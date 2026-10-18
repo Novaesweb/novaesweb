@@ -4,11 +4,11 @@ import { ArrowRight, MessageCircle, Sparkles, Shirt, Image, Store, CheckCircle2,
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { whatsLink, videoPacks, packWhatsMsg, brl } from "@/data/plans";
-import portrait from "@/assets/portrait.jpg.asset.json";
-import a1 from "@/assets/amb1.jpg.asset.json";
-import a2 from "@/assets/amb2.jpg.asset.json";
-import a3 from "@/assets/amb3.jpg.asset.json";
-import a4 from "@/assets/amb4.jpg.asset.json";
+import portrait from "@/assets/portrait.jpg";
+import a1 from "@/assets/amb1.jpg";
+import a2 from "@/assets/amb2.jpg";
+import a3 from "@/assets/amb3.jpg";
+import a4 from "@/assets/amb4.jpg";
 
 export const Route = createFileRoute("/criacao-visual")({
   head: () => ({
@@ -25,10 +25,10 @@ export const Route = createFileRoute("/criacao-visual")({
 });
 
 const models = [
-  { img: a3.url, t: "Com placa personalizada", d: "Segurando a mensagem da sua loja." },
-  { img: a1.url, t: "Modelo Clássico", d: "Uniforme e logo da sua marca." },
-  { img: a2.url, t: "Modelo Natural", d: "Visual leve e acolhedor." },
-  { img: a4.url, t: "Modelo Moderno", d: "Presença forte e confiante." },
+  { img: a3, t: "Com placa personalizada", d: "Segurando a mensagem da sua loja." },
+  { img: a1, t: "Modelo Clássico", d: "Uniforme e logo da sua marca." },
+  { img: a2, t: "Modelo Natural", d: "Visual leve e acolhedor." },
+  { img: a4, t: "Modelo Moderno", d: "Presença forte e confiante." },
 ];
 
 const steps = [
@@ -46,7 +46,7 @@ function CriacaoVisual() {
       <SiteHeader active="Criação Visual" />
       <div className="relative">
       <div aria-hidden className="pointer-events-none absolute inset-0">
-        <img src={portrait.url} alt="" className="h-full w-full object-cover object-top opacity-40" />
+        <img src={portrait} alt="" className="h-full w-full object-cover object-top opacity-40" />
         <div className="absolute inset-0 bg-gradient-to-r from-background via-background/70 to-background/40" />
         <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-background to-transparent" />
       </div>

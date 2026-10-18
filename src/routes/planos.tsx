@@ -4,7 +4,7 @@ import {
   Zap, Settings, ShieldCheck, Rocket, Crown, Gem, CheckCircle2, ArrowRight, BarChart3, Headphones,
   MessageCircle, Globe, Database, Palette, RefreshCw, Search, Plus,
 } from "lucide-react";
-import portrait from "@/assets/portrait.jpg.asset.json";
+import portrait from "@/assets/portrait.jpg";
 import { SiteHeader, WHATS } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { plans, comparison, addons, brl, half, whatsLink, planWhatsMsg } from "@/data/plans";
@@ -32,7 +32,7 @@ function Planos() {
 
       <section className="relative">
         <div className="absolute inset-y-0 right-0 w-full md:w-3/5">
-          <img src={portrait.url} alt="Equipe NovaesWeb" className="h-full w-full object-cover object-[center_20%]" />
+          <img src={portrait} alt="Equipe NovaesWeb" className="h-full w-full object-cover object-[center_20%]" />
           <div className="absolute inset-0 bg-gradient-to-r from-background via-background/60 to-transparent" />
           <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-background to-transparent" />
         </div>
@@ -129,7 +129,7 @@ function Planos() {
 
         <div className="my-12 flex flex-wrap items-center justify-between gap-6 overflow-hidden rounded-2xl border-2 border-neon-pink bg-card p-6 shadow-neon">
           <div className="flex items-center gap-5">
-            <img src={portrait.url} alt="" className="hidden h-24 w-24 rounded-full object-cover object-[60%_25%] sm:block" />
+            <img src={portrait} alt="" className="hidden h-24 w-24 rounded-full object-cover object-[60%_25%] sm:block" />
             <div>
               <h3 className="text-2xl font-bold">Vamos criar algo incrível para o seu negócio?</h3>
               <p className="text-muted-foreground">Fale agora com a nossa equipe e receba uma proposta personalizada.</p>

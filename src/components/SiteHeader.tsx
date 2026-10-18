@@ -1,7 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { useState } from "react";
 import { Menu, MessageCircle, X } from "lucide-react";
-import logo from "@/assets/logo-mark.png.asset.json";
+import logo from "@/assets/logo-mark.png";
 import { whatsLink } from "@/data/plans";
 export const WHATS = whatsLink();
 
@@ -20,7 +20,7 @@ export function SiteHeader({ active }: { active: string }) {
     <header className="sticky top-0 z-30 border-b border-border/40 bg-background/80 backdrop-blur">
       <div className="mx-auto grid max-w-[1800px] grid-cols-[minmax(0,1fr)_auto] items-center gap-4 px-4 py-3 sm:px-8 lg:flex lg:justify-between xl:px-14">
         <Link to="/" className="flex min-w-0 items-center gap-3">
-          <img src={logo.url} alt="NovaesWeb" className="h-10 w-10 shrink-0 rounded-full object-cover shadow-neon sm:h-12 sm:w-12" />
+          <img src={logo} alt="NovaesWeb" className="h-10 w-10 shrink-0 rounded-full object-cover shadow-neon sm:h-12 sm:w-12" />
           <div className="min-w-0 leading-tight">
             <div className="truncate font-display text-xl font-bold sm:text-2xl">Novaes<span className="text-neon-pink">Web</span></div>
             <div className="text-xs text-muted-foreground">Soluções Digitais</div>

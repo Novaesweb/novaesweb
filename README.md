@@ -33,7 +33,7 @@ WhatsApp API.
 - Textos de termos e privacidade: `src/data/legal.ts`
 - Cabecalho do menu: `src/components/SiteHeader.tsx`
 - Rodape com a janelinha dos textos: `src/components/SiteFooter.tsx`
-- Fotos usadas no site: `public/fotos/`
+- Fotos usadas no site: `src/assets/` (copias em `public/fotos/`)
 - Icone da aba do navegador: `public/favicon.png`
 
 ## Testes

@@ -6,24 +6,24 @@ import {
   Globe, Palette, Zap, Headphones, ArrowRight, Box, Users, Rocket, ChevronRight, MessageCircle,
   MessagesSquare, Plus, Smartphone, TrendingUp, ShieldCheck, ChevronDown,
 } from "lucide-react";
-import portrait from "@/assets/portrait.jpg.asset.json";
-import s0 from "@/assets/s0.jpg.asset.json";
-import s1 from "@/assets/s1.jpg.asset.json";
-import s2 from "@/assets/s2.jpg.asset.json";
-import s3 from "@/assets/s3.jpg.asset.json";
-import s4 from "@/assets/s4.jpg.asset.json";
-import mBurger from "@/assets/modelo-burge-house.jpg.asset.json";
-import mAcai from "@/assets/modelo-a-a-royal-two.jpg.asset.json";
-import mFogo from "@/assets/modelo-fogo-na-brasa.jpg.asset.json";
-import mOlympus from "@/assets/modelo-olympus-burger.jpg.asset.json";
-import mPet from "@/assets/modelo-pet-em-casa.jpg.asset.json";
+import portrait from "@/assets/portrait.jpg";
+import s0 from "@/assets/s0.jpg";
+import s1 from "@/assets/s1.jpg";
+import s2 from "@/assets/s2.jpg";
+import s3 from "@/assets/s3.jpg";
+import s4 from "@/assets/s4.jpg";
+import mBurger from "@/assets/modelo-burge-house.jpg";
+import mAcai from "@/assets/modelo-a-a-royal-two.jpg";
+import mFogo from "@/assets/modelo-fogo-na-brasa.jpg";
+import mOlympus from "@/assets/modelo-olympus-burger.jpg";
+import mPet from "@/assets/modelo-pet-em-casa.jpg";
 
 const modelos = [
-  { nome: "Burger House", nicho: "Hamburgueria · Delivery", url: "https://burge-house.vercel.app/", img: mBurger.url, d: "Cardápio digital, carrinho, checkout e acompanhamento do pedido, com painel para o dono." },
-  { nome: "Açaí Royal", nicho: "Açaiteria", url: "https://a-a-royal-two.vercel.app/", img: mAcai.url, d: "O cliente monta o açaí, escolhe os adicionais e pede direto pelo WhatsApp." },
-  { nome: "Fogo na Brasa", nicho: "Churrascaria · Lanches", url: "https://fogo-na-brasa.vercel.app/", img: mFogo.url, d: "Hambúrgueres, churrasco e lanches em uma vitrine que dá fome e leva ao pedido." },
-  { nome: "Olympus Burger", nicho: "Hamburgueria · Artesanal", url: "https://olympus-burger-menu-ashen.vercel.app/", img: mOlympus.url, d: "Cardápio com cara de marca premium: destaque para os lançamentos e pedido rápido." },
-  { nome: "Pet em Casa", nicho: "Pet Shop · Banho e Tosa", url: "https://pet-em-casa-liard.vercel.app/", img: mPet.url, d: "Serviços de banho e tosa com agendamento direto pelo site, do jeitinho que o pet merece." },
+  { nome: "Burger House", nicho: "Hamburgueria · Delivery", url: "https://burge-house.vercel.app/", img: mBurger, d: "Cardápio digital, carrinho, checkout e acompanhamento do pedido, com painel para o dono." },
+  { nome: "Açaí Royal", nicho: "Açaiteria", url: "https://a-a-royal-two.vercel.app/", img: mAcai, d: "O cliente monta o açaí, escolhe os adicionais e pede direto pelo WhatsApp." },
+  { nome: "Fogo na Brasa", nicho: "Churrascaria · Lanches", url: "https://fogo-na-brasa.vercel.app/", img: mFogo, d: "Hambúrgueres, churrasco e lanches em uma vitrine que dá fome e leva ao pedido." },
+  { nome: "Olympus Burger", nicho: "Hamburgueria · Artesanal", url: "https://olympus-burger-menu-ashen.vercel.app/", img: mOlympus, d: "Cardápio com cara de marca premium: destaque para os lançamentos e pedido rápido." },
+  { nome: "Pet em Casa", nicho: "Pet Shop · Banho e Tosa", url: "https://pet-em-casa-liard.vercel.app/", img: mPet, d: "Serviços de banho e tosa com agendamento direto pelo site, do jeitinho que o pet merece." },
 ];
 
 export const Route = createFileRoute("/")({
@@ -44,11 +44,11 @@ import { whatsLink } from "@/data/plans";
 import { allFaqs, faqsShown } from "@/data/faqs";
 const WHATS = whatsLink();
 const services = [
-  { img: s0.url, t: "Sites Profissionais", d: "Sites modernos, rápidos e otimizados para vender mais." },
-  { img: s1.url, t: "Delivery e Cardápio", d: "Receba pedidos pelo WhatsApp com um site completo." },
-  { img: s2.url, t: "Sistemas Personalizados", d: "Soluções sob medida para o seu negócio." },
-  { img: s3.url, t: "Identidade Visual", d: "Logos, artes e materiais profissionais." },
-  { img: s4.url, t: "Redes Sociais", d: "Artes e vídeos que destacam sua marca." },
+  { img: s0, t: "Sites Profissionais", d: "Sites modernos, rápidos e otimizados para vender mais." },
+  { img: s1, t: "Delivery e Cardápio", d: "Receba pedidos pelo WhatsApp com um site completo." },
+  { img: s2, t: "Sistemas Personalizados", d: "Soluções sob medida para o seu negócio." },
+  { img: s3, t: "Identidade Visual", d: "Logos, artes e materiais profissionais." },
+  { img: s4, t: "Redes Sociais", d: "Artes e vídeos que destacam sua marca." },
 ];
 
 const steps = [
@@ -66,8 +66,8 @@ function Index() {
 
       <section id="inicio" className="relative">
         <div className="absolute inset-y-0 right-0 w-full overflow-hidden md:w-3/5">
-          <img src={portrait.url} aria-hidden="true" className="absolute inset-0 h-full w-full scale-110 object-cover object-top opacity-40 blur-2xl" />
-          <img src={portrait.url} alt="Equipe NovaesWeb" className="absolute inset-y-0 right-0 h-full w-full object-cover object-top md:w-auto md:max-w-none" />
+          <img src={portrait} aria-hidden="true" className="absolute inset-0 h-full w-full scale-110 object-cover object-top opacity-40 blur-2xl" />
+          <img src={portrait} alt="Equipe NovaesWeb" className="absolute inset-y-0 right-0 h-full w-full object-cover object-top md:w-auto md:max-w-none" />
           <div className="absolute inset-y-0 left-0 w-2/3 bg-gradient-to-r from-background via-background/60 to-transparent" />
           <div className="absolute inset-x-0 bottom-0 h-48 bg-gradient-to-t from-background via-background/70 to-transparent" />
         </div>

@@ -6,7 +6,7 @@ import {
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { whatsLink } from "@/data/plans";
-import portrait from "@/assets/portrait.jpg.asset.json";
+import portrait from "@/assets/portrait.jpg";
 
 export const Route = createFileRoute("/sobre")({
   head: () => ({
@@ -47,7 +47,7 @@ function Sobre() {
       {/* Hero */}
       <section className="relative">
         <div className="absolute inset-y-0 right-0 w-full md:w-3/5">
-          <img src={portrait.url} alt="Equipe NovaesWeb" className="h-full w-full object-cover object-top" />
+          <img src={portrait} alt="Equipe NovaesWeb" className="h-full w-full object-cover object-top" />
           <div className="absolute inset-0 bg-gradient-to-r from-background via-background/60 to-transparent" />
         </div>
         <div className="relative mx-auto max-w-[1800px] px-4 pb-20 pt-16 sm:px-8 xl:px-14">

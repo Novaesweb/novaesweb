@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { ArrowRight, MessageCircle, X } from "lucide-react";
-import apiArt from "@/assets/api-whatsapp.png.asset.json";
+import apiArt from "@/assets/api-whatsapp.png";
 import { legalDocs, type LegalDoc } from "@/data/legal";
 import { whatsLink } from "@/data/plans";
 
@@ -24,7 +24,7 @@ export function SiteFooter() {
     <footer className="border-t border-border/40 px-4 py-6 sm:px-8 xl:px-14">
       <div className="mx-auto mb-6 flex max-w-[1800px] flex-col items-center gap-5 rounded-2xl border border-neon-violet/40 bg-card/70 p-5 text-center shadow-neon backdrop-blur sm:flex-row sm:gap-7 sm:p-6 sm:text-left">
         <img
-          src={apiArt.url}
+          src={apiArt}
           alt="Integração com WhatsApp API"
           loading="lazy"
           className="h-36 w-36 shrink-0 rounded-xl border border-neon-violet/40 object-cover shadow-neon sm:h-44 sm:w-44"
