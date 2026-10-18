@@ -1,21 +1,29 @@
-# NovaesWeb - Site oficial
+# Welcome to your Lovable project
 
-Site da NovaesWeb Solucoes Digitais: pagina inicial, planos e criacao visual.
+This project was built with [Lovable](https://lovable.dev).
 
-## Rodar no computador
+## Build with Lovable
 
-```bash
-bun install
-bun run dev
+Open your project in the [Lovable editor](https://lovable.dev) and keep building.
+
+- **Ship faster**: describe what you want to build and Lovable handles the code.
+- **Stay in sync**: connect the project to GitHub and every change made in Lovable is committed straight to your repository.
+- **Full ownership**: this code is yours. Push to your repository and your changes sync back into Lovable, ready for your next prompt.
+
+## Development
+
+Prefer working locally? You need Node.js and npm — [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating).
+
+```sh
+git clone <this-repository-url>
+cd <repository-name>
+npm i
+npm run dev
 ```
 
-## Paginas
+## Built with
 
-- `/` - inicio
-- `/planos` - planos e contratacao
-- `/criacao-visual` - modelos e fotos
-
-## Dados dos planos
-
-Valores, prazos, itens adicionais e perguntas frequentes ficam em `src/data/plans.ts`.
-As fotos usadas no site estao em `public/fotos/`.
+- TanStack Start
+- TypeScript
+- React
+- Tailwind CSS
