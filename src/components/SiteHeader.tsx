@@ -5,13 +5,12 @@ import logo from "@/assets/logo.jpg.asset.json";
 import { whatsLink } from "@/data/plans";
 export const WHATS = whatsLink();
 
-const nav: { label: string; to: "/" | "/planos" | "/criacao-visual" }[] = [
+const nav: { label: string; to: "/" | "/planos" | "/criacao-visual" | "/sobre" }[] = [
   { label: "Início", to: "/" },
   { label: "Serviços", to: "/" },
-  { label: "Modelos", to: "/" },
   { label: "Planos", to: "/planos" },
   { label: "Criação Visual", to: "/criacao-visual" },
-  { label: "Sobre", to: "/" },
+  { label: "Sobre", to: "/sobre" },
   { label: "Contato", to: "/" },
 ];
 

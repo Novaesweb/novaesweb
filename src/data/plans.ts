@@ -101,3 +101,39 @@ export const faqs: [string, string][] = [
   ["Quanto custam alterações?", "O Start inclui 1 alteração simples por mês. Alterações simples extras custam R$ 15; troca de banner, R$ 25."],
   ["Como funciona o cancelamento?", CONTRATO],
 ];
+
+export type PackId = "divulgacao" | "apresentacao" | "conteudo";
+
+export const videoPacks = [
+  {
+    id: "divulgacao" as PackId,
+    name: "Divulgação Rápida",
+    tag: "Várias divulgações curtas para manter a loja sempre em movimento.",
+    videos: "2 vídeos de 10s",
+    images: "3 imagens",
+    price: 89,
+    savings: 9,
+  },
+  {
+    id: "apresentacao" as PackId,
+    name: "Apresentação da Loja",
+    tag: "Uma apresentação mais completa do seu negócio.",
+    videos: "1 vídeo de 30s",
+    images: "3 imagens",
+    price: 89,
+    savings: 7,
+  },
+  {
+    id: "conteudo" as PackId,
+    name: "Mais Conteúdo",
+    tag: "Mais material pronto para as redes sociais.",
+    videos: "1 vídeo de 30s",
+    images: "4 imagens",
+    price: 109,
+    savings: 9,
+  },
+];
+
+export const packWhatsMsg = (p: (typeof videoPacks)[number]) =>
+  `Olá, NovaesWeb! Tenho interesse no pacote ${p.name}: ${p.videos} + ${p.images}, por R$ ${brl(p.price)}. Gostaria de conversar.`;
+

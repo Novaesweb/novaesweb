@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { SiteHeader } from "@/components/SiteHeader";
+import { SiteFooter } from "@/components/SiteFooter";
 import {
   Globe, Palette, Zap, Headphones, ArrowRight, Box, Users, Rocket, ChevronRight, MessageCircle,
 } from "lucide-react";
@@ -28,7 +29,6 @@ export const Route = createFileRoute("/")({
 
 import { whatsLink } from "@/data/plans";
 const WHATS = whatsLink();
-const nav = ["Início", "Serviços", "Modelos", "Planos", "Criação Visual", "Sobre", "Contato"];
 const services = [
   { img: s0.url, t: "Sites Profissionais", d: "Sites modernos, rápidos e otimizados para vender mais." },
   { img: s1.url, t: "Delivery e Cardápio", d: "Receba pedidos pelo WhatsApp com um site completo." },
@@ -116,7 +116,7 @@ function Index() {
           </a>
         </div>
       </section>
-      <footer className="border-t border-border/40 py-6 text-center text-sm text-muted-foreground">© 2026 NovaesWeb — Soluções Digitais</footer>
+      <SiteFooter />
     </div>
   );
 }

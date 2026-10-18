@@ -1,29 +1,35 @@
-# Welcome to your Lovable project
+# NovaesWeb - Site oficial
 
-This project was built with [Lovable](https://lovable.dev).
+Site da NovaesWeb Solucoes Digitais: pagina inicial, planos, criacao visual e sobre.
 
-## Build with Lovable
+## Rodar no computador
 
-Open your project in the [Lovable editor](https://lovable.dev) and keep building.
-
-- **Ship faster**: describe what you want to build and Lovable handles the code.
-- **Stay in sync**: connect the project to GitHub and every change made in Lovable is committed straight to your repository.
-- **Full ownership**: this code is yours. Push to your repository and your changes sync back into Lovable, ready for your next prompt.
-
-## Development
-
-Prefer working locally? You need Node.js and npm — [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating).
-
-```sh
-git clone <this-repository-url>
-cd <repository-name>
-npm i
-npm run dev
+```bash
+bun install
+bun run dev
 ```
 
-## Built with
+## Paginas
 
-- TanStack Start
-- TypeScript
-- React
-- Tailwind CSS
+- `/` - inicio
+- `/planos` - planos, comparativo, adicionais e perguntas frequentes
+- `/criacao-visual` - modelos, fotos e pacotes de videos e imagens
+- `/sobre` - quem somos, missao, visao e valores
+
+No rodape de todas as paginas ficam "Termos de uso e condicoes comerciais" e
+"Politica de privacidade", que abrem uma janelinha com o texto.
+
+## Onde fica cada coisa
+
+- Valores dos planos, prazos, adicionais e perguntas frequentes: `src/data/plans.ts`
+- Pacotes de videos e imagens: `videoPacks` em `src/data/plans.ts`
+- Textos de termos e privacidade: `src/data/legal.ts`
+- Cabecalho do menu: `src/components/SiteHeader.tsx`
+- Rodape com a janelinha dos textos: `src/components/SiteFooter.tsx`
+- Fotos usadas no site: `public/fotos/`
+
+## Testes
+
+```bash
+bunx vitest run
+```

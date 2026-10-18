@@ -1,8 +1,9 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
-import { ArrowRight, MessageCircle, Sparkles, Shirt, Image, Store, CheckCircle2 } from "lucide-react";
+import { ArrowRight, MessageCircle, Sparkles, Shirt, Image, Store, CheckCircle2, Video } from "lucide-react";
 import { SiteHeader } from "@/components/SiteHeader";
-import { whatsLink } from "@/data/plans";
+import { SiteFooter } from "@/components/SiteFooter";
+import { whatsLink, videoPacks, packWhatsMsg, brl } from "@/data/plans";
 import portrait from "@/assets/portrait.jpg.asset.json";
 import a1 from "@/assets/amb1.jpg.asset.json";
 import a2 from "@/assets/amb2.jpg.asset.json";
@@ -94,7 +95,41 @@ function CriacaoVisual() {
           ))}
         </div>
       </section>
-      <footer className="border-t border-border/40 py-6 text-center text-sm text-muted-foreground">© 2026 NovaesWeb — Soluções Digitais</footer>
+      <section className="mx-auto max-w-[1800px] px-4 sm:px-8 xl:px-14 pb-16">
+        <div className="flex flex-wrap items-end justify-between gap-4">
+          <div>
+            <h2 className="text-3xl font-bold sm:text-4xl">Pacotes de vídeos e imagens</h2>
+            <p className="mt-2 max-w-2xl text-muted-foreground">Valores por pacote, sem mensalidade. A economia considera os valores avulsos.</p>
+          </div>
+          <span className="rounded-full border border-neon-violet px-4 py-1 text-xs font-semibold tracking-[0.2em]">SEM MENSALIDADE</span>
+        </div>
+        <div className="mt-8 grid gap-5 md:grid-cols-3">
+          {videoPacks.map((p) => (
+            <div key={p.name} className="flex flex-col rounded-2xl border border-border bg-card p-6 transition hover:-translate-y-1 hover:border-neon-pink">
+              <div className="flex items-start justify-between gap-3">
+                <h3 className="font-display text-xl font-bold">{p.name}</h3>
+                <span className="shrink-0 rounded-full bg-neon px-3 py-1 text-xs font-bold">Economize R$ {p.savings}</span>
+              </div>
+              <p className="mt-1 text-sm text-muted-foreground">{p.tag}</p>
+              <ul className="mt-5 space-y-3 text-sm">
+                <li className="flex items-center gap-3"><Video className="h-5 w-5 text-neon-pink" />{p.videos}</li>
+                <li className="flex items-center gap-3"><Image className="h-5 w-5 text-neon-pink" />{p.images}</li>
+              </ul>
+              <div className="mt-6 flex items-baseline gap-2">
+                <span className="font-display text-4xl font-extrabold text-neon">R$ {brl(p.price)}</span>
+                <span className="text-sm text-muted-foreground">por pacote</span>
+              </div>
+              <a href={whatsLink(packWhatsMsg(p))} target="_blank" rel="noopener noreferrer" className="mt-6 inline-flex items-center justify-center gap-2 rounded-full border border-neon-pink px-5 py-3 font-semibold transition hover:gap-4">
+                <MessageCircle className="h-5 w-5" /> Quero esse pacote
+              </a>
+            </div>
+          ))}
+        </div>
+        <p className="mt-6 rounded-2xl border border-border bg-card/60 p-5 text-sm text-muted-foreground">
+          Os dois primeiros pacotes têm o mesmo valor porque atendem a objetivos diferentes: várias divulgações curtas ou uma apresentação mais completa.
+        </p>
+      </section>
+      <SiteFooter />
     </div>
   );
 }

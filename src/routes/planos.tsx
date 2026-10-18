@@ -6,6 +6,7 @@ import {
 } from "lucide-react";
 import portrait from "@/assets/portrait.jpg.asset.json";
 import { SiteHeader, WHATS } from "@/components/SiteHeader";
+import { SiteFooter } from "@/components/SiteFooter";
 import { plans, faqs, comparison, addons, brl, half, whatsLink, planWhatsMsg } from "@/data/plans";
 
 export const Route = createFileRoute("/planos")({
@@ -149,7 +150,7 @@ function Planos() {
           <a href={whatsLink("Olá, NovaesWeb! Gostaria de solicitar um orçamento.")} className="flex items-center gap-3 rounded-full bg-neon px-8 py-4 font-semibold shadow-neon"><MessageCircle className="h-5 w-5" /> Solicitar orçamento <ArrowRight className="h-5 w-5" /></a>
         </div>
       </section>
-      <footer className="border-t border-border/40 py-6 text-center text-sm text-muted-foreground">© 2026 NovaesWeb — Soluções Digitais</footer>
+      <SiteFooter />
     </div>
   );
 }
