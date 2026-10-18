@@ -36,6 +36,22 @@ WhatsApp API.
 - Fotos usadas no site: `src/assets/` (copias em `public/fotos/`)
 - Icone da aba do navegador: `public/favicon.png`
 
+## Colocar no ar na Vercel
+
+O site ja esta preparado para a Vercel: `vercel.json` na raiz diz como instalar e
+construir, e a build reconhece sozinha que o destino e a Vercel.
+
+1. Em vercel.com, faca login com a conta GitHub `Novaesweb`.
+2. **Add New... -> Project** e importe o repositorio `Novaesweb/novaesweb`.
+3. Confirme os comandos (instalacao `bun install`, build `bun run build`) e clique
+   em **Deploy**.
+
+Cada envio novo para a branch `main` publica o site de novo sozinho.
+
+> Atencao: `novaesweb.vercel.app` hoje mostra um site antigo, de outro projeto.
+> Ao importar este repositorio a Vercel cria um endereco novo; para usar
+> `novaesweb.vercel.app`, apague o projeto antigo ou troque o dominio no painel.
+
 ## Testes
 
 ```bash
