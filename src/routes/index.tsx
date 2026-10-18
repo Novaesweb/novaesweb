@@ -12,6 +12,19 @@ import s1 from "@/assets/s1.jpg.asset.json";
 import s2 from "@/assets/s2.jpg.asset.json";
 import s3 from "@/assets/s3.jpg.asset.json";
 import s4 from "@/assets/s4.jpg.asset.json";
+import mBurger from "@/assets/modelo-burge-house.jpg.asset.json";
+import mAcai from "@/assets/modelo-a-a-royal-two.jpg.asset.json";
+import mFogo from "@/assets/modelo-fogo-na-brasa.jpg.asset.json";
+import mOlympus from "@/assets/modelo-olympus-burger.jpg.asset.json";
+import mPet from "@/assets/modelo-pet-em-casa.jpg.asset.json";
+
+const modelos = [
+  { nome: "Burger House", nicho: "Hamburgueria · Delivery", url: "https://burge-house.vercel.app/", img: mBurger.url, d: "Cardápio digital, carrinho, checkout e acompanhamento do pedido, com painel para o dono." },
+  { nome: "Açaí Royal", nicho: "Açaiteria", url: "https://a-a-royal-two.vercel.app/", img: mAcai.url, d: "O cliente monta o açaí, escolhe os adicionais e pede direto pelo WhatsApp." },
+  { nome: "Fogo na Brasa", nicho: "Churrascaria · Lanches", url: "https://fogo-na-brasa.vercel.app/", img: mFogo.url, d: "Hambúrgueres, churrasco e lanches em uma vitrine que dá fome e leva ao pedido." },
+  { nome: "Olympus Burger", nicho: "Hamburgueria · Artesanal", url: "https://olympus-burger-menu-ashen.vercel.app/", img: mOlympus.url, d: "Cardápio com cara de marca premium: destaque para os lançamentos e pedido rápido." },
+  { nome: "Pet em Casa", nicho: "Pet Shop · Banho e Tosa", url: "https://pet-em-casa-liard.vercel.app/", img: mPet.url, d: "Serviços de banho e tosa com agendamento direto pelo site, do jeitinho que o pet merece." },
+];
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -113,6 +126,43 @@ function Index() {
             </article>
           ))}
         </div>
+
+        <div id="modelos" className="mt-16">
+          <div className="text-sm font-semibold tracking-[0.25em] text-neon-pink">VEJA FUNCIONANDO</div>
+          <div className="mt-2 flex flex-wrap items-end justify-between gap-4">
+            <h2 className="text-3xl font-bold sm:text-4xl">Sites de demonstração para verificar</h2>
+            <p className="max-w-xl text-muted-foreground">Abra, clique e teste como se fosse cliente. É assim que o seu negócio pode aparecer na internet.</p>
+          </div>
+          <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
+            {modelos.map((m) => (
+              <a key={m.url} href={m.url} target="_blank" rel="noopener noreferrer"
+                className="group flex flex-col overflow-hidden rounded-xl border border-neon-violet/40 bg-card transition hover:-translate-y-1 hover:border-neon-pink hover:shadow-neon">
+                <div className="flex items-center gap-1.5 border-b border-border px-2.5 py-1.5">
+                  <span className="h-2 w-2 rounded-full bg-neon-pink/70" />
+                  <span className="h-2 w-2 rounded-full bg-neon-violet/70" />
+                  <span className="h-2 w-2 rounded-full bg-muted-foreground/50" />
+                  <span className="ml-1.5 truncate text-[11px] text-muted-foreground">{m.url.replace("https://", "")}</span>
+                </div>
+                <div className="overflow-hidden">
+                  <img src={m.img} alt={`Site ${m.nome}`} loading="lazy" className="aspect-[16/10] w-full object-cover object-top transition duration-500 group-hover:scale-105" />
+                </div>
+                <div className="flex flex-1 flex-col p-4">
+                  <span className="w-fit rounded-full border border-neon-violet/50 px-2.5 py-0.5 text-[11px] text-neon-pink">{m.nicho}</span>
+                  <h3 className="mt-2 text-lg font-bold">{m.nome}</h3>
+                  <p className="mt-1 flex-1 text-xs leading-relaxed text-muted-foreground">{m.d}</p>
+                  <span className="mt-3 inline-flex items-center gap-2 text-sm font-semibold text-neon-pink">Ver site ao vivo <ArrowRight className="h-4 w-4 transition group-hover:translate-x-1" /></span>
+                </div>
+              </a>
+            ))}
+          </div>
+          <div className="mt-8 text-center">
+            <a href={whatsLink("Olá! Vi os modelos no site da NovaesWeb e quero um site assim para o meu negócio.")} target="_blank" rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 rounded-full bg-neon px-7 py-3 font-semibold shadow-neon">
+              <MessageCircle className="h-5 w-5" /> Quero um site assim
+            </a>
+          </div>
+        </div>
+
 
         <div id="contato" className="mt-14 flex flex-wrap items-center justify-between gap-6 rounded-2xl border-2 border-neon-pink bg-card p-7 shadow-neon">
           <div className="flex items-center gap-5">
