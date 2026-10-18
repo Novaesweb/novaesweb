@@ -1,5 +1,6 @@
 import { describe, it, expect } from "vitest";
-import { plans, half, whatsLink, planWhatsMsg, videoPacks, packWhatsMsg } from "@/data/plans";
+import { plans, half, whatsLink, planWhatsMsg, videoPacks, packWhatsMsg, faqs } from "@/data/plans";
+import { allFaqs, faqsShown } from "@/data/faqs";
 
 describe("planos", () => {
   it("valores oficiais", () => {
@@ -28,5 +29,26 @@ describe("pacotes de criação visual", () => {
   it("mensagem do whatsapp traz o pacote e o valor", () => {
     expect(packWhatsMsg(videoPacks[0]!)).toContain("pacote Divulgação Rápida");
     expect(packWhatsMsg(videoPacks[2]!)).toContain("R$ 109,00");
+  });
+});
+
+describe("dúvidas da tela inicial", () => {
+  it("não fala só de plano: cobre vídeos, identidade visual e WhatsApp API", () => {
+    const perguntas = allFaqs.map(([q]) => q).join(" | ");
+    expect(perguntas).toContain("vídeos e artes para as redes sociais");
+    expect(perguntas).toContain("logo e as artes da minha marca");
+    expect(perguntas).toContain("integração com o WhatsApp API");
+  });
+  it("mantém as dúvidas dos planos dentro da lista", () => {
+    expect(allFaqs.length).toBeGreaterThan(faqs.length);
+    expect(allFaqs).toContainEqual(faqs[0]!);
+  });
+  it("toda dúvida tem resposta escrita", () => {
+    expect(allFaqs.every(([, a]) => a.trim().length > 10)).toBe(true);
+  });
+  it("a tela inicial mostra poucas dúvidas, entre 8 e 10", () => {
+    expect(faqsShown).toBeGreaterThanOrEqual(8);
+    expect(faqsShown).toBeLessThanOrEqual(10);
+    expect(allFaqs.length).toBeGreaterThan(faqsShown);
   });
 });

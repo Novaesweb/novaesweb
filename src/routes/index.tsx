@@ -4,9 +4,9 @@ import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import {
   Globe, Palette, Zap, Headphones, ArrowRight, Box, Users, Rocket, ChevronRight, MessageCircle,
+  MessagesSquare, Plus, Smartphone, TrendingUp, ShieldCheck, ChevronDown,
 } from "lucide-react";
 import portrait from "@/assets/portrait.jpg.asset.json";
-import logo from "@/assets/logo.jpg.asset.json";
 import s0 from "@/assets/s0.jpg.asset.json";
 import s1 from "@/assets/s1.jpg.asset.json";
 import s2 from "@/assets/s2.jpg.asset.json";
@@ -28,6 +28,7 @@ export const Route = createFileRoute("/")({
 });
 
 import { whatsLink } from "@/data/plans";
+import { allFaqs, faqsShown } from "@/data/faqs";
 const WHATS = whatsLink();
 const services = [
   { img: s0.url, t: "Sites Profissionais", d: "Sites modernos, rápidos e otimizados para vender mais." },
@@ -37,15 +38,25 @@ const services = [
   { img: s4.url, t: "Redes Sociais", d: "Artes e vídeos que destacam sua marca." },
 ];
 
+const steps = [
+  ["01", "Vamos entender", "Você conta sua ideia. Definimos o escopo, o plano e as condições na proposta."],
+  ["02", "Hora de criar", "Com os materiais recebidos e a proposta alinhada, começamos o desenvolvimento."],
+  ["03", "Você acompanha", "Apresentamos o projeto para revisão e alinhamos os detalhes da entrega."],
+  ["04", "Pronto para começar", "Concluímos a entrega conforme a proposta. A mensalidade inicia na ativação."],
+];
+
 function Index() {
+  const [faqsAbertas, setFaqsAbertas] = useState(false);
   return (
     <div className="min-h-screen overflow-x-hidden">
       <SiteHeader active="Início" />
 
       <section id="inicio" className="relative">
-        <div className="absolute inset-y-0 right-0 w-full md:w-3/5">
-          <img src={portrait.url} alt="Equipe NovaesWeb" className="h-full w-full object-cover object-top" />
-          <div className="absolute inset-0 bg-gradient-to-r from-background via-background/60 to-transparent" />
+        <div className="absolute inset-y-0 right-0 w-full overflow-hidden md:w-3/5">
+          <img src={portrait.url} aria-hidden="true" className="absolute inset-0 h-full w-full scale-110 object-cover object-top opacity-40 blur-2xl" />
+          <img src={portrait.url} alt="Equipe NovaesWeb" className="absolute inset-y-0 right-0 h-full w-full object-cover object-top md:w-auto md:max-w-none" />
+          <div className="absolute inset-y-0 left-0 w-2/3 bg-gradient-to-r from-background via-background/60 to-transparent" />
+          <div className="absolute inset-x-0 bottom-0 h-48 bg-gradient-to-t from-background via-background/70 to-transparent" />
         </div>
         <div className="relative mx-auto max-w-[1800px] px-4 sm:px-8 xl:px-14 pb-24 pt-16">
           <div className="max-w-xl 2xl:max-w-2xl">
@@ -115,6 +126,67 @@ function Index() {
             <MessageCircle className="h-5 w-5" /> Falar no WhatsApp <ArrowRight className="h-5 w-5" />
           </a>
         </div>
+      </section>
+
+      <section className="mx-auto max-w-[1800px] px-4 py-14 sm:px-8 xl:px-14">
+        <div className="text-sm font-semibold tracking-[0.25em] text-neon-pink">SEM COMPLICAÇÃO</div>
+        <h2 className="mt-2 text-4xl font-bold">Da conversa ao seu site no ar</h2>
+        <div className="mt-8 grid gap-5 md:grid-cols-2 xl:grid-cols-4">
+          {steps.map(([n, t, d]) => (
+            <div key={n} className="rounded-xl border border-border bg-card p-5 transition hover:shadow-neon">
+              <div className="font-display text-3xl font-extrabold text-neon">{n}</div>
+              <h3 className="mt-3 text-lg font-semibold">{t}</h3>
+              <p className="mt-1 text-sm leading-relaxed text-muted-foreground">{d}</p>
+            </div>
+          ))}
+        </div>
+        <div className="mt-5 grid gap-5 md:grid-cols-3">
+          {[[Smartphone, "Em todas as telas", "Navegação pensada para celular, tablet e computador."],
+            [TrendingUp, "Estrutura para evoluir", "Comece com o que precisa e avalie novos recursos conforme seu negócio cresce."],
+            [ShieldCheck, "Clareza em cada etapa", "Valores, escopo e condições alinhados antes da contratação."]].map(([I, t, d]: any) => (
+            <div key={t} className="flex items-start gap-4 rounded-xl border border-border bg-card/60 p-5">
+              <I className="h-8 w-8 shrink-0 text-neon-pink" />
+              <div>
+                <h3 className="font-semibold">{t}</h3>
+                <p className="mt-1 text-sm leading-relaxed text-muted-foreground">{d}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+      <section className="mx-auto max-w-[1800px] px-4 pb-14 sm:px-8 xl:px-14">
+        <div className="flex flex-wrap items-center justify-between gap-4">
+          <div className="flex items-start gap-3">
+            <MessagesSquare className="h-10 w-10 shrink-0 text-neon-pink" />
+            <div>
+              <h2 className="text-2xl font-bold">Dúvidas comuns e respostas claras</h2>
+              <p className="mt-1 text-sm text-muted-foreground">As perguntas que mais recebemos — de sites e identidade visual a vídeos e integração no WhatsApp.</p>
+            </div>
+          </div>
+          <a href={WHATS} className="inline-flex items-center gap-2 rounded-full border-2 border-neon-pink px-5 py-3 text-sm font-semibold">
+            <MessageCircle className="h-4 w-4" /> Não achou a sua? Fale com a gente
+          </a>
+        </div>
+        <div className="mt-6 grid gap-3 md:grid-cols-2 xl:grid-cols-3">
+          {(faqsAbertas ? allFaqs : allFaqs.slice(0, faqsShown)).map(([q, a]) => (
+            <details key={q} className="group rounded-md border border-border bg-card px-4 py-2 text-sm">
+              <summary className="flex cursor-pointer list-none items-center justify-between">{q}<Plus className="h-4 w-4 transition group-open:rotate-45" /></summary>
+              <p className="mt-2 text-muted-foreground">{a}</p>
+            </details>
+          ))}
+        </div>
+        {allFaqs.length > faqsShown && (
+          <div className="mt-6 flex justify-center">
+            <button
+              type="button"
+              onClick={() => setFaqsAbertas((v) => !v)}
+              className="inline-flex items-center gap-2 rounded-full border border-neon-violet px-6 py-3 text-sm font-semibold text-neon-violet transition hover:bg-neon-violet/10"
+            >
+              {faqsAbertas ? "Mostrar menos dúvidas" : `Ver todas as ${allFaqs.length} dúvidas`}
+              <ChevronDown className={`h-4 w-4 transition ${faqsAbertas ? "rotate-180" : ""}`} />
+            </button>
+          </div>
+        )}
       </section>
       <SiteFooter />
     </div>

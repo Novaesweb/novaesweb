@@ -1,7 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { useState } from "react";
 import { Menu, MessageCircle, X } from "lucide-react";
-import logo from "@/assets/logo.jpg.asset.json";
+import logo from "@/assets/logo-mark.png.asset.json";
 import { whatsLink } from "@/data/plans";
 export const WHATS = whatsLink();
 

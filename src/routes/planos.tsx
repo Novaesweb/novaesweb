@@ -2,12 +2,12 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import {
   Zap, Settings, ShieldCheck, Rocket, Crown, Gem, CheckCircle2, ArrowRight, BarChart3, Headphones,
-  MessageCircle, Globe, Database, Palette, RefreshCw, Search, MessagesSquare, Plus,
+  MessageCircle, Globe, Database, Palette, RefreshCw, Search, Plus,
 } from "lucide-react";
 import portrait from "@/assets/portrait.jpg.asset.json";
 import { SiteHeader, WHATS } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
-import { plans, faqs, comparison, addons, brl, half, whatsLink, planWhatsMsg } from "@/data/plans";
+import { plans, comparison, addons, brl, half, whatsLink, planWhatsMsg } from "@/data/plans";
 
 export const Route = createFileRoute("/planos")({
   head: () => ({
@@ -124,18 +124,6 @@ function Planos() {
               <li>• Falhas críticas de responsabilidade da NovaesWeb não são cobradas.</li>
               <li>• Demandas fora do escopo são orçadas antes da execução.</li>
             </ul>
-          </div>
-        </div>
-
-        <div className="mt-10 grid gap-6 lg:grid-cols-[1fr_3fr]">
-          <div className="flex items-center gap-3"><MessagesSquare className="h-10 w-10 text-neon-pink" /><h2 className="text-2xl font-bold">Dúvidas sobre nossos planos?</h2></div>
-          <div className="grid gap-3 md:grid-cols-2">
-            {faqs.map(([q, a]) => (
-              <details key={q} className="group rounded-md border border-border bg-card px-4 py-2 text-sm">
-                <summary className="flex cursor-pointer list-none items-center justify-between">{q}<Plus className="h-4 w-4 transition group-open:rotate-45" /></summary>
-                <p className="mt-2 text-muted-foreground">{a}</p>
-              </details>
-            ))}
           </div>
         </div>
 
