@@ -21,7 +21,7 @@ export const legalDocs: LegalDoc[] = [
         h: "1. Quem somos",
         p: [
           "A NovaesWeb — Soluções Digitais cria sites, cardápios digitais, sistemas de delivery, identidade visual e conteúdo digital para negócios.",
-          "Todo contato comercial e suporte acontece pelo WhatsApp +55 51 98196-4238.",
+          "Todo contato comercial e suporte acontece pelo WhatsApp +55 51 99118-9293.",
         ],
       },
       {
@@ -126,7 +126,7 @@ export const legalDocs: LegalDoc[] = [
         h: "5. Seus direitos",
         p: [
           "Você pode pedir acesso, correção, exclusão, portabilidade ou revogar o consentimento a qualquer momento.",
-          "Basta chamar no WhatsApp +55 51 98196-4238 e dizer o que precisa. Respondemos sem custo.",
+          "Basta chamar no WhatsApp +55 51 99118-9293 e dizer o que precisa. Respondemos sem custo.",
         ],
       },
       {

@@ -12,4 +12,5 @@
 - [x] Título da seção de dúvidas: "Dúvidas comuns e respostas claras"
 - [x] Tela inicial mostra só 9 dúvidas, com botão para abrir todas
 - [ ] Revisar os textos de "Termos de uso" e "Política de privacidade" (escritos pela IA, aguardando aprovação da cliente)
-- [ ] Enviar novidades para o GitHub quando a cliente pedir
+- [x] Enviar novidades para o GitHub
+- [x] Trocar o número do WhatsApp para 51 99118-9293

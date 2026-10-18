@@ -10,7 +10,7 @@ describe("planos", () => {
     expect(plans.map((p) => half(p.setup))).toEqual([119, 249, 449]);
   });
   it("whatsapp", () => {
-    expect(whatsLink("x")).toBe("https://wa.me/5551981964238?text=x");
+    expect(whatsLink("x")).toBe("https://wa.me/5551991189293?text=x");
     expect(planWhatsMsg(plans[2]!)).toContain("Novaes Premium, com criação de R$ 898,00 e mensalidade de R$ 209,90");
   });
 });

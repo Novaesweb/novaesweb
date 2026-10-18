@@ -1,4 +1,4 @@
-export const WHATS_NUMBER = "5551981964238";
+export const WHATS_NUMBER = "5551991189293";
 export const whatsLink = (msg = "Olá, NovaesWeb! Gostaria de conversar sobre um projeto.") =>
   `https://wa.me/${WHATS_NUMBER}?text=${encodeURIComponent(msg)}`;
 
