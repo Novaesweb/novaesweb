@@ -8,7 +8,8 @@
 - [x] Seção rebatizada "Dúvidas sobre tudo", com perguntas de sites, identidade visual, vídeos e WhatsApp API
 
 ## Pendente
-- [ ] Investigar por que o site não abre corretamente pela URL da Vercel (aguardando a URL usada pela cliente)
+- [x] Investigar Vercel: as fotos ficavam só nos servidores da Lovable; agora vão dentro do repositório (deploy na Vercel precisa ser refeito pra pegar a versão nova)
+- [x] Tela inicial: modelos Olympus Burger e Pet em Casa adicionados, cartões em tamanho médio
 - [x] Tela inicial: seção "Sem complicação" com os 4 passos e os 3 destaques
 - [x] Título da seção de dúvidas: "Dúvidas comuns e respostas claras"
 - [x] Tela inicial mostra só 9 dúvidas, com botão para abrir todas
