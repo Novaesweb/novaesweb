@@ -16,3 +16,5 @@
 - [ ] Revisar os textos de "Termos de uso" e "Política de privacidade" (escritos pela IA, aguardando aprovação da cliente)
 - [x] Enviar novidades para o GitHub
 - [x] Trocar o número do WhatsApp para 51 99118-9293
+- [x] Site preparado para a Vercel: vercel.json na raiz e a build reconhece a Vercel sozinha; as 4 páginas e todas as fotos conferidas na versão construída
+- [ ] Importar o repositório Novaesweb/novaesweb na Vercel (precisa ser feito na conta da cliente) e conferir o endereço novo
