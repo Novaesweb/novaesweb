@@ -21,4 +21,7 @@
 - [x] Trocar o número do WhatsApp para 51 99118-9293
 - [x] Site preparado para a Vercel: vercel.json na raiz e a build reconhece a Vercel sozinha; as 4 páginas e todas as fotos conferidas na versão construída
 - [x] Fotos convertidas para WebP: Criação Visual de 3,9 MB para 541 KB, tela inicial de 656 KB para 321 KB, Planos e Sobre de 782 KB para 174 KB — as 4 páginas conferidas, nenhuma foto quebrada
+- [x] Cadastro de contato "Deixe seu contato e a gente te chama" na tela inicial, guardando na lista de leads
+- [x] Versão de 19/10 enviada ao GitHub (commit 33c850d, 120 arquivos conferidos um a um; readme reescrito explicando o projeto)
 - [ ] Importar o repositório Novaesweb/novaesweb na Vercel (precisa ser feito na conta da cliente) e conferir o endereço novo
+- [ ] Passar as duas chaves do backend para a Vercel (Settings → Environment Variables) para o formulário de contato funcionar lá
