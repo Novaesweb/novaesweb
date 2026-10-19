@@ -6,17 +6,17 @@ import {
   Globe, Palette, Zap, Headphones, ArrowRight, Box, Users, Rocket, ChevronRight, MessageCircle,
   MessagesSquare, Plus, Smartphone, TrendingUp, ShieldCheck, ChevronDown, Star, Quote,
 } from "lucide-react";
-import portrait from "@/assets/portrait-wide.jpg";
+import portrait from "@/assets/portrait-wide.webp";
 import s0 from "@/assets/s0.jpg";
 import s1 from "@/assets/s1.jpg";
 import s2 from "@/assets/s2.jpg";
 import s3 from "@/assets/s3.jpg";
 import s4 from "@/assets/s4.jpg";
-import mBurger from "@/assets/modelo-burge-house.jpg";
-import mAcai from "@/assets/modelo-a-a-royal-two.jpg";
+import mBurger from "@/assets/modelo-burge-house.webp";
+import mAcai from "@/assets/modelo-a-a-royal-two.webp";
 import mFogo from "@/assets/modelo-fogo-na-brasa.jpg";
-import mOlympus from "@/assets/modelo-olympus-burger.jpg";
-import mPet from "@/assets/modelo-pet-em-casa.jpg";
+import mOlympus from "@/assets/modelo-olympus-burger.webp";
+import mPet from "@/assets/modelo-pet-em-casa.webp";
 
 const modelos = [
   { nome: "Burger House", nicho: "Hamburgueria · Delivery", url: "https://burge-house.vercel.app/", img: mBurger, d: "Cardápio digital, carrinho, checkout e acompanhamento do pedido, com painel para o dono." },

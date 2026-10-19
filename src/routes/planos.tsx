@@ -4,7 +4,7 @@ import {
   Zap, Settings, ShieldCheck, Rocket, Crown, Gem, CheckCircle2, ArrowRight, BarChart3, Headphones,
   MessageCircle, Globe, Database, Palette, RefreshCw, Search, Plus,
 } from "lucide-react";
-import portrait from "@/assets/portrait.jpg";
+import portrait from "@/assets/portrait.webp";
 import { SiteHeader, WHATS } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { plans, comparison, addons, brl, half, whatsLink, planWhatsMsg } from "@/data/plans";

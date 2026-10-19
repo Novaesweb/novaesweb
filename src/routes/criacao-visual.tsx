@@ -4,11 +4,11 @@ import { ArrowRight, MessageCircle, Sparkles, Shirt, Image, Store, CheckCircle2,
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { whatsLink, videoPacks, packWhatsMsg, brl } from "@/data/plans";
-import portrait from "@/assets/portrait.jpg";
-import a1 from "@/assets/amb1.jpg";
-import a2 from "@/assets/amb2.jpg";
-import a3 from "@/assets/amb3.jpg";
-import a4 from "@/assets/amb4.jpg";
+import portrait from "@/assets/portrait.webp";
+import a1 from "@/assets/amb1.webp";
+import a2 from "@/assets/amb2.webp";
+import a3 from "@/assets/amb3.webp";
+import a4 from "@/assets/amb4.webp";
 
 export const Route = createFileRoute("/criacao-visual")({
   head: () => ({

@@ -6,7 +6,7 @@ import {
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { whatsLink } from "@/data/plans";
-import portrait from "@/assets/portrait.jpg";
+import portrait from "@/assets/portrait.webp";
 
 export const Route = createFileRoute("/sobre")({
   head: () => ({

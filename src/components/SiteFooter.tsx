@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { ArrowRight, MessageCircle, X } from "lucide-react";
-import apiArt from "@/assets/api-whatsapp.png";
+import apiArt from "@/assets/api-whatsapp.webp";
 import { legalDocs, type LegalDoc } from "@/data/legal";
 import { whatsLink } from "@/data/plans";
 

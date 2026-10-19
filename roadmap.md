@@ -15,6 +15,10 @@
 - [x] Tela inicial mostra só 9 dúvidas, com botão para abrir todas
 - [ ] Revisar os textos de "Termos de uso" e "Política de privacidade" (escritos pela IA, aguardando aprovação da cliente)
 - [x] Enviar novidades para o GitHub
+- [x] Tela inicial: foto ampla da Novaes aparecendo inteira no computador e abaixo do texto no celular
+- [x] Botão flutuante "Fale conosco" no canto de todas as páginas + seção de depoimentos na tela inicial
+- [x] Versão de 19/10 enviada ao GitHub (commit 60794b6, 125 arquivos conferidos um a um)
 - [x] Trocar o número do WhatsApp para 51 99118-9293
 - [x] Site preparado para a Vercel: vercel.json na raiz e a build reconhece a Vercel sozinha; as 4 páginas e todas as fotos conferidas na versão construída
+- [x] Fotos convertidas para WebP: Criação Visual de 3,9 MB para 541 KB, tela inicial de 656 KB para 321 KB, Planos e Sobre de 782 KB para 174 KB — as 4 páginas conferidas, nenhuma foto quebrada
 - [ ] Importar o repositório Novaesweb/novaesweb na Vercel (precisa ser feito na conta da cliente) e conferir o endereço novo
