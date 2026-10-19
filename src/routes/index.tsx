@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
+import { LeadForm } from "@/components/LeadForm";
 import {
   Globe, Palette, Zap, Headphones, ArrowRight, Box, Users, Rocket, ChevronRight, MessageCircle,
   MessagesSquare, Plus, Smartphone, TrendingUp, ShieldCheck, ChevronDown, Star, Quote,
@@ -242,6 +243,16 @@ function Index() {
           </a>
         </div>
       </section>
+
+      <section id="cadastro" className="mx-auto max-w-[1800px] px-4 pb-14 sm:px-8 xl:px-14">
+        <div className="mx-auto max-w-3xl rounded-3xl border border-neon-violet/30 bg-card/60 p-6 shadow-neon sm:p-10">
+          <p className="text-sm font-semibold tracking-widest text-neon-pink">FALE COM A GENTE</p>
+          <h2 className="mt-2 text-2xl font-bold sm:text-3xl">Deixe seu contato e a gente te chama</h2>
+          <p className="mt-2 mb-6 text-muted-foreground">Preencha rapidinho e retornamos pelo WhatsApp.</p>
+          <LeadForm />
+        </div>
+      </section>
+
 
       <section className="mx-auto max-w-[1800px] px-4 pb-14 sm:px-8 xl:px-14">
         <div className="flex flex-wrap items-center justify-between gap-4">
