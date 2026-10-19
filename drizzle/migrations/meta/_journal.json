@@ -1,13 +1,1 @@
-{
-  "version": "7",
-  "dialect": "postgresql",
-  "entries": [
-    {
-      "idx": 0,
-      "version": "7",
-      "when": 1792401558340,
-      "tag": "0000_migration",
-      "breakpoints": true
-    }
-  ]
-}
+ewogICJ2ZXJzaW9uIjogIjciLAogICJkaWFsZWN0IjogInBvc3RncmVzcWwiLAogICJlbnRyaWVzIjogWwogICAgewogICAgICAiaWR4IjogMCwKICAgICAgInZlcnNpb24iOiAiNyIsCiAgICAgICJ3aGVuIjogMTc5MjQwMTU1ODM0MCwKICAgICAgInRhZyI6ICIwMDAwX21pZ3JhdGlvbiIsCiAgICAgICJicmVha3BvaW50cyI6IHRydWUKICAgIH0KICBdCn0K
