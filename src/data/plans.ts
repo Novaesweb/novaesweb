@@ -1,1 +1,139 @@
-ZXhwb3J0IGNvbnN0IFdIQVRTX05VTUJFUiA9ICI1NTUxOTkxMTg5MjkzIjsKZXhwb3J0IGNvbnN0IHdoYXRzTGluayA9IChtc2cgPSAiT2zDoSwgTm92YWVzV2ViISBHb3N0YXJpYSBkZSBjb252ZXJzYXIgc29icmUgdW0gcHJvamV0by4iKSA9PgogIGBodHRwczovL3dhLm1lLyR7V0hBVFNfTlVNQkVSfT90ZXh0PSR7ZW5jb2RlVVJJQ29tcG9uZW50KG1zZyl9YDsKCmV4cG9ydCBjb25zdCBicmwgPSAodjogbnVtYmVyKSA9PiB2LnRvTG9jYWxlU3RyaW5nKCJwdC1CUiIsIHsgbWluaW11bUZyYWN0aW9uRGlnaXRzOiAyLCBtYXhpbXVtRnJhY3Rpb25EaWdpdHM6IDIgfSk7CgpleHBvcnQgdHlwZSBQbGFuSWQgPSAic3RhcnQiIHwgImJ1c2luZXNzIiB8ICJwcmVtaXVtIjsKCmV4cG9ydCBjb25zdCBwbGFucyA9IFsKICB7CiAgICBpZDogInN0YXJ0IiBhcyBQbGFuSWQsIG5hbWU6ICJOT1ZBRVMgU1RBUlQiLCBsYWJlbDogIk5vdmFlcyBTdGFydCIsIHRhZzogIlN1YSBlbXByZXNhIG5vIGRpZ2l0YWwuIiwKICAgIHNldHVwOiAyMzgsIG1vbnRobHk6IDU5LjksIGRlYWRsaW5lOiAiMiBhIDQgZGlhcyDDunRlaXMiLAogICAgZGVzYzogIkxhbmRpbmcgcGFnZSBwZXJzb25hbGl6YWRhIHBhcmEgYXByZXNlbnRhciBzdWEgZW1wcmVzYSBlIHJlY2ViZXIgY29udGF0b3MgcGVsbyBXaGF0c0FwcC4iLAogICAgaXRlbXM6IFsiTGFuZGluZyBwYWdlIHBlcnNvbmFsaXphZGEiLCAiTG9nbywgYmFubmVyIGUgaWRlbnRpZGFkZSB2aXN1YWwiLCAiUHJvZHV0b3Mvc2VydmnDp29zIGNvbSBmb3RvcyBlIHByZcOnb3MgZml4b3MiLCAiSG9yw6FyaW8sIGVuZGVyZcOnbyBlIGxvY2FsaXphw6fDo28iLCAiTGlua3MgcGFyYSByZWRlcyBzb2NpYWlzIiwgIkJvdMOjbyBkZSBXaGF0c0FwcCBjb20gbWVuc2FnZW0gcHJvbnRhIiwgIkFkYXB0YWRvIHBhcmEgY2VsdWxhciwgdGFibGV0IGUgY29tcHV0YWRvciIsICJIb3NwZWRhZ2VtLCBtYW51dGVuw6fDo28gZSBzdXBvcnRlIiwgIjEgYWx0ZXJhw6fDo28gc2ltcGxlcyBkZSBjb250ZcO6ZG8gcG9yIG3DqnMiXSwKICAgIGV4Y2x1ZGVzOiAiU2VtIHBhaW5lbCBhZG1pbmlzdHJhdGl2bywgY2FycmluaG8sIGNoZWNrb3V0IG91IHJlZ2lzdHJvIGRlIHBlZGlkb3MuIiwKICB9LAogIHsKICAgIGlkOiAiYnVzaW5lc3MiIGFzIFBsYW5JZCwgbmFtZTogIk5PVkFFUyBCVVNJTkVTUyIsIGxhYmVsOiAiTm92YWVzIEJ1c2luZXNzIiwgdGFnOiAiU2V1IGRlbGl2ZXJ5IGNvbSBhdXRvbm9taWEuIiwgcG9wdWxhcjogdHJ1ZSwKICAgIHNldHVwOiA0OTgsIG1vbnRobHk6IDEwOS45LCBkZWFkbGluZTogIjUgYSA4IGRpYXMgw7p0ZWlzIiwKICAgIGRlc2M6ICJDYXJkw6FwaW8gZGlnaXRhbCBjb20gY2FycmluaG8sIGNoZWNrb3V0IGUgcGFpbmVsIHNpbXBsaWZpY2FkbyBwYXJhIGdlcmVuY2lhciBwZWRpZG9zIGUgcHJvZHV0b3MuIiwKICAgIGl0ZW1zOiBbIlR1ZG8gcXVlIGZvciBhcGxpY8OhdmVsIGRvIFN0YXJ0IiwgIkNhcmTDoXBpbyBkaWdpdGFsIGRpbsOibWljbyIsICJDYXJyaW5obyBlIGNoZWNrb3V0IiwgIkNFUCBhdXRvbcOhdGljbyBlIGRhZG9zIHNhbHZvcyBkbyBjbGllbnRlIiwgIlBpeCwgZGluaGVpcm8gZSBjYXJ0w6NvIG5hIGVudHJlZ2EiLCAiQWNvbXBhbmhhbWVudG8gZG8gcGVkaWRvIHBlbG8gc2l0ZSIsICJQYWluZWwgc2ltcGxpZmljYWRvOiBwZWRpZG9zLCBwcm9kdXRvcywgcHJlw6dvcyBlIGNhdGVnb3JpYXMiLCAiQWJyaXIvZmVjaGFyIGxvamEsIGhvcsOhcmlvIGUgdGF4YSBkZSBlbnRyZWdhIl0sCiAgICBleGNsdWRlczogIk7Do28gaW5jbHVpIGZpbmFuY2Vpcm8gYXZhbsOnYWRvLCBmdW5jaW9uw6FyaW9zLCBtYXJrZXRpbmcsIGN1cG9ucyBlIFdoYXRzQXBwIGF1dG9tw6F0aWNvIChkaXNwb27DrXZlaXMgY29tbyBhZGljaW9uYWlzKS4iLAogIH0sCiAgewogICAgaWQ6ICJwcmVtaXVtIiBhcyBQbGFuSWQsIG5hbWU6ICJOT1ZBRVMgUFJFTUlVTSIsIGxhYmVsOiAiTm92YWVzIFByZW1pdW0iLCB0YWc6ICJTdWEgb3BlcmHDp8OjbyBpbnRlaXJhIGVtIHVtYSBwbGF0YWZvcm1hLiIsCiAgICBzZXR1cDogODk4LCBtb250aGx5OiAyMDkuOSwgZGVhZGxpbmU6ICIxMCBhIDE1IGRpYXMgw7p0ZWlzIiwKICAgIGRlc2M6ICJQbGF0YWZvcm1hIGNvbXBsZXRhIG5vIHBhZHLDo28gQnVyZ2VyIEhvdXNlLCBjb20gYXV0b25vbWlhIHRvdGFsIHBhcmEgYWRtaW5pc3RyYXIgc3VhIGxvamEuIiwKICAgIGl0ZW1zOiBbIlR1ZG8gZG8gQnVzaW5lc3MiLCAiQ29tYm9zIGUgcGVyc29uYWxpemHDp8OjbyBkZSBwcm9kdXRvcyIsICJDdXBvbnMgZSBwcm9tb8Onw7VlcyIsICJBdmFsaWHDp8O1ZXMgZGEgY29taWRhIGUgZGEgZW50cmVnYSIsICJQYWluZWwgY29tcGxldG8gY29tIGRhc2hib2FyZCBlIHJlbGF0w7NyaW9zIiwgIkZpbmFuY2Vpcm8gZSBmZWNoYW1lbnRvIGRlIGNhaXhhIiwgIkVxdWlwZSwgcGVybWlzc8O1ZXMgZSBtYXJrZXRpbmciLCAiSW1wcmVzc8OjbyBkZSBjb21hbmRhcyBlIHBlZGlkb3MgbWFudWFpcyJdLAogICAgZXhjbHVkZXM6ICJOw6NvIGluY2x1aSBXaGF0c0FwcCBhdXRvbcOhdGljbywgdGFyaWZhcyBkYSBNZXRhLCBkb23DrW5pbyBwcsOzcHJpbyBlIGludGVncmHDp8O1ZXMgcGVyc29uYWxpemFkYXMuIiwKICB9LApdOwoKZXhwb3J0IGNvbnN0IGhhbGYgPSAodjogbnVtYmVyKSA9PiB2IC8gMjsKZXhwb3J0IGNvbnN0IHBsYW5XaGF0c01zZyA9IChwOiAodHlwZW9mIHBsYW5zKVtudW1iZXJdKSA9PgogIGBPbMOhLCBOb3ZhZXNXZWIhIFRlbmhvIGludGVyZXNzZSBubyAke3AubGFiZWx9LCBjb20gY3JpYcOnw6NvIGRlIFIkICR7YnJsKHAuc2V0dXApfSBlIG1lbnNhbGlkYWRlIGRlIFIkICR7YnJsKHAubW9udGhseSl9LiBHb3N0YXJpYSBkZSBjb252ZXJzYXIgc29icmUgYSBjb250cmF0YcOnw6NvLmA7CgovLyB2YWx1ZSBwZXIgcGxhbjogdHJ1ZSA9IGluY2x1w61kbywgZmFsc2UgPSBuw6NvLCBzdHJpbmcgPSBvYnNlcnZhw6fDo28KZXhwb3J0IGNvbnN0IGNvbXBhcmlzb246IFtzdHJpbmcsIGJvb2xlYW4gfCBzdHJpbmcsIGJvb2xlYW4gfCBzdHJpbmcsIGJvb2xlYW4gfCBzdHJpbmddW10gPSBbCiAgWyJMYW5kaW5nIHBhZ2UiLCB0cnVlLCB0cnVlLCB0cnVlXSwKICBbIkNhcmTDoXBpbyIsICJFc3TDoXRpY28iLCAiRGluw6JtaWNvIiwgIkRpbsOibWljbyJdLAogIFsiUHJvZHV0b3MiLCB0cnVlLCB0cnVlLCB0cnVlXSwKICBbIkNhdGVnb3JpYXMiLCB0cnVlLCB0cnVlLCB0cnVlXSwKICBbIkNhcnJpbmhvIiwgZmFsc2UsIHRydWUsIHRydWVdLAogIFsiQ2hlY2tvdXQiLCBmYWxzZSwgdHJ1ZSwgdHJ1ZV0sCiAgWyJQZWRpZG9zIiwgZmFsc2UsIHRydWUsIHRydWVdLAogIFsiQWNvbXBhbmhhbWVudG8iLCBmYWxzZSwgdHJ1ZSwgdHJ1ZV0sCiAgWyJQYWluZWwgYWRtaW5pc3RyYXRpdm8iLCAiU2VtIHBhaW5lbCIsICJTaW1wbGlmaWNhZG8iLCAiQ29tcGxldG8iXSwKICBbIkVkacOnw6NvIGRlIHByb2R1dG9zIiwgZmFsc2UsIHRydWUsIHRydWVdLAogIFsiRWRpw6fDo28gZGUgcHJlw6dvcyIsIGZhbHNlLCB0cnVlLCB0cnVlXSwKICBbIkdlc3TDo28gZGUgcGVkaWRvcyIsIGZhbHNlLCB0cnVlLCB0cnVlXSwKICBbIkZpbmFuY2Vpcm8iLCBmYWxzZSwgIkFkaWNpb25hbCIsIHRydWVdLAogIFsiRnVuY2lvbsOhcmlvcyIsIGZhbHNlLCAiQWRpY2lvbmFsIiwgdHJ1ZV0sCiAgWyJNYXJrZXRpbmciLCBmYWxzZSwgIkFkaWNpb25hbCIsIHRydWVdLAogIFsiQ3Vwb25zIiwgZmFsc2UsICJBZGljaW9uYWwiLCB0cnVlXSwKICBbIkNvbWJvcyIsIGZhbHNlLCBmYWxzZSwgdHJ1ZV0sCiAgWyJSZWxhdMOzcmlvcyIsIGZhbHNlLCAiQWRpY2lvbmFsIiwgdHJ1ZV0sCiAgWyJBdmFsaWHDp8O1ZXMiLCBmYWxzZSwgZmFsc2UsIHRydWVdLAogIFsiSW1wcmVzc8OjbyIsIGZhbHNlLCBmYWxzZSwgdHJ1ZV0sCiAgWyJQZWRpZG9zIG1hbnVhaXMiLCBmYWxzZSwgZmFsc2UsIHRydWVdLAogIFsiV2hhdHNBcHAgYXV0b23DoXRpY28iLCBmYWxzZSwgIkFkaWNpb25hbCIsICJBZGljaW9uYWwiXSwKICBbIlN1cG9ydGUiLCB0cnVlLCB0cnVlLCB0cnVlXSwKXTsKCmV4cG9ydCBjb25zdCBhZGRvbnM6IFtzdHJpbmcsIHN0cmluZ11bXSA9IFsKICBbIk5vdGlmaWNhw6fDtWVzIGF1dG9tw6F0aWNhcyBXaGF0c0FwcCIsICJSJCAyNS9tw6pzIl0sCiAgWyJDb25maWd1cmHDp8OjbyBpbmljaWFsIFdoYXRzQXBwIENsb3VkIEFQSSIsICJSJCAxMDAgKMO6bmljbykiXSwKICBbIkN1cG9ucyBlIHByb21vw6fDtWVzIChCdXNpbmVzcykiLCAiUiQgMTUvbcOqcyJdLAogIFsiRmluYW5jZWlybyBhdmFuw6dhZG8gKEJ1c2luZXNzKSIsICJSJCAzMC9tw6pzIl0sCiAgWyJHZXN0w6NvIGRlIGZ1bmNpb27DoXJpb3MgKEJ1c2luZXNzKSIsICJSJCAyMC9tw6pzIl0sCiAgWyJSZWxhdMOzcmlvcyBhdmFuw6dhZG9zIChCdXNpbmVzcykiLCAiUiQgMjAvbcOqcyJdLAogIFsiTWFya2V0aW5nIChCdXNpbmVzcykiLCAiUiQgMzUvbcOqcyJdLAogIFsiRG9tw61uaW8gcHLDs3ByaW8iLCAiUiQgNTAgKyByZWdpc3RybyJdLAogIFsiVHJlaW5hbWVudG8gYWRpY2lvbmFsIiwgIlIkIDcwL2hvcmEiXSwKICBbIkFsdGVyYcOnw6NvIHNpbXBsZXMgZm9yYSBkYSBmcmFucXVpYSIsICJSJCAxNSJdLAogIFsiVHJvY2EgZGUgYmFubmVyIiwgIlIkIDI1Il0sCiAgWyJDYWRhc3RybyBkZSBhdMOpIDEwIHByb2R1dG9zIiwgIlIkIDM1Il0sCiAgWyJBdGVuZGltZW50byBleHRyYW9yZGluw6FyaW8iLCAiUiQgNTAiXSwKICBbIkZ1bmNpb25hbGlkYWRlcyBwZXJzb25hbGl6YWRhcyIsICJTb2Igb3LDp2FtZW50byJdLAogIFsiSW50ZWdyYcOnw7VlcyBleHRlcm5hcyIsICJTb2Igb3LDp2FtZW50byJdLAogIFsiSW1wcmVzc8OjbyBhdXRvbcOhdGljYSBlc3BlY2lhbCIsICJTb2Igb3LDp2FtZW50byJdLApdOwoKY29uc3QgQ09OVFJBVE8gPSAiQXMgY29uZGnDp8O1ZXMgc8OjbyBhcHJlc2VudGFkYXMgbmEgcHJvcG9zdGEgb3Ugbm8gY29udHJhdG8uIjsKZXhwb3J0IGNvbnN0IGZhcXM6IFtzdHJpbmcsIHN0cmluZ11bXSA9IFsKICBbIlByZWNpc28gcGFnYXIgYSBjcmlhw6fDo28gZSBhIG1lbnNhbGlkYWRlPyIsICJTaW0uIEEgY3JpYcOnw6NvIMOpIHVtYSBjb2JyYW7Dp2Egw7puaWNhIGUgYSBtZW5zYWxpZGFkZSDDqSByZWNvcnJlbnRlLiBBIG1lbnNhbGlkYWRlIG7Do28gw6kgcGFyY2VsYSBkYSBjcmlhw6fDo28uIl0sCiAgWyJDb21vIGZ1bmNpb25hIGEgZW50cmFkYSBkZSA1MCU/IiwgIlZvY8OqIHBhZ2EgNTAlIGRvIHZhbG9yIGRhIGNyaWHDp8OjbyBwYXJhIGluaWNpYXJtb3MgbyBwcm9qZXRvLiJdLAogIFsiUXVhbmRvIHBhZ28gbyByZXN0YW50ZT8iLCAiT3Mgb3V0cm9zIDUwJSBkYSBjcmlhw6fDo28gc8OjbyBwYWdvcyBuYSBlbnRyZWdhLiJdLAogIFsiUXVhbmRvIGNvbWXDp2EgYSBtZW5zYWxpZGFkZT8iLCAiQSBtZW5zYWxpZGFkZSBjb21lw6dhIG5hIGF0aXZhw6fDo28gZG8gc2l0ZS4iXSwKICBbIlF1YW50byB0ZW1wbyBkZW1vcmEgYSBjcmlhw6fDo28/IiwgIlN0YXJ0OiAyIGEgNCBkaWFzIMO6dGVpcy4gQnVzaW5lc3M6IDUgYSA4LiBQcmVtaXVtOiAxMCBhIDE1LiBPcyBwcmF6b3Mgc8OjbyBlc3RpbWFkb3MgZSBjb21lw6dhbSBhcMOzcyBvIHJlY2ViaW1lbnRvIGRvcyBtYXRlcmlhaXMgZSBpbmZvcm1hw6fDtWVzLiJdLAogIFsiUG9zc28gZWRpdGFyIG1ldSBzaXRlPyIsICJObyBTdGFydCwgYXMgYWx0ZXJhw6fDtWVzIHPDo28gc29saWNpdGFkYXMgw6AgTm92YWVzV2ViLiBObyBCdXNpbmVzcyBlIG5vIFByZW1pdW0sIHZvY8OqIGVkaXRhIHByb2R1dG9zLCBwcmXDp29zIGUgY29uZmlndXJhw6fDtWVzIHBlbG8gcGFpbmVsLiJdLAogIFsiTyBTdGFydCBwb3NzdWkgcGFpbmVsPyIsICJOw6NvLiBPIFN0YXJ0IG7Do28gcG9zc3VpIHBhaW5lbCBhZG1pbmlzdHJhdGl2byBuZW0gbG9naW4gZG8gcHJvcHJpZXTDoXJpby4iXSwKICBbIk8gQnVzaW5lc3MgcG9zc3VpIHBhaW5lbD8iLCAiU2ltLCB1bSBwYWluZWwgc2ltcGxpZmljYWRvIHBhcmEgcGVkaWRvcywgcHJvZHV0b3MsIGNhdGVnb3JpYXMgZSBjb25maWd1cmHDp8O1ZXMgYsOhc2ljYXMgZGEgbG9qYS4iXSwKICBbIk8gUHJlbWl1bSBwb3NzdWkgdG9kYXMgYXMgZmVycmFtZW50YXM/IiwgIk8gUHJlbWl1bSBpbmNsdWkgbyBwYWluZWwgY29tcGxldG8gY29tIHRvZG9zIG9zIG3Ds2R1bG9zIHByw7NwcmlvcyBjb25jbHXDrWRvcyBlIGhvbW9sb2dhZG9zLiBXaGF0c0FwcCBhdXRvbcOhdGljbywgZG9tw61uaW8gZSBpbnRlZ3Jhw6fDtWVzIHBlcnNvbmFsaXphZGFzIHPDo28gY29udHJhdGFkb3Mgw6AgcGFydGUuIl0sCiAgWyJPIFdoYXRzQXBwIGF1dG9tw6F0aWNvIGVzdMOhIGluY2x1w61kbz8iLCAiTsOjby4gw4kgdW0gYWRpY2lvbmFsIGRlIFIkIDI1L23DqnMsIG1haXMgUiQgMTAwIGRlIGNvbmZpZ3VyYcOnw6NvIGluaWNpYWwuIFRhcmlmYXMgZGEgTWV0YSBuw6NvIGVzdMOjbyBpbmNsdcOtZGFzLiBPIGNsaWVudGUgYWNvbXBhbmhhIG8gcGVkaWRvIHBlbG8gc2l0ZSBtZXNtbyBzZW0gZXNzZSBhZGljaW9uYWwuIl0sCiAgWyJQb3NzbyBjb250cmF0YXIgYWRpY2lvbmFpcz8iLCAiU2ltLCBzZW1wcmUgcXVlIGZvcmVtIGNvbXBhdMOtdmVpcyBjb20gbyBzZXUgcGxhbm8uIl0sCiAgWyJQb3NzbyBtdWRhciBkZSBwbGFubz8iLCBDT05UUkFUT10sCiAgWyJQb3NzbyB1c2FyIG1ldSBkb23DrW5pbz8iLCAiU2ltLiBBIGNvbmZpZ3VyYcOnw6NvIGN1c3RhIFIkIDUwLCBtYWlzIG8gY3VzdG8gZG8gcmVnaXN0cm8gZG8gZG9tw61uaW8uIl0sCiAgWyJRdWVtIGN1aWRhIGRhIGhvc3BlZGFnZW0/IiwgIkEgTm92YWVzV2ViLiBBIGhvc3BlZGFnZW0gZXN0w6EgaW5jbHXDrWRhIG5hIG1lbnNhbGlkYWRlLiJdLAogIFsiQ29tbyBmdW5jaW9uYSBvIHN1cG9ydGU/IiwgIlNlZ3VuZGEgYSBzZXh0YS1mZWlyYSwgZGFzIDloIMOgcyAxOGggKGhvcsOhcmlvIGRlIEJyYXPDrWxpYSkuIE7Do28gb2ZlcmVjZW1vcyBhdGVuZGltZW50byBodW1hbm8gMjQgaG9yYXMuIl0sCiAgWyJQb3NzbyBwZWRpciBhdGVuZGltZW50byBmb3JhIGRvIGhvcsOhcmlvPyIsICJTaW0sIG1lZGlhbnRlIGRpc3BvbmliaWxpZGFkZTogUiQgNTAgcG9yIGF0ZW5kaW1lbnRvIGRlIGF0w6kgMzAgbWludXRvcy4gRmFsaGFzIGNyw610aWNhcyBkZSByZXNwb25zYWJpbGlkYWRlIGRhIE5vdmFlc1dlYiBuw6NvIHPDo28gY29icmFkYXMuIl0sCiAgWyJRdWFudG8gY3VzdGFtIGFsdGVyYcOnw7Vlcz8iLCAiTyBTdGFydCBpbmNsdWkgMSBhbHRlcmHDp8OjbyBzaW1wbGVzIHBvciBtw6pzLiBBbHRlcmHDp8O1ZXMgc2ltcGxlcyBleHRyYXMgY3VzdGFtIFIkIDE1OyB0cm9jYSBkZSBiYW5uZXIsIFIkIDI1LiJdLAogIFsiQ29tbyBmdW5jaW9uYSBvIGNhbmNlbGFtZW50bz8iLCBDT05UUkFUT10sCl07CgpleHBvcnQgdHlwZSBQYWNrSWQgPSAiZGl2dWxnYWNhbyIgfCAiYXByZXNlbnRhY2FvIiB8ICJjb250ZXVkbyI7CgpleHBvcnQgY29uc3QgdmlkZW9QYWNrcyA9IFsKICB7CiAgICBpZDogImRpdnVsZ2FjYW8iIGFzIFBhY2tJZCwKICAgIG5hbWU6ICJEaXZ1bGdhw6fDo28gUsOhcGlkYSIsCiAgICB0YWc6ICJWw6FyaWFzIGRpdnVsZ2HDp8O1ZXMgY3VydGFzIHBhcmEgbWFudGVyIGEgbG9qYSBzZW1wcmUgZW0gbW92aW1lbnRvLiIsCiAgICB2aWRlb3M6ICIyIHbDrWRlb3MgZGUgMTBzIiwKICAgIGltYWdlczogIjMgaW1hZ2VucyIsCiAgICBwcmljZTogODksCiAgICBzYXZpbmdzOiA5LAogIH0sCiAgewogICAgaWQ6ICJhcHJlc2VudGFjYW8iIGFzIFBhY2tJZCwKICAgIG5hbWU6ICJBcHJlc2VudGHDp8OjbyBkYSBMb2phIiwKICAgIHRhZzogIlVtYSBhcHJlc2VudGHDp8OjbyBtYWlzIGNvbXBsZXRhIGRvIHNldSBuZWfDs2Npby4iLAogICAgdmlkZW9zOiAiMSB2w61kZW8gZGUgMzBzIiwKICAgIGltYWdlczogIjMgaW1hZ2VucyIsCiAgICBwcmljZTogODksCiAgICBzYXZpbmdzOiA3LAogIH0sCiAgewogICAgaWQ6ICJjb250ZXVkbyIgYXMgUGFja0lkLAogICAgbmFtZTogIk1haXMgQ29udGXDumRvIiwKICAgIHRhZzogIk1haXMgbWF0ZXJpYWwgcHJvbnRvIHBhcmEgYXMgcmVkZXMgc29jaWFpcy4iLAogICAgdmlkZW9zOiAiMSB2w61kZW8gZGUgMzBzIiwKICAgIGltYWdlczogIjQgaW1hZ2VucyIsCiAgICBwcmljZTogMTA5LAogICAgc2F2aW5nczogOSwKICB9LApdOwoKZXhwb3J0IGNvbnN0IHBhY2tXaGF0c01zZyA9IChwOiAodHlwZW9mIHZpZGVvUGFja3MpW251bWJlcl0pID0+CiAgYE9sw6EsIE5vdmFlc1dlYiEgVGVuaG8gaW50ZXJlc3NlIG5vIHBhY290ZSAke3AubmFtZX06ICR7cC52aWRlb3N9ICsgJHtwLmltYWdlc30sIHBvciBSJCAke2JybChwLnByaWNlKX0uIEdvc3RhcmlhIGRlIGNvbnZlcnNhci5gOwoK
+export const WHATS_NUMBER = "5551991189293";
+export const whatsLink = (msg = "Olá, NovaesWeb! Gostaria de conversar sobre um projeto.") =>
+  `https://wa.me/${WHATS_NUMBER}?text=${encodeURIComponent(msg)}`;
+
+export const brl = (v: number) => v.toLocaleString("pt-BR", { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+
+export type PlanId = "start" | "business" | "premium";
+
+export const plans = [
+  {
+    id: "start" as PlanId, name: "NOVAES START", label: "Novaes Start", tag: "Sua empresa no digital.",
+    setup: 238, monthly: 59.9, deadline: "2 a 4 dias úteis",
+    desc: "Landing page personalizada para apresentar sua empresa e receber contatos pelo WhatsApp.",
+    items: ["Landing page personalizada", "Logo, banner e identidade visual", "Produtos/serviços com fotos e preços fixos", "Horário, endereço e localização", "Links para redes sociais", "Botão de WhatsApp com mensagem pronta", "Adaptado para celular, tablet e computador", "Hospedagem, manutenção e suporte", "1 alteração simples de conteúdo por mês"],
+    excludes: "Sem painel administrativo, carrinho, checkout ou registro de pedidos.",
+  },
+  {
+    id: "business" as PlanId, name: "NOVAES BUSINESS", label: "Novaes Business", tag: "Seu delivery com autonomia.", popular: true,
+    setup: 498, monthly: 109.9, deadline: "5 a 8 dias úteis",
+    desc: "Cardápio digital com carrinho, checkout e painel simplificado para gerenciar pedidos e produtos.",
+    items: ["Tudo que for aplicável do Start", "Cardápio digital dinâmico", "Carrinho e checkout", "CEP automático e dados salvos do cliente", "Pix, dinheiro e cartão na entrega", "Acompanhamento do pedido pelo site", "Painel simplificado: pedidos, produtos, preços e categorias", "Abrir/fechar loja, horário e taxa de entrega"],
+    excludes: "Não inclui financeiro avançado, funcionários, marketing, cupons e WhatsApp automático (disponíveis como adicionais).",
+  },
+  {
+    id: "premium" as PlanId, name: "NOVAES PREMIUM", label: "Novaes Premium", tag: "Sua operação inteira em uma plataforma.",
+    setup: 898, monthly: 209.9, deadline: "10 a 15 dias úteis",
+    desc: "Plataforma completa no padrão Burger House, com autonomia total para administrar sua loja.",
+    items: ["Tudo do Business", "Combos e personalização de produtos", "Cupons e promoções", "Avaliações da comida e da entrega", "Painel completo com dashboard e relatórios", "Financeiro e fechamento de caixa", "Equipe, permissões e marketing", "Impressão de comandas e pedidos manuais"],
+    excludes: "Não inclui WhatsApp automático, tarifas da Meta, domínio próprio e integrações personalizadas.",
+  },
+];
+
+export const half = (v: number) => v / 2;
+export const planWhatsMsg = (p: (typeof plans)[number]) =>
+  `Olá, NovaesWeb! Tenho interesse no ${p.label}, com criação de R$ ${brl(p.setup)} e mensalidade de R$ ${brl(p.monthly)}. Gostaria de conversar sobre a contratação.`;
+
+// value per plan: true = incluído, false = não, string = observação
+export const comparison: [string, boolean | string, boolean | string, boolean | string][] = [
+  ["Landing page", true, true, true],
+  ["Cardápio", "Estático", "Dinâmico", "Dinâmico"],
+  ["Produtos", true, true, true],
+  ["Categorias", true, true, true],
+  ["Carrinho", false, true, true],
+  ["Checkout", false, true, true],
+  ["Pedidos", false, true, true],
+  ["Acompanhamento", false, true, true],
+  ["Painel administrativo", "Sem painel", "Simplificado", "Completo"],
+  ["Edição de produtos", false, true, true],
+  ["Edição de preços", false, true, true],
+  ["Gestão de pedidos", false, true, true],
+  ["Financeiro", false, "Adicional", true],
+  ["Funcionários", false, "Adicional", true],
+  ["Marketing", false, "Adicional", true],
+  ["Cupons", false, "Adicional", true],
+  ["Combos", false, false, true],
+  ["Relatórios", false, "Adicional", true],
+  ["Avaliações", false, false, true],
+  ["Impressão", false, false, true],
+  ["Pedidos manuais", false, false, true],
+  ["WhatsApp automático", false, "Adicional", "Adicional"],
+  ["Suporte", true, true, true],
+];
+
+export const addons: [string, string][] = [
+  ["Notificações automáticas WhatsApp", "R$ 25/mês"],
+  ["Configuração inicial WhatsApp Cloud API", "R$ 100 (único)"],
+  ["Cupons e promoções (Business)", "R$ 15/mês"],
+  ["Financeiro avançado (Business)", "R$ 30/mês"],
+  ["Gestão de funcionários (Business)", "R$ 20/mês"],
+  ["Relatórios avançados (Business)", "R$ 20/mês"],
+  ["Marketing (Business)", "R$ 35/mês"],
+  ["Domínio próprio", "R$ 50 + registro"],
+  ["Treinamento adicional", "R$ 70/hora"],
+  ["Alteração simples fora da franquia", "R$ 15"],
+  ["Troca de banner", "R$ 25"],
+  ["Cadastro de até 10 produtos", "R$ 35"],
+  ["Atendimento extraordinário", "R$ 50"],
+  ["Funcionalidades personalizadas", "Sob orçamento"],
+  ["Integrações externas", "Sob orçamento"],
+  ["Impressão automática especial", "Sob orçamento"],
+];
+
+const CONTRATO = "As condições são apresentadas na proposta ou no contrato.";
+export const faqs: [string, string][] = [
+  ["Preciso pagar a criação e a mensalidade?", "Sim. A criação é uma cobrança única e a mensalidade é recorrente. A mensalidade não é parcela da criação."],
+  ["Como funciona a entrada de 50%?", "Você paga 50% do valor da criação para iniciarmos o projeto."],
+  ["Quando pago o restante?", "Os outros 50% da criação são pagos na entrega."],
+  ["Quando começa a mensalidade?", "A mensalidade começa na ativação do site."],
+  ["Quanto tempo demora a criação?", "Start: 2 a 4 dias úteis. Business: 5 a 8. Premium: 10 a 15. Os prazos são estimados e começam após o recebimento dos materiais e informações."],
+  ["Posso editar meu site?", "No Start, as alterações são solicitadas à NovaesWeb. No Business e no Premium, você edita produtos, preços e configurações pelo painel."],
+  ["O Start possui painel?", "Não. O Start não possui painel administrativo nem login do proprietário."],
+  ["O Business possui painel?", "Sim, um painel simplificado para pedidos, produtos, categorias e configurações básicas da loja."],
+  ["O Premium possui todas as ferramentas?", "O Premium inclui o painel completo com todos os módulos próprios concluídos e homologados. WhatsApp automático, domínio e integrações personalizadas são contratados à parte."],
+  ["O WhatsApp automático está incluído?", "Não. É um adicional de R$ 25/mês, mais R$ 100 de configuração inicial. Tarifas da Meta não estão incluídas. O cliente acompanha o pedido pelo site mesmo sem esse adicional."],
+  ["Posso contratar adicionais?", "Sim, sempre que forem compatíveis com o seu plano."],
+  ["Posso mudar de plano?", CONTRATO],
+  ["Posso usar meu domínio?", "Sim. A configuração custa R$ 50, mais o custo do registro do domínio."],
+  ["Quem cuida da hospedagem?", "A NovaesWeb. A hospedagem está incluída na mensalidade."],
+  ["Como funciona o suporte?", "Segunda a sexta-feira, das 9h às 18h (horário de Brasília). Não oferecemos atendimento humano 24 horas."],
+  ["Posso pedir atendimento fora do horário?", "Sim, mediante disponibilidade: R$ 50 por atendimento de até 30 minutos. Falhas críticas de responsabilidade da NovaesWeb não são cobradas."],
+  ["Quanto custam alterações?", "O Start inclui 1 alteração simples por mês. Alterações simples extras custam R$ 15; troca de banner, R$ 25."],
+  ["Como funciona o cancelamento?", CONTRATO],
+];
+
+export type PackId = "divulgacao" | "apresentacao" | "conteudo";
+
+export const videoPacks = [
+  {
+    id: "divulgacao" as PackId,
+    name: "Divulgação Rápida",
+    tag: "Várias divulgações curtas para manter a loja sempre em movimento.",
+    videos: "2 vídeos de 10s",
+    images: "3 imagens",
+    price: 89,
+    savings: 9,
+  },
+  {
+    id: "apresentacao" as PackId,
+    name: "Apresentação da Loja",
+    tag: "Uma apresentação mais completa do seu negócio.",
+    videos: "1 vídeo de 30s",
+    images: "3 imagens",
+    price: 89,
+    savings: 7,
+  },
+  {
+    id: "conteudo" as PackId,
+    name: "Mais Conteúdo",
+    tag: "Mais material pronto para as redes sociais.",
+    videos: "1 vídeo de 30s",
+    images: "4 imagens",
+    price: 109,
+    savings: 9,
+  },
+];
+
+export const packWhatsMsg = (p: (typeof videoPacks)[number]) =>
+  `Olá, NovaesWeb! Tenho interesse no pacote ${p.name}: ${p.videos} + ${p.images}, por R$ ${brl(p.price)}. Gostaria de conversar.`;
+
