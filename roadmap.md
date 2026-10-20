@@ -5,6 +5,7 @@
 - [x] Organizar categorias, filtros e detalhes acessíveis na página de Planos.
 - [x] Conferir solicitações por WhatsApp, testes e visualização no celular e computador.
 - [x] Versão de 20/10 enviada ao GitHub (commit 7dc48fd, 120 arquivos conferidos um a um).
+- [x] Correção no envio ao GitHub: os arquivos estavam chegando codificados como texto (causa do "vercel.json inválido"). Reenviados com conteúdo real, commit 244565b, 120 arquivos conferidos byte a byte.
 
 ## Feito nesta rodada
 - [x] Logo nova (emblema neon) no topo de todas as páginas + ícone do site
