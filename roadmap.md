@@ -7,6 +7,13 @@
 - [x] Versão de 20/10 enviada ao GitHub (commit 7dc48fd, 120 arquivos conferidos um a um).
 - [x] Correção no envio ao GitHub: os arquivos estavam chegando codificados como texto (causa do "vercel.json inválido"). Reenviados com conteúdo real, commit 244565b, 120 arquivos conferidos byte a byte.
 
+## Vitrine de adicionais — 20/10
+- [x] Retirar o catálogo completo de adicionais (com preços e botões de solicitação) da página pública de Planos.
+- [x] Nova seção "Seu site começa completo" com só 4 exemplos (Novaes TV, Fideliza, Mesa, Gift), sem preços, e chamada "E isso é só o começo" com botão "Conhecer possibilidades" no WhatsApp.
+- [x] Dados completos dos adicionais preservados em src/data/plans.ts para uso futuro no painel Master e no painel do cliente (nada foi apagado).
+- [x] Testes atualizados (58 passando) e página conferida no computador e no celular, sem rolagem lateral.
+- [ ] Enviar esta versão para o GitHub (cliente ainda não pediu).
+
 ## Feito nesta rodada
 - [x] Logo nova (emblema neon) no topo de todas as páginas + ícone do site
 - [x] Rodapé: arte + aviso de que agora trabalhamos com integração ao WhatsApp

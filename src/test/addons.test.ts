@@ -1,5 +1,6 @@
 import { describe, it, expect } from "vitest";
 import { addons, addonCategories, addonWhatsMsg, whatsLink } from "@/data/plans";
+import { showcaseIds, extrasWhatsMsg } from "@/components/AddonHighlights";
 
 describe("catálogo de adicionais", () => {
   const existing = [
@@ -46,5 +47,25 @@ describe("catálogo de adicionais", () => {
     expect(url.searchParams.get("text")).toContain(`${addon.name} (${addon.price})`);
     if (addon.status === "planning") expect(url.searchParams.get("text")).toContain("em planejamento");
     if (addon.status === "proposal") expect(url.searchParams.get("text")).toContain("valor provisório sujeito à aprovação");
+  });
+});
+
+describe("vitrine pública de adicionais (página /planos)", () => {
+  it("mostra exatamente os 4 exemplos combinados: TV, Fideliza, Mesa e Gift", () => {
+    expect([...showcaseIds].sort()).toEqual(["gift", "loyalty", "tables", "tv"]);
+    for (const id of showcaseIds) {
+      const addon = addons.find((a) => a.id === id);
+      expect(addon?.name).toMatch(/^Novaes (TV|Fideliza|Mesa|Gift)$/);
+    }
+  });
+  it("exemplos exibidos continuam sinalizados como em planejamento, sem preço público", () => {
+    for (const id of showcaseIds) {
+      expect(addons.find((a) => a.id === id)).toMatchObject({ status: "planning", price: "Sob orçamento" });
+    }
+  });
+  it("botão de possibilidades direciona ao WhatsApp falando de funcionalidades adicionais", () => {
+    const url = new URL(whatsLink(extrasWhatsMsg));
+    expect(url.pathname).toBe("/5551991189293");
+    expect(url.searchParams.get("text")).toContain("funcionalidades adicionais");
   });
 });

@@ -7,7 +7,7 @@ import {
 import portrait from "@/assets/portrait.webp";
 import { SiteHeader, WHATS } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
-import { AddonCatalog } from "@/components/AddonCatalog";
+import { AddonHighlights } from "@/components/AddonHighlights";
 import { plans, comparison, brl, half, whatsLink, planWhatsMsg } from "@/data/plans";
 
 export const Route = createFileRoute("/planos")({
@@ -105,7 +105,7 @@ function Planos() {
           </div>
         </details>
 
-        <AddonCatalog />
+        <AddonHighlights />
 
         <div className="mt-6 grid gap-6 lg:grid-cols-2">
           <div className="rounded-2xl border border-border bg-card p-6">
