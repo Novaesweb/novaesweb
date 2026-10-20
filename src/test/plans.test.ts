@@ -1,1 +1,54 @@
-aW1wb3J0IHsgZGVzY3JpYmUsIGl0LCBleHBlY3QgfSBmcm9tICJ2aXRlc3QiOwppbXBvcnQgeyBwbGFucywgaGFsZiwgd2hhdHNMaW5rLCBwbGFuV2hhdHNNc2csIHZpZGVvUGFja3MsIHBhY2tXaGF0c01zZywgZmFxcyB9IGZyb20gIkAvZGF0YS9wbGFucyI7CmltcG9ydCB7IGFsbEZhcXMsIGZhcXNTaG93biB9IGZyb20gIkAvZGF0YS9mYXFzIjsKCmRlc2NyaWJlKCJwbGFub3MiLCAoKSA9PiB7CiAgaXQoInZhbG9yZXMgb2ZpY2lhaXMiLCAoKSA9PiB7CiAgICBleHBlY3QocGxhbnMubWFwKChwKSA9PiBbcC5zZXR1cCwgcC5tb250aGx5XSkpLnRvRXF1YWwoW1syMzgsIDU5LjldLCBbNDk4LCAxMDkuOV0sIFs4OTgsIDIwOS45XV0pOwogIH0pOwogIGl0KCJlbnRyYWRhIGRlIDUwJSIsICgpID0+IHsKICAgIGV4cGVjdChwbGFucy5tYXAoKHApID0+IGhhbGYocC5zZXR1cCkpKS50b0VxdWFsKFsxMTksIDI0OSwgNDQ5XSk7CiAgfSk7CiAgaXQoIndoYXRzYXBwIiwgKCkgPT4gewogICAgZXhwZWN0KHdoYXRzTGluaygieCIpKS50b0JlKCJodHRwczovL3dhLm1lLzU1NTE5OTExODkyOTM/dGV4dD14Iik7CiAgICBleHBlY3QocGxhbldoYXRzTXNnKHBsYW5zWzJdISkpLnRvQ29udGFpbigiTm92YWVzIFByZW1pdW0sIGNvbSBjcmlhw6fDo28gZGUgUiQgODk4LDAwIGUgbWVuc2FsaWRhZGUgZGUgUiQgMjA5LDkwIik7CiAgfSk7Cn0pOwoKZGVzY3JpYmUoInBhY290ZXMgZGUgY3JpYcOnw6NvIHZpc3VhbCIsICgpID0+IHsKICBpdCgiY2FkYSBwYWNvdGUgdHJheiBvIGNvbnRlw7pkbywgbyB2YWxvciBlIGEgZWNvbm9taWEgaW5mb3JtYWRvcyIsICgpID0+IHsKICAgIGV4cGVjdCh2aWRlb1BhY2tzLm1hcCgocCkgPT4gW3AubmFtZSwgcC52aWRlb3MsIHAuaW1hZ2VzLCBwLnByaWNlLCBwLnNhdmluZ3NdKSkudG9FcXVhbChbCiAgICAgIFsiRGl2dWxnYcOnw6NvIFLDoXBpZGEiLCAiMiB2w61kZW9zIGRlIDEwcyIsICIzIGltYWdlbnMiLCA4OSwgOV0sCiAgICAgIFsiQXByZXNlbnRhw6fDo28gZGEgTG9qYSIsICIxIHbDrWRlbyBkZSAzMHMiLCAiMyBpbWFnZW5zIiwgODksIDddLAogICAgICBbIk1haXMgQ29udGXDumRvIiwgIjEgdsOtZGVvIGRlIDMwcyIsICI0IGltYWdlbnMiLCAxMDksIDldLAogICAgXSk7CiAgfSk7CiAgaXQoIm5lbmh1bSBwYWNvdGUgdGVtIG1lbnNhbGlkYWRlIiwgKCkgPT4gewogICAgZXhwZWN0KHZpZGVvUGFja3MuZXZlcnkoKHApID0+ICEoIm1vbnRobHkiIGluIHApKSkudG9CZSh0cnVlKTsKICB9KTsKICBpdCgibWVuc2FnZW0gZG8gd2hhdHNhcHAgdHJheiBvIHBhY290ZSBlIG8gdmFsb3IiLCAoKSA9PiB7CiAgICBleHBlY3QocGFja1doYXRzTXNnKHZpZGVvUGFja3NbMF0hKSkudG9Db250YWluKCJwYWNvdGUgRGl2dWxnYcOnw6NvIFLDoXBpZGEiKTsKICAgIGV4cGVjdChwYWNrV2hhdHNNc2codmlkZW9QYWNrc1syXSEpKS50b0NvbnRhaW4oIlIkIDEwOSwwMCIpOwogIH0pOwp9KTsKCmRlc2NyaWJlKCJkw7p2aWRhcyBkYSB0ZWxhIGluaWNpYWwiLCAoKSA9PiB7CiAgaXQoIm7Do28gZmFsYSBzw7MgZGUgcGxhbm86IGNvYnJlIHbDrWRlb3MsIGlkZW50aWRhZGUgdmlzdWFsIGUgV2hhdHNBcHAgQVBJIiwgKCkgPT4gewogICAgY29uc3QgcGVyZ3VudGFzID0gYWxsRmFxcy5tYXAoKFtxXSkgPT4gcSkuam9pbigiIHwgIik7CiAgICBleHBlY3QocGVyZ3VudGFzKS50b0NvbnRhaW4oInbDrWRlb3MgZSBhcnRlcyBwYXJhIGFzIHJlZGVzIHNvY2lhaXMiKTsKICAgIGV4cGVjdChwZXJndW50YXMpLnRvQ29udGFpbigibG9nbyBlIGFzIGFydGVzIGRhIG1pbmhhIG1hcmNhIik7CiAgICBleHBlY3QocGVyZ3VudGFzKS50b0NvbnRhaW4oImludGVncmHDp8OjbyBjb20gbyBXaGF0c0FwcCBBUEkiKTsKICB9KTsKICBpdCgibWFudMOpbSBhcyBkw7p2aWRhcyBkb3MgcGxhbm9zIGRlbnRybyBkYSBsaXN0YSIsICgpID0+IHsKICAgIGV4cGVjdChhbGxGYXFzLmxlbmd0aCkudG9CZUdyZWF0ZXJUaGFuKGZhcXMubGVuZ3RoKTsKICAgIGV4cGVjdChhbGxGYXFzKS50b0NvbnRhaW5FcXVhbChmYXFzWzBdISk7CiAgfSk7CiAgaXQoInRvZGEgZMO6dmlkYSB0ZW0gcmVzcG9zdGEgZXNjcml0YSIsICgpID0+IHsKICAgIGV4cGVjdChhbGxGYXFzLmV2ZXJ5KChbLCBhXSkgPT4gYS50cmltKCkubGVuZ3RoID4gMTApKS50b0JlKHRydWUpOwogIH0pOwogIGl0KCJhIHRlbGEgaW5pY2lhbCBtb3N0cmEgcG91Y2FzIGTDunZpZGFzLCBlbnRyZSA4IGUgMTAiLCAoKSA9PiB7CiAgICBleHBlY3QoZmFxc1Nob3duKS50b0JlR3JlYXRlclRoYW5PckVxdWFsKDgpOwogICAgZXhwZWN0KGZhcXNTaG93bikudG9CZUxlc3NUaGFuT3JFcXVhbCgxMCk7CiAgICBleHBlY3QoYWxsRmFxcy5sZW5ndGgpLnRvQmVHcmVhdGVyVGhhbihmYXFzU2hvd24pOwogIH0pOwp9KTsK
+import { describe, it, expect } from "vitest";
+import { plans, half, whatsLink, planWhatsMsg, videoPacks, packWhatsMsg, faqs } from "@/data/plans";
+import { allFaqs, faqsShown } from "@/data/faqs";
+
+describe("planos", () => {
+  it("valores oficiais", () => {
+    expect(plans.map((p) => [p.setup, p.monthly])).toEqual([[238, 59.9], [498, 109.9], [898, 209.9]]);
+  });
+  it("entrada de 50%", () => {
+    expect(plans.map((p) => half(p.setup))).toEqual([119, 249, 449]);
+  });
+  it("whatsapp", () => {
+    expect(whatsLink("x")).toBe("https://wa.me/5551991189293?text=x");
+    expect(planWhatsMsg(plans[2]!)).toContain("Novaes Premium, com criação de R$ 898,00 e mensalidade de R$ 209,90");
+  });
+});
+
+describe("pacotes de criação visual", () => {
+  it("cada pacote traz o conteúdo, o valor e a economia informados", () => {
+    expect(videoPacks.map((p) => [p.name, p.videos, p.images, p.price, p.savings])).toEqual([
+      ["Divulgação Rápida", "2 vídeos de 10s", "3 imagens", 89, 9],
+      ["Apresentação da Loja", "1 vídeo de 30s", "3 imagens", 89, 7],
+      ["Mais Conteúdo", "1 vídeo de 30s", "4 imagens", 109, 9],
+    ]);
+  });
+  it("nenhum pacote tem mensalidade", () => {
+    expect(videoPacks.every((p) => !("monthly" in p))).toBe(true);
+  });
+  it("mensagem do whatsapp traz o pacote e o valor", () => {
+    expect(packWhatsMsg(videoPacks[0]!)).toContain("pacote Divulgação Rápida");
+    expect(packWhatsMsg(videoPacks[2]!)).toContain("R$ 109,00");
+  });
+});
+
+describe("dúvidas da tela inicial", () => {
+  it("não fala só de plano: cobre vídeos, identidade visual e WhatsApp API", () => {
+    const perguntas = allFaqs.map(([q]) => q).join(" | ");
+    expect(perguntas).toContain("vídeos e artes para as redes sociais");
+    expect(perguntas).toContain("logo e as artes da minha marca");
+    expect(perguntas).toContain("integração com o WhatsApp API");
+  });
+  it("mantém as dúvidas dos planos dentro da lista", () => {
+    expect(allFaqs.length).toBeGreaterThan(faqs.length);
+    expect(allFaqs).toContainEqual(faqs[0]!);
+  });
+  it("toda dúvida tem resposta escrita", () => {
+    expect(allFaqs.every(([, a]) => a.trim().length > 10)).toBe(true);
+  });
+  it("a tela inicial mostra poucas dúvidas, entre 8 e 10", () => {
+    expect(faqsShown).toBeGreaterThanOrEqual(8);
+    expect(faqsShown).toBeLessThanOrEqual(10);
+    expect(allFaqs.length).toBeGreaterThan(faqsShown);
+  });
+});

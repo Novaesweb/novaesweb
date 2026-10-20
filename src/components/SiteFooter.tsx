@@ -1,1 +1,128 @@
-aW1wb3J0IHsgdXNlRWZmZWN0LCB1c2VTdGF0ZSB9IGZyb20gInJlYWN0IjsKaW1wb3J0IHsgQXJyb3dSaWdodCwgTWVzc2FnZUNpcmNsZSwgWCB9IGZyb20gImx1Y2lkZS1yZWFjdCI7CmltcG9ydCBhcGlBcnQgZnJvbSAiQC9hc3NldHMvYXBpLXdoYXRzYXBwLndlYnAiOwppbXBvcnQgeyBsZWdhbERvY3MsIHR5cGUgTGVnYWxEb2MgfSBmcm9tICJAL2RhdGEvbGVnYWwiOwppbXBvcnQgeyB3aGF0c0xpbmsgfSBmcm9tICJAL2RhdGEvcGxhbnMiOwoKZXhwb3J0IGZ1bmN0aW9uIFNpdGVGb290ZXIoKSB7CiAgY29uc3QgW2RvYywgc2V0RG9jXSA9IHVzZVN0YXRlPExlZ2FsRG9jIHwgbnVsbD4obnVsbCk7CgogIHVzZUVmZmVjdCgoKSA9PiB7CiAgICBpZiAoIWRvYykgcmV0dXJuOwogICAgY29uc3Qgb25LZXkgPSAoZTogS2V5Ym9hcmRFdmVudCkgPT4gewogICAgICBpZiAoZS5rZXkgPT09ICJFc2NhcGUiKSBzZXREb2MobnVsbCk7CiAgICB9OwogICAgZG9jdW1lbnQuYWRkRXZlbnRMaXN0ZW5lcigia2V5ZG93biIsIG9uS2V5KTsKICAgIGRvY3VtZW50LmJvZHkuc3R5bGUub3ZlcmZsb3cgPSAiaGlkZGVuIjsKICAgIHJldHVybiAoKSA9PiB7CiAgICAgIGRvY3VtZW50LnJlbW92ZUV2ZW50TGlzdGVuZXIoImtleWRvd24iLCBvbktleSk7CiAgICAgIGRvY3VtZW50LmJvZHkuc3R5bGUub3ZlcmZsb3cgPSAiIjsKICAgIH07CiAgfSwgW2RvY10pOwoKICByZXR1cm4gKAogICAgPGZvb3RlciBjbGFzc05hbWU9ImJvcmRlci10IGJvcmRlci1ib3JkZXIvNDAgcHgtNCBweS02IHNtOnB4LTggeGw6cHgtMTQiPgogICAgICA8ZGl2IGNsYXNzTmFtZT0ibXgtYXV0byBtYi02IGZsZXggbWF4LXctWzE4MDBweF0gZmxleC1jb2wgaXRlbXMtY2VudGVyIGdhcC01IHJvdW5kZWQtMnhsIGJvcmRlciBib3JkZXItbmVvbi12aW9sZXQvNDAgYmctY2FyZC83MCBwLTUgdGV4dC1jZW50ZXIgc2hhZG93LW5lb24gYmFja2Ryb3AtYmx1ciBzbTpmbGV4LXJvdyBzbTpnYXAtNyBzbTpwLTYgc206dGV4dC1sZWZ0Ij4KICAgICAgICA8aW1nCiAgICAgICAgICBzcmM9e2FwaUFydH0KICAgICAgICAgIGFsdD0iSW50ZWdyYcOnw6NvIGNvbSBXaGF0c0FwcCBBUEkiCiAgICAgICAgICBsb2FkaW5nPSJsYXp5IgogICAgICAgICAgY2xhc3NOYW1lPSJoLTM2IHctMzYgc2hyaW5rLTAgcm91bmRlZC14bCBib3JkZXIgYm9yZGVyLW5lb24tdmlvbGV0LzQwIG9iamVjdC1jb3ZlciBzaGFkb3ctbmVvbiBzbTpoLTQ0IHNtOnctNDQiCiAgICAgICAgLz4KICAgICAgICA8ZGl2IGNsYXNzTmFtZT0ibWluLXctMCBmbGV4LTEiPgogICAgICAgICAgPHNwYW4gY2xhc3NOYW1lPSJpbmxpbmUtYmxvY2sgcm91bmRlZC1mdWxsIGJnLW5lb24gcHgtMyBweS0xIHRleHQtWzExcHhdIGZvbnQtc2VtaWJvbGQgdHJhY2tpbmctWzAuMThlbV0iPk5PVklEQURFPC9zcGFuPgogICAgICAgICAgPGgzIGNsYXNzTmFtZT0ibXQtMyBmb250LWRpc3BsYXkgdGV4dC14bCBmb250LWJvbGQiPkFnb3JhIHRyYWJhbGhhbW9zIGNvbSBpbnRlZ3Jhw6fDo28gYW8gV2hhdHNBcHA8L2gzPgogICAgICAgICAgPHAgY2xhc3NOYW1lPSJtdC0yIHRleHQtc20gbGVhZGluZy1yZWxheGVkIHRleHQtbXV0ZWQtZm9yZWdyb3VuZCI+CiAgICAgICAgICAgIENvbmVjdGFtb3Mgc2V1IHNpdGUsIGxvamEgb3Ugc2lzdGVtYSBhbyBXaGF0c0FwcCBBUEk6IG1lbnNhZ2VucyBhdXRvbcOhdGljYXMsIGF2aXNvcyBkZSBwZWRpZG8gZSBhdGVuZGltZW50byBjZW50cmFsaXphZG8gbm8gc2V1IG7Dum1lcm8uCiAgICAgICAgICA8L3A+CiAgICAgICAgPC9kaXY+CiAgICAgICAgPGEKICAgICAgICAgIGhyZWY9e3doYXRzTGluaygiT2zDoSwgTm92YWVzV2ViISBRdWVybyBzYWJlciBtYWlzIHNvYnJlIGEgaW50ZWdyYcOnw6NvIGNvbSBvIFdoYXRzQXBwIEFQSS4iKX0KICAgICAgICAgIHRhcmdldD0iX2JsYW5rIgogICAgICAgICAgcmVsPSJub29wZW5lciBub3JlZmVycmVyIgogICAgICAgICAgY2xhc3NOYW1lPSJpbmxpbmUtZmxleCBzaHJpbmstMCBpdGVtcy1jZW50ZXIgZ2FwLTIgcm91bmRlZC1mdWxsIGJnLW5lb24gcHgtNSBweS0zIHRleHQtc20gZm9udC1zZW1pYm9sZCBzaGFkb3ctbmVvbiIKICAgICAgICA+CiAgICAgICAgICA8TWVzc2FnZUNpcmNsZSBjbGFzc05hbWU9ImgtNCB3LTQiIC8+IFF1ZXJvIGVzc2EgaW50ZWdyYcOnw6NvIDxBcnJvd1JpZ2h0IGNsYXNzTmFtZT0iaC00IHctNCIgLz4KICAgICAgICA8L2E+CiAgICAgIDwvZGl2PgogICAgICA8ZGl2IGNsYXNzTmFtZT0ibXgtYXV0byBmbGV4IG1heC13LVsxODAwcHhdIGZsZXgtY29sIGl0ZW1zLWNlbnRlciBnYXAtMyB0ZXh0LWNlbnRlciB0ZXh0LXNtIHRleHQtbXV0ZWQtZm9yZWdyb3VuZCBzbTpmbGV4LXJvdyBzbTpqdXN0aWZ5LWJldHdlZW4gc206dGV4dC1sZWZ0Ij4KICAgICAgICA8c3Bhbj7CqSAyMDI2IE5vdmFlc1dlYiDigJQgU29sdcOnw7VlcyBEaWdpdGFpczwvc3Bhbj4KICAgICAgICA8ZGl2IGNsYXNzTmFtZT0iZmxleCBmbGV4LXdyYXAgaXRlbXMtY2VudGVyIGp1c3RpZnktY2VudGVyIGdhcC14LTYgZ2FwLXktMiI+CiAgICAgICAgICB7bGVnYWxEb2NzLm1hcCgoZCkgPT4gKAogICAgICAgICAgICA8YnV0dG9uCiAgICAgICAgICAgICAga2V5PXtkLmlkfQogICAgICAgICAgICAgIG9uQ2xpY2s9eygpID0+IHNldERvYyhkKX0KICAgICAgICAgICAgICBjbGFzc05hbWU9InVuZGVybGluZSBkZWNvcmF0aW9uLWJvcmRlciB1bmRlcmxpbmUtb2Zmc2V0LTQgdHJhbnNpdGlvbiBob3Zlcjp0ZXh0LW5lb24tcGluayBob3ZlcjpkZWNvcmF0aW9uLW5lb24tcGluayIKICAgICAgICAgICAgPgogICAgICAgICAgICAgIHtkLnNob3J0fQogICAgICAgICAgICA8L2J1dHRvbj4KICAgICAgICAgICkpfQogICAgICAgIDwvZGl2PgogICAgICA8L2Rpdj4KCiAgICAgIHtkb2MgJiYgKAogICAgICAgIDxkaXYKICAgICAgICAgIHJvbGU9ImRpYWxvZyIKICAgICAgICAgIGFyaWEtbW9kYWw9InRydWUiCiAgICAgICAgICBhcmlhLWxhYmVsPXtkb2MudGl0bGV9CiAgICAgICAgICBvbkNsaWNrPXsoKSA9PiBzZXREb2MobnVsbCl9CiAgICAgICAgICBjbGFzc05hbWU9ImZpeGVkIGluc2V0LTAgei01MCBmbGV4IGl0ZW1zLWVuZCBqdXN0aWZ5LWNlbnRlciBiZy1ibGFjay83MCBwLTMgYmFja2Ryb3AtYmx1ci1zbSBzbTppdGVtcy1jZW50ZXIgc206cC02IgogICAgICAgID4KICAgICAgICAgIDxkaXYKICAgICAgICAgICAgb25DbGljaz17KGUpID0+IGUuc3RvcFByb3BhZ2F0aW9uKCl9CiAgICAgICAgICAgIGNsYXNzTmFtZT0iZmxleCBtYXgtaC1bODV2aF0gdy1mdWxsIG1heC13LTJ4bCBmbGV4LWNvbCBvdmVyZmxvdy1oaWRkZW4gcm91bmRlZC0yeGwgYm9yZGVyIGJvcmRlci1uZW9uLXZpb2xldC80MCBiZy1jYXJkIHNoYWRvdy1uZW9uIGFuaW1hdGUtaW4gZmFkZS1pbiBzbGlkZS1pbi1mcm9tLWJvdHRvbS00IgogICAgICAgICAgPgogICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT0iZmxleCBpdGVtcy1zdGFydCBqdXN0aWZ5LWJldHdlZW4gZ2FwLTQgYm9yZGVyLWIgYm9yZGVyLWJvcmRlci81MCBiZy1uZW9uIHB4LTUgcHktNCI+CiAgICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9Im1pbi13LTAiPgogICAgICAgICAgICAgICAgPGgyIGNsYXNzTmFtZT0iZm9udC1kaXNwbGF5IHRleHQtbGcgZm9udC1ib2xkIGxlYWRpbmctdGlnaHQgc206dGV4dC14bCI+e2RvYy50aXRsZX08L2gyPgogICAgICAgICAgICAgICAgPHAgY2xhc3NOYW1lPSJtdC0xIHRleHQteHMgb3BhY2l0eS04MCI+QXR1YWxpemFkbyBlbSB7ZG9jLnVwZGF0ZWR9PC9wPgogICAgICAgICAgICAgIDwvZGl2PgogICAgICAgICAgICAgIDxidXR0b24KICAgICAgICAgICAgICAgIG9uQ2xpY2s9eygpID0+IHNldERvYyhudWxsKX0KICAgICAgICAgICAgICAgIGFyaWEtbGFiZWw9IkZlY2hhciIKICAgICAgICAgICAgICAgIGNsYXNzTmFtZT0iZ3JpZCBoLTkgdy05IHNocmluay0wIHBsYWNlLWl0ZW1zLWNlbnRlciByb3VuZGVkLWZ1bGwgYm9yZGVyIGJvcmRlci13aGl0ZS8yNSB0cmFuc2l0aW9uIGhvdmVyOmJnLXdoaXRlLzE1IgogICAgICAgICAgICAgID4KICAgICAgICAgICAgICAgIDxYIGNsYXNzTmFtZT0iaC00IHctNCIgLz4KICAgICAgICAgICAgICA8L2J1dHRvbj4KICAgICAgICAgICAgPC9kaXY+CgogICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT0ib3ZlcmZsb3cteS1hdXRvIHB4LTUgcHktNSI+CiAgICAgICAgICAgICAgPHAgY2xhc3NOYW1lPSJ0ZXh0LXNtIHRleHQtbXV0ZWQtZm9yZWdyb3VuZCI+e2RvYy5pbnRyb308L3A+CiAgICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9Im10LTUgc3BhY2UteS01Ij4KICAgICAgICAgICAgICAgIHtkb2Muc2VjdGlvbnMubWFwKChzKSA9PiAoCiAgICAgICAgICAgICAgICAgIDxzZWN0aW9uIGtleT17cy5ofT4KICAgICAgICAgICAgICAgICAgICA8aDMgY2xhc3NOYW1lPSJmb250LWRpc3BsYXkgdGV4dC1iYXNlIGZvbnQtc2VtaWJvbGQgdGV4dC1mb3JlZ3JvdW5kIj57cy5ofTwvaDM+CiAgICAgICAgICAgICAgICAgICAge3MucD8ubWFwKCh0KSA9PiAoCiAgICAgICAgICAgICAgICAgICAgICA8cCBrZXk9e3R9IGNsYXNzTmFtZT0ibXQtMiB0ZXh0LXNtIGxlYWRpbmctcmVsYXhlZCB0ZXh0LW11dGVkLWZvcmVncm91bmQiPgogICAgICAgICAgICAgICAgICAgICAgICB7dH0KICAgICAgICAgICAgICAgICAgICAgIDwvcD4KICAgICAgICAgICAgICAgICAgICApKX0KICAgICAgICAgICAgICAgICAgICB7cy5saXN0ICYmICgKICAgICAgICAgICAgICAgICAgICAgIDx1bCBjbGFzc05hbWU9Im10LTIgc3BhY2UteS0yIj4KICAgICAgICAgICAgICAgICAgICAgICAge3MubGlzdC5tYXAoKHQpID0+ICgKICAgICAgICAgICAgICAgICAgICAgICAgICA8bGkga2V5PXt0fSBjbGFzc05hbWU9ImZsZXggZ2FwLTIgdGV4dC1zbSBsZWFkaW5nLXJlbGF4ZWQgdGV4dC1tdXRlZC1mb3JlZ3JvdW5kIj4KICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxzcGFuIGNsYXNzTmFtZT0ibXQtMiBoLTEuNSB3LTEuNSBzaHJpbmstMCByb3VuZGVkLWZ1bGwgYmctbmVvbi1waW5rIiAvPgogICAgICAgICAgICAgICAgICAgICAgICAgICAgPHNwYW4+e3R9PC9zcGFuPgogICAgICAgICAgICAgICAgICAgICAgICAgIDwvbGk+CiAgICAgICAgICAgICAgICAgICAgICAgICkpfQogICAgICAgICAgICAgICAgICAgICAgPC91bD4KICAgICAgICAgICAgICAgICAgICApfQogICAgICAgICAgICAgICAgICA8L3NlY3Rpb24+CiAgICAgICAgICAgICAgICApKX0KICAgICAgICAgICAgICA8L2Rpdj4KICAgICAgICAgICAgPC9kaXY+CgogICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT0iYm9yZGVyLXQgYm9yZGVyLWJvcmRlci81MCBweC01IHB5LTMiPgogICAgICAgICAgICAgIDxidXR0b24KICAgICAgICAgICAgICAgIG9uQ2xpY2s9eygpID0+IHNldERvYyhudWxsKX0KICAgICAgICAgICAgICAgIGNsYXNzTmFtZT0idy1mdWxsIHJvdW5kZWQteGwgYmctbmVvbiBweC01IHB5LTMgdGV4dC1zbSBmb250LXNlbWlib2xkIHNoYWRvdy1uZW9uIgogICAgICAgICAgICAgID4KICAgICAgICAgICAgICAgIEVudGVuZGksIGZlY2hhcgogICAgICAgICAgICAgIDwvYnV0dG9uPgogICAgICAgICAgICA8L2Rpdj4KICAgICAgICAgIDwvZGl2PgogICAgICAgIDwvZGl2PgogICAgICApfQogICAgPC9mb290ZXI+CiAgKTsKfQo=
+import { useEffect, useState } from "react";
+import { ArrowRight, MessageCircle, X } from "lucide-react";
+import apiArt from "@/assets/api-whatsapp.webp";
+import { legalDocs, type LegalDoc } from "@/data/legal";
+import { whatsLink } from "@/data/plans";
+
+export function SiteFooter() {
+  const [doc, setDoc] = useState<LegalDoc | null>(null);
+
+  useEffect(() => {
+    if (!doc) return;
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setDoc(null);
+    };
+    document.addEventListener("keydown", onKey);
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.removeEventListener("keydown", onKey);
+      document.body.style.overflow = "";
+    };
+  }, [doc]);
+
+  return (
+    <footer className="border-t border-border/40 px-4 py-6 sm:px-8 xl:px-14">
+      <div className="mx-auto mb-6 flex max-w-[1800px] flex-col items-center gap-5 rounded-2xl border border-neon-violet/40 bg-card/70 p-5 text-center shadow-neon backdrop-blur sm:flex-row sm:gap-7 sm:p-6 sm:text-left">
+        <img
+          src={apiArt}
+          alt="Integração com WhatsApp API"
+          loading="lazy"
+          className="h-36 w-36 shrink-0 rounded-xl border border-neon-violet/40 object-cover shadow-neon sm:h-44 sm:w-44"
+        />
+        <div className="min-w-0 flex-1">
+          <span className="inline-block rounded-full bg-neon px-3 py-1 text-[11px] font-semibold tracking-[0.18em]">NOVIDADE</span>
+          <h3 className="mt-3 font-display text-xl font-bold">Agora trabalhamos com integração ao WhatsApp</h3>
+          <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+            Conectamos seu site, loja ou sistema ao WhatsApp API: mensagens automáticas, avisos de pedido e atendimento centralizado no seu número.
+          </p>
+        </div>
+        <a
+          href={whatsLink("Olá, NovaesWeb! Quero saber mais sobre a integração com o WhatsApp API.")}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex shrink-0 items-center gap-2 rounded-full bg-neon px-5 py-3 text-sm font-semibold shadow-neon"
+        >
+          <MessageCircle className="h-4 w-4" /> Quero essa integração <ArrowRight className="h-4 w-4" />
+        </a>
+      </div>
+      <div className="mx-auto flex max-w-[1800px] flex-col items-center gap-3 text-center text-sm text-muted-foreground sm:flex-row sm:justify-between sm:text-left">
+        <span>© 2026 NovaesWeb — Soluções Digitais</span>
+        <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2">
+          {legalDocs.map((d) => (
+            <button
+              key={d.id}
+              onClick={() => setDoc(d)}
+              className="underline decoration-border underline-offset-4 transition hover:text-neon-pink hover:decoration-neon-pink"
+            >
+              {d.short}
+            </button>
+          ))}
+        </div>
+      </div>
+
+      {doc && (
+        <div
+          role="dialog"
+          aria-modal="true"
+          aria-label={doc.title}
+          onClick={() => setDoc(null)}
+          className="fixed inset-0 z-50 flex items-end justify-center bg-black/70 p-3 backdrop-blur-sm sm:items-center sm:p-6"
+        >
+          <div
+            onClick={(e) => e.stopPropagation()}
+            className="flex max-h-[85vh] w-full max-w-2xl flex-col overflow-hidden rounded-2xl border border-neon-violet/40 bg-card shadow-neon animate-in fade-in slide-in-from-bottom-4"
+          >
+            <div className="flex items-start justify-between gap-4 border-b border-border/50 bg-neon px-5 py-4">
+              <div className="min-w-0">
+                <h2 className="font-display text-lg font-bold leading-tight sm:text-xl">{doc.title}</h2>
+                <p className="mt-1 text-xs opacity-80">Atualizado em {doc.updated}</p>
+              </div>
+              <button
+                onClick={() => setDoc(null)}
+                aria-label="Fechar"
+                className="grid h-9 w-9 shrink-0 place-items-center rounded-full border border-white/25 transition hover:bg-white/15"
+              >
+                <X className="h-4 w-4" />
+              </button>
+            </div>
+
+            <div className="overflow-y-auto px-5 py-5">
+              <p className="text-sm text-muted-foreground">{doc.intro}</p>
+              <div className="mt-5 space-y-5">
+                {doc.sections.map((s) => (
+                  <section key={s.h}>
+                    <h3 className="font-display text-base font-semibold text-foreground">{s.h}</h3>
+                    {s.p?.map((t) => (
+                      <p key={t} className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                        {t}
+                      </p>
+                    ))}
+                    {s.list && (
+                      <ul className="mt-2 space-y-2">
+                        {s.list.map((t) => (
+                          <li key={t} className="flex gap-2 text-sm leading-relaxed text-muted-foreground">
+                            <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-neon-pink" />
+                            <span>{t}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    )}
+                  </section>
+                ))}
+              </div>
+            </div>
+
+            <div className="border-t border-border/50 px-5 py-3">
+              <button
+                onClick={() => setDoc(null)}
+                className="w-full rounded-xl bg-neon px-5 py-3 text-sm font-semibold shadow-neon"
+              >
+                Entendi, fechar
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+    </footer>
+  );
+}

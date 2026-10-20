@@ -1,1 +1,1 @@
-eyIkc2NoZW1hIjogImh0dHBzOi8vb3BlbmFwaS52ZXJjZWwuc2gvdmVyY2VsLmpzb24iLCAiZnJhbWV3b3JrIjogInRhbnN0YWNrLXN0YXJ0IiwgImluc3RhbGxDb21tYW5kIjogImJ1biBpbnN0YWxsIiwgImJ1aWxkQ29tbWFuZCI6ICJidW4gcnVuIGJ1aWxkIn0=
+{"$schema": "https://openapi.vercel.sh/vercel.json", "framework": "tanstack-start", "installCommand": "bun install", "buildCommand": "bun run build"}

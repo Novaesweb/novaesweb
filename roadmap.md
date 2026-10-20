@@ -1,1 +1,39 @@
-IyBSb2FkbWFwIOKAlCBOb3ZhZXNXZWIKCiMjIENhdMOhbG9nbyBkZSBhZGljaW9uYWlzIOKAlCAyMC8xMAotIFt4XSBSZW5vbWVhciBvcyAxNiBhZGljaW9uYWlzIHNlbSBhbHRlcmFyIHByZcOnb3M7IGFkaWNpb25hciA5IHByb3Bvc3RhcyBzaW5hbGl6YWRhcy4KLSBbeF0gT3JnYW5pemFyIGNhdGVnb3JpYXMsIGZpbHRyb3MgZSBkZXRhbGhlcyBhY2Vzc8OtdmVpcyBuYSBww6FnaW5hIGRlIFBsYW5vcy4KLSBbeF0gQ29uZmVyaXIgc29saWNpdGHDp8O1ZXMgcG9yIFdoYXRzQXBwLCB0ZXN0ZXMgZSB2aXN1YWxpemHDp8OjbyBubyBjZWx1bGFyIGUgY29tcHV0YWRvci4KLSBbeF0gVmVyc8OjbyBkZSAyMC8xMCBlbnZpYWRhIGFvIEdpdEh1YiAoY29tbWl0IDdkYzQ4ZmQsIDEyMCBhcnF1aXZvcyBjb25mZXJpZG9zIHVtIGEgdW0pLgoKIyMgRmVpdG8gbmVzdGEgcm9kYWRhCi0gW3hdIExvZ28gbm92YSAoZW1ibGVtYSBuZW9uKSBubyB0b3BvIGRlIHRvZGFzIGFzIHDDoWdpbmFzICsgw61jb25lIGRvIHNpdGUKLSBbeF0gUm9kYXDDqTogYXJ0ZSArIGF2aXNvIGRlIHF1ZSBhZ29yYSB0cmFiYWxoYW1vcyBjb20gaW50ZWdyYcOnw6NvIGFvIFdoYXRzQXBwCi0gW3hdIFRlbGEgaW5pY2lhbDogZm90byBkYSBtb8OnYSBtb3N0cmFuZG8gbWFpcyBkbyBjb3JwbyBubyBjb21wdXRhZG9yCi0gW3hdIETDunZpZGFzIGRvcyBwbGFub3MgbW92aWRhcyBkYSB0ZWxhIGRlIFBsYW5vcyBwYXJhIGEgdGVsYSBpbmljaWFsCi0gW3hdIFNlw6fDo28gcmViYXRpemFkYSAiRMO6dmlkYXMgc29icmUgdHVkbyIsIGNvbSBwZXJndW50YXMgZGUgc2l0ZXMsIGlkZW50aWRhZGUgdmlzdWFsLCB2w61kZW9zIGUgV2hhdHNBcHAgQVBJCgojIyBQZW5kZW50ZQotIFt4XSBJbnZlc3RpZ2FyIFZlcmNlbDogYXMgZm90b3MgZmljYXZhbSBzw7Mgbm9zIHNlcnZpZG9yZXMgZGEgTG92YWJsZTsgYWdvcmEgdsOjbyBkZW50cm8gZG8gcmVwb3NpdMOzcmlvIChkZXBsb3kgbmEgVmVyY2VsIHByZWNpc2Egc2VyIHJlZmVpdG8gcHJhIHBlZ2FyIGEgdmVyc8OjbyBub3ZhKQotIFt4XSBUZWxhIGluaWNpYWw6IG1vZGVsb3MgT2x5bXB1cyBCdXJnZXIgZSBQZXQgZW0gQ2FzYSBhZGljaW9uYWRvcywgY2FydMO1ZXMgZW0gdGFtYW5obyBtw6lkaW8KLSBbeF0gVGVsYSBpbmljaWFsOiBzZcOnw6NvICJTZW0gY29tcGxpY2HDp8OjbyIgY29tIG9zIDQgcGFzc29zIGUgb3MgMyBkZXN0YXF1ZXMKLSBbeF0gVMOtdHVsbyBkYSBzZcOnw6NvIGRlIGTDunZpZGFzOiAiRMO6dmlkYXMgY29tdW5zIGUgcmVzcG9zdGFzIGNsYXJhcyIKLSBbeF0gVGVsYSBpbmljaWFsIG1vc3RyYSBzw7MgOSBkw7p2aWRhcywgY29tIGJvdMOjbyBwYXJhIGFicmlyIHRvZGFzCi0gW3hdIFDDoWdpbmEgQ3JpYcOnw6NvIFZpc3VhbCByZXRpcmFkYSBkbyBzaXRlIGEgcGVkaWRvIGRhIGNsaWVudGUgKG1lbnUsIGNhZGFzdHJvLCBkw7p2aWRhcyBlIHRlcm1vcyBhanVzdGFkb3MpCi0gW3hdIEJhcnJhIGRlIGRlc3RhcXVlcyBkYSB0ZWxhIGluaWNpYWwgcmVkdXppZGEgYSAzIGl0ZW5zICh0aXJhZG8gIkVudHJlZ2Egw6FnaWwgLyBBIHBhcnRpciBkZSAyIGRpYXMgw7p0ZWlzIikKLSBbeF0gRMO6dmlkYXMgY29tdW5zOiBwZXJndW50YXMgbWFpcyBsb25nYXMgY29tIGVzcGHDp28gZXh0cmEgcGFyYSBvICIrIiBuw6NvIGFwZXJ0YXIgYXMgbGV0cmFzCi0gW3hdIFZlcnPDo28gZGUgMTkvMTAgZW52aWFkYSBhbyBHaXRIdWIgKGNvbW1pdCAxYmViNzY5LCAxMTkgYXJxdWl2b3M7IHDDoWdpbmEgQ3JpYcOnw6NvIFZpc3VhbCBhcGFnYWRhIGRvIHJlcG9zaXTDs3JpbykKLSBbIF0gUmV2aXNhciBvcyB0ZXh0b3MgZGUgIlRlcm1vcyBkZSB1c28iIGUgIlBvbMOtdGljYSBkZSBwcml2YWNpZGFkZSIgKGVzY3JpdG9zIHBlbGEgSUEsIGFndWFyZGFuZG8gYXByb3Zhw6fDo28gZGEgY2xpZW50ZSkKLSBbeF0gRW52aWFyIG5vdmlkYWRlcyBwYXJhIG8gR2l0SHViCi0gW3hdIFRlbGEgaW5pY2lhbDogZm90byBhbXBsYSBkYSBOb3ZhZXMgYXBhcmVjZW5kbyBpbnRlaXJhIG5vIGNvbXB1dGFkb3IgZSBhYmFpeG8gZG8gdGV4dG8gbm8gY2VsdWxhcgotIFt4XSBCb3TDo28gZmx1dHVhbnRlICJGYWxlIGNvbm9zY28iIG5vIGNhbnRvIGRlIHRvZGFzIGFzIHDDoWdpbmFzICsgc2XDp8OjbyBkZSBkZXBvaW1lbnRvcyBuYSB0ZWxhIGluaWNpYWwKLSBbeF0gVmVyc8OjbyBkZSAxOS8xMCBlbnZpYWRhIGFvIEdpdEh1YiAoY29tbWl0IDYwNzk0YjYsIDEyNSBhcnF1aXZvcyBjb25mZXJpZG9zIHVtIGEgdW0pCi0gW3hdIFRyb2NhciBvIG7Dum1lcm8gZG8gV2hhdHNBcHAgcGFyYSA1MSA5OTExOC05MjkzCi0gW3hdIFNpdGUgcHJlcGFyYWRvIHBhcmEgYSBWZXJjZWw6IHZlcmNlbC5qc29uIG5hIHJhaXogZSBhIGJ1aWxkIHJlY29uaGVjZSBhIFZlcmNlbCBzb3ppbmhhOyBhcyA0IHDDoWdpbmFzIGUgdG9kYXMgYXMgZm90b3MgY29uZmVyaWRhcyBuYSB2ZXJzw6NvIGNvbnN0cnXDrWRhCi0gW3hdIEZvdG9zIGNvbnZlcnRpZGFzIHBhcmEgV2ViUDogQ3JpYcOnw6NvIFZpc3VhbCBkZSAzLDkgTUIgcGFyYSA1NDEgS0IsIHRlbGEgaW5pY2lhbCBkZSA2NTYgS0IgcGFyYSAzMjEgS0IsIFBsYW5vcyBlIFNvYnJlIGRlIDc4MiBLQiBwYXJhIDE3NCBLQiDigJQgYXMgNCBww6FnaW5hcyBjb25mZXJpZGFzLCBuZW5odW1hIGZvdG8gcXVlYnJhZGEKLSBbeF0gQ2FkYXN0cm8gZGUgY29udGF0byAiRGVpeGUgc2V1IGNvbnRhdG8gZSBhIGdlbnRlIHRlIGNoYW1hIiBuYSB0ZWxhIGluaWNpYWwsIGd1YXJkYW5kbyBuYSBsaXN0YSBkZSBsZWFkcwotIFt4XSBWZXJzw6NvIGRlIDE5LzEwIGVudmlhZGEgYW8gR2l0SHViIChjb21taXQgMzNjODUwZCwgMTIwIGFycXVpdm9zIGNvbmZlcmlkb3MgdW0gYSB1bTsgcmVhZG1lIHJlZXNjcml0byBleHBsaWNhbmRvIG8gcHJvamV0bykKLSBbeF0gSW1hZ2VucyBkb3MgNSBzZXJ2acOnb3MgcmVmZWl0YXMgZW0gYWx0YSwgdG9kYXMgY29tIHRleHRvIGVtIHBvcnR1Z3XDqnMsIGUgYSBkZSBJZGVudGlkYWRlIFZpc3VhbCBtb3N0cmFuZG8gYSBtYXJjYSBOb3ZhZXNXZWIKLSBbeF0gVmVyc8OjbyBkZSAxOS8xMCBlbnZpYWRhIGFvIEdpdEh1YiAoY29tbWl0IDU2NGI0YTYsIDExOSBhcnF1aXZvcyBjb25mZXJpZG9zIHVtIGEgdW0pCi0gWyBdIEltcG9ydGFyIG8gcmVwb3NpdMOzcmlvIE5vdmFlc3dlYi9ub3ZhZXN3ZWIgbmEgVmVyY2VsIChwcmVjaXNhIHNlciBmZWl0byBuYSBjb250YSBkYSBjbGllbnRlKSBlIGNvbmZlcmlyIG8gZW5kZXJlw6dvIG5vdm8KLSBbIF0gUGFzc2FyIGFzIGR1YXMgY2hhdmVzIGRvIGJhY2tlbmQgcGFyYSBhIFZlcmNlbCAoU2V0dGluZ3Mg4oaSIEVudmlyb25tZW50IFZhcmlhYmxlcykgcGFyYSBvIGZvcm11bMOhcmlvIGRlIGNvbnRhdG8gZnVuY2lvbmFyIGzDoQo=
+# Roadmap — NovaesWeb
+
+## Catálogo de adicionais — 20/10
+- [x] Renomear os 16 adicionais sem alterar preços; adicionar 9 propostas sinalizadas.
+- [x] Organizar categorias, filtros e detalhes acessíveis na página de Planos.
+- [x] Conferir solicitações por WhatsApp, testes e visualização no celular e computador.
+- [x] Versão de 20/10 enviada ao GitHub (commit 7dc48fd, 120 arquivos conferidos um a um).
+
+## Feito nesta rodada
+- [x] Logo nova (emblema neon) no topo de todas as páginas + ícone do site
+- [x] Rodapé: arte + aviso de que agora trabalhamos com integração ao WhatsApp
+- [x] Tela inicial: foto da moça mostrando mais do corpo no computador
+- [x] Dúvidas dos planos movidas da tela de Planos para a tela inicial
+- [x] Seção rebatizada "Dúvidas sobre tudo", com perguntas de sites, identidade visual, vídeos e WhatsApp API
+
+## Pendente
+- [x] Investigar Vercel: as fotos ficavam só nos servidores da Lovable; agora vão dentro do repositório (deploy na Vercel precisa ser refeito pra pegar a versão nova)
+- [x] Tela inicial: modelos Olympus Burger e Pet em Casa adicionados, cartões em tamanho médio
+- [x] Tela inicial: seção "Sem complicação" com os 4 passos e os 3 destaques
+- [x] Título da seção de dúvidas: "Dúvidas comuns e respostas claras"
+- [x] Tela inicial mostra só 9 dúvidas, com botão para abrir todas
+- [x] Página Criação Visual retirada do site a pedido da cliente (menu, cadastro, dúvidas e termos ajustados)
+- [x] Barra de destaques da tela inicial reduzida a 3 itens (tirado "Entrega ágil / A partir de 2 dias úteis")
+- [x] Dúvidas comuns: perguntas mais longas com espaço extra para o "+" não apertar as letras
+- [x] Versão de 19/10 enviada ao GitHub (commit 1beb769, 119 arquivos; página Criação Visual apagada do repositório)
+- [ ] Revisar os textos de "Termos de uso" e "Política de privacidade" (escritos pela IA, aguardando aprovação da cliente)
+- [x] Enviar novidades para o GitHub
+- [x] Tela inicial: foto ampla da Novaes aparecendo inteira no computador e abaixo do texto no celular
+- [x] Botão flutuante "Fale conosco" no canto de todas as páginas + seção de depoimentos na tela inicial
+- [x] Versão de 19/10 enviada ao GitHub (commit 60794b6, 125 arquivos conferidos um a um)
+- [x] Trocar o número do WhatsApp para 51 99118-9293
+- [x] Site preparado para a Vercel: vercel.json na raiz e a build reconhece a Vercel sozinha; as 4 páginas e todas as fotos conferidas na versão construída
+- [x] Fotos convertidas para WebP: Criação Visual de 3,9 MB para 541 KB, tela inicial de 656 KB para 321 KB, Planos e Sobre de 782 KB para 174 KB — as 4 páginas conferidas, nenhuma foto quebrada
+- [x] Cadastro de contato "Deixe seu contato e a gente te chama" na tela inicial, guardando na lista de leads
+- [x] Versão de 19/10 enviada ao GitHub (commit 33c850d, 120 arquivos conferidos um a um; readme reescrito explicando o projeto)
+- [x] Imagens dos 5 serviços refeitas em alta, todas com texto em português, e a de Identidade Visual mostrando a marca NovaesWeb
+- [x] Versão de 19/10 enviada ao GitHub (commit 564b4a6, 119 arquivos conferidos um a um)
+- [ ] Importar o repositório Novaesweb/novaesweb na Vercel (precisa ser feito na conta da cliente) e conferir o endereço novo
+- [ ] Passar as duas chaves do backend para a Vercel (Settings → Environment Variables) para o formulário de contato funcionar lá

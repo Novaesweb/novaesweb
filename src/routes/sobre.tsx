@@ -1,1 +1,159 @@
-aW1wb3J0IHsgY3JlYXRlRmlsZVJvdXRlIH0gZnJvbSAiQHRhbnN0YWNrL3JlYWN0LXJvdXRlciI7CmltcG9ydCB7CiAgR2xvYmUsIFNob3BwaW5nQmFnLCBDcHUsIE1lZ2FwaG9uZSwgVGFyZ2V0LCBFeWUsIFNoaWVsZENoZWNrLCBMaWdodGJ1bGIsIEhhbmRzaGFrZSwKICBSb2NrZXQsIEhlYXJ0LCBNZXNzYWdlQ2lyY2xlLCBBcnJvd1JpZ2h0LAp9IGZyb20gImx1Y2lkZS1yZWFjdCI7CmltcG9ydCB7IFNpdGVIZWFkZXIgfSBmcm9tICJAL2NvbXBvbmVudHMvU2l0ZUhlYWRlciI7CmltcG9ydCB7IFNpdGVGb290ZXIgfSBmcm9tICJAL2NvbXBvbmVudHMvU2l0ZUZvb3RlciI7CmltcG9ydCB7IHdoYXRzTGluayB9IGZyb20gIkAvZGF0YS9wbGFucyI7CmltcG9ydCBwb3J0cmFpdCBmcm9tICJAL2Fzc2V0cy9wb3J0cmFpdC53ZWJwIjsKCmV4cG9ydCBjb25zdCBSb3V0ZSA9IGNyZWF0ZUZpbGVSb3V0ZSgiL3NvYnJlIikoewogIGhlYWQ6ICgpID0+ICh7CiAgICBtZXRhOiBbCiAgICAgIHsgdGl0bGU6ICJTb2JyZSBhIE5vdmFlc1dlYiDigJQgU3VhIGlkZWlhIG1lcmVjZSBnYW5oYXIgZXNwYcOnbyBubyBkaWdpdGFsIiB9LAogICAgICB7IG5hbWU6ICJkZXNjcmlwdGlvbiIsIGNvbnRlbnQ6ICJDb25oZcOnYSBhIE5vdmFlc1dlYjogY3JpYW1vcyBzaXRlcywgbG9qYXMgdmlydHVhaXMsIHNpc3RlbWFzIGUgY29udGXDumRvcyBkaWdpdGFpcyBxdWUgdHJhbnNmb3JtYW0gaWRlaWFzIGVtIHByZXNlbsOnYSBkaWdpdGFsLiIgfSwKICAgICAgeyBwcm9wZXJ0eTogIm9nOnRpdGxlIiwgY29udGVudDogIlNvYnJlIGEgTm92YWVzV2ViIOKAlCBTb2x1w6fDtWVzIERpZ2l0YWlzIiB9LAogICAgICB7IHByb3BlcnR5OiAib2c6ZGVzY3JpcHRpb24iLCBjb250ZW50OiAiVHJhbnNmb3JtYW1vcyBpZGVpYXMgZW0gc29sdcOnw7VlcyBkaWdpdGFpcyBtb2Rlcm5hcywgYWNlc3PDrXZlaXMgZSBmdW5jaW9uYWlzLiIgfSwKICAgICAgeyBwcm9wZXJ0eTogIm9nOnR5cGUiLCBjb250ZW50OiAid2Vic2l0ZSIgfSwKICAgICAgeyBuYW1lOiAidHdpdHRlcjpjYXJkIiwgY29udGVudDogInN1bW1hcnlfbGFyZ2VfaW1hZ2UiIH0sCiAgICBdLAogIH0pLAogIGNvbXBvbmVudDogU29icmUsCn0pOwoKY29uc3QgV0hBVFMgPSB3aGF0c0xpbmsoKTsKCmNvbnN0IGZhemVtb3MgPSBbCiAgeyBJOiBHbG9iZSwgdDogIlNpdGVzIGUgTGFuZGluZyBQYWdlcyIsIGQ6ICJQw6FnaW5hcyBwcm9maXNzaW9uYWlzIHF1ZSBhcHJlc2VudGFtIHN1YSBlbXByZXNhIGNvbSBiZWxlemEgZSBmdW5jaW9uYW0gZGUgdmVyZGFkZSDigJQgbm8gY2VsdWxhciBlIG5vIGNvbXB1dGFkb3IuIiB9LAogIHsgSTogU2hvcHBpbmdCYWcsIHQ6ICJMb2phcyBWaXJ0dWFpcyBlIERlbGl2ZXJ5IiwgZDogIkNhdMOhbG9nbywgY2FycmluaG8gZSBwZWRpZG9zIG5hIHBhbG1hIGRhIG3Do28uIENvbmZvcm1lIG8gcGxhbm8sIHZvY8OqIGFpbmRhIGdlcmVuY2lhIHByb2R1dG9zIGUgcGVkaWRvcyBwb3IgdW0gcGFpbmVsLiIgfSwKICB7IEk6IENwdSwgdDogIlNpc3RlbWFzIFBlcnNvbmFsaXphZG9zIiwgZDogIlNvbHXDp8O1ZXMgc29iIG1lZGlkYTogYSBnZW50ZSBzZW50YSBjb20gdm9jw6ogZSBjb25zdHLDs2kgZXhhdGFtZW50ZSBvIHF1ZSBhIHN1YSBvcGVyYcOnw6NvIHByZWNpc2EuIiB9LAogIHsgSTogTWVnYXBob25lLCB0OiAiRGVzaWduIGUgRGl2dWxnYcOnw6NvIERpZ2l0YWwiLCBkOiAiSW1hZ2VucyBlIHbDrWRlb3MgcHJvbW9jaW9uYWlzIHF1ZSBmYXplbSBzdWEgbWFyY2Egc2VyIHZpc3RhLCBsZW1icmFkYSBlIGVzY29saGlkYS4iIH0sCl07Cgpjb25zdCB2YWxvcmVzID0gWwogIHsgSTogU2hpZWxkQ2hlY2ssIHQ6ICJUcmFuc3BhcsOqbmNpYSIsIGQ6ICJDb211bmljYcOnw6NvIGNsYXJhIHNvYnJlIHNlcnZpw6dvcywgdmFsb3JlcyBlIGNvbmRpw6fDtWVzLiIgfSwKICB7IEk6IExpZ2h0YnVsYiwgdDogIkNyaWF0aXZpZGFkZSIsIGQ6ICJTb2x1w6fDtWVzIHF1ZSB2YWxvcml6YW0gYSBpZGVudGlkYWRlIGRlIGNhZGEgbWFyY2EuIiB9LAogIHsgSTogVGFyZ2V0LCB0OiAiQ29tcHJvbWlzc28iLCBkOiAiQXRlbsOnw6NvIMOgcyBuZWNlc3NpZGFkZXMgZSBhb3Mgb2JqZXRpdm9zIGRlIGNhZGEgcHJvamV0by4iIH0sCiAgeyBJOiBSb2NrZXQsIHQ6ICJJbm92YcOnw6NvIiwgZDogIkJ1c2NhIGNvbnN0YW50ZSBwb3Igbm92YXMgcG9zc2liaWxpZGFkZXMgZGlnaXRhaXMuIiB9LAogIHsgSTogSGFuZHNoYWtlLCB0OiAiUGFyY2VyaWEiLCBkOiAiUmVsYWNpb25hbWVudG8gcHLDs3hpbW8gY29tIHZvY8OqLCBkbyBpbsOtY2lvIGFvIGZpbS4iIH0sCl07CgpmdW5jdGlvbiBTb2JyZSgpIHsKICByZXR1cm4gKAogICAgPGRpdiBjbGFzc05hbWU9Im1pbi1oLXNjcmVlbiBvdmVyZmxvdy14LWhpZGRlbiI+CiAgICAgIDxTaXRlSGVhZGVyIGFjdGl2ZT0iU29icmUiIC8+CgogICAgICB7LyogSGVybyAqL30KICAgICAgPHNlY3Rpb24gY2xhc3NOYW1lPSJyZWxhdGl2ZSI+CiAgICAgICAgPGRpdiBjbGFzc05hbWU9ImFic29sdXRlIGluc2V0LXktMCByaWdodC0wIHctZnVsbCBtZDp3LTMvNSI+CiAgICAgICAgICA8aW1nIHNyYz17cG9ydHJhaXR9IGFsdD0iRXF1aXBlIE5vdmFlc1dlYiIgY2xhc3NOYW1lPSJoLWZ1bGwgdy1mdWxsIG9iamVjdC1jb3ZlciBvYmplY3QtdG9wIiAvPgogICAgICAgICAgPGRpdiBjbGFzc05hbWU9ImFic29sdXRlIGluc2V0LTAgYmctZ3JhZGllbnQtdG8tciBmcm9tLWJhY2tncm91bmQgdmlhLWJhY2tncm91bmQvNjAgdG8tdHJhbnNwYXJlbnQiIC8+CiAgICAgICAgPC9kaXY+CiAgICAgICAgPGRpdiBjbGFzc05hbWU9InJlbGF0aXZlIG14LWF1dG8gbWF4LXctWzE4MDBweF0gcHgtNCBwYi0yMCBwdC0xNiBzbTpweC04IHhsOnB4LTE0Ij4KICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPSJtYXgtdy14bCAyeGw6bWF4LXctMnhsIj4KICAgICAgICAgICAgPHNwYW4gY2xhc3NOYW1lPSJpbmxpbmUtYmxvY2sgcm91bmRlZC1mdWxsIGJvcmRlciBib3JkZXItbmVvbi1waW5rIHB4LTQgcHktMSB0ZXh0LXhzIGZvbnQtc2VtaWJvbGQgdHJhY2tpbmctWzAuMmVtXSI+UVVFTSBTT01PUzwvc3Bhbj4KICAgICAgICAgICAgPGgxIGNsYXNzTmFtZT0ibXQtNSB0ZXh0LTR4bCBmb250LWV4dHJhYm9sZCBsZWFkaW5nLVsxLjA1XSBzbTp0ZXh0LTV4bCBtZDp0ZXh0LTZ4bCI+CiAgICAgICAgICAgICAgU3VhIGlkZWlhIG1lcmVjZSA8c3BhbiBjbGFzc05hbWU9InRleHQtbmVvbiI+Z2FuaGFyIGVzcGHDp288L3NwYW4+IG5vIG11bmRvIGRpZ2l0YWwKICAgICAgICAgICAgPC9oMT4KICAgICAgICAgICAgPHAgY2xhc3NOYW1lPSJtdC01IHRleHQtbGcgdGV4dC1tdXRlZC1mb3JlZ3JvdW5kIj4KICAgICAgICAgICAgICBBIE5vdmFlc1dlYiBuYXNjZXUgY29tIHVtIHByb3DDs3NpdG86IHRyYW5zZm9ybWFyIGlkZWlhcyBlbSBzb2x1w6fDtWVzIGRpZ2l0YWlzIG1vZGVybmFzLCBhY2Vzc8OtdmVpcyBlIGZ1bmNpb25haXMuCiAgICAgICAgICAgIDwvcD4KICAgICAgICAgIDwvZGl2PgogICAgICAgIDwvZGl2PgogICAgICA8L3NlY3Rpb24+CgogICAgICB7LyogTm9zc2EgaGlzdMOzcmlhICovfQogICAgICA8c2VjdGlvbiBjbGFzc05hbWU9Im14LWF1dG8gbWF4LXctWzE4MDBweF0gcHgtNCBwYi02IHNtOnB4LTggeGw6cHgtMTQiPgogICAgICAgIDxkaXYgY2xhc3NOYW1lPSJncmlkIGdhcC02IGxnOmdyaWQtY29scy0zIj4KICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPSJyb3VuZGVkLTJ4bCBib3JkZXItMiBib3JkZXItbmVvbi1waW5rIGJnLWNhcmQgcC03IHNoYWRvdy1uZW9uIGxnOmNvbC1zcGFuLTIiPgogICAgICAgICAgICA8aDIgY2xhc3NOYW1lPSJ0ZXh0LTJ4bCBmb250LWJvbGQgc206dGV4dC0zeGwiPk1haXMgcXVlIHNpdGVzOiBjcmlhbW9zIG8gZXNwYcOnbyBkYSBzdWEgbWFyY2EgbmEgaW50ZXJuZXQ8L2gyPgogICAgICAgICAgICA8cCBjbGFzc05hbWU9Im10LTQgdGV4dC1tdXRlZC1mb3JlZ3JvdW5kIj4KICAgICAgICAgICAgICBTb21vcyB1bWEgZW1wcmVzYSBkZSBjcmlhw6fDo28gZGUgc2l0ZXMsIGxvamFzIHZpcnR1YWlzLCBzaXN0ZW1hcyBwZXJzb25hbGl6YWRvcyBlIGNvbnRlw7pkb3MgZGlnaXRhaXMuIE5vc3NvIG9iamV0aXZvIMOpIGFqdWRhciBlbXByZWVuZGVkb3JlcyBlIGVtcHJlc2FzIGEgZm9ydGFsZWNlciBzdWEgcHJlc2Vuw6dhIG5hIGludGVybmV0LCBhcHJlc2VudGFyIHNldXMgc2VydmnDp29zIGUgZmFjaWxpdGFyIG8gY29udGF0byBjb20gc2V1cyBjbGllbnRlcy4KICAgICAgICAgICAgPC9wPgogICAgICAgICAgICA8cCBjbGFzc05hbWU9Im10LTMgdGV4dC1tdXRlZC1mb3JlZ3JvdW5kIj4KICAgICAgICAgICAgICBBY3JlZGl0YW1vcyBxdWUgY2FkYSBuZWfDs2NpbyB0ZW0gc3VhIHByw7NwcmlhIGlkZW50aWRhZGUuIFBvciBpc3NvLCBkZXNlbnZvbHZlbW9zIHNvbHXDp8O1ZXMgcXVlIHJlc3BlaXRhbSBhcyBuZWNlc3NpZGFkZXMgZGUgY2FkYSBjbGllbnRlIOKAlCBjb20gYXRlbsOnw6NvIGFvIHZpc3VhbCwgw6AgZmFjaWxpZGFkZSBkZSB1c28gZSBhbyBmdW5jaW9uYW1lbnRvLgogICAgICAgICAgICA8L3A+CiAgICAgICAgICA8L2Rpdj4KICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPSJmbGV4IGZsZXgtY29sIGp1c3RpZnktY2VudGVyIGdhcC00IHJvdW5kZWQtMnhsIGJvcmRlciBib3JkZXItYm9yZGVyIGJnLWNhcmQvODAgcC03Ij4KICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9ImZsZXggaXRlbXMtc3RhcnQgZ2FwLTQiPgogICAgICAgICAgICAgIDxUYXJnZXQgY2xhc3NOYW1lPSJoLTkgdy05IHNocmluay0wIHRleHQtbmVvbi1waW5rIiAvPgogICAgICAgICAgICAgIDxkaXY+CiAgICAgICAgICAgICAgICA8aDMgY2xhc3NOYW1lPSJmb250LWRpc3BsYXkgdGV4dC14bCBmb250LWJvbGQgdGV4dC1uZW9uIj5NaXNzw6NvPC9oMz4KICAgICAgICAgICAgICAgIDxwIGNsYXNzTmFtZT0ibXQtMSB0ZXh0LXNtIHRleHQtbXV0ZWQtZm9yZWdyb3VuZCI+VG9ybmFyIGEgdGVjbm9sb2dpYSBhY2Vzc8OtdmVsIGEgdG9kbyBlbXByZWVuZGVkb3I6IHNvbHXDp8O1ZXMgcXVlIHNpbXBsaWZpY2FtIHByb2Nlc3NvcywgdmFsb3JpemFtIG1hcmNhcyBlIGNyaWFtIG5vdmFzIG9wb3J0dW5pZGFkZXMgZGUgbmVnw7NjaW8uPC9wPgogICAgICAgICAgICAgIDwvZGl2PgogICAgICAgICAgICA8L2Rpdj4KICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9ImZsZXggaXRlbXMtc3RhcnQgZ2FwLTQiPgogICAgICAgICAgICAgIDxFeWUgY2xhc3NOYW1lPSJoLTkgdy05IHNocmluay0wIHRleHQtbmVvbi1waW5rIiAvPgogICAgICAgICAgICAgIDxkaXY+CiAgICAgICAgICAgICAgICA8aDMgY2xhc3NOYW1lPSJmb250LWRpc3BsYXkgdGV4dC14bCBmb250LWJvbGQgdGV4dC1uZW9uIj5WaXPDo288L2gzPgogICAgICAgICAgICAgICAgPHAgY2xhc3NOYW1lPSJtdC0xIHRleHQtc20gdGV4dC1tdXRlZC1mb3JlZ3JvdW5kIj5DcmVzY2VyIGNvbW8gdW1hIGVtcHJlc2EgcmVjb25oZWNpZGEgcGVsYSBjcmlhdGl2aWRhZGUsIHF1YWxpZGFkZSBlIGNvbXByb21pc3NvIOKAlCBhY29tcGFuaGFuZG8gYSBldm9sdcOnw6NvIGRlIGNhZGEgbmVnw7NjaW8uPC9wPgogICAgICAgICAgICAgIDwvZGl2PgogICAgICAgICAgICA8L2Rpdj4KICAgICAgICAgIDwvZGl2PgogICAgICAgIDwvZGl2PgogICAgICA8L3NlY3Rpb24+CgogICAgICB7LyogTyBxdWUgZmF6ZW1vcyAqL30KICAgICAgPHNlY3Rpb24gY2xhc3NOYW1lPSJteC1hdXRvIG1heC13LVsxODAwcHhdIHB4LTQgcHktMTQgc206cHgtOCB4bDpweC0xNCI+CiAgICAgICAgPGRpdiBjbGFzc05hbWU9InRleHQtc20gZm9udC1zZW1pYm9sZCB0cmFja2luZy1bMC4yNWVtXSB0ZXh0LW5lb24tcGluayI+TyBRVUUgRkFaRU1PUzwvZGl2PgogICAgICAgIDxoMiBjbGFzc05hbWU9Im10LTIgdGV4dC00eGwgZm9udC1ib2xkIj5UdWRvIG8gcXVlIHN1YSBtYXJjYSBwcmVjaXNhLCBlbSB1bSBzw7MgbHVnYXI8L2gyPgogICAgICAgIDxkaXYgY2xhc3NOYW1lPSJtdC04IGdyaWQgZ2FwLTUgc206Z3JpZC1jb2xzLTIgbGc6Z3JpZC1jb2xzLTQiPgogICAgICAgICAge2ZhemVtb3MubWFwKCh7IEksIHQsIGQgfSkgPT4gKAogICAgICAgICAgICA8YXJ0aWNsZSBrZXk9e3R9IGNsYXNzTmFtZT0icm91bmRlZC0yeGwgYm9yZGVyIGJvcmRlci1ib3JkZXIgYmctY2FyZCBwLTYgdHJhbnNpdGlvbiBob3Zlcjpib3JkZXItbmVvbi1waW5rLzYwIGhvdmVyOnNoYWRvdy1uZW9uIj4KICAgICAgICAgICAgICA8SSBjbGFzc05hbWU9ImgtMTAgdy0xMCB0ZXh0LW5lb24tcGluayIgLz4KICAgICAgICAgICAgICA8aDMgY2xhc3NOYW1lPSJtdC00IHRleHQtbGcgZm9udC1zZW1pYm9sZCI+e3R9PC9oMz4KICAgICAgICAgICAgICA8cCBjbGFzc05hbWU9Im10LTIgdGV4dC1zbSB0ZXh0LW11dGVkLWZvcmVncm91bmQiPntkfTwvcD4KICAgICAgICAgICAgPC9hcnRpY2xlPgogICAgICAgICAgKSl9CiAgICAgICAgPC9kaXY+CiAgICAgIDwvc2VjdGlvbj4KCiAgICAgIHsvKiBWYWxvcmVzICovfQogICAgICA8c2VjdGlvbiBjbGFzc05hbWU9Im14LWF1dG8gbWF4LXctWzE4MDBweF0gcHgtNCBwYi0xNCBzbTpweC04IHhsOnB4LTE0Ij4KICAgICAgICA8ZGl2IGNsYXNzTmFtZT0idGV4dC1zbSBmb250LXNlbWlib2xkIHRyYWNraW5nLVswLjI1ZW1dIHRleHQtbmVvbi1waW5rIj5OT1NTT1MgVkFMT1JFUzwvZGl2PgogICAgICAgIDxoMiBjbGFzc05hbWU9Im10LTIgdGV4dC00eGwgZm9udC1ib2xkIj5PIHF1ZSBtb3ZlIGEgZ2VudGUgdG9kb3Mgb3MgZGlhczwvaDI+CiAgICAgICAgPGRpdiBjbGFzc05hbWU9Im10LTggZ3JpZCBnYXAtNSBzbTpncmlkLWNvbHMtMiBsZzpncmlkLWNvbHMtNSI+CiAgICAgICAgICB7dmFsb3Jlcy5tYXAoKHsgSSwgdCwgZCB9KSA9PiAoCiAgICAgICAgICAgIDxkaXYga2V5PXt0fSBjbGFzc05hbWU9InJvdW5kZWQtMnhsIGJvcmRlciBib3JkZXItYm9yZGVyIGJnLWNhcmQvODAgcC02IHRleHQtY2VudGVyIHRyYW5zaXRpb24gaG92ZXI6c2hhZG93LW5lb24iPgogICAgICAgICAgICAgIDxzcGFuIGNsYXNzTmFtZT0ibXgtYXV0byBncmlkIGgtMTQgdy0xNCBwbGFjZS1pdGVtcy1jZW50ZXIgcm91bmRlZC1mdWxsIGJvcmRlciBib3JkZXItbmVvbi1waW5rLzUwIGJnLW5lb24vMTAiPgogICAgICAgICAgICAgICAgPEkgY2xhc3NOYW1lPSJoLTcgdy03IHRleHQtbmVvbi1waW5rIiAvPgogICAgICAgICAgICAgIDwvc3Bhbj4KICAgICAgICAgICAgICA8aDMgY2xhc3NOYW1lPSJtdC00IGZvbnQtZGlzcGxheSB0ZXh0LWxnIGZvbnQtYm9sZCI+e3R9PC9oMz4KICAgICAgICAgICAgICA8cCBjbGFzc05hbWU9Im10LTIgdGV4dC1zbSB0ZXh0LW11dGVkLWZvcmVncm91bmQiPntkfTwvcD4KICAgICAgICAgICAgPC9kaXY+CiAgICAgICAgICApKX0KICAgICAgICA8L2Rpdj4KICAgICAgPC9zZWN0aW9uPgoKICAgICAgey8qIFBvciBxdWUgZXNjb2xoZXIgKi99CiAgICAgIDxzZWN0aW9uIGNsYXNzTmFtZT0ibXgtYXV0byBtYXgtdy1bMTgwMHB4XSBweC00IHBiLTE0IHNtOnB4LTggeGw6cHgtMTQiPgogICAgICAgIDxkaXYgY2xhc3NOYW1lPSJmbGV4IGZsZXgtY29sIGl0ZW1zLWNlbnRlciBnYXAtNiByb3VuZGVkLTJ4bCBib3JkZXItMiBib3JkZXItbmVvbi1waW5rIGJnLWNhcmQgcC04IHRleHQtY2VudGVyIHNoYWRvdy1uZW9uIG1kOnAtMTIiPgogICAgICAgICAgPEhlYXJ0IGNsYXNzTmFtZT0iaC0xMiB3LTEyIHRleHQtbmVvbi1waW5rIiAvPgogICAgICAgICAgPGgyIGNsYXNzTmFtZT0ibWF4LXctM3hsIHRleHQtM3hsIGZvbnQtYm9sZCBzbTp0ZXh0LTR4bCI+VW0gc2l0ZSBib25pdG8gw6kgYm9tLiBVbSBzaXRlIGNvbSBwcm9ww7NzaXRvIMOpIG1lbGhvci48L2gyPgogICAgICAgICAgPHAgY2xhc3NOYW1lPSJtYXgtdy0yeGwgdGV4dC1sZyB0ZXh0LW11dGVkLWZvcmVncm91bmQiPgogICAgICAgICAgICBTZWphIHBhcmEgYXByZXNlbnRhciBzdWEgZW1wcmVzYSwgcmVjZWJlciBwZWRpZG9zLCBvcmdhbml6YXIgaW5mb3JtYcOnw7VlcyBvdSBkaXZ1bGdhciBzZXVzIHByb2R1dG9zLCBjcmlhbW9zIGZlcnJhbWVudGFzIHByw6F0aWNhcyBwYXJhIG8gZGlhIGEgZGlhIGRvIHNldSBuZWfDs2Npby4KICAgICAgICAgIDwvcD4KICAgICAgICA8L2Rpdj4KICAgICAgPC9zZWN0aW9uPgoKICAgICAgey8qIENUQSBmaW5hbCAqL30KICAgICAgPHNlY3Rpb24gY2xhc3NOYW1lPSJteC1hdXRvIG1heC13LVsxODAwcHhdIHB4LTQgcGItMTYgc206cHgtOCB4bDpweC0xNCI+CiAgICAgICAgPGRpdiBjbGFzc05hbWU9ImZsZXggZmxleC13cmFwIGl0ZW1zLWNlbnRlciBqdXN0aWZ5LWJldHdlZW4gZ2FwLTYgcm91bmRlZC0yeGwgYm9yZGVyIGJvcmRlci1ib3JkZXIgYmctY2FyZCBwLTcgc2hhZG93LW5lb24iPgogICAgICAgICAgPGRpdiBjbGFzc05hbWU9ImZsZXggaXRlbXMtY2VudGVyIGdhcC01Ij4KICAgICAgICAgICAgPFJvY2tldCBjbGFzc05hbWU9ImgtMTIgdy0xMiB0ZXh0LW5lb24tcGluayIgLz4KICAgICAgICAgICAgPGRpdj4KICAgICAgICAgICAgICA8aDMgY2xhc3NOYW1lPSJ0ZXh0LTJ4bCBmb250LWJvbGQiPlZhbW9zIHRyYW5zZm9ybWFyIHN1YSBpZGVpYSBlbSByZWFsaWRhZGU/PC9oMz4KICAgICAgICAgICAgICA8cCBjbGFzc05hbWU9InRleHQtbXV0ZWQtZm9yZWdyb3VuZCI+Tm92YWVzV2ViIOKAlCBTdWEgbWFyY2EsIHNldSBlc3Bhw6dvLCBzdWEgcHJlc2Vuw6dhIGRpZ2l0YWwuIENvbnRlIG8gcXVlIHZvY8OqIGRlc2VqYSBjcmlhci48L3A+CiAgICAgICAgICAgIDwvZGl2PgogICAgICAgICAgPC9kaXY+CiAgICAgICAgICA8YSBocmVmPXtXSEFUU30gY2xhc3NOYW1lPSJmbGV4IGl0ZW1zLWNlbnRlciBnYXAtMyByb3VuZGVkLWZ1bGwgYmctbmVvbiBweC04IHB5LTQgZm9udC1zZW1pYm9sZCBzaGFkb3ctbmVvbiI+CiAgICAgICAgICAgIDxNZXNzYWdlQ2lyY2xlIGNsYXNzTmFtZT0iaC01IHctNSIgLz4gRmFsYXIgbm8gV2hhdHNBcHAgPEFycm93UmlnaHQgY2xhc3NOYW1lPSJoLTUgdy01IiAvPgogICAgICAgICAgPC9hPgogICAgICAgIDwvZGl2PgogICAgICA8L3NlY3Rpb24+CgogICAgICA8U2l0ZUZvb3RlciAvPgogICAgPC9kaXY+CiAgKTsKfQo=
+import { createFileRoute } from "@tanstack/react-router";
+import {
+  Globe, ShoppingBag, Cpu, Megaphone, Target, Eye, ShieldCheck, Lightbulb, Handshake,
+  Rocket, Heart, MessageCircle, ArrowRight,
+} from "lucide-react";
+import { SiteHeader } from "@/components/SiteHeader";
+import { SiteFooter } from "@/components/SiteFooter";
+import { whatsLink } from "@/data/plans";
+import portrait from "@/assets/portrait.webp";
+
+export const Route = createFileRoute("/sobre")({
+  head: () => ({
+    meta: [
+      { title: "Sobre a NovaesWeb — Sua ideia merece ganhar espaço no digital" },
+      { name: "description", content: "Conheça a NovaesWeb: criamos sites, lojas virtuais, sistemas e conteúdos digitais que transformam ideias em presença digital." },
+      { property: "og:title", content: "Sobre a NovaesWeb — Soluções Digitais" },
+      { property: "og:description", content: "Transformamos ideias em soluções digitais modernas, acessíveis e funcionais." },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
+    ],
+  }),
+  component: Sobre,
+});
+
+const WHATS = whatsLink();
+
+const fazemos = [
+  { I: Globe, t: "Sites e Landing Pages", d: "Páginas profissionais que apresentam sua empresa com beleza e funcionam de verdade — no celular e no computador." },
+  { I: ShoppingBag, t: "Lojas Virtuais e Delivery", d: "Catálogo, carrinho e pedidos na palma da mão. Conforme o plano, você ainda gerencia produtos e pedidos por um painel." },
+  { I: Cpu, t: "Sistemas Personalizados", d: "Soluções sob medida: a gente senta com você e constrói exatamente o que a sua operação precisa." },
+  { I: Megaphone, t: "Design e Divulgação Digital", d: "Imagens e vídeos promocionais que fazem sua marca ser vista, lembrada e escolhida." },
+];
+
+const valores = [
+  { I: ShieldCheck, t: "Transparência", d: "Comunicação clara sobre serviços, valores e condições." },
+  { I: Lightbulb, t: "Criatividade", d: "Soluções que valorizam a identidade de cada marca." },
+  { I: Target, t: "Compromisso", d: "Atenção às necessidades e aos objetivos de cada projeto." },
+  { I: Rocket, t: "Inovação", d: "Busca constante por novas possibilidades digitais." },
+  { I: Handshake, t: "Parceria", d: "Relacionamento próximo com você, do início ao fim." },
+];
+
+function Sobre() {
+  return (
+    <div className="min-h-screen overflow-x-hidden">
+      <SiteHeader active="Sobre" />
+
+      {/* Hero */}
+      <section className="relative">
+        <div className="absolute inset-y-0 right-0 w-full md:w-3/5">
+          <img src={portrait} alt="Equipe NovaesWeb" className="h-full w-full object-cover object-top" />
+          <div className="absolute inset-0 bg-gradient-to-r from-background via-background/60 to-transparent" />
+        </div>
+        <div className="relative mx-auto max-w-[1800px] px-4 pb-20 pt-16 sm:px-8 xl:px-14">
+          <div className="max-w-xl 2xl:max-w-2xl">
+            <span className="inline-block rounded-full border border-neon-pink px-4 py-1 text-xs font-semibold tracking-[0.2em]">QUEM SOMOS</span>
+            <h1 className="mt-5 text-4xl font-extrabold leading-[1.05] sm:text-5xl md:text-6xl">
+              Sua ideia merece <span className="text-neon">ganhar espaço</span> no mundo digital
+            </h1>
+            <p className="mt-5 text-lg text-muted-foreground">
+              A NovaesWeb nasceu com um propósito: transformar ideias em soluções digitais modernas, acessíveis e funcionais.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Nossa história */}
+      <section className="mx-auto max-w-[1800px] px-4 pb-6 sm:px-8 xl:px-14">
+        <div className="grid gap-6 lg:grid-cols-3">
+          <div className="rounded-2xl border-2 border-neon-pink bg-card p-7 shadow-neon lg:col-span-2">
+            <h2 className="text-2xl font-bold sm:text-3xl">Mais que sites: criamos o espaço da sua marca na internet</h2>
+            <p className="mt-4 text-muted-foreground">
+              Somos uma empresa de criação de sites, lojas virtuais, sistemas personalizados e conteúdos digitais. Nosso objetivo é ajudar empreendedores e empresas a fortalecer sua presença na internet, apresentar seus serviços e facilitar o contato com seus clientes.
+            </p>
+            <p className="mt-3 text-muted-foreground">
+              Acreditamos que cada negócio tem sua própria identidade. Por isso, desenvolvemos soluções que respeitam as necessidades de cada cliente — com atenção ao visual, à facilidade de uso e ao funcionamento.
+            </p>
+          </div>
+          <div className="flex flex-col justify-center gap-4 rounded-2xl border border-border bg-card/80 p-7">
+            <div className="flex items-start gap-4">
+              <Target className="h-9 w-9 shrink-0 text-neon-pink" />
+              <div>
+                <h3 className="font-display text-xl font-bold text-neon">Missão</h3>
+                <p className="mt-1 text-sm text-muted-foreground">Tornar a tecnologia acessível a todo empreendedor: soluções que simplificam processos, valorizam marcas e criam novas oportunidades de negócio.</p>
+              </div>
+            </div>
+            <div className="flex items-start gap-4">
+              <Eye className="h-9 w-9 shrink-0 text-neon-pink" />
+              <div>
+                <h3 className="font-display text-xl font-bold text-neon">Visão</h3>
+                <p className="mt-1 text-sm text-muted-foreground">Crescer como uma empresa reconhecida pela criatividade, qualidade e compromisso — acompanhando a evolução de cada negócio.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* O que fazemos */}
+      <section className="mx-auto max-w-[1800px] px-4 py-14 sm:px-8 xl:px-14">
+        <div className="text-sm font-semibold tracking-[0.25em] text-neon-pink">O QUE FAZEMOS</div>
+        <h2 className="mt-2 text-4xl font-bold">Tudo o que sua marca precisa, em um só lugar</h2>
+        <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+          {fazemos.map(({ I, t, d }) => (
+            <article key={t} className="rounded-2xl border border-border bg-card p-6 transition hover:border-neon-pink/60 hover:shadow-neon">
+              <I className="h-10 w-10 text-neon-pink" />
+              <h3 className="mt-4 text-lg font-semibold">{t}</h3>
+              <p className="mt-2 text-sm text-muted-foreground">{d}</p>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      {/* Valores */}
+      <section className="mx-auto max-w-[1800px] px-4 pb-14 sm:px-8 xl:px-14">
+        <div className="text-sm font-semibold tracking-[0.25em] text-neon-pink">NOSSOS VALORES</div>
+        <h2 className="mt-2 text-4xl font-bold">O que move a gente todos os dias</h2>
+        <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-5">
+          {valores.map(({ I, t, d }) => (
+            <div key={t} className="rounded-2xl border border-border bg-card/80 p-6 text-center transition hover:shadow-neon">
+              <span className="mx-auto grid h-14 w-14 place-items-center rounded-full border border-neon-pink/50 bg-neon/10">
+                <I className="h-7 w-7 text-neon-pink" />
+              </span>
+              <h3 className="mt-4 font-display text-lg font-bold">{t}</h3>
+              <p className="mt-2 text-sm text-muted-foreground">{d}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Por que escolher */}
+      <section className="mx-auto max-w-[1800px] px-4 pb-14 sm:px-8 xl:px-14">
+        <div className="flex flex-col items-center gap-6 rounded-2xl border-2 border-neon-pink bg-card p-8 text-center shadow-neon md:p-12">
+          <Heart className="h-12 w-12 text-neon-pink" />
+          <h2 className="max-w-3xl text-3xl font-bold sm:text-4xl">Um site bonito é bom. Um site com propósito é melhor.</h2>
+          <p className="max-w-2xl text-lg text-muted-foreground">
+            Seja para apresentar sua empresa, receber pedidos, organizar informações ou divulgar seus produtos, criamos ferramentas práticas para o dia a dia do seu negócio.
+          </p>
+        </div>
+      </section>
+
+      {/* CTA final */}
+      <section className="mx-auto max-w-[1800px] px-4 pb-16 sm:px-8 xl:px-14">
+        <div className="flex flex-wrap items-center justify-between gap-6 rounded-2xl border border-border bg-card p-7 shadow-neon">
+          <div className="flex items-center gap-5">
+            <Rocket className="h-12 w-12 text-neon-pink" />
+            <div>
+              <h3 className="text-2xl font-bold">Vamos transformar sua ideia em realidade?</h3>
+              <p className="text-muted-foreground">NovaesWeb — Sua marca, seu espaço, sua presença digital. Conte o que você deseja criar.</p>
+            </div>
+          </div>
+          <a href={WHATS} className="flex items-center gap-3 rounded-full bg-neon px-8 py-4 font-semibold shadow-neon">
+            <MessageCircle className="h-5 w-5" /> Falar no WhatsApp <ArrowRight className="h-5 w-5" />
+          </a>
+        </div>
+      </section>
+
+      <SiteFooter />
+    </div>
+  );
+}
