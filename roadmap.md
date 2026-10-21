@@ -1,5 +1,14 @@
 # Roadmap — NovaesWeb
 
+## Adequação jurídica — 21/10
+- [x] Auditar dados, rastreadores, acessibilidade, depoimentos e origem das imagens; prioridades apresentadas e registradas em docs/auditoria-privacidade.md.
+- [x] Integrar Privacidade, Termos e Cancelamento/Reembolso ao site, sem criar regras comerciais.
+- [x] Implementar escolhas de cookies e preparação do Analytics desativada até aprovação; aceitar/recusar/personalizar e reabrir conferidos, nenhum rastreador opcional carregado.
+- [x] Reduzir acesso de rastreadores de treinamento de IA mantendo buscas convencionais — regras voluntárias, sem garantia de bloqueio.
+- [x] Corrigir problemas de acessibilidade prioritários e verificar os novos caminhos; 79 testes passaram, páginas e preferências conferidas em computador/celular, build OK.
+- [ ] Confirmar identificação legal da empresa, retenção operacional e comprovação dos indicadores/imagens — depende das informações da cliente; documento enviado termina incompleto no item 5.
+- [ ] Revisar antiabuso, acesso operacional aos contatos e exclusão automática — depende da definição de responsáveis e retenção; esta revisão não alterou permissões nem certificou o ambiente publicado.
+
 ## Catálogo de adicionais — 20/10
 - [x] Renomear os 16 adicionais sem alterar preços; adicionar 9 propostas sinalizadas.
 - [x] Organizar categorias, filtros e detalhes acessíveis na página de Planos.
@@ -31,7 +40,7 @@
 - [x] Barra de destaques da tela inicial reduzida a 3 itens (tirado "Entrega ágil / A partir de 2 dias úteis")
 - [x] Dúvidas comuns: perguntas mais longas com espaço extra para o "+" não apertar as letras
 - [x] Versão de 19/10 enviada ao GitHub (commit 1beb769, 119 arquivos; página Criação Visual apagada do repositório)
-- [ ] Revisar os textos de "Termos de uso" e "Política de privacidade" (escritos pela IA, aguardando aprovação da cliente)
+- [x] Revisar os textos de "Termos de uso" e "Política de privacidade"; novas minutas de 21/10 publicadas no preview, confirmação operacional/jurídica pendente conforme lista acima.
 - [x] Enviar novidades para o GitHub
 - [x] Tela inicial: foto ampla da Novaes aparecendo inteira no computador e abaixo do texto no celular
 - [x] Botão flutuante "Fale conosco" no canto de todas as páginas + seção de depoimentos na tela inicial

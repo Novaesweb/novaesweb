@@ -3,9 +3,10 @@ import { useEffect, useState } from "react";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { LeadForm } from "@/components/LeadForm";
+import { Button } from "@/components/ui/button";
 import {
   Globe, Palette, Zap, Headphones, ArrowRight, Box, Users, Rocket, ChevronRight, MessageCircle,
-  MessagesSquare, Plus, Smartphone, TrendingUp, ShieldCheck, ChevronDown, Star, Quote,
+  MessagesSquare, Plus, Smartphone, TrendingUp, ShieldCheck, ChevronDown,
 } from "lucide-react";
 import portrait from "@/assets/portrait-wide.webp";
 import s0 from "@/assets/s0.webp";
@@ -59,12 +60,6 @@ const steps = [
   ["04", "Pronto para começar", "Concluímos a entrega conforme a proposta. A mensalidade inicia na ativação."],
 ];
 
-const depoimentos = [
-  { nome: "Cliente · Hamburgueria", destaque: "Site no ar em poucos dias", frase: "O site ficou do jeito que a gente imaginava. Em poucos dias estava no ar e os pedidos pelo WhatsApp começaram a aparecer." },
-  { nome: "Cliente · Pet Shop", destaque: "Identidade visual marcante", frase: "A identidade visual deu outra cara para o nosso negócio. Hoje os clientes comentam do visual quando chegam." },
-  { nome: "Cliente · Estética", destaque: "Atendimento simples e rápido", frase: "Atendimento rápido e explicado sem termos complicados. Recomendo para quem quer começar do zero." },
-];
-
 function Index() {
   const [faqsAbertas, setFaqsAbertas] = useState(false);
   return (
@@ -73,8 +68,8 @@ function Index() {
 
       <section id="inicio" className="relative">
         <div className="absolute inset-y-0 right-0 hidden w-full overflow-hidden md:block md:w-3/5">
-          <img src={portrait} aria-hidden="true" className="absolute inset-0 h-full w-full scale-110 object-cover object-center opacity-40 blur-2xl" />
-          <img src={portrait} alt="Equipe NovaesWeb" className="absolute inset-y-0 right-0 h-full w-full object-cover object-[70%_center] md:w-auto md:max-w-none md:object-right" />
+          <img src={portrait} alt="" aria-hidden="true" className="absolute inset-0 h-full w-full scale-110 object-cover object-center opacity-40 blur-2xl" />
+          <img src={portrait} alt="Imagem de apresentação da marca NovaesWeb" className="absolute inset-y-0 right-0 h-full w-full object-cover object-[70%_center] md:w-auto md:max-w-none md:object-right" />
           <div className="absolute inset-y-0 left-0 w-2/3 bg-gradient-to-r from-background via-background/60 to-transparent" />
           <div className="absolute inset-x-0 bottom-0 h-48 bg-gradient-to-t from-background via-background/70 to-transparent" />
         </div>
@@ -85,7 +80,7 @@ function Index() {
               Sites que vendem e uma <RotatingWord /> para o seu negócio
             </h1>
             <p className="mt-5 text-lg text-muted-foreground">Criamos sites, sistemas e identidade visual completos para sua empresa se destacar e atrair mais clientes.</p>
-            <img src={portrait} alt="Equipe NovaesWeb" className="mt-6 w-full rounded-2xl border border-neon-violet/30 object-cover shadow-neon md:hidden" />
+            <img src={portrait} alt="Imagem de apresentação da marca NovaesWeb" className="mt-6 w-full rounded-2xl border border-neon-violet/30 object-cover shadow-neon md:hidden" />
             <div className="mt-7 grid grid-cols-2 gap-4 text-sm sm:grid-cols-4">
               {[[Globe, "Sites Profissionais"], [Palette, "Design Moderno"], [Zap, "Entrega Rápida"], [Headphones, "Suporte Especializado"]].map(([I, t]: any) => (
                 <div key={t} className="flex items-center gap-2"><I className="h-6 w-6 shrink-0 text-neon-pink" />{t}</div>
@@ -213,37 +208,6 @@ function Index() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-[1800px] px-4 pb-14 sm:px-8 xl:px-14">
-        <div className="text-sm font-semibold tracking-[0.25em] text-neon-pink">QUEM JÁ ESTÁ COM A GENTE</div>
-        <div className="mt-2 flex flex-wrap items-end justify-between gap-4">
-          <h2 className="text-3xl font-bold sm:text-4xl">O que nossos clientes dizem</h2>
-          <p className="max-w-xl text-muted-foreground">Negócios de vários ramos já deram o primeiro passo no digital com a NovaesWeb.</p>
-        </div>
-        <div className="mt-8 grid gap-5 md:grid-cols-3">
-          {depoimentos.map((d) => (
-            <figure key={d.nome} className="relative flex flex-col rounded-2xl border border-border bg-card p-6 transition hover:-translate-y-1 hover:border-neon-pink hover:shadow-neon">
-              <Quote className="h-8 w-8 text-neon-pink/60" />
-              <div className="mt-3 flex gap-1" aria-label="5 de 5 estrelas">
-                {Array.from({ length: 5 }).map((_, i) => (
-                  <Star key={i} className="h-4 w-4 fill-neon-pink text-neon-pink" />
-                ))}
-              </div>
-              <blockquote className="mt-4 flex-1 text-sm leading-relaxed text-muted-foreground">"{d.frase}"</blockquote>
-              <figcaption className="mt-5 border-t border-border/50 pt-4">
-                <div className="font-semibold">{d.nome}</div>
-                <div className="text-xs text-neon-pink">{d.destaque}</div>
-              </figcaption>
-            </figure>
-          ))}
-        </div>
-        <div className="mt-8 text-center">
-          <a href={whatsLink("Olá, NovaesWeb! Quero ser o próximo cliente e começar meu projeto.")} target="_blank" rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 rounded-full bg-neon px-7 py-3 font-semibold shadow-neon">
-            <MessageCircle className="h-5 w-5" /> Quero começar meu projeto
-          </a>
-        </div>
-      </section>
-
       <section id="cadastro" className="mx-auto max-w-[1800px] px-4 pb-14 sm:px-8 xl:px-14">
         <div className="mx-auto max-w-3xl rounded-3xl border border-neon-violet/30 bg-card/60 p-6 shadow-neon sm:p-10">
           <p className="text-sm font-semibold tracking-widest text-neon-pink">FALE COM A GENTE</p>
@@ -277,14 +241,16 @@ function Index() {
         </div>
         {allFaqs.length > faqsShown && (
           <div className="mt-6 flex justify-center">
-            <button
+            <Button
+              variant="outline"
               type="button"
+              aria-expanded={faqsAbertas}
               onClick={() => setFaqsAbertas((v) => !v)}
-              className="inline-flex items-center gap-2 rounded-full border border-neon-violet px-6 py-3 text-sm font-semibold text-neon-violet transition hover:bg-neon-violet/10"
+              className="min-h-11 h-auto whitespace-normal inline-flex items-center gap-2 rounded-full border border-neon-violet px-6 py-3 text-sm font-semibold text-neon-pink transition hover:bg-neon-violet/10"
             >
               {faqsAbertas ? "Mostrar menos dúvidas" : `Ver todas as ${allFaqs.length} dúvidas`}
               <ChevronDown className={`h-4 w-4 transition ${faqsAbertas ? "rotate-180" : ""}`} />
-            </button>
+            </Button>
           </div>
         )}
       </section>
@@ -297,8 +263,9 @@ const words = ["identidade de marca", "presença digital", "vitrine que vende"];
 function RotatingWord() {
   const [i, setI] = useState(0);
   useEffect(() => {
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
     const t = setInterval(() => setI((x) => (x + 1) % words.length), 2500);
     return () => clearInterval(t);
   }, []);
-  return <span key={i} className="block whitespace-nowrap text-neon animate-in fade-in slide-in-from-bottom-3 duration-500">{words[i]}</span>;
+  return <span key={i} className="block text-neon animate-in fade-in slide-in-from-bottom-3 duration-500">{words[i]}</span>;
 }

@@ -137,6 +137,8 @@
   --foreground: oklch(0.97 0.01 300);
   --card: oklch(0.17 0.05 285);
   --card-foreground: oklch(0.97 0.01 300);
+  --popover: oklch(0.17 0.05 285);
+  --popover-foreground: oklch(0.97 0.01 300);
   --primary: oklch(0.65 0.29 320);
   --primary-foreground: oklch(0.99 0 0);
   --muted-foreground: oklch(0.78 0.03 300);
@@ -180,4 +182,19 @@
 }
 @layer components {
   a.bg-neon:hover, button.bg-neon:hover, a[class*="border-neon"]:hover { animation: neon-pulse 1.1s ease-in-out infinite; }
+}
+
+@layer base {
+  :where(a, button, input, textarea, select, summary):focus-visible {
+    outline: 2px solid var(--foreground);
+    outline-offset: 4px;
+  }
+  summary { min-height: 44px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
 }

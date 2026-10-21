@@ -9,6 +9,7 @@ import { SiteHeader, WHATS } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { AddonHighlights } from "@/components/AddonHighlights";
 import { plans, comparison, brl, half, whatsLink, planWhatsMsg } from "@/data/plans";
+import { Button } from "@/components/ui/button";
 
 export const Route = createFileRoute("/planos")({
   head: () => ({
@@ -33,7 +34,7 @@ function Planos() {
 
       <section className="relative">
         <div className="absolute inset-y-0 right-0 w-full md:w-3/5">
-          <img src={portrait} alt="Equipe NovaesWeb" className="h-full w-full object-cover object-[center_20%]" />
+          <img src={portrait} alt="Imagem de apresentação da marca NovaesWeb" className="h-full w-full object-cover object-[center_20%]" />
           <div className="absolute inset-0 bg-gradient-to-r from-background via-background/60 to-transparent" />
           <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-background to-transparent" />
         </div>
@@ -58,7 +59,7 @@ function Planos() {
         </div>
 
         <div className="mt-8 grid grid-cols-2 gap-6 rounded-2xl border border-border bg-card/80 p-6 md:grid-cols-4">
-          {[[BarChart3, "Resultados reais", "Mais visibilidade e vendas"], [Settings, "Atualizações inclusas", "Seu site sempre moderno"], [Headphones, "Suporte de verdade", "Fale direto com nossa equipe"], [ShieldCheck, "Segurança e estabilidade", "Seu site sempre no ar"]].map(([I, a, b]: any) => (
+          {[[BarChart3, "Presença digital", "Apresente seu negócio"], [Settings, "Atualizações inclusas", "Conforme seu plano"], [Headphones, "Suporte de verdade", "Fale direto com nossa equipe"], [ShieldCheck, "Segurança e estabilidade", "Manutenção técnica"]].map(([I, a, b]: any) => (
             <div key={a} className="flex items-center gap-4"><I className="h-9 w-9 shrink-0 text-neon-pink" /><div><div className="font-semibold">{a}</div><div className="text-sm text-muted-foreground">{b}</div></div></div>
           ))}
         </div>
@@ -97,7 +98,7 @@ function Planos() {
                 {comparison.map(([f, ...v]) => (
                   <tr key={f} className="border-b border-border/40">
                     <td className="py-2">{f}</td>
-                    {v.map((x, i) => <td key={i} className="py-2 text-center">{x === true ? <CheckCircle2 className="mx-auto h-5 w-5 text-neon-pink" /> : x === false ? <span className="text-muted-foreground">—</span> : <span className="text-xs font-semibold">{x}</span>}</td>)}
+                    {v.map((x, i) => <td key={i} className="py-2 text-center">{x === true ? <><CheckCircle2 aria-hidden="true" className="mx-auto h-5 w-5 text-neon-pink" /><span className="sr-only">Incluído</span></> : x === false ? <><span aria-hidden="true" className="text-muted-foreground">—</span><span className="sr-only">Não incluído</span></> : <span className="text-xs font-semibold">{x}</span>}</td>)}
                   </tr>
                 ))}
               </tbody>
@@ -166,7 +167,7 @@ function PlanCard({ p }: { p: Plan }) {
 
       <div className="mt-5 grid grid-cols-2 rounded-full border border-border p-1 text-sm">
         {(["inclui", "pagamento"] as const).map((t) => (
-          <button key={t} onClick={() => setTab(t)} className={`rounded-full py-1.5 font-semibold transition ${tab === t ? "bg-neon shadow-neon" : "text-muted-foreground"}`}>{t === "inclui" ? "O que inclui" : "Pagamento"}</button>
+          <Button variant="ghost" key={t} aria-pressed={tab === t} onClick={() => setTab(t)} className={`min-h-11 h-auto whitespace-normal rounded-full py-1.5 font-semibold transition ${tab === t ? "bg-neon shadow-neon" : "text-muted-foreground"}`}>{t === "inclui" ? "O que inclui" : "Pagamento"}</Button>
         ))}
       </div>
 
@@ -176,7 +177,7 @@ function PlanCard({ p }: { p: Plan }) {
             <ul className="space-y-2.5 text-sm">
               {items.map((i) => <li key={i} className="flex items-center gap-3 animate-in fade-in"><CheckCircle2 className="h-5 w-5 shrink-0 text-neon-pink" />{i}</li>)}
             </ul>
-            <button onClick={() => setAll(!all)} className="mt-3 text-sm font-semibold text-neon-pink">{all ? "Mostrar menos" : `+ ${p.items.length - 4} recursos`}</button>
+            <Button variant="link" aria-expanded={all} onClick={() => setAll(!all)} className="mt-3 min-h-11 h-auto px-0 text-sm font-semibold text-neon-pink">{all ? "Mostrar menos" : `+ ${p.items.length - 4} recursos`}</Button>
             {all && <p className="mt-3 text-xs text-muted-foreground animate-in fade-in">{p.excludes}</p>}
           </>
         ) : (

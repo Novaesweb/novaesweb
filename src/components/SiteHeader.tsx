@@ -3,6 +3,7 @@ import { useState } from "react";
 import { Menu, MessageCircle, X } from "lucide-react";
 import logo from "@/assets/logo-mark.webp";
 import { whatsLink } from "@/data/plans";
+import { Button } from "@/components/ui/button";
 export const WHATS = whatsLink();
 
 const nav: { label: string; to: "/" | "/planos" | "/sobre" }[] = [
@@ -34,13 +35,13 @@ export function SiteHeader({ active }: { active: string }) {
           <a href={WHATS} target="_blank" rel="noopener noreferrer" aria-label="Falar no WhatsApp" className="flex items-center gap-2 rounded-xl bg-neon px-3 py-3 text-sm font-semibold shadow-neon sm:px-5">
             <MessageCircle className="h-5 w-5" /> <span className="hidden sm:inline">Falar no WhatsApp</span>
           </a>
-          <button onClick={() => setOpen(!open)} aria-label="Abrir menu" className="grid h-11 w-11 place-items-center rounded-xl border border-border lg:hidden">
+          <Button variant="outline" size="icon" onClick={() => setOpen(!open)} aria-expanded={open} aria-controls="menu-celular" aria-label={open ? "Fechar menu" : "Abrir menu"} className="grid h-11 w-11 place-items-center rounded-xl border border-border lg:hidden">
             {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
-          </button>
+          </Button>
         </div>
       </div>
       {open && (
-        <nav className="border-t border-border/40 px-4 pb-4 animate-in fade-in slide-in-from-top-2 lg:hidden">
+        <nav id="menu-celular" aria-label="Menu principal no celular" className="border-t border-border/40 px-4 pb-4 animate-in fade-in slide-in-from-top-2 lg:hidden">
           {nav.map((n) => (
             <Link key={n.label} to={n.to} onClick={() => setOpen(false)} className={`block border-b border-border/30 py-3 ${n.label === active ? "text-neon-pink" : ""}`}>{n.label}</Link>
           ))}
