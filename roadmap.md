@@ -6,6 +6,7 @@
 - [x] Implementar escolhas de cookies e preparação do Analytics desativada até aprovação; aceitar/recusar/personalizar e reabrir conferidos, nenhum rastreador opcional carregado.
 - [x] Reduzir acesso de rastreadores de treinamento de IA mantendo buscas convencionais — regras voluntárias, sem garantia de bloqueio.
 - [x] Corrigir problemas de acessibilidade prioritários e verificar os novos caminhos; 79 testes passaram, páginas e preferências conferidas em computador/celular, build OK.
+- [x] Versão de 21/10 enviada ao GitHub (commit 31051c96, 131 arquivos conferidos byte a byte; nada de chaves ou arquivos internos enviado).
 - [ ] Confirmar identificação legal da empresa, retenção operacional e comprovação dos indicadores/imagens — depende das informações da cliente; documento enviado termina incompleto no item 5.
 - [ ] Revisar antiabuso, acesso operacional aos contatos e exclusão automática — depende da definição de responsáveis e retenção; esta revisão não alterou permissões nem certificou o ambiente publicado.
 
