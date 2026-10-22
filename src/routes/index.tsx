@@ -57,7 +57,7 @@ const steps = [
   ["01", "Vamos entender", "Você conta sua ideia. Definimos o escopo, o plano e as condições na proposta."],
   ["02", "Hora de criar", "Com os materiais recebidos e a proposta alinhada, começamos o desenvolvimento."],
   ["03", "Você acompanha", "Apresentamos o projeto para revisão e alinhamos os detalhes da entrega."],
-  ["04", "Pronto para começar", "Concluímos a entrega conforme a proposta. A mensalidade inicia na ativação."],
+  ["04", "Pronto para começar", "Concluímos a entrega conforme a proposta. Start sem mensalidade obrigatória; Business e Premium com mensalidade na ativação."],
 ];
 
 function Index() {

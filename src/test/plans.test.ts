@@ -1,17 +1,54 @@
 import { describe, it, expect } from "vitest";
-import { plans, half, whatsLink, planWhatsMsg, videoPacks, packWhatsMsg, faqs } from "@/data/plans";
+import { plans, half, whatsLink, planWhatsMsg, videoPacks, packWhatsMsg, faqs, comparison } from "@/data/plans";
 import { allFaqs, faqsShown } from "@/data/faqs";
 
 describe("planos", () => {
   it("valores oficiais", () => {
-    expect(plans.map((p) => [p.setup, p.monthly])).toEqual([[238, 59.9], [498, 109.9], [898, 209.9]]);
+     expect(plans.map((p) => [p.setup, p.monthly])).toEqual([[630, 0], [578, 190], [980, 270]]);
   });
   it("entrada de 50%", () => {
-    expect(plans.map((p) => half(p.setup))).toEqual([119, 249, 449]);
+     expect(plans.map((p) => half(p.setup))).toEqual([315, 289, 490]);
   });
   it("whatsapp", () => {
     expect(whatsLink("x")).toBe("https://wa.me/5551991189293?text=x");
-    expect(planWhatsMsg(plans[2]!)).toContain("Novaes Premium, com criação de R$ 898,00 e mensalidade de R$ 209,90");
+    const premium = plans.find((p) => p.id === "premium");
+    if (!premium) throw new Error("Premium ausente");
+    expect(planWhatsMsg(premium)).toContain("Novaes Premium, com criação de R$ 980,00 e mensalidade de R$ 270,00");
+  });
+  it("Business custa 578 de criação e 190 por mês", () => {
+    const business = plans.find((p) => p.id === "business");
+    expect(business?.setup).toBe(578);
+    expect(business?.monthly).toBe(190);
+    if (!business) throw new Error("Business ausente");
+    expect(planWhatsMsg(business)).toContain("criação de R$ 578,00 e mensalidade de R$ 190,00");
+  });
+  it("Premium custa 980 de criação e 270 por mês", () => {
+    const premium = plans.find((p) => p.id === "premium");
+    expect(premium?.setup).toBe(980);
+    expect(premium?.monthly).toBe(270);
+  });
+  it("Premium mantém WhatsApp automático como adicional, não inclui tudo", () => {
+    expect(comparison.find(([name]) => name === "WhatsApp automático")?.[3]).toBe("Adicional");
+  });
+  it("Start tem criação única de 630 e nenhuma mensalidade obrigatória", () => {
+    const start = plans.find((p) => p.id === "start");
+    expect(start?.setup).toBe(630);
+    expect(start?.monthly).toBe(0);
+    if (!start) throw new Error("Start ausente");
+    expect(planWhatsMsg(start)).toContain("sem mensalidade obrigatória");
+    expect(planWhatsMsg(start)).toContain("sem suporte contratado");
+  });
+  it("suporte opcional do Start custa 80 por mês e exige seleção", () => {
+    const start = plans.find((p) => p.id === "start");
+    expect(start?.optionalSupportMonthly).toBe(80);
+    if (!start) throw new Error("Start ausente");
+    expect(planWhatsMsg(start, true)).toContain("suporte opcional de R$ 80,00 por mês");
+    expect(planWhatsMsg(start)).not.toContain("Quero contratar também");
+  });
+  it("Start não inclui serviços recorrentes", () => {
+    expect(comparison.find(([name]) => name === "Suporte")?.[1]).toBe("Opcional: R$ 80/mês");
+    expect(comparison.find(([name]) => name === "Manutenção inclusa")?.[1]).toBe(false);
+    expect(comparison.find(([name]) => name === "Hospedagem recorrente inclusa")?.[1]).toBe(false);
   });
 });
 

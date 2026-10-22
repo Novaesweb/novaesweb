@@ -1,5 +1,20 @@
 # Roadmap — NovaesWeb
 
+## Atualização oficial dos planos — 22/10
+- [x] Incorporar ajustes finais: lançamento Start de R$ 890 por R$ 630 (economia R$ 260) informado pela empresa e franquia de 4 solicitações mensais no Business/Premium.
+- [x] Registrar requisitos comerciais oficiais e preparar resumo da alteração restrita à página de Planos.
+- [x] Aplicar ajustes aprovados somente em Planos: campanha Start, pagamento antes da publicação, regras das 4 solicitações, comparativo e Personalizado; catálogo e demais páginas preservados. 98 testes passaram; controles e WhatsApp conferidos em 390, 650 e 1280px, sem rolagem lateral ou erros. Sem envio ao GitHub ou publicação.
+- [ ] Validar recursos comerciais dos painéis e módulos antes de anunciá-los como disponíveis — depende da confirmação da cliente sobre os sistemas entregues fora deste site.
+
+## Valores e apresentação dos planos — 22/10
+- [x] Dar destaque comercial aos valores reais, sem inventar preço anterior, desconto ou prazo promocional.
+- [x] Destacar R$ 0/mês no Start com criação única menor abaixo; Business R$ 578 + R$ 190/mês; Premium R$ 980 + R$ 270/mês.
+- [x] Retirar promessas de oferta completa do Premium e apresentar todas as possibilidades no Personalizado, sob orçamento; 77 testes passaram, preços, entradas, suporte e mensagens conferidos na página, sem erros ou rolagem lateral em 390 e 650px.
+
+## Novaes Start — 22/10
+- [x] Atualizar criação para R$ 630, sem mensalidade obrigatória ou serviços recorrentes inclusos; suporte opcional R$ 80/mês.
+- [x] Ajustar cartão, comparativo, WhatsApp, dúvidas e termos; 74 testes passaram, escolha de suporte e valores de entrada/entrega conferidos na página, sem rolagem lateral em 650px.
+
 ## Adequação jurídica — 21/10
 - [x] Auditar dados, rastreadores, acessibilidade, depoimentos e origem das imagens; prioridades apresentadas e registradas em docs/auditoria-privacidade.md.
 - [x] Integrar Privacidade, Termos e Cancelamento/Reembolso ao site, sem criar regras comerciais.

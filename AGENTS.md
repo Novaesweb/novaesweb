@@ -14,3 +14,5 @@
 - Keep legal documents centralized and expose them through dedicated leaf routes so disclosures have stable, shareable URLs.
 - Optional analytics requires both explicit visitor consent and approved owner configuration; keep all browser storage and tracking operations in effects or event handlers.
 - Root layout owns the single main landmark and privacy preferences dialog so every route has consistent keyboard access and consent controls.
+- Plan cards and WhatsApp quotes distinguish one-time creation from recurring plans; optional support is opt-in and priced from the plan record to prevent automatic enrollment or divergent quotes.
+- Keep page-scoped commercial plan presentation in `src/data/commercial-plans.ts`, deriving prices from the shared plan records; this isolates approved `/planos` updates from legacy FAQ/legal content and preserves the complete add-on catalog.
