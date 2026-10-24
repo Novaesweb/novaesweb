@@ -1,5 +1,10 @@
 # Roadmap — NovaesWeb
 
+## Página Quem Somos — 24/10
+- [x] Criar a página /quem-somos (apresentação, o que fazemos, missão, segmentos, soluções, diferenciais, resumo dos 4 planos e chamada de orçamento) e colocar "Quem Somos" no menu do topo e do celular.
+- [x] Conferir no navegador no computador e no celular: página renderiza, link do menu funciona, sem corte lateral; 99 testes passaram.
+- [x] Versão de 24/10 enviada ao GitHub (commit 602974a8, 135 arquivos conferidos byte a byte; nada de chaves ou arquivos internos enviado).
+
 ## Atualização oficial dos planos — 22/10
 - [x] Incorporar ajustes finais: lançamento Start de R$ 890 por R$ 630 (economia R$ 260) informado pela empresa e franquia de 4 solicitações mensais no Business/Premium.
 - [x] Registrar requisitos comerciais oficiais e preparar resumo da alteração restrita à página de Planos.
