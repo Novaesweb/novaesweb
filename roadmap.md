@@ -70,3 +70,4 @@
 - [x] Versão de 19/10 enviada ao GitHub (commit 564b4a6, 119 arquivos conferidos um a um)
 - [ ] Importar o repositório Novaesweb/novaesweb na Vercel (precisa ser feito na conta da cliente) e conferir o endereço novo
 - [ ] Passar as duas chaves do backend para a Vercel (Settings → Environment Variables) para o formulário de contato funcionar lá
+- [x] Página "Quem Somos" (/quem-somos) criada conforme o documento da cliente: apresentação, o que fazemos, missão, segmentos atendidos, soluções que evoluem, diferenciais, resumo dos planos com botão para /planos e chamada final — menu do topo e do celular atualizados, testes e visual conferidos; sem push/deploy sem autorização
