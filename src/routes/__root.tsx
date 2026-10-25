@@ -12,6 +12,7 @@ import { useEffect, type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
+import { AnimatedBackground } from "@/components/AnimatedBackground";
 import { FloatingWhatsApp } from "@/components/FloatingWhatsApp";
 import { PrivacyPreferences } from "@/components/PrivacyPreferences";
 import { Button } from "@/components/ui/button";
@@ -171,6 +172,7 @@ function RootComponent() {
 
   return (
     <QueryClientProvider client={queryClient}>
+      <AnimatedBackground />
       {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
       <a
         href="#conteudo-principal"
@@ -178,7 +180,7 @@ function RootComponent() {
       >
         Ir para o conteúdo
       </a>
-      <main id="conteudo-principal" tabIndex={-1}>
+      <main id="conteudo-principal" className="relative z-10" tabIndex={-1}>
         <Outlet />
       </main>
       <FloatingWhatsApp />

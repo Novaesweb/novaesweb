@@ -135,15 +135,15 @@ function Planos() {
       </style>
       <SiteHeader active="Planos" />
 
-      <section className="relative">
-        <div className="absolute inset-y-0 right-0 w-full md:w-3/5">
+      <section className="relative overflow-hidden">
+        <div className="absolute inset-y-0 right-0 w-full md:w-1/2 lg:w-3/5 pointer-events-none">
           <img
             src={portrait}
             alt="Imagem de apresentação da marca NovaesWeb"
             className="h-full w-full object-cover object-[center_20%]"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-background via-background/60 to-transparent" />
-          <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-background to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#080512] via-[#080512]/75 to-transparent" />
+          <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-[#080512] to-transparent" />
         </div>
         <div className="relative mx-auto max-w-[1800px] px-4 pb-16 pt-12 sm:px-8 xl:px-14">
           <div className="max-w-xl 2xl:max-w-2xl">
