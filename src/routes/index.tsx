@@ -4,6 +4,7 @@ import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { LeadForm } from "@/components/LeadForm";
 import { EconomyTeaserSection } from "@/components/EconomyTeaserSection";
+import { PlansSummarySection } from "@/components/PlansSummarySection";
 import { Button } from "@/components/ui/button";
 import {
   Globe, Palette, Zap, Headphones, ArrowRight, Box, Users, Rocket, ChevronRight, MessageCircle,
@@ -181,6 +182,8 @@ function Index() {
           </a>
         </div>
       </section>
+
+      <PlansSummarySection />
 
       <EconomyTeaserSection />
 
