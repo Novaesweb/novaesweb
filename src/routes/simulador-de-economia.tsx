@@ -111,21 +111,39 @@ function SimuladorDeEconomiaPage() {
       setInputs((prev) => ({
         ...prev,
         siteMonthlyCost: found.monthly,
+        siteIncludedOrders: found.includedOrders,
+        siteOverageOrderPrice: found.overageOrderPrice,
       }));
     }
   }
 
   function updateNumberField<K extends keyof SimulationInput>(key: K, rawValue: string) {
     const parsed = rawValue === "" ? 0 : Number(rawValue.replace(",", "."));
-    if (key === "siteMonthlyCost") {
+    const numericVal = Number.isNaN(parsed) ? 0 : parsed;
+
+    if (
+      key === "siteMonthlyCost" ||
+      key === "siteIncludedOrders" ||
+      key === "siteOverageOrderPrice"
+    ) {
+      const nextMonthly = key === "siteMonthlyCost" ? numericVal : inputs.siteMonthlyCost;
+      const nextIncluded = key === "siteIncludedOrders" ? numericVal : inputs.siteIncludedOrders;
+      const nextOverage =
+        key === "siteOverageOrderPrice" ? numericVal : inputs.siteOverageOrderPrice;
+
       const matchingPlan = sitePlanOptions.find(
-        (p) => p.id !== "custom" && p.monthly === parsed,
+        (p) =>
+          p.id !== "custom" &&
+          p.monthly === nextMonthly &&
+          p.includedOrders === nextIncluded &&
+          p.overageOrderPrice === nextOverage,
       );
       setSelectedSitePlan(matchingPlan ? matchingPlan.id : "custom");
     }
+
     setInputs((prev) => ({
       ...prev,
-      [key]: Number.isNaN(parsed) ? 0 : parsed,
+      [key]: numericVal,
     }));
   }
 
@@ -204,8 +222,8 @@ function SimuladorDeEconomiaPage() {
               <div>
                 <h2 className="text-sm font-bold">Simulação transparente</h2>
                 <p className="mt-1 text-xs leading-relaxed text-muted-foreground">
-                  Todos os campos são editáveis e consideram transição gradual entre aplicativo e
-                  site próprio.
+                  Todos os campos são editáveis, incluindo franquia de pedidos aceitos, excedentes e
+                  transição gradual entre canais.
                 </p>
               </div>
             </div>
@@ -297,12 +315,12 @@ function SimuladorDeEconomiaPage() {
                               ...prev,
                               platformCommissionPct: 12,
                               platformPaymentFeePct: 3.2,
-                              platformMonthlyFee: 130,
+                              platformMonthlyFee: 110,
                             }))
                           }
                           className="rounded-full border border-neon-violet/50 bg-background/60 px-3 py-1 text-[11px] font-medium text-muted-foreground hover:border-neon-pink hover:text-foreground"
                         >
-                          Usar ref. Plano Básico (12% + 3,2% + R$ 130)
+                          Usar ref. Plano Básico (12% + 3,2% + R$ 110)
                         </button>
                         <button
                           type="button"
@@ -317,6 +335,38 @@ function SimuladorDeEconomiaPage() {
                           className="rounded-full border border-neon-violet/50 bg-background/60 px-3 py-1 text-[11px] font-medium text-muted-foreground hover:border-neon-pink hover:text-foreground"
                         >
                           Usar ref. Plano Entrega (23% + 3,2% + R$ 150)
+                        </button>
+                      </div>
+                    )}
+                    {s.platform === "99food" && (
+                      <div className="mt-2 flex flex-wrap gap-2">
+                        <button
+                          type="button"
+                          onClick={() =>
+                            setInputs((prev) => ({
+                              ...prev,
+                              platformCommissionPct: 8.9,
+                              platformPaymentFeePct: 3.2,
+                              platformMonthlyFee: 0,
+                            }))
+                          }
+                          className="rounded-full border border-neon-violet/50 bg-background/60 px-3 py-1 text-[11px] font-medium text-muted-foreground hover:border-neon-pink hover:text-foreground"
+                        >
+                          Usar ref. Entrega Própria (8,9% + 3,2% + R$ 0)
+                        </button>
+                        <button
+                          type="button"
+                          onClick={() =>
+                            setInputs((prev) => ({
+                              ...prev,
+                              platformCommissionPct: 12,
+                              platformPaymentFeePct: 3.2,
+                              platformMonthlyFee: 0,
+                            }))
+                          }
+                          className="rounded-full border border-neon-violet/50 bg-background/60 px-3 py-1 text-[11px] font-medium text-muted-foreground hover:border-neon-pink hover:text-foreground"
+                        >
+                          Usar ref. Entrega Parceira (12% + 3,2% + R$ 0)
                         </button>
                       </div>
                     )}
@@ -432,7 +482,7 @@ function SimuladorDeEconomiaPage() {
                 {/* 3. Custos no Site Próprio NovaesWeb */}
                 <fieldset className="space-y-4 border-t border-border pt-5">
                   <legend className="text-sm font-bold uppercase tracking-wider text-neon-pink">
-                    3. Custos no site próprio NovaesWeb
+                    3. Custos e franquia no site próprio NovaesWeb
                   </legend>
 
                   <div>
@@ -454,12 +504,20 @@ function SimuladorDeEconomiaPage() {
                     <p className="mt-1.5 text-xs leading-relaxed text-muted-foreground">
                       {currentSitePlanObj.note}
                     </p>
+                    {selectedSitePlan === "start" && (
+                      <p className="mt-2 rounded-xl border border-amber-400/50 bg-amber-500/10 p-3 text-xs leading-relaxed text-amber-200">
+                        <strong>Atenção:</strong> O plano <strong>Novaes Start</strong> é um site
+                        institucional e não inclui sistema de pedidos online. Para receber pedidos
+                        no site próprio, selecione <strong>Novaes Business</strong> (340 pedidos
+                        incluídos) ou <strong>Novaes Premium</strong> (750 pedidos incluídos).
+                      </p>
+                    )}
                   </div>
 
                   <div className="grid gap-4 sm:grid-cols-2">
                     <div>
                       <label htmlFor="sim-site-monthly-cost" className="block text-sm font-medium">
-                        Custo mensal do site NovaesWeb (R$)
+                        Mensalidade do plano NovaesWeb (R$)
                       </label>
                       <input
                         id="sim-site-monthly-cost"
@@ -469,6 +527,44 @@ function SimuladorDeEconomiaPage() {
                         step={10}
                         value={inputs.siteMonthlyCost}
                         onChange={(e) => updateNumberField("siteMonthlyCost", e.target.value)}
+                        className={`mt-1.5 ${inputClass}`}
+                      />
+                    </div>
+                    <div>
+                      <label
+                        htmlFor="sim-site-included-orders"
+                        className="block text-sm font-medium"
+                      >
+                        Pedidos aceitos incluídos/mês (franquia)
+                      </label>
+                      <input
+                        id="sim-site-included-orders"
+                        type="number"
+                        min={0}
+                        max={1000000}
+                        step={10}
+                        value={inputs.siteIncludedOrders}
+                        onChange={(e) => updateNumberField("siteIncludedOrders", e.target.value)}
+                        className={`mt-1.5 ${inputClass}`}
+                      />
+                    </div>
+                    <div>
+                      <label
+                        htmlFor="sim-site-overage-price"
+                        className="block text-sm font-medium"
+                      >
+                        Pedido aceito excedente (R$/pedido)
+                      </label>
+                      <input
+                        id="sim-site-overage-price"
+                        type="number"
+                        min={0}
+                        max={100}
+                        step={0.05}
+                        value={inputs.siteOverageOrderPrice}
+                        onChange={(e) =>
+                          updateNumberField("siteOverageOrderPrice", e.target.value)
+                        }
                         className={`mt-1.5 ${inputClass}`}
                       />
                     </div>
@@ -708,12 +804,22 @@ function SimuladorDeEconomiaPage() {
 
                   <dl className="mt-4 flex-1 space-y-2 text-xs">
                     <div className="flex justify-between gap-2">
-                      <dt className="text-muted-foreground">Comissão por pedido</dt>
+                      <dt className="text-muted-foreground">Comissão sobre o valor da venda</dt>
                       <dd className="font-semibold text-neon-emerald">R$ 0,00 (0%)</dd>
                     </div>
                     <div className="flex justify-between gap-2">
                       <dt className="text-muted-foreground">Mensalidade do site NovaesWeb</dt>
                       <dd className="font-semibold">R$ {brl(directOnly.monthlyFeeCost)}</dd>
+                    </div>
+                    <div className="flex justify-between gap-2">
+                      <dt className="text-muted-foreground">
+                        Pedidos excedentes (
+                        {s.siteIncludedOrders > 0
+                          ? `${directOnly.overageOrders} após ${s.siteIncludedOrders} incluídos`
+                          : "sem franquia ativa"}
+                        )
+                      </dt>
+                      <dd className="font-semibold">R$ {brl(directOnly.overageCost)}</dd>
                     </div>
                     <div className="flex justify-between gap-2">
                       <dt className="text-muted-foreground">
@@ -868,8 +974,9 @@ function SimuladorDeEconomiaPage() {
                   <p className="mt-1 text-[11px] text-muted-foreground">
                     Parcela no app: R$ {brl(combined.appPortionCost)} (taxas variáveis R${" "}
                     {brl(combined.appVariableCost)} + fixos R$ {brl(combined.appFixedCost)}) ·
-                    Parcela no site: R$ {brl(combined.sitePortionCost)} (taxas variáveis R${" "}
-                    {brl(combined.siteVariableCost)} + fixos R$ {brl(combined.siteFixedCost)})
+                    Parcela no site: R$ {brl(combined.sitePortionCost)} (pagamento R${" "}
+                    {brl(combined.siteVariableCost)} + excedentes R${" "}
+                    {brl(combined.siteOverageCost)} + fixos R$ {brl(combined.siteFixedCost)})
                   </p>
                 </div>
 
@@ -931,7 +1038,9 @@ function SimuladorDeEconomiaPage() {
                     <li>
                       • <strong>Custos em vendas diretas (100%):</strong> Faturamento ×{" "}
                       {s.sitePaymentFeePct}% + Mensalidade do site (R${" "}
-                      {brl(directOnly.monthlyFeeCost)}) + Divulgação (R${" "}
+                      {brl(directOnly.monthlyFeeCost)}) + Excedentes de pedidos (
+                      {directOnly.overageOrders} × R$ {brl(s.siteOverageOrderPrice)} = R${" "}
+                      {brl(directOnly.overageCost)}) + Divulgação (R${" "}
                       {brl(directOnly.marketingCost)}) + Adicionais no site (R${" "}
                       {brl(directOnly.additionalCost)}) ={" "}
                       <strong className="text-foreground">
@@ -942,8 +1051,9 @@ function SimuladorDeEconomiaPage() {
                     <li>
                       • <strong>Cenário combinado ({s.migratedOrdersPct}% no site):</strong> Soma os
                       custos variáveis e fixos da parcela que permanece no aplicativo (R${" "}
-                      {brl(combined.appPortionCost)}) com os custos variáveis e fixos da parcela
-                      atendida no site próprio (R$ {brl(combined.sitePortionCost)}) ={" "}
+                      {brl(combined.appPortionCost)}) com os custos variáveis, excedentes de
+                      pedidos (R$ {brl(combined.siteOverageCost)}) e fixos da parcela atendida no
+                      site próprio (R$ {brl(combined.sitePortionCost)}) ={" "}
                       <strong className="text-foreground">
                         R$ {brl(combined.totalCombinedMonthlyCost)}/mês
                       </strong>
@@ -960,6 +1070,12 @@ function SimuladorDeEconomiaPage() {
                   <h3 className="font-bold text-foreground">Premissas e custos operacionais</h3>
                   <ul className="mt-2 space-y-1.5">
                     <li>
+                      • <strong>Franquia de pedidos aceitos e excedentes:</strong> No Business são
+                      incluídos 340 pedidos aceitos/mês (excedente R$ 0,20/pedido) e no Premium 750
+                      pedidos aceitos/mês (excedente R$ 0,15/pedido), sem bloqueio de vendas ao
+                      ultrapassar a franquia.
+                    </li>
+                    <li>
                       • <strong>Taxa de criação única do site:</strong> A implantação inicial do
                       site NovaesWeb é cobrada uma única vez (ex.: R$ 578,00 no Business, R$ 980,00
                       no Premium ou R$ 630,00 no Start) e não faz parte da mensalidade recorrente.
@@ -974,10 +1090,6 @@ function SimuladorDeEconomiaPage() {
                       parceiros do aplicativo hoje e passe a operar entrega própria no site, inclua
                       a diferença operacional no campo{" "}
                       <em>Custos adicionais no site (R$/mês)</em>.
-                    </li>
-                    <li>
-                      • <strong>Módulos e serviços terceiros:</strong> Domínio próprio, WhatsApp
-                      API oficial, tarifas da Meta e módulos extras são contratados separadamente.
                     </li>
                   </ul>
                 </div>
