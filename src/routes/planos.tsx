@@ -23,6 +23,7 @@ import {
   ReceiptText,
   ShoppingBag,
   MessagesSquare,
+  Sparkles,
 } from "lucide-react";
 import portrait from "@/assets/portrait.webp";
 import { SiteHeader } from "@/components/SiteHeader";
@@ -173,7 +174,7 @@ function Planos() {
               <ul className="mt-4 grid gap-2.5 text-sm sm:grid-cols-2">
                 {enterprisePlan.items.map((item) => (
                   <li key={item} className="flex items-center gap-2.5">
-                    <CheckCircle2 className="h-5 w-5 shrink-0 text-neon-pink" aria-hidden="true" />
+                    <CheckCircle2 className="h-5 w-5 shrink-0 text-neon-emerald" aria-hidden="true" />
                     <span>{item}</span>
                   </li>
                 ))}
@@ -240,7 +241,7 @@ function Planos() {
           className="mt-10 rounded-3xl border border-neon-violet/50 bg-card/90 p-6 shadow-neon sm:p-10"
         >
           <div className="max-w-3xl">
-            <span className="inline-flex items-center gap-2 rounded-full border border-neon-pink px-3.5 py-1 text-xs font-semibold tracking-widest text-neon-pink">
+            <span className="inline-flex items-center gap-2 rounded-full border border-neon-emerald/60 bg-neon-emerald/15 px-3.5 py-1 text-xs font-semibold tracking-widest text-neon-emerald">
               <ShieldCheck className="h-3.5 w-3.5" aria-hidden="true" />
               CONTINUIDADE DO RECEBIMENTO DE PEDIDOS
             </span>
@@ -266,8 +267,8 @@ function Planos() {
                   key={b.title}
                   className="flex items-start gap-4 rounded-2xl border border-border bg-background/70 p-5"
                 >
-                  <span className="grid h-11 w-11 shrink-0 place-items-center rounded-xl border border-neon-pink/50 bg-neon/10">
-                    <BenefitIcon className="h-6 w-6 text-neon-pink" aria-hidden="true" />
+                  <span className="grid h-11 w-11 shrink-0 place-items-center rounded-xl border border-neon-emerald/50 bg-neon-emerald/10">
+                    <BenefitIcon className="h-6 w-6 text-neon-emerald" aria-hidden="true" />
                   </span>
                   <div>
                     <h3 className="font-bold text-foreground">{b.title}</h3>
@@ -330,9 +331,9 @@ function Planos() {
                         R$ {brl(ex.overageTotalCost)}
                       </dd>
                     </div>
-                    <div className="rounded-xl border border-neon-pink/60 bg-card p-3">
-                      <dt className="text-xs font-semibold text-neon-pink">Total mensal</dt>
-                      <dd className="mt-1 font-display text-lg font-extrabold text-neon">
+                    <div className="rounded-xl border border-neon-emerald/60 bg-card p-3">
+                      <dt className="text-xs font-semibold text-neon-emerald">Total mensal</dt>
+                      <dd className="mt-1 font-display text-lg font-extrabold text-neon-emerald">
                         R$ {brl(ex.totalMonthlyBill)}
                       </dd>
                     </div>
@@ -358,7 +359,7 @@ function Planos() {
               {orderCountingRules.map((rule) => (
                 <li key={rule} className="flex items-start gap-2.5">
                   <CheckCircle2
-                    className="mt-0.5 h-4 w-4 shrink-0 text-neon-pink"
+                    className="mt-0.5 h-4 w-4 shrink-0 text-neon-emerald"
                     aria-hidden="true"
                   />
                   <span>{rule}</span>
@@ -437,7 +438,7 @@ function Planos() {
                           <>
                             <CheckCircle2
                               aria-hidden="true"
-                              className="mx-auto h-5 w-5 text-neon-pink"
+                              className="mx-auto h-5 w-5 text-neon-emerald"
                             />
                             <span className="sr-only">Incluído</span>
                           </>
@@ -612,6 +613,7 @@ function PlanCard({ p }: { p: Plan }) {
   const [all, setAll] = useState(false);
   const [withSupport, setWithSupport] = useState(false);
   const isOneTime = p.monthly === 0;
+  const isHighlighted = p.id === "business";
   const I = icons[p.id];
   const items = all ? p.items : p.items.slice(0, 5);
   const q = p.orderQuota;
@@ -619,11 +621,18 @@ function PlanCard({ p }: { p: Plan }) {
   return (
     <article
       className={`group relative flex flex-col rounded-2xl bg-card/90 p-7 backdrop-blur transition duration-300 hover:-translate-y-1 hover:shadow-neon ${
-        p.popular
+        isHighlighted
           ? "border-2 border-neon-pink shadow-neon md:-mt-3"
           : "border border-border hover:border-neon-pink"
       }`}
     >
+      {isHighlighted && (
+        <span className="mb-3 inline-flex w-fit items-center gap-1.5 rounded-full bg-neon px-3.5 py-1 text-xs font-bold tracking-wider text-primary-foreground shadow-neon">
+          <Sparkles className="h-3.5 w-3.5" aria-hidden="true" />
+          MAIS ESCOLHIDO PARA DELIVERY
+        </span>
+      )}
+
       <div className="flex items-center gap-4">
         <I className="h-10 w-10 shrink-0 text-neon-pink transition group-hover:scale-110" />
         <div className="min-w-0">
@@ -641,7 +650,7 @@ function PlanCard({ p }: { p: Plan }) {
             <span className="text-xl font-bold">R$</span>
             <span className="font-display text-5xl font-bold">{brl(p.setup)}</span>
           </div>
-          <p className="mt-1 text-sm font-semibold text-neon-pink">
+          <p className="mt-1 text-sm font-semibold text-neon-emerald">
             Economize R$ {brl(launchSaving(p))} · pagamento único
           </p>
           <p className="mt-3 text-xl font-bold">R$ {brl(p.monthly)}/mês</p>
@@ -667,9 +676,9 @@ function PlanCard({ p }: { p: Plan }) {
       </div>
 
       {/* NOVO DESTAQUE NOS CARDS: Quantidade de pedidos, excedente e selo Sem Bloqueio */}
-      <div className="mt-4 rounded-2xl border border-neon-pink/50 bg-background/80 p-4">
+      <div className="mt-4 rounded-2xl border border-neon-violet/50 bg-background/80 p-4">
         {q.noBlockBadge && (
-          <span className="mb-2 inline-flex items-center gap-1.5 rounded-full bg-neon px-3 py-0.5 text-[11px] font-bold text-primary-foreground shadow-neon">
+          <span className="mb-2 inline-flex items-center gap-1.5 rounded-full border border-neon-emerald/60 bg-neon-emerald/15 px-3 py-0.5 text-[11px] font-bold text-neon-emerald">
             <ShieldCheck className="h-3.5 w-3.5 shrink-0" aria-hidden="true" />
             {q.noBlockBadge}
           </span>
@@ -753,7 +762,7 @@ function PlanCard({ p }: { p: Plan }) {
             <ul className="space-y-2.5 text-sm">
               {items.map((i) => (
                 <li key={i} className="flex items-center gap-3 animate-in fade-in">
-                  <CheckCircle2 className="h-5 w-5 shrink-0 text-neon-pink" />
+                  <CheckCircle2 className="h-5 w-5 shrink-0 text-neon-emerald" />
                   {i}
                 </li>
               ))}

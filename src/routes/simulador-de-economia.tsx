@@ -79,8 +79,15 @@ function SimuladorDeEconomiaPage() {
   const [shareSimulationConfirmed, setShareSimulationConfirmed] = useState(false);
 
   const result = calculateEconomySimulation(inputs);
-  const { sanitizedInput: s, grossMonthlyRevenue, grossAnnualRevenue, appOnly, directOnly, directComparison, combined } =
-    result;
+  const {
+    sanitizedInput: s,
+    grossMonthlyRevenue,
+    grossAnnualRevenue,
+    appOnly,
+    directOnly,
+    directComparison,
+    combined,
+  } = result;
 
   const currentPlatformPreset = platformPresets[s.platform];
   const currentSitePlanObj =
@@ -115,17 +122,6 @@ function SimuladorDeEconomiaPage() {
         (p) => p.id !== "custom" && p.monthly === parsed,
       );
       setSelectedSitePlan(matchingPlan ? matchingPlan.id : "custom");
-    }
-    if (
-      key === "platformCommissionPct" ||
-      key === "platformPaymentFeePct" ||
-      key === "platformMonthlyFee"
-    ) {
-      setInputs((prev) => ({
-        ...prev,
-        [key]: Number.isNaN(parsed) ? 0 : parsed,
-      }));
-      return;
     }
     setInputs((prev) => ({
       ...prev,
@@ -204,7 +200,7 @@ function SimuladorDeEconomiaPage() {
               </div>
             </div>
             <div className="flex items-start gap-3.5 rounded-2xl border border-border bg-card/80 p-4">
-              <Scale className="mt-0.5 h-7 w-7 shrink-0 text-neon-pink" aria-hidden="true" />
+              <Scale className="mt-0.5 h-7 w-7 shrink-0 text-neon-emerald" aria-hidden="true" />
               <div>
                 <h2 className="text-sm font-bold">Simulação transparente</h2>
                 <p className="mt-1 text-xs leading-relaxed text-muted-foreground">
@@ -596,10 +592,10 @@ function SimuladorDeEconomiaPage() {
               </div>
 
               <div>
-                <span className="text-xs font-semibold uppercase tracking-wider text-neon-pink">
+                <span className="text-xs font-semibold uppercase tracking-wider text-neon-emerald">
                   Diferença mensal ({s.migratedOrdersPct}% no site)
                 </span>
-                <div className="mt-1 font-display text-2xl font-extrabold text-neon sm:text-3xl">
+                <div className="mt-1 font-display text-2xl font-extrabold text-neon-emerald sm:text-3xl">
                   {combinedMonthlyFormatted.prefix} {combinedMonthlyFormatted.amount}
                   <span className="text-xs font-normal text-muted-foreground">/mês</span>
                 </div>
@@ -688,9 +684,9 @@ function SimuladorDeEconomiaPage() {
                 {/* Card 2: Site próprio NovaesWeb */}
                 <article className="flex flex-col rounded-2xl border border-neon-violet/60 bg-card p-5">
                   <div className="flex items-center gap-2.5">
-                    <Store className="h-6 w-6 shrink-0 text-neon-pink" aria-hidden="true" />
+                    <Store className="h-6 w-6 shrink-0 text-neon-emerald" aria-hidden="true" />
                     <div>
-                      <span className="text-[11px] font-semibold uppercase tracking-wider text-neon-pink">
+                      <span className="text-[11px] font-semibold uppercase tracking-wider text-neon-emerald">
                         CANAL 2 · 100% DIRETO
                       </span>
                       <h3 className="text-lg font-bold">Site próprio NovaesWeb</h3>
@@ -701,7 +697,7 @@ function SimuladorDeEconomiaPage() {
                     <span className="text-xs text-muted-foreground">
                       Custos estimados com vendas diretas
                     </span>
-                    <div className="mt-1 font-display text-3xl font-extrabold text-neon">
+                    <div className="mt-1 font-display text-3xl font-extrabold text-neon-emerald">
                       R$ {brl(directOnly.totalMonthlyCost)}
                       <span className="text-xs font-normal text-muted-foreground">/mês</span>
                     </div>
@@ -713,7 +709,7 @@ function SimuladorDeEconomiaPage() {
                   <dl className="mt-4 flex-1 space-y-2 text-xs">
                     <div className="flex justify-between gap-2">
                       <dt className="text-muted-foreground">Comissão por pedido</dt>
-                      <dd className="font-semibold text-neon-pink">R$ 0,00 (0%)</dd>
+                      <dd className="font-semibold text-neon-emerald">R$ 0,00 (0%)</dd>
                     </div>
                     <div className="flex justify-between gap-2">
                       <dt className="text-muted-foreground">Mensalidade do site NovaesWeb</dt>
@@ -742,7 +738,7 @@ function SimuladorDeEconomiaPage() {
                     <TrendingDown className="h-6 w-6 shrink-0 text-neon-pink" aria-hidden="true" />
                     <div>
                       <span className="text-[11px] font-semibold uppercase tracking-wider text-neon-pink">
-                         SÍNTESE COMPARATIVA
+                        SÍNTESE COMPARATIVA
                       </span>
                       <h3 className="text-lg font-bold">Resultado da simulação</h3>
                     </div>
@@ -762,8 +758,8 @@ function SimuladorDeEconomiaPage() {
                   </div>
 
                   <div className="mt-4 flex-1 space-y-2.5 text-xs">
-                    <div className="rounded-xl border border-neon-violet/40 bg-background/70 p-3">
-                      <div className="font-semibold text-neon-pink">
+                    <div className="rounded-xl border border-neon-emerald/40 bg-background/70 p-3">
+                      <div className="font-semibold text-neon-emerald">
                         Cenário combinado ({s.migratedOrdersPct}% migrado ao site)
                       </div>
                       <div className="mt-1 flex justify-between">
@@ -774,7 +770,7 @@ function SimuladorDeEconomiaPage() {
                       </div>
                       <div className="mt-1 flex justify-between">
                         <span className="text-muted-foreground">Diferença mensal estimada:</span>
-                        <span className="font-bold text-neon-pink">
+                        <span className="font-bold text-neon-emerald">
                           {combinedMonthlyFormatted.prefix} {combinedMonthlyFormatted.amount}
                         </span>
                       </div>
@@ -813,7 +809,7 @@ function SimuladorDeEconomiaPage() {
                     No aplicativo: {combined.remainingAppPct}% ({combined.appOrders} pedidos · R${" "}
                     {brl(combined.appRevenue)})
                   </span>
-                  <span className="text-neon-pink">
+                  <span className="text-neon-emerald">
                     No site próprio: {s.migratedOrdersPct}% ({combined.siteOrders} pedidos · R${" "}
                     {brl(combined.siteRevenue)})
                   </span>
@@ -879,10 +875,12 @@ function SimuladorDeEconomiaPage() {
 
                 <div>
                   <div className="flex justify-between text-xs">
-                    <span className="font-medium">
+                    <span className="font-medium text-neon-emerald">
                       3. Recebendo 100% desse volume pelo site próprio
                     </span>
-                    <span className="font-bold">R$ {brl(directOnly.totalMonthlyCost)}/mês</span>
+                    <span className="font-bold text-neon-emerald">
+                      R$ {brl(directOnly.totalMonthlyCost)}/mês
+                    </span>
                   </div>
                   <div className="mt-1.5 h-3.5 w-full overflow-hidden rounded-full bg-secondary">
                     <div
@@ -1122,7 +1120,7 @@ function SimuladorDeEconomiaPage() {
                   to="/planos"
                   className="inline-flex min-h-11 items-center justify-center gap-2 rounded-full border-2 border-neon-pink px-5 py-3 text-center text-sm font-semibold transition hover:bg-neon-pink/10"
                 >
-                  <CheckCircle2 className="h-4 w-4 shrink-0 text-neon-pink" aria-hidden="true" />
+                  <CheckCircle2 className="h-4 w-4 shrink-0 text-neon-emerald" aria-hidden="true" />
                   Ver planos e valores
                 </Link>
                 <a

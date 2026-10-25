@@ -28,7 +28,7 @@ export function EconomyTeaserSection() {
       aria-labelledby="titulo-simulador-resumo"
       className="mx-auto max-w-[1800px] px-4 py-14 sm:px-8 xl:px-14"
     >
-      <div className="rounded-3xl border border-neon-violet/40 bg-card/85 p-6 shadow-neon backdrop-blur sm:p-10">
+      <div className="rounded-3xl border border-neon-violet/50 bg-card/85 p-6 shadow-neon backdrop-blur sm:p-10">
         <div className="grid gap-8 lg:grid-cols-12 lg:items-center">
           {/* Coluna de texto, benefícios de marca e CTA */}
           <div className="lg:col-span-6">
@@ -125,10 +125,10 @@ export function EconomyTeaserSection() {
                 </div>
 
                 {/* Barra Site Próprio */}
-                <div className="rounded-xl border border-neon-pink/60 bg-card/90 p-4">
+                <div className="rounded-xl border border-neon-emerald/50 bg-card/90 p-4">
                   <div className="flex flex-wrap items-baseline justify-between gap-2">
                     <div>
-                      <span className="inline-flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wider text-neon-pink">
+                      <span className="inline-flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wider text-neon-emerald">
                         <Store className="h-3.5 w-3.5" aria-hidden="true" />
                         Site próprio NovaesWeb (100% vendas diretas)
                       </span>
@@ -138,7 +138,7 @@ export function EconomyTeaserSection() {
                         {brl(input.siteMarketingInvestment)}
                       </p>
                     </div>
-                    <span className="font-display text-xl font-bold text-neon">
+                    <span className="font-display text-xl font-bold text-neon-emerald">
                       R$ {brl(result.directOnly.totalMonthlyCost)}/mês
                     </span>
                   </div>
@@ -153,12 +153,12 @@ export function EconomyTeaserSection() {
 
               {/* Resumo de diferenças (Cenário combinado vs 100% direto) */}
               <div className="mt-4 grid gap-3 sm:grid-cols-2">
-                <div className="rounded-xl border border-neon-violet/40 bg-card/70 p-3.5">
-                  <div className="flex items-center gap-1.5 text-xs font-semibold text-neon-pink">
+                <div className="rounded-xl border border-neon-emerald/40 bg-card/70 p-3.5">
+                  <div className="flex items-center gap-1.5 text-xs font-semibold text-neon-emerald">
                     <TrendingDown className="h-4 w-4 shrink-0" aria-hidden="true" />
                     Cenário combinado ({input.migratedOrdersPct}% no site)
                   </div>
-                  <div className="mt-1 font-display text-lg font-bold">
+                  <div className="mt-1 font-display text-lg font-bold text-neon-emerald">
                     R$ {brl(result.combined.monthlyDifferenceVsAppOnly)}/mês
                   </div>
                   <p className="text-[11px] text-muted-foreground">

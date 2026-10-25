@@ -9,7 +9,8 @@ export const interesses = [
   "Novaes Start",
   "Novaes Business",
   "Novaes Premium",
-"Integração WhatsApp API",
+  "Novaes Empresarial / Personalizado",
+  "Integração WhatsApp API",
   "Ainda não sei",
 ];
 
@@ -25,7 +26,7 @@ const schema = z.object({
 });
 
 const field =
-  "w-full rounded-xl border border-neon-violet/30 bg-background/60 px-4 py-3 text-foreground placeholder:text-muted-foreground focus:border-neon-pink focus:outline-none";
+  "w-full rounded-xl border border-neon-violet/40 bg-background/80 px-4 py-3 text-foreground placeholder:text-muted-foreground focus:border-neon-pink focus:outline-none";
 
 export function LeadForm() {
   const [form, setForm] = useState({ nome: "", whatsapp: "", interesse: "", mensagem: "" });
@@ -55,7 +56,7 @@ export function LeadForm() {
   if (status === "ok")
     return (
       <div role="status" className="flex flex-col items-center gap-3 py-10 text-center">
-        <CheckCircle2 className="h-12 w-12 text-neon-pink" />
+        <CheckCircle2 className="h-12 w-12 text-neon-emerald" />
         <h3 className="text-xl font-bold">Cadastro recebido!</h3>
         <p className="text-muted-foreground">Obrigado, {form.nome.split(" ")[0]}. Vamos te chamar no WhatsApp em breve.</p>
       </div>
