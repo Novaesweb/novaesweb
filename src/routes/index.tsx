@@ -123,22 +123,24 @@ function Index() {
 
       {/* Hero original com imagem cobrindo toda a tela de início */}
       <section id="inicio" className="relative">
-        <div className="absolute inset-y-0 right-0 hidden w-full overflow-hidden md:block md:w-3/5">
+        <div className="absolute inset-0 w-full overflow-hidden pointer-events-none">
           <img
             src={portrait}
             alt=""
             aria-hidden="true"
-            className="absolute inset-0 h-full w-full scale-110 object-cover object-center opacity-40 blur-2xl"
+            className="absolute inset-0 h-full w-full scale-105 object-cover object-[center_20%] opacity-30 blur-2xl"
           />
           <img
             src={portrait}
             alt="Imagem de apresentação da marca NovaesWeb"
-            className="absolute inset-y-0 right-0 h-full w-full object-cover object-[70%_center] md:w-auto md:max-w-none md:object-right"
+            className="absolute inset-0 h-full w-full object-cover object-[center_top] md:object-[right_center] lg:object-[78%_center]"
           />
-          <div className="absolute inset-y-0 left-0 w-2/3 bg-gradient-to-r from-background via-background/60 to-transparent" />
-          <div className="absolute inset-x-0 bottom-0 h-48 bg-gradient-to-t from-background via-background/70 to-transparent" />
+          <div className="absolute inset-y-0 left-0 w-full md:w-3/5 bg-gradient-to-r from-[#080512]/92 via-[#080512]/70 to-transparent" />
+          <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-[#080512] via-[#080512]/60 to-transparent" />
+          {/* Linha luminosa no final da imagem em harmonia com a paleta neon */}
+          <div className="absolute inset-x-0 bottom-0 h-[2px] bg-gradient-to-r from-transparent via-neon-pink to-transparent opacity-85 shadow-[0_0_16px_rgba(236,72,153,0.7)]" />
         </div>
-        <div className="relative mx-auto max-w-[1800px] px-4 sm:px-8 xl:px-14 pb-24 pt-16">
+        <div className="relative mx-auto max-w-[1800px] px-4 sm:px-8 xl:px-14 pb-16 md:pb-24 pt-16">
           <div className="max-w-xl 2xl:max-w-2xl">
             <span className="inline-block rounded-full border border-neon-pink px-4 py-1 text-xs font-semibold tracking-[0.2em]">
               SUA MARCA EM DESTAQUE NA INTERNET
@@ -186,8 +188,8 @@ function Index() {
             Mais que sites, criamos identidade!
           </p>
         </div>
-        <div className="relative mx-auto max-w-[1800px] px-4 sm:px-8 xl:px-14 pb-12">
-          <div className="grid grid-cols-1 gap-6 rounded-2xl border border-border bg-card/80 p-6 shadow-neon backdrop-blur sm:grid-cols-3">
+        <div className="relative z-20 mx-auto max-w-[1800px] px-4 sm:px-8 xl:px-14 translate-y-1/2 -mb-12">
+          <div className="grid grid-cols-1 gap-6 rounded-2xl border border-neon-violet/40 bg-card/90 p-6 shadow-neon backdrop-blur-md sm:grid-cols-3">
             {[
               [Box, "+30", "Projetos entregues"],
               [Users, "100%", "Clientes satisfeitos"],
@@ -206,7 +208,7 @@ function Index() {
       </section>
 
       {/* Serviços */}
-      <section id="servicos" className="mx-auto max-w-[1800px] px-4 sm:px-8 xl:px-14 py-14">
+      <section id="servicos" className="mx-auto max-w-[1800px] px-4 sm:px-8 xl:px-14 pt-20 md:pt-24 pb-14">
         <div className="flex flex-wrap items-end justify-between gap-4">
           <div>
             <div className="text-sm font-semibold tracking-[0.25em] text-neon-pink">NOSSOS SERVIÇOS</div>

@@ -6,7 +6,7 @@ import {
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { whatsLink } from "@/data/plans";
-import portrait from "@/assets/portrait.webp";
+import portrait from "@/assets/portrait-wide.webp";
 
 export const Route = createFileRoute("/sobre")({
   head: () => ({
@@ -45,13 +45,25 @@ function Sobre() {
       <SiteHeader active="Sobre" />
 
       {/* Hero */}
-      <section className="relative overflow-hidden">
-        <div className="absolute inset-y-0 right-0 w-full overflow-hidden md:w-1/2 lg:w-3/5 pointer-events-none">
-          <img src={portrait} alt="Imagem de apresentação da marca NovaesWeb" className="h-full w-full object-cover object-[center_20%]" />
-          <div className="absolute inset-0 bg-gradient-to-r from-[#080512] via-[#080512]/75 to-transparent" />
-          <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-[#080512] to-transparent" />
+      <section className="relative overflow-hidden min-h-[520px] md:min-h-[580px] flex flex-col justify-center">
+        <div className="absolute inset-0 w-full overflow-hidden pointer-events-none">
+          <img
+            src={portrait}
+            alt=""
+            aria-hidden="true"
+            className="absolute inset-0 h-full w-full scale-105 object-cover object-[center_20%] opacity-30 blur-2xl"
+          />
+          <img
+            src={portrait}
+            alt="Imagem de apresentação da marca NovaesWeb"
+            className="absolute inset-0 h-full w-full object-cover object-[center_top] md:object-[right_center] lg:object-[78%_center]"
+          />
+          <div className="absolute inset-y-0 left-0 w-full md:w-3/5 bg-gradient-to-r from-[#080512]/92 via-[#080512]/70 to-transparent" />
+          <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-[#080512] via-[#080512]/60 to-transparent" />
+          {/* Linha luminosa no final da imagem em harmonia com a paleta neon */}
+          <div className="absolute inset-x-0 bottom-0 h-[2px] bg-gradient-to-r from-transparent via-neon-pink to-transparent opacity-85 shadow-[0_0_16px_rgba(236,72,153,0.7)]" />
         </div>
-        <div className="relative mx-auto max-w-[1800px] px-4 pb-20 pt-16 sm:px-8 xl:px-14">
+        <div className="relative mx-auto w-full max-w-[1800px] px-4 pb-20 pt-16 sm:px-8 xl:px-14">
           <div className="max-w-xl 2xl:max-w-2xl">
             <span className="inline-block rounded-full border border-neon-pink px-4 py-1 text-xs font-semibold tracking-[0.2em]">QUEM SOMOS</span>
             <h1 className="mt-5 text-4xl font-extrabold leading-[1.05] sm:text-5xl md:text-6xl">
