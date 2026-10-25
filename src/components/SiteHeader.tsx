@@ -6,10 +6,11 @@ import { whatsLink } from "@/data/plans";
 import { Button } from "@/components/ui/button";
 export const WHATS = whatsLink();
 
-const nav: { label: string; to: "/" | "/planos" | "/sobre" | "/quem-somos" }[] = [
+const nav: { label: string; to: "/" | "/planos" | "/simulador-de-economia" | "/sobre" | "/quem-somos" }[] = [
   { label: "Início", to: "/" },
   { label: "Serviços", to: "/" },
   { label: "Planos", to: "/planos" },
+  { label: "Simulador", to: "/simulador-de-economia" },
   { label: "Sobre", to: "/sobre" },
   { label: "Quem Somos", to: "/quem-somos" },
   { label: "Contato", to: "/" },

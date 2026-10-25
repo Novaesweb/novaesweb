@@ -14,6 +14,7 @@ import { Route as PlanosRouteImport } from './routes/planos'
 import { Route as PrivacidadeRouteImport } from './routes/privacidade'
 import { Route as QuemSomosRouteImport } from './routes/quem-somos'
 import { Route as ReembolsoRouteImport } from './routes/reembolso'
+import { Route as SimuladorDeEconomiaRouteImport } from './routes/simulador-de-economia'
 import { Route as SobreRouteImport } from './routes/sobre'
 import { Route as TermosRouteImport } from './routes/termos'
 
@@ -42,6 +43,11 @@ const ReembolsoRoute = ReembolsoRouteImport.update({
   path: '/reembolso',
   getParentRoute: () => rootRouteImport,
 } as any)
+const SimuladorDeEconomiaRoute = SimuladorDeEconomiaRouteImport.update({
+  id: '/simulador-de-economia',
+  path: '/simulador-de-economia',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const SobreRoute = SobreRouteImport.update({
   id: '/sobre',
   path: '/sobre',
@@ -59,6 +65,7 @@ export interface FileRoutesByFullPath {
   '/privacidade': typeof PrivacidadeRoute
   '/quem-somos': typeof QuemSomosRoute
   '/reembolso': typeof ReembolsoRoute
+  '/simulador-de-economia': typeof SimuladorDeEconomiaRoute
   '/sobre': typeof SobreRoute
   '/termos': typeof TermosRoute
 }
@@ -68,6 +75,7 @@ export interface FileRoutesByTo {
   '/privacidade': typeof PrivacidadeRoute
   '/quem-somos': typeof QuemSomosRoute
   '/reembolso': typeof ReembolsoRoute
+  '/simulador-de-economia': typeof SimuladorDeEconomiaRoute
   '/sobre': typeof SobreRoute
   '/termos': typeof TermosRoute
 }
@@ -78,6 +86,7 @@ export interface FileRoutesById {
   '/privacidade': typeof PrivacidadeRoute
   '/quem-somos': typeof QuemSomosRoute
   '/reembolso': typeof ReembolsoRoute
+  '/simulador-de-economia': typeof SimuladorDeEconomiaRoute
   '/sobre': typeof SobreRoute
   '/termos': typeof TermosRoute
 }
@@ -89,6 +98,7 @@ export interface FileRouteTypes {
     | '/privacidade'
     | '/quem-somos'
     | '/reembolso'
+    | '/simulador-de-economia'
     | '/sobre'
     | '/termos'
   fileRoutesByTo: FileRoutesByTo
@@ -98,6 +108,7 @@ export interface FileRouteTypes {
     | '/privacidade'
     | '/quem-somos'
     | '/reembolso'
+    | '/simulador-de-economia'
     | '/sobre'
     | '/termos'
   id:
@@ -107,6 +118,7 @@ export interface FileRouteTypes {
     | '/privacidade'
     | '/quem-somos'
     | '/reembolso'
+    | '/simulador-de-economia'
     | '/sobre'
     | '/termos'
   fileRoutesById: FileRoutesById
@@ -117,6 +129,7 @@ export interface RootRouteChildren {
   PrivacidadeRoute: typeof PrivacidadeRoute
   QuemSomosRoute: typeof QuemSomosRoute
   ReembolsoRoute: typeof ReembolsoRoute
+  SimuladorDeEconomiaRoute: typeof SimuladorDeEconomiaRoute
   SobreRoute: typeof SobreRoute
   TermosRoute: typeof TermosRoute
 }
@@ -158,6 +171,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ReembolsoRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/simulador-de-economia': {
+      id: '/simulador-de-economia'
+      path: '/simulador-de-economia'
+      fullPath: '/simulador-de-economia'
+      preLoaderRoute: typeof SimuladorDeEconomiaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/sobre': {
       id: '/sobre'
       path: '/sobre'
@@ -181,6 +201,7 @@ const rootRouteChildren: RootRouteChildren = {
   PrivacidadeRoute: PrivacidadeRoute,
   QuemSomosRoute: QuemSomosRoute,
   ReembolsoRoute: ReembolsoRoute,
+  SimuladorDeEconomiaRoute: SimuladorDeEconomiaRoute,
   SobreRoute: SobreRoute,
   TermosRoute: TermosRoute,
 }

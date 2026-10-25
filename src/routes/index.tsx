@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { LeadForm } from "@/components/LeadForm";
+import { EconomyTeaserSection } from "@/components/EconomyTeaserSection";
 import { Button } from "@/components/ui/button";
 import {
   Globe, Palette, Zap, Headphones, ArrowRight, Box, Users, Rocket, ChevronRight, MessageCircle,
@@ -180,6 +181,8 @@ function Index() {
           </a>
         </div>
       </section>
+
+      <EconomyTeaserSection />
 
       <section className="mx-auto max-w-[1800px] px-4 py-14 sm:px-8 xl:px-14">
         <div className="text-sm font-semibold tracking-[0.25em] text-neon-pink">SEM COMPLICAÇÃO</div>
