@@ -1,22 +1,22 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { useState } from "react";
 import {
-  Zap,
-  Settings,
-  ShieldCheck,
   Rocket,
   Crown,
   Gem,
   CheckCircle2,
   ArrowRight,
-  BarChart3,
-  Headphones,
-  MessageCircle,
+  ShieldCheck,
+  Zap,
   Globe,
   Database,
   Palette,
   RefreshCw,
   Search,
+  MessageCircle,
+  BarChart3,
+  Settings,
+  Headphones,
   Plus,
   Building2,
   BellRing,
@@ -24,6 +24,8 @@ import {
   ShoppingBag,
   MessagesSquare,
   Sparkles,
+  Calculator,
+  Scale,
 } from "lucide-react";
 import portrait from "@/assets/portrait.webp";
 import { SiteHeader } from "@/components/SiteHeader";
@@ -45,14 +47,59 @@ import {
 } from "@/data/commercial-plans";
 import { Button } from "@/components/ui/button";
 
+const plansJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "OfferCatalog",
+  name: "Planos Comerciais NovaesWeb",
+  url: "https://novaesweb.com.br/planos",
+  description:
+    "Planos de criação de site institucional, delivery com franquia de pedidos sem bloqueio e soluções sob medida.",
+  itemListElement: [
+    {
+      "@type": "Offer",
+      name: "Novaes Start",
+      description: "Site institucional sem sistema de pedidos. Pagamento único de R$ 630. Sem mensalidade obrigatória.",
+      price: "630.00",
+      priceCurrency: "BRL",
+    },
+    {
+      "@type": "Offer",
+      name: "Novaes Business",
+      description:
+        "Site de delivery com 340 pedidos aceitos/mês incluídos. R$ 578 criação + R$ 190/mês. Pedido excedente: R$ 0,20.",
+      price: "190.00",
+      priceCurrency: "BRL",
+    },
+    {
+      "@type": "Offer",
+      name: "Novaes Premium",
+      description:
+        "Site de delivery com 750 pedidos aceitos/mês incluídos. R$ 980 criação + R$ 270/mês. Pedido excedente: R$ 0,15.",
+      price: "270.00",
+      priceCurrency: "BRL",
+    },
+    {
+      "@type": "Offer",
+      name: "Novaes Empresarial",
+      description: "Solução sob medida para redes e operações de alto volume. Condições personalizadas.",
+      priceCurrency: "BRL",
+    },
+  ],
+};
+
 export const Route = createFileRoute("/planos")({
   head: () => ({
     meta: [
-      { title: "Planos — NovaesWeb | Start, Business, Premium e Empresarial" },
+      { title: "Planos e Preços — NovaesWeb | Start, Business, Premium e Empresarial" },
       {
         name: "description",
         content:
-          "Novaes Start: R$ 630 criação única. Business: R$ 190/mês (340 pedidos aceitos incluídos, excedente R$ 0,20). Premium: R$ 270/mês (750 pedidos aceitos incluídos, excedente R$ 0,15). Empresarial sob consulta.",
+          "Novaes Start: R$ 630 criação única sem mensalidade. Business: R$ 190/mês (340 pedidos aceitos incluídos, excedente R$ 0,20). Premium: R$ 270/mês (750 pedidos aceitos incluídos, excedente R$ 0,15). Sem bloqueio de vendas.",
+      },
+      {
+        name: "keywords",
+        content:
+          "planos novaesweb, preco site delivery, site para restaurante precos, plano delivery sem comissao, quanto custa um site para pizzaria",
       },
       { property: "og:title", content: "Planos que se adaptam ao seu negócio — NovaesWeb" },
       {
@@ -61,7 +108,15 @@ export const Route = createFileRoute("/planos")({
           "Conheça os planos Start, Business, Premium e Empresarial da NovaesWeb, com franquia de pedidos aceitos e continuidade sem bloqueio de vendas.",
       },
       { property: "og:type", content: "website" },
+      { property: "og:url", content: "https://novaesweb.com.br/planos" },
       { name: "twitter:card", content: "summary_large_image" },
+    ],
+    links: [{ rel: "canonical", href: "https://novaesweb.com.br/planos" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify(plansJsonLd),
+      },
     ],
   }),
   component: Planos,
@@ -93,9 +148,9 @@ function Planos() {
         <div className="relative mx-auto max-w-[1800px] px-4 pb-16 pt-12 sm:px-8 xl:px-14">
           <div className="max-w-xl 2xl:max-w-2xl">
             <span className="inline-block rounded-full border border-neon-pink px-4 py-1 text-xs font-semibold tracking-[0.2em]">
-              PLANOS NOVAESWEB
+              PLANOS OFICIAIS
             </span>
-            <h1 className="mt-4 text-4xl font-extrabold leading-[1.05] sm:text-5xl md:text-6xl 2xl:text-7xl">
+            <h1 className="mt-4 font-display text-4xl font-extrabold leading-[1.08] sm:text-5xl md:text-6xl">
               Planos que se adaptam ao seu <span className="text-neon">negócio</span>
             </h1>
             <p className="mt-4 text-lg text-muted-foreground">
@@ -369,6 +424,46 @@ function Planos() {
           </div>
         </section>
 
+        {/* Banner de Interligação: Simulador de Economia e Comparativo de Canais */}
+        <section
+          aria-label="Ferramentas interativas de decisão"
+          className="mt-8 rounded-3xl border-2 border-neon-pink/70 bg-card/90 p-6 shadow-neon sm:p-8"
+        >
+          <div className="grid gap-6 lg:grid-cols-12 lg:items-center">
+            <div className="lg:col-span-8">
+              <span className="inline-flex items-center gap-1.5 rounded-full bg-neon/20 px-3 py-1 text-xs font-bold tracking-wider text-neon-pink">
+                <Calculator className="h-3.5 w-3.5" aria-hidden="true" />
+                ECONOMIA REAL NO SEU DELIVERY
+              </span>
+              <h2 className="mt-3 text-2xl font-bold sm:text-3xl">
+                Quer saber exatamente quanto seu negócio economiza?
+              </h2>
+              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                Compare as taxas do iFood e outros aplicativos com a mensalidade da NovaesWeb no
+                nosso Simulador de Economia interativo ou veja o comparativo completo com outras
+                plataformas.
+              </p>
+            </div>
+            <div className="flex flex-col gap-3 sm:flex-row lg:col-span-4 lg:flex-col lg:justify-end">
+              <Link
+                to="/simulador-de-economia"
+                className="inline-flex min-h-12 items-center justify-center gap-2.5 rounded-full bg-neon px-6 py-3 font-semibold shadow-neon transition"
+              >
+                <Calculator className="h-5 w-5 shrink-0" aria-hidden="true" />
+                Simular economia agora
+                <ArrowRight className="h-5 w-5 shrink-0" aria-hidden="true" />
+              </Link>
+              <Link
+                to="/comparativo"
+                className="inline-flex min-h-11 items-center justify-center gap-2 rounded-full border border-neon-violet px-5 py-2.5 text-sm font-semibold text-foreground transition hover:border-neon-pink hover:text-neon-pink"
+              >
+                <Scale className="h-4 w-4 shrink-0 text-neon-pink" aria-hidden="true" />
+                Ver comparativo com Anota AI / Goomer
+              </Link>
+            </div>
+          </div>
+        </section>
+
         <div className="mt-8 grid grid-cols-1 gap-6 rounded-2xl border border-border bg-card/80 p-6 sm:grid-cols-2 md:grid-cols-4">
           {[
             [BarChart3, "Presença digital", "Apresente seu negócio"],
@@ -633,70 +728,67 @@ function PlanCard({ p }: { p: Plan }) {
         </span>
       )}
 
-      <div className="flex items-center gap-4">
-        <I className="h-10 w-10 shrink-0 text-neon-pink transition group-hover:scale-110" />
-        <div className="min-w-0">
-          <h2 className="text-2xl font-bold">{p.name}</h2>
-          <div className="text-sm text-neon-pink">{p.tag}</div>
+      <div className="flex items-center gap-3">
+        <I className="h-8 w-8 shrink-0 text-neon-pink" />
+        <div>
+          <h3 className="text-2xl font-bold">{p.name}</h3>
+          <p className="text-xs text-neon-pink">{p.tag}</p>
         </div>
       </div>
 
-      {isOneTime ? (
-        <div className="mt-5">
-          <p className="text-sm text-muted-foreground">
-            Criação: de <s>R$ {brl(p.previousSetup ?? p.setup)}</s> por
-          </p>
-          <div className="mt-1 flex flex-wrap items-baseline gap-2">
-            <span className="text-xl font-bold">R$</span>
-            <span className="font-display text-5xl font-bold">{brl(p.setup)}</span>
-          </div>
-          <p className="mt-1 text-sm font-semibold text-neon-emerald">
-            Economize R$ {brl(launchSaving(p))} · pagamento único
-          </p>
-          <p className="mt-3 text-xl font-bold">R$ {brl(p.monthly)}/mês</p>
-          <p className="mt-1 text-xs text-muted-foreground">
-            Sem mensalidade obrigatória. A criação é paga uma única vez, não é gratuita.
-          </p>
-        </div>
-      ) : (
-        <div className="mt-5 flex flex-wrap items-baseline gap-2">
-          <span className="text-xl font-bold">R$</span>
-          <span className="font-display text-5xl font-bold">{brl(p.monthly)}</span>
-          <span className="text-muted-foreground">/mês</span>
-        </div>
-      )}
+      <p className="mt-3 text-xs leading-5 text-muted-foreground">{p.idealFor}</p>
 
-      <div className="mt-2 flex flex-wrap gap-2 text-xs">
-        <span className="rounded-full border border-neon-violet px-3 py-1">
-          {isOneTime ? "Sem mensalidade obrigatória" : `Criação R$ ${brl(p.setup)}`}
-        </span>
-        <span className="rounded-full border border-border px-3 py-1 text-muted-foreground">
-          {p.deadline}
-        </span>
-      </div>
-
-      {/* NOVO DESTAQUE NOS CARDS: Quantidade de pedidos, excedente e selo Sem Bloqueio */}
-      <div className="mt-4 rounded-2xl border border-neon-violet/50 bg-background/80 p-4">
-        {q.noBlockBadge && (
-          <span className="mb-2 inline-flex items-center gap-1.5 rounded-full border border-neon-emerald/60 bg-neon-emerald/15 px-3 py-0.5 text-[11px] font-bold text-neon-emerald">
-            <ShieldCheck className="h-3.5 w-3.5 shrink-0" aria-hidden="true" />
-            {q.noBlockBadge}
-          </span>
+      <div className="mt-4 border-b border-border/60 pb-4">
+        {isOneTime ? (
+          <>
+            <div className="flex items-baseline gap-1.5">
+              <span className="text-base font-bold">R$</span>
+              <span className="font-display text-4xl font-extrabold">{brl(p.setup)}</span>
+              <span className="text-xs text-muted-foreground">criação única</span>
+            </div>
+            <p className="mt-1 text-xs font-semibold text-neon-emerald">
+              Sem mensalidade obrigatória · Suporte opcional: R$ {brl(p.optionalSupportMonthly ?? 80)}/mês
+            </p>
+          </>
+        ) : (
+          <>
+            <div className="flex items-baseline gap-1.5">
+              <span className="text-base font-bold">R$</span>
+              <span className="font-display text-4xl font-extrabold">{brl(p.monthly)}</span>
+              <span className="text-xs text-muted-foreground">/mês</span>
+            </div>
+            <p className="mt-1 text-xs font-medium text-muted-foreground">
+              Criação única de R$ {brl(p.setup)} cobrada à parte na implantação
+            </p>
+          </>
         )}
-        <p className="text-sm font-bold text-foreground">{q.headline}</p>
-        <p className="mt-1 text-xs leading-relaxed text-muted-foreground">{q.description}</p>
-        {q.hasOnlineOrders && (
-          <div className="mt-3 flex flex-wrap gap-2 border-t border-border/60 pt-2.5 text-[11px] font-semibold">
-            <span className="rounded-full border border-border bg-card px-2.5 py-0.5">
-              Até {q.maxProducts} produtos
-            </span>
-            <span className="rounded-full border border-border bg-card px-2.5 py-0.5">
-              Até {q.maxAdmins} administradores
-            </span>
-            <span className="rounded-full border border-neon-pink/50 bg-neon/10 px-2.5 py-0.5 text-neon-pink">
-              Excedente: R$ {brl(q.overageOrderPrice ?? 0)} / pedido aceito
-            </span>
-          </div>
+      </div>
+
+      {/* Destaque visual das regras de pedidos aceitos e continuidade */}
+      <div className="mt-4 rounded-xl border border-border/70 bg-background/60 p-3.5 text-xs">
+        <div className="font-semibold text-foreground">
+          {q.includedAcceptedOrders > 0
+            ? `${q.includedAcceptedOrders} pedidos aceitos incluídos por mês.`
+            : "Site institucional (sem pedidos online)."}
+        </div>
+
+        {q.includedAcceptedOrders > 0 ? (
+          <>
+            <p className="mt-1 text-muted-foreground">
+              {p.id === "business"
+                ? "Seu delivery continua recebendo pedidos após atingir a franquia. Cada pedido aceito adicional custa apenas R$ 0,20."
+                : "Seu negócio continua recebendo pedidos mesmo após atingir a franquia. Cada pedido aceito adicional custa apenas R$ 0,15."}
+            </p>
+            <div className="mt-2.5 inline-flex items-center gap-1.5 rounded-full border border-neon-emerald/50 bg-neon-emerald/10 px-2.5 py-0.5 text-[11px] font-semibold text-neon-emerald">
+              <ShieldCheck className="h-3 w-3 shrink-0" aria-hidden="true" />
+              Sem bloqueio ao atingir a franquia
+            </div>
+          </>
+        ) : (
+          <p className="mt-1 text-muted-foreground">
+            Ideal para apresentação institucional de serviços com botão para o WhatsApp. Não inclui
+            carrinho, checkout ou painel de pedidos.
+          </p>
         )}
       </div>
 

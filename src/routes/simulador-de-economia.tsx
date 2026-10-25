@@ -31,32 +31,61 @@ import {
   type SitePlanPresetId,
 } from "@/data/economy-simulator";
 
+const simulatorJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  name: "Simulador de Economia NovaesWeb",
+  url: "https://novaesweb.com.br/simulador-de-economia",
+  applicationCategory: "BusinessApplication",
+  operatingSystem: "All",
+  description:
+    "Simulador interativo de custos para delivery: compare taxas de marketplaces (iFood, 99Food) com o canal próprio da NovaesWeb considerando franquia e pedidos excedentes.",
+  offers: {
+    "@type": "Offer",
+    price: "0",
+    priceCurrency: "BRL",
+  },
+};
+
 export const Route = createFileRoute("/simulador-de-economia")({
   head: () => ({
     meta: [
-      { title: "Simulador de Economia NovaesWeb — Compare custos de aplicativos e site próprio" },
+      {
+        title: "Simulador de Economia — NovaesWeb | Compare Custos de Aplicativos e Site Próprio",
+      },
       {
         name: "description",
         content:
-          "Compare custos, descubra oportunidades de economia e entenda as vantagens de ter seu próprio canal de vendas com o Simulador de Economia NovaesWeb.",
+          "Calcule quanto seu delivery economiza ao migrar pedidos para o site próprio sem comissão. Compare taxas do iFood, 99Food e veja o impacto da franquia de pedidos NovaesWeb.",
+      },
+      {
+        name: "keywords",
+        content:
+          "simulador de economia delivery, calcular taxas ifood, calculadora ifood para restaurantes, custos delivery site proprio, franquia pedidos delivery novaesweb",
       },
       { property: "og:title", content: "Simulador de Economia NovaesWeb" },
       {
         property: "og:description",
         content:
-          "Compare custos, descubra oportunidades de economia e entenda as vantagens de ter seu próprio canal de vendas.",
+          "Compare custos de aplicativos e site próprio, descubra oportunidades de economia e entenda as vantagens de ter seu próprio canal de vendas.",
       },
       { property: "og:type", content: "website" },
       {
         property: "og:url",
-        content: "https://image-to-web-workshop.lovable.app/simulador-de-economia",
+        content: "https://novaesweb.com.br/simulador-de-economia",
       },
       { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [
       {
         rel: "canonical",
-        href: "https://image-to-web-workshop.lovable.app/simulador-de-economia",
+        href: "https://novaesweb.com.br/simulador-de-economia",
+      },
+    ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify(simulatorJsonLd),
       },
     ],
   }),

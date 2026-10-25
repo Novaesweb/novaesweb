@@ -13,8 +13,7 @@ Allow: /
 User-agent: *
 Allow: /
 
-# Requests to avoid collection for AI training. These are voluntary directives.
-# Conventional search engines and social previews remain allowed above.
+# Directives to avoid unauthorized scraping while allowing conventional search indexers
 User-agent: GPTBot
 Disallow: /
 
@@ -35,3 +34,5 @@ Disallow: /
 
 User-agent: Amazonbot
 Disallow: /
+
+Sitemap: https://novaesweb.com.br/sitemap.xml

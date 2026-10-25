@@ -76,21 +76,74 @@ function ErrorComponent({ error, reset }: ErrorComponentProps) {
   );
 }
 
+const rootJsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://novaesweb.com.br/#organization",
+      name: "NovaesWeb — Soluções Digitais",
+      url: "https://novaesweb.com.br",
+      logo: "https://novaesweb.com.br/favicon.png",
+      description:
+        "Criação de sites profissionais, cardápios digitais para delivery sem comissão e sistemas sob medida para empresas.",
+      sameAs: [],
+      contactPoint: {
+        "@type": "ContactPoint",
+        contactType: "sales",
+        availableLanguage: "Portuguese",
+      },
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://novaesweb.com.br/#website",
+      url: "https://novaesweb.com.br",
+      name: "NovaesWeb",
+      publisher: {
+        "@id": "https://novaesweb.com.br/#organization",
+      },
+      inLanguage: "pt-BR",
+    },
+  ],
+};
+
 export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()({
   head: () => ({
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "NovaesWeb — Soluções Digitais" },
-      { name: "description", content: "Sites, sistemas e identidade visual para o seu negócio." },
+      { title: "NovaesWeb — Sites Profissionais e Delivery Sem Comissão" },
+      {
+        name: "description",
+        content:
+          "Criação de sites profissionais, cardápios digitais e sistemas para delivery sem comissão. Fortaleça sua marca e pare de pagar taxas abusivas.",
+      },
+      {
+        name: "keywords",
+        content:
+          "site delivery sem comissao, cardapio digital whatsapp, criacao de sites profissionais, novaesweb, alternativas ifood, site para hamburgueria, site para pizzaria",
+      },
+      { name: "author", content: "NovaesWeb — Soluções Digitais" },
+      { name: "robots", content: "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" },
+      { property: "og:site_name", content: "NovaesWeb" },
       { property: "og:type", content: "website" },
+      { property: "og:locale", content: "pt_BR" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
-      { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Outfit:wght@600;700;800&family=Figtree:wght@400;500;600&display=swap" },
+      {
+        rel: "stylesheet",
+        href: "https://fonts.googleapis.com/css2?family=Outfit:wght@600;700;800&family=Figtree:wght@400;500;600&display=swap",
+      },
       { rel: "icon", type: "image/png", href: "/favicon.png" },
+    ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify(rootJsonLd),
+      },
     ],
   }),
   shellComponent: RootShell,
@@ -119,8 +172,15 @@ function RootComponent() {
   return (
     <QueryClientProvider client={queryClient}>
       {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
-      <a href="#conteudo-principal" className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[60] focus:rounded-md focus:bg-background focus:p-4 focus:text-foreground">Ir para o conteúdo</a>
-      <main id="conteudo-principal" tabIndex={-1}><Outlet /></main>
+      <a
+        href="#conteudo-principal"
+        className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[60] focus:rounded-md focus:bg-background focus:p-4 focus:text-foreground"
+      >
+        Ir para o conteúdo
+      </a>
+      <main id="conteudo-principal" tabIndex={-1}>
+        <Outlet />
+      </main>
       <FloatingWhatsApp />
       <PrivacyPreferences />
     </QueryClientProvider>
