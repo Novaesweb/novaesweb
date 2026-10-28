@@ -21,6 +21,8 @@ import mAcai from "@/assets/modelo-a-a-royal-two.webp";
 import mFogo from "@/assets/modelo-fogo-na-brasa.jpg";
 import mOlympus from "@/assets/modelo-olympus-burger.webp";
 import mPet from "@/assets/modelo-pet-em-casa.webp";
+import mBarber from "@/assets/modelo-dom-barber.png";
+import mAcaiPremium from "@/assets/modelo-acai-premium.png";
 import { whatsLink } from "@/data/plans";
 import { allFaqs, faqsShown } from "@/data/faqs";
 
@@ -32,6 +34,8 @@ const modelos = [
   { nome: "Fogo na Brasa", nicho: "Churrascaria · Lanches", url: "https://fogo-na-brasa.vercel.app/", img: mFogo, d: "Hambúrgueres, churrasco e lanches em uma vitrine que dá fome e leva ao pedido." },
   { nome: "Olympus Burger", nicho: "Hamburgueria · Artesanal", url: "https://olympus-burger-menu-ashen.vercel.app/", img: mOlympus, d: "Cardápio com cara de marca premium: destaque para os lançamentos e pedido rápido." },
   { nome: "Pet em Casa", nicho: "Pet Shop · Banho e Tosa", url: "https://pet-em-casa-liard.vercel.app/", img: mPet, d: "Serviços de banho e tosa com agendamento direto pelo site, do jeitinho que o pet merece." },
+  { nome: "Dom Barber", nicho: "Barbearia · Agendamento", url: "https://barber-inky-alpha.vercel.app/", img: mBarber, d: "Site responsivo pensado principalmente para celular, com serviços, preços e agendamento de horário." },
+  { nome: "Açaí Premium", nicho: "Açaiteria · Cardápio digital", url: "https://acaipremium-five.vercel.app/", img: mAcaiPremium, d: "Site responsivo pensado para celular, com cardápio, preços e montagem do pedido." },
 ];
 
 const homeJsonLd = {
@@ -236,7 +240,7 @@ function Index() {
             <h2 className="text-3xl font-bold sm:text-4xl">Sites de demonstração para verificar</h2>
             <p className="max-w-xl text-muted-foreground">Abra, clique e teste como se fosse cliente. É assim que o seu negócio pode aparecer na internet.</p>
           </div>
-          <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
+          <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {modelos.map((m) => (
               <a key={m.url} href={m.url} target="_blank" rel="noopener noreferrer"
                 className="group flex flex-col overflow-hidden rounded-xl border border-neon-violet/40 bg-card transition hover:-translate-y-1 hover:border-neon-pink hover:shadow-neon">
