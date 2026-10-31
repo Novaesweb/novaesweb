@@ -15,5 +15,5 @@ export const generalFaqs: [string, string][] = [
 
 export const allFaqs: [string, string][] = [...generalFaqs, ...planFaqs];
 
-// Quantas dúvidas aparecem na tela inicial antes de abrir todas as outras.
+// Quantas dúvidas gerais aparecem na página de Contato antes de abrir as demais.
 export const faqsShown = 9;

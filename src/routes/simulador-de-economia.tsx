@@ -1283,7 +1283,7 @@ function SimuladorDeEconomiaPage() {
                   Ver planos e valores
                 </Link>
                 <a
-                  href="/#cadastro"
+                  href="/contato"
                   className="inline-flex min-h-11 items-center justify-center gap-2 rounded-full border border-border bg-background/60 px-5 py-3 text-center text-sm font-semibold text-muted-foreground transition hover:border-neon-pink hover:text-foreground"
                 >
                   Pedir contato pelo formulário

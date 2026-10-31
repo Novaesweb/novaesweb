@@ -11,10 +11,12 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as ComparativoRouteImport } from './routes/comparativo'
+import { Route as ContatoRouteImport } from './routes/contato'
 import { Route as PlanosRouteImport } from './routes/planos'
 import { Route as PrivacidadeRouteImport } from './routes/privacidade'
 import { Route as QuemSomosRouteImport } from './routes/quem-somos'
 import { Route as ReembolsoRouteImport } from './routes/reembolso'
+import { Route as ServicosRouteImport } from './routes/servicos'
 import { Route as SimuladorDeEconomiaRouteImport } from './routes/simulador-de-economia'
 import { Route as SobreRouteImport } from './routes/sobre'
 import { Route as TermosRouteImport } from './routes/termos'
@@ -27,6 +29,11 @@ const IndexRoute = IndexRouteImport.update({
 const ComparativoRoute = ComparativoRouteImport.update({
   id: '/comparativo',
   path: '/comparativo',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContatoRoute = ContatoRouteImport.update({
+  id: '/contato',
+  path: '/contato',
   getParentRoute: () => rootRouteImport,
 } as any)
 const PlanosRoute = PlanosRouteImport.update({
@@ -49,6 +56,11 @@ const ReembolsoRoute = ReembolsoRouteImport.update({
   path: '/reembolso',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ServicosRoute = ServicosRouteImport.update({
+  id: '/servicos',
+  path: '/servicos',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const SimuladorDeEconomiaRoute = SimuladorDeEconomiaRouteImport.update({
   id: '/simulador-de-economia',
   path: '/simulador-de-economia',
@@ -68,10 +80,12 @@ const TermosRoute = TermosRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/comparativo': typeof ComparativoRoute
+  '/contato': typeof ContatoRoute
   '/planos': typeof PlanosRoute
   '/privacidade': typeof PrivacidadeRoute
   '/quem-somos': typeof QuemSomosRoute
   '/reembolso': typeof ReembolsoRoute
+  '/servicos': typeof ServicosRoute
   '/simulador-de-economia': typeof SimuladorDeEconomiaRoute
   '/sobre': typeof SobreRoute
   '/termos': typeof TermosRoute
@@ -79,10 +93,12 @@ export interface FileRoutesByFullPath {
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/comparativo': typeof ComparativoRoute
+  '/contato': typeof ContatoRoute
   '/planos': typeof PlanosRoute
   '/privacidade': typeof PrivacidadeRoute
   '/quem-somos': typeof QuemSomosRoute
   '/reembolso': typeof ReembolsoRoute
+  '/servicos': typeof ServicosRoute
   '/simulador-de-economia': typeof SimuladorDeEconomiaRoute
   '/sobre': typeof SobreRoute
   '/termos': typeof TermosRoute
@@ -91,10 +107,12 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/comparativo': typeof ComparativoRoute
+  '/contato': typeof ContatoRoute
   '/planos': typeof PlanosRoute
   '/privacidade': typeof PrivacidadeRoute
   '/quem-somos': typeof QuemSomosRoute
   '/reembolso': typeof ReembolsoRoute
+  '/servicos': typeof ServicosRoute
   '/simulador-de-economia': typeof SimuladorDeEconomiaRoute
   '/sobre': typeof SobreRoute
   '/termos': typeof TermosRoute
@@ -104,10 +122,12 @@ export interface FileRouteTypes {
   fullPaths:
     | '/'
     | '/comparativo'
+    | '/contato'
     | '/planos'
     | '/privacidade'
     | '/quem-somos'
     | '/reembolso'
+    | '/servicos'
     | '/simulador-de-economia'
     | '/sobre'
     | '/termos'
@@ -115,10 +135,12 @@ export interface FileRouteTypes {
   to:
     | '/'
     | '/comparativo'
+    | '/contato'
     | '/planos'
     | '/privacidade'
     | '/quem-somos'
     | '/reembolso'
+    | '/servicos'
     | '/simulador-de-economia'
     | '/sobre'
     | '/termos'
@@ -126,10 +148,12 @@ export interface FileRouteTypes {
     | '__root__'
     | '/'
     | '/comparativo'
+    | '/contato'
     | '/planos'
     | '/privacidade'
     | '/quem-somos'
     | '/reembolso'
+    | '/servicos'
     | '/simulador-de-economia'
     | '/sobre'
     | '/termos'
@@ -138,10 +162,12 @@ export interface FileRouteTypes {
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   ComparativoRoute: typeof ComparativoRoute
+  ContatoRoute: typeof ContatoRoute
   PlanosRoute: typeof PlanosRoute
   PrivacidadeRoute: typeof PrivacidadeRoute
   QuemSomosRoute: typeof QuemSomosRoute
   ReembolsoRoute: typeof ReembolsoRoute
+  ServicosRoute: typeof ServicosRoute
   SimuladorDeEconomiaRoute: typeof SimuladorDeEconomiaRoute
   SobreRoute: typeof SobreRoute
   TermosRoute: typeof TermosRoute
@@ -161,6 +187,13 @@ declare module '@tanstack/react-router' {
       path: '/comparativo'
       fullPath: '/comparativo'
       preLoaderRoute: typeof ComparativoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contato': {
+      id: '/contato'
+      path: '/contato'
+      fullPath: '/contato'
+      preLoaderRoute: typeof ContatoRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/planos': {
@@ -191,6 +224,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ReembolsoRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/servicos': {
+      id: '/servicos'
+      path: '/servicos'
+      fullPath: '/servicos'
+      preLoaderRoute: typeof ServicosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/simulador-de-economia': {
       id: '/simulador-de-economia'
       path: '/simulador-de-economia'
@@ -218,10 +258,12 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   ComparativoRoute: ComparativoRoute,
+  ContatoRoute: ContatoRoute,
   PlanosRoute: PlanosRoute,
   PrivacidadeRoute: PrivacidadeRoute,
   QuemSomosRoute: QuemSomosRoute,
   ReembolsoRoute: ReembolsoRoute,
+  ServicosRoute: ServicosRoute,
   SimuladorDeEconomiaRoute: SimuladorDeEconomiaRoute,
   SobreRoute: SobreRoute,
   TermosRoute: TermosRoute,
