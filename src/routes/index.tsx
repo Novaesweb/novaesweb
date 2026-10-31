@@ -31,10 +31,10 @@ const WHATS = whatsLink();
 const modelos = [
   { nome: "Burger House", nicho: "Hamburgueria · Delivery", url: "https://burge-house.vercel.app/", img: mBurger, d: "Cardápio digital, carrinho, checkout e acompanhamento do pedido, com painel para o dono." },
   { nome: "Açaí Royal", nicho: "Açaiteria", url: "https://a-a-royal-two.vercel.app/", img: mAcai, d: "O cliente monta o açaí, escolhe os adicionais e pede direto pelo WhatsApp." },
+  { nome: "Dom Barber", nicho: "Barbearia · Agendamento", url: "https://barber-inky-alpha.vercel.app/", img: mBarber, d: "Site responsivo pensado principalmente para celular, com serviços, preços e agendamento de horário." },
   { nome: "Fogo na Brasa", nicho: "Churrascaria · Lanches", url: "https://fogo-na-brasa.vercel.app/", img: mFogo, d: "Hambúrgueres, churrasco e lanches em uma vitrine que dá fome e leva ao pedido." },
   { nome: "Olympus Burger", nicho: "Hamburgueria · Artesanal", url: "https://olympus-burger-menu-ashen.vercel.app/", img: mOlympus, d: "Cardápio com cara de marca premium: destaque para os lançamentos e pedido rápido." },
   { nome: "Pet em Casa", nicho: "Pet Shop · Banho e Tosa", url: "https://pet-em-casa-liard.vercel.app/", img: mPet, d: "Serviços de banho e tosa com agendamento direto pelo site, do jeitinho que o pet merece." },
-  { nome: "Dom Barber", nicho: "Barbearia · Agendamento", url: "https://barber-inky-alpha.vercel.app/", img: mBarber, d: "Site responsivo pensado principalmente para celular, com serviços, preços e agendamento de horário." },
   { nome: "Açaí Premium", nicho: "Açaiteria · Cardápio digital", url: "https://acaipremium-five.vercel.app/", img: mAcaiPremium, d: "Site responsivo pensado para celular, com cardápio, preços e montagem do pedido." },
 ];
 
@@ -197,8 +197,8 @@ function Index() {
         <div className="relative z-20 mx-auto max-w-[1800px] px-4 sm:px-8 xl:px-14 translate-y-1/2 -mb-12">
           <div className="grid grid-cols-1 gap-6 rounded-2xl border border-neon-violet/40 bg-card/90 p-6 shadow-neon backdrop-blur-md sm:grid-cols-3">
             {[
-              [Box, "+30", "Projetos entregues"],
-              [Users, "100%", "Clientes satisfeitos"],
+              [Box, "Demonstrações", "Explore projetos ao vivo"],
+              [Users, "Sob medida", "Soluções para seu negócio"],
               [Headphones, "Suporte", "via WhatsApp"],
             ].map(([I, a, b]: any) => (
               <div key={a} className="flex items-center justify-center gap-4">
