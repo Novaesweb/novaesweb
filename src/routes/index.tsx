@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { useState } from "react";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
+import { ServiceHighlights, BusinessHighlight, AboutHighlight, DecisionHighlights } from "@/components/HomeHighlights";
 import { ArrowRight, MessageCircle, ChevronDown } from "lucide-react";
 import portrait from "@/assets/portrait-wide.webp";
 import mBurger from "@/assets/modelo-burge-house.webp";
@@ -98,7 +99,7 @@ function Index() {
           <img
             src={portrait}
             alt="Imagem de apresentação da marca NovaesWeb"
-            className="absolute inset-0 h-full w-full object-cover object-[center_top] md:object-[right_center] lg:object-[78%_center]"
+            className="absolute inset-0 hidden h-full w-full object-cover object-[center_top] md:block md:object-[right_center] lg:object-[78%_center]"
           />
           <div className="absolute inset-y-0 left-0 w-full md:w-3/5 bg-gradient-to-r from-[#080512]/92 via-[#080512]/70 to-transparent" />
           <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-[#080512] via-[#080512]/60 to-transparent" />
@@ -143,13 +144,7 @@ function Index() {
         </div>
       </section>
 
-      <section id="servicos" aria-label="Conheça a NovaesWeb" className="mx-auto flex max-w-[1800px] flex-wrap items-center justify-between gap-4 px-4 py-6 sm:px-8 xl:px-14">
-        <p className="text-sm text-muted-foreground">Sites profissionais · Delivery · Sistemas sob medida</p>
-        <div className="flex flex-wrap gap-5 text-sm font-semibold text-neon-pink">
-          <Link to="/servicos" className="inline-flex min-h-11 items-center gap-2 hover:underline">Conhecer serviços <ArrowRight className="h-4 w-4" aria-hidden="true" /></Link>
-          <Link to="/planos" className="inline-flex min-h-11 items-center gap-2 hover:underline">Ver planos <ArrowRight className="h-4 w-4" aria-hidden="true" /></Link>
-        </div>
-      </section>
+      <ServiceHighlights />
       <section className="mx-auto max-w-[1800px] px-4 pb-10 sm:px-8 xl:px-14">
         {/* Modelos de Demonstração */}
         <div id="modelos" className="scroll-mt-24">
@@ -196,8 +191,15 @@ function Index() {
           )}
         </div>
 
+      </section>
+
+      <BusinessHighlight />
+      <AboutHighlight />
+      <DecisionHighlights />
+
+      <section aria-label="Fale com a NovaesWeb" className="mx-auto max-w-[1800px] px-4 pb-10 pt-4 sm:px-8 xl:px-14">
         {/* Banner de Contato Rápido */}
-        <div id="contato" className="mt-8 flex flex-wrap items-center justify-between gap-6 rounded-2xl border-2 border-neon-pink bg-card p-7 shadow-neon">
+        <div id="contato" className="flex flex-wrap items-center justify-between gap-6 rounded-2xl border-2 border-neon-pink bg-card p-7 shadow-neon">
           <div className="flex items-center gap-5">
             <MessageCircle className="hidden h-10 w-10 shrink-0 text-neon-pink sm:block" />
             <div>
@@ -205,9 +207,14 @@ function Index() {
               <p className="text-muted-foreground">Conte sua ideia e receba uma proposta alinhada ao que você precisa.</p>
             </div>
           </div>
-          <Link id="cadastro" to="/contato" className="inline-flex min-h-11 items-center gap-3 rounded-full bg-neon px-6 py-3 font-semibold shadow-neon">
-            Entrar em contato <ArrowRight className="h-5 w-5" aria-hidden="true" />
-          </Link>
+          <div id="cadastro" className="flex w-full flex-col gap-3 sm:w-auto sm:flex-row sm:flex-wrap">
+            <a href={WHATS} target="_blank" rel="noopener noreferrer" className="inline-flex min-h-11 items-center justify-center gap-2 rounded-full bg-neon px-6 py-3 text-sm font-semibold shadow-neon">
+              <MessageCircle className="h-5 w-5 shrink-0" aria-hidden="true" /> Falar no WhatsApp
+            </a>
+            <Link to="/contato" className="inline-flex min-h-11 items-center justify-center gap-2 rounded-full border border-neon-pink px-6 py-3 text-sm font-semibold hover:bg-neon-pink/10">
+              Enviar meu contato <ArrowRight className="h-4 w-4 shrink-0" aria-hidden="true" />
+            </Link>
+          </div>
         </div>
       </section>
 
