@@ -723,7 +723,8 @@ function PlanCard({ p }: { p: Plan }) {
 
   return (
     <article
-      className={`group relative flex flex-col rounded-2xl bg-card/90 p-7 backdrop-blur transition duration-300 hover:-translate-y-1 hover:shadow-neon ${
+      id={`plano-${p.id}`}
+      className={`group relative scroll-mt-24 flex flex-col rounded-2xl bg-card/90 p-7 backdrop-blur transition duration-300 hover:-translate-y-1 hover:shadow-neon ${
         isHighlighted
           ? "border-2 border-neon-pink shadow-neon md:-mt-3"
           : "border border-border hover:border-neon-pink"
