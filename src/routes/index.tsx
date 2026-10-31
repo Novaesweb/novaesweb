@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { LeadForm } from "@/components/LeadForm";
@@ -72,22 +72,22 @@ const homeJsonLd = {
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "NovaesWeb — Sites que vendem, Delivery sem comissão e Identidade Visual" },
+      { title: "NovaesWeb — Sites, Delivery e Sistemas Personalizados" },
       {
         name: "description",
         content:
-          "Criamos sites profissionais, cardápios digitais para delivery sem comissão no WhatsApp e sistemas sob medida para sua empresa se destacar e vender mais.",
+          "Criamos sites profissionais, lojas virtuais, cardápios digitais e sistemas sob medida para fortalecer sua marca e apoiar a evolução do seu negócio.",
       },
       {
         name: "keywords",
         content:
           "site para delivery, cardapio digital whatsapp, site sem comissao, criacao de sites, novaesweb, sistema para restaurante, delivery proprio",
       },
-      { property: "og:title", content: "NovaesWeb — Sites que vendem e Delivery sem comissão" },
+      { property: "og:title", content: "NovaesWeb — O seu crescimento é parte do nosso sucesso" },
       {
         property: "og:description",
         content:
-          "Sites, sistemas e identidade visual completos para sua empresa se destacar e receber pedidos diretos.",
+          "Sites, lojas virtuais e sistemas personalizados para fortalecer sua marca, facilitar sua operação e evoluir com o seu negócio.",
       },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "https://novaesweb.com.br/" },
@@ -147,13 +147,14 @@ function Index() {
         <div className="relative mx-auto max-w-[1800px] px-4 sm:px-8 xl:px-14 pb-16 md:pb-24 pt-16">
           <div className="max-w-xl 2xl:max-w-2xl">
             <span className="inline-block rounded-full border border-neon-pink px-4 py-1 text-xs font-semibold tracking-[0.2em]">
-              SUA MARCA EM DESTAQUE NA INTERNET
+              SITES E SISTEMAS SOB MEDIDA
             </span>
             <h1 className="mt-5 text-4xl font-extrabold leading-[1.05] sm:text-5xl md:text-6xl">
-              Sites que vendem e uma <RotatingWord /> para o seu negócio
+              O seu crescimento é parte do <span className="text-neon">nosso sucesso.</span>
             </h1>
             <p className="mt-5 text-lg text-muted-foreground">
-              Criamos sites, sistemas e identidade visual completos para sua empresa se destacar e atrair mais clientes.
+              Criamos sites, lojas virtuais e sistemas personalizados para fortalecer sua marca,
+              facilitar sua operação e acompanhar a evolução do seu negócio.
             </p>
             <img
               src={portrait}
@@ -181,10 +182,10 @@ function Index() {
                 <MessageCircle className="h-5 w-5" /> Solicitar orçamento <ArrowRight className="h-5 w-5" />
               </a>
               <a
-                href="#servicos"
+                href="#modelos"
                 className="flex items-center gap-3 rounded-full border-2 border-neon-pink px-8 py-4 font-semibold"
               >
-                Ver modelos <ArrowRight className="h-5 w-5" />
+                Ver projetos funcionando <ArrowRight className="h-5 w-5" />
               </a>
             </div>
           </div>
@@ -369,15 +370,4 @@ function Index() {
       <SiteFooter />
     </div>
   );
-}
-
-const words = ["identidade de marca", "presença digital", "vitrine que vende"];
-function RotatingWord() {
-  const [i, setI] = useState(0);
-  useEffect(() => {
-    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
-    const t = setInterval(() => setI((x) => (x + 1) % words.length), 2500);
-    return () => clearInterval(t);
-  }, []);
-  return <span key={i} className="block text-neon animate-in fade-in slide-in-from-bottom-3 duration-500">{words[i]}</span>;
 }

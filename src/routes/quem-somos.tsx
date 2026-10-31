@@ -17,10 +17,10 @@ export const Route = createFileRoute("/quem-somos")({
       { property: "og:title", content: "Quem Somos — NovaesWeb" },
       { property: "og:description", content: "Tecnologia e soluções digitais para ajudar seu negócio a evoluir." },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "https://image-to-web-workshop.lovable.app/quem-somos" },
+      { property: "og:url", content: "https://novaesweb.com.br/quem-somos" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
-    links: [{ rel: "canonical", href: "https://image-to-web-workshop.lovable.app/quem-somos" }],
+    links: [{ rel: "canonical", href: "https://novaesweb.com.br/quem-somos" }],
   }),
   component: QuemSomos,
 });
@@ -159,6 +159,11 @@ function QuemSomos() {
         <div className="rounded-2xl border border-border bg-card p-7 shadow-neon sm:p-10">
           <div className="text-sm font-semibold tracking-[0.25em] text-neon-pink">SOLUÇÕES QUE EVOLUEM COM SUA EMPRESA</div>
           <h2 className="mt-2 text-3xl font-bold sm:text-4xl">Seu site pode crescer junto com o seu negócio</h2>
+          <p className="mt-4 max-w-3xl text-muted-foreground">
+            Na NovaesWeb, o seu crescimento é parte do nosso sucesso. Cada negócio tem sua história,
+            seus desafios e seus objetivos. Por isso, criamos soluções que respeitam sua identidade e
+            podem evoluir conforme suas necessidades, com escopo e condições alinhados em cada etapa.
+          </p>
           <p className="mt-4 max-w-3xl text-muted-foreground">
             A NovaesWeb desenvolve funcionalidades adicionais, como fidelidade digital, cardápios para TV, relatórios comerciais e cartões-presente. Cada recurso é avaliado conforme a necessidade e a compatibilidade com o seu negócio.
           </p>
