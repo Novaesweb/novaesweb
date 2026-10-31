@@ -8,16 +8,16 @@ export const WHATS = whatsLink();
 
 const nav: {
   label: string;
-  to: "/" | "/planos" | "/simulador-de-economia" | "/comparativo" | "/quem-somos";
+  to: "/" | "/planos" | "/simulador-de-economia" | "/comparativo" | "/quem-somos" | "/servicos" | "/contato";
   hash?: string;
 }[] = [
   { label: "Início", to: "/" },
-  { label: "Serviços", to: "/", hash: "servicos" },
+  { label: "Serviços", to: "/servicos" },
   { label: "Planos", to: "/planos" },
   { label: "Simulador", to: "/simulador-de-economia" },
   { label: "Comparativo", to: "/comparativo" },
   { label: "Quem Somos", to: "/quem-somos" },
-  { label: "Contato", to: "/", hash: "cadastro" },
+  { label: "Contato", to: "/contato" },
 ];
 
 export function SiteHeader({ active }: { active: string }) {

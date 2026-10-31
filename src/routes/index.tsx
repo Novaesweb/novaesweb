@@ -1,21 +1,9 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { useState } from "react";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
-import { LeadForm } from "@/components/LeadForm";
-import { EconomyTeaserSection } from "@/components/EconomyTeaserSection";
-import { PlansSummarySection } from "@/components/PlansSummarySection";
-import { Button } from "@/components/ui/button";
-import {
-  Globe, Palette, Zap, Headphones, ArrowRight, Box, Users, Rocket, ChevronRight, MessageCircle,
-  MessagesSquare, Plus, Smartphone, TrendingUp, ShieldCheck, ChevronDown,
-} from "lucide-react";
+import { ArrowRight, MessageCircle, ChevronDown } from "lucide-react";
 import portrait from "@/assets/portrait-wide.webp";
-import s0 from "@/assets/s0.webp";
-import s1 from "@/assets/s1.webp";
-import s2 from "@/assets/s2.webp";
-import s3 from "@/assets/s3.webp";
-import s4 from "@/assets/s4.webp";
 import mBurger from "@/assets/modelo-burge-house.webp";
 import mAcai from "@/assets/modelo-a-a-royal-two.webp";
 import mFogo from "@/assets/modelo-fogo-na-brasa.jpg";
@@ -24,7 +12,6 @@ import mPet from "@/assets/modelo-pet-em-casa.webp";
 import mBarber from "@/assets/modelo-dom-barber.png";
 import mAcaiPremium from "@/assets/modelo-acai-premium.png";
 import { whatsLink } from "@/data/plans";
-import { allFaqs, faqsShown } from "@/data/faqs";
 
 const WHATS = whatsLink();
 
@@ -54,17 +41,6 @@ const homeJsonLd = {
         addressCountry: "BR",
       },
       areaServed: "BR",
-    },
-    {
-      "@type": "FAQPage",
-      mainEntity: allFaqs.map(([question, answer]) => ({
-        "@type": "Question",
-        name: question,
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: answer,
-        },
-      })),
     },
   ],
 };
@@ -104,23 +80,7 @@ export const Route = createFileRoute("/")({
   component: Index,
 });
 
-const services = [
-  { img: s0, t: "Sites Profissionais", d: "Sites modernos, rápidos e otimizados para vender mais." },
-  { img: s1, t: "Delivery e Cardápio", d: "Receba pedidos pelo WhatsApp com um site completo." },
-  { img: s2, t: "Sistemas Personalizados", d: "Soluções sob medida para o seu negócio." },
-  { img: s3, t: "Identidade Visual", d: "Logos, artes e materiais profissionais." },
-  { img: s4, t: "Redes Sociais", d: "Artes e vídeos que destacam sua marca." },
-];
-
-const steps = [
-  ["01", "Vamos entender", "Você conta sua ideia. Definimos o escopo, o plano e as condições na proposta."],
-  ["02", "Hora de criar", "Com os materiais recebidos e a proposta alinhada, começamos o desenvolvimento."],
-  ["03", "Você acompanha", "Apresentamos o projeto para revisão e alinhamos os detalhes da entrega."],
-  ["04", "Pronto para começar", "Concluímos a entrega conforme a proposta. Start sem mensalidade obrigatória; Business e Premium com mensalidade na ativação."],
-];
-
 function Index() {
-  const [faqsAbertas, setFaqsAbertas] = useState(false);
   const [mostrarTodosModelos, setMostrarTodosModelos] = useState(false);
   return (
     <div className="min-h-screen overflow-x-hidden">
@@ -145,7 +105,7 @@ function Index() {
           {/* Linha luminosa no final da imagem em harmonia com a paleta neon */}
           <div className="absolute inset-x-0 bottom-0 h-[2px] bg-gradient-to-r from-transparent via-neon-pink to-transparent opacity-85 shadow-[0_0_16px_rgba(236,72,153,0.7)]" />
         </div>
-        <div className="relative mx-auto max-w-[1800px] px-4 sm:px-8 xl:px-14 pb-16 md:pb-24 pt-16">
+        <div className="relative mx-auto max-w-[1800px] px-4 sm:px-8 xl:px-14 py-10 md:py-16">
           <div className="max-w-xl 2xl:max-w-2xl">
             <span className="inline-block rounded-full border border-neon-pink px-4 py-1 text-xs font-semibold tracking-[0.2em]">
               SITES E SISTEMAS SOB MEDIDA
@@ -162,19 +122,6 @@ function Index() {
               alt="Imagem de apresentação da marca NovaesWeb"
               className="mt-6 w-full rounded-2xl border border-neon-violet/30 object-cover shadow-neon md:hidden"
             />
-            <div className="mt-7 grid grid-cols-2 gap-4 text-sm sm:grid-cols-4">
-              {[
-                [Globe, "Sites Profissionais"],
-                [Palette, "Design Moderno"],
-                [Zap, "Entrega Rápida"],
-                [Headphones, "Suporte Especializado"],
-              ].map(([I, t]: any) => (
-                <div key={t} className="flex items-center gap-2">
-                  <I className="h-6 w-6 shrink-0 text-neon-pink" />
-                  {t}
-                </div>
-              ))}
-            </div>
             <div className="mt-8 flex flex-wrap gap-4">
               <a
                 href={WHATS}
@@ -194,53 +141,22 @@ function Index() {
             Mais que sites, criamos identidade!
           </p>
         </div>
-        <div className="relative z-20 mx-auto max-w-[1800px] px-4 sm:px-8 xl:px-14 translate-y-1/2 -mb-12">
-          <div className="grid grid-cols-1 gap-6 rounded-2xl border border-neon-violet/40 bg-card/90 p-6 shadow-neon backdrop-blur-md sm:grid-cols-3">
-            {[
-              [Box, "Demonstrações", "Explore projetos ao vivo"],
-              [Users, "Sob medida", "Soluções para seu negócio"],
-              [Headphones, "Suporte", "via WhatsApp"],
-            ].map(([I, a, b]: any) => (
-              <div key={a} className="flex items-center justify-center gap-4">
-                <I className="h-10 w-10 text-neon-pink" />
-                <div>
-                  <div className="font-display text-2xl font-bold text-neon">{a}</div>
-                  <div className="text-sm">{b}</div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
       </section>
 
-      {/* Serviços */}
-      <section id="servicos" className="mx-auto max-w-[1800px] px-4 sm:px-8 xl:px-14 pt-20 md:pt-24 pb-14">
-        <div className="flex flex-wrap items-end justify-between gap-4">
-          <div>
-            <div className="text-sm font-semibold tracking-[0.25em] text-neon-pink">NOSSOS SERVIÇOS</div>
-            <h2 className="mt-2 text-4xl font-bold">Tudo o que seu negócio precisa</h2>
-            <p className="mt-2 text-lg text-muted-foreground">Os 5 passos que a sua marca precisa para crescer na internet.</p>
-          </div>
+      <section id="servicos" aria-label="Conheça a NovaesWeb" className="mx-auto flex max-w-[1800px] flex-wrap items-center justify-between gap-4 px-4 py-6 sm:px-8 xl:px-14">
+        <p className="text-sm text-muted-foreground">Sites profissionais · Delivery · Sistemas sob medida</p>
+        <div className="flex flex-wrap gap-5 text-sm font-semibold text-neon-pink">
+          <Link to="/servicos" className="inline-flex min-h-11 items-center gap-2 hover:underline">Conhecer serviços <ArrowRight className="h-4 w-4" aria-hidden="true" /></Link>
+          <Link to="/planos" className="inline-flex min-h-11 items-center gap-2 hover:underline">Ver planos <ArrowRight className="h-4 w-4" aria-hidden="true" /></Link>
         </div>
-        <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-5">
-          {services.map((s, i) => (
-            <article key={s.t} className="relative flex flex-col rounded-xl border border-border bg-card p-2 transition hover:shadow-neon">
-              <span className="absolute left-4 top-4 z-10 grid h-9 w-9 place-items-center rounded-full bg-neon font-display font-bold shadow-neon">{i + 1}</span>
-              <img src={s.img} alt={s.t} className="aspect-[3/2] w-full rounded-lg object-cover" loading="lazy" />
-              <div className="flex flex-1 flex-col p-3">
-                <h3 className="text-lg font-semibold">{s.t}</h3>
-                <p className="mt-1 flex-1 text-sm text-muted-foreground">{s.d}</p>
-              </div>
-            </article>
-          ))}
-        </div>
-
+      </section>
+      <section className="mx-auto max-w-[1800px] px-4 pb-10 sm:px-8 xl:px-14">
         {/* Modelos de Demonstração */}
-        <div id="modelos" className="mt-16">
+        <div id="modelos" className="scroll-mt-24">
           <div className="text-sm font-semibold tracking-[0.25em] text-neon-pink">VEJA FUNCIONANDO</div>
           <div className="mt-2 flex flex-wrap items-end justify-between gap-4">
-            <h2 className="text-3xl font-bold sm:text-4xl">Sites de demonstração para verificar</h2>
-            <p className="max-w-xl text-muted-foreground">Abra, clique e teste como se fosse cliente. É assim que o seu negócio pode aparecer na internet.</p>
+            <h2 className="text-3xl font-bold sm:text-4xl">Veja nossos projetos</h2>
+            <p className="max-w-xl text-muted-foreground">Explore os modelos e teste a experiência de quem visita o seu site.</p>
           </div>
           <div id="lista-modelos" className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {modelos.map((m, index) => (
@@ -278,110 +194,23 @@ function Index() {
               </button>
             </div>
           )}
-          <div className="mt-8 text-center">
-            <a href={whatsLink("Olá! Vi os modelos no site da NovaesWeb e quero um site assim para o meu negócio.")} target="_blank" rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-full bg-neon px-7 py-3 font-semibold shadow-neon">
-              <MessageCircle className="h-5 w-5" /> Quero um site assim
-            </a>
-          </div>
         </div>
 
         {/* Banner de Contato Rápido */}
-        <div id="contato" className="mt-14 flex flex-wrap items-center justify-between gap-6 rounded-2xl border-2 border-neon-pink bg-card p-7 shadow-neon">
+        <div id="contato" className="mt-8 flex flex-wrap items-center justify-between gap-6 rounded-2xl border-2 border-neon-pink bg-card p-7 shadow-neon">
           <div className="flex items-center gap-5">
-            <Rocket className="h-12 w-12 text-neon-pink" />
+            <MessageCircle className="hidden h-10 w-10 shrink-0 text-neon-pink sm:block" />
             <div>
-              <h3 className="text-2xl font-bold">Vamos criar algo incrível para o seu negócio?</h3>
-              <p className="text-muted-foreground">Fale agora com a nossa equipe e receba uma proposta personalizada.</p>
+              <h3 className="text-2xl font-bold">Vamos conversar sobre o seu projeto?</h3>
+              <p className="text-muted-foreground">Conte sua ideia e receba uma proposta alinhada ao que você precisa.</p>
             </div>
           </div>
-          <a href={WHATS} className="flex items-center gap-3 rounded-full bg-neon px-8 py-4 font-semibold shadow-neon">
-            <MessageCircle className="h-5 w-5" /> Falar no WhatsApp <ArrowRight className="h-5 w-5" />
-          </a>
+          <Link id="cadastro" to="/contato" className="inline-flex min-h-11 items-center gap-3 rounded-full bg-neon px-6 py-3 font-semibold shadow-neon">
+            Entrar em contato <ArrowRight className="h-5 w-5" aria-hidden="true" />
+          </Link>
         </div>
       </section>
 
-      {/* Resumo Oficial dos Planos */}
-      <PlansSummarySection />
-
-      {/* Teaser do Simulador de Economia */}
-      <EconomyTeaserSection />
-
-      {/* Passos e Metodologia */}
-      <section className="mx-auto max-w-[1800px] px-4 py-14 sm:px-8 xl:px-14">
-        <div className="text-sm font-semibold tracking-[0.25em] text-neon-pink">SEM COMPLICAÇÃO</div>
-        <h2 className="mt-2 text-4xl font-bold">Da conversa ao seu site no ar</h2>
-        <div className="mt-8 grid gap-5 md:grid-cols-2 xl:grid-cols-4">
-          {steps.map(([n, t, d]) => (
-            <div key={n} className="rounded-xl border border-border bg-card p-5 transition hover:shadow-neon">
-              <div className="font-display text-3xl font-extrabold text-neon">{n}</div>
-              <h3 className="mt-3 text-lg font-semibold">{t}</h3>
-              <p className="mt-1 text-sm leading-relaxed text-muted-foreground">{d}</p>
-            </div>
-          ))}
-        </div>
-        <div className="mt-5 grid gap-5 md:grid-cols-3">
-          {[[Smartphone, "Em todas as telas", "Navegação pensada para celular, tablet e computador."],
-            [TrendingUp, "Estrutura para evoluir", "Comece com o que precisa e avalie novos recursos conforme seu negócio cresce."],
-            [ShieldCheck, "Clareza em cada etapa", "Valores, escopo e condições alinhados antes da contratação."]].map(([I, t, d]: any) => (
-            <div key={t} className="flex items-start gap-4 rounded-xl border border-border bg-card/60 p-5">
-              <I className="h-8 w-8 shrink-0 text-neon-pink" />
-              <div>
-                <h3 className="font-semibold">{t}</h3>
-                <p className="mt-1 text-sm leading-relaxed text-muted-foreground">{d}</p>
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* Formulário de Lead */}
-      <section id="cadastro" className="mx-auto max-w-[1800px] px-4 pb-14 sm:px-8 xl:px-14">
-        <div className="mx-auto max-w-3xl rounded-3xl border border-neon-violet/30 bg-card/60 p-6 shadow-neon sm:p-10">
-          <p className="text-sm font-semibold tracking-widest text-neon-pink">FALE COM A GENTE</p>
-          <h2 className="mt-2 text-2xl font-bold sm:text-3xl">Deixe seu contato e a gente te chama</h2>
-          <p className="mt-2 mb-6 text-muted-foreground">Preencha rapidinho e retornamos pelo WhatsApp.</p>
-          <LeadForm />
-        </div>
-      </section>
-
-      {/* Dúvidas Frequentes */}
-      <section className="mx-auto max-w-[1800px] px-4 pb-14 sm:px-8 xl:px-14">
-        <div className="flex flex-wrap items-center justify-between gap-4">
-          <div className="flex items-start gap-3">
-            <MessagesSquare className="h-10 w-10 shrink-0 text-neon-pink" />
-            <div>
-              <h2 className="text-2xl font-bold">Dúvidas comuns e respostas claras</h2>
-              <p className="mt-1 text-sm text-muted-foreground">As perguntas que mais recebemos — de sites e identidade visual a vídeos e integração no WhatsApp.</p>
-            </div>
-          </div>
-          <a href={WHATS} className="inline-flex items-center gap-2 rounded-full border-2 border-neon-pink px-5 py-3 text-sm font-semibold">
-            <MessageCircle className="h-4 w-4" /> Não achou a sua? Fale com a gente
-          </a>
-        </div>
-        <div className="mt-6 grid gap-3 md:grid-cols-2 xl:grid-cols-3">
-          {(faqsAbertas ? allFaqs : allFaqs.slice(0, faqsShown)).map(([q, a]) => (
-            <details key={q} className="group rounded-md border border-border bg-card px-4 py-2 text-sm">
-              <summary className="flex cursor-pointer list-none items-center justify-between gap-3 py-1 leading-snug">{q}<Plus className="h-4 w-4 shrink-0 transition group-open:rotate-45" /></summary>
-              <p className="mt-2 text-muted-foreground">{a}</p>
-            </details>
-          ))}
-        </div>
-        {allFaqs.length > faqsShown && (
-          <div className="mt-6 flex justify-center">
-            <Button
-              variant="outline"
-              type="button"
-              aria-expanded={faqsAbertas}
-              onClick={() => setFaqsAbertas((v) => !v)}
-              className="min-h-11 h-auto whitespace-normal inline-flex items-center gap-2 rounded-full border border-neon-violet px-6 py-3 text-sm font-semibold text-neon-pink transition hover:bg-neon-violet/10"
-            >
-              {faqsAbertas ? "Mostrar menos dúvidas" : `Ver todas as ${allFaqs.length} dúvidas`}
-              <ChevronDown className={`h-4 w-4 transition ${faqsAbertas ? "rotate-180" : ""}`} />
-            </Button>
-          </div>
-        )}
-      </section>
       <SiteFooter />
     </div>
   );
