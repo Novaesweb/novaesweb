@@ -121,6 +121,7 @@ const steps = [
 
 function Index() {
   const [faqsAbertas, setFaqsAbertas] = useState(false);
+  const [mostrarTodosModelos, setMostrarTodosModelos] = useState(false);
   return (
     <div className="min-h-screen overflow-x-hidden">
       <SiteHeader active="Início" />
@@ -241,10 +242,10 @@ function Index() {
             <h2 className="text-3xl font-bold sm:text-4xl">Sites de demonstração para verificar</h2>
             <p className="max-w-xl text-muted-foreground">Abra, clique e teste como se fosse cliente. É assim que o seu negócio pode aparecer na internet.</p>
           </div>
-          <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {modelos.map((m) => (
+          <div id="lista-modelos" className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {modelos.map((m, index) => (
               <a key={m.url} href={m.url} target="_blank" rel="noopener noreferrer"
-                className="group flex flex-col overflow-hidden rounded-xl border border-neon-violet/40 bg-card transition hover:-translate-y-1 hover:border-neon-pink hover:shadow-neon">
+                className={`group ${index < 3 || mostrarTodosModelos ? "flex" : "hidden"} flex-col overflow-hidden rounded-xl border border-neon-violet/40 bg-card transition hover:-translate-y-1 hover:border-neon-pink hover:shadow-neon`}>
                 <div className="flex items-center gap-1.5 border-b border-border px-2.5 py-1.5">
                   <span className="h-2 w-2 rounded-full bg-neon-pink/70" />
                   <span className="h-2 w-2 rounded-full bg-neon-violet/70" />
@@ -263,6 +264,20 @@ function Index() {
               </a>
             ))}
           </div>
+          {modelos.length > 3 && (
+            <div className="mt-6 text-center">
+              <button
+                type="button"
+                aria-expanded={mostrarTodosModelos}
+                aria-controls="lista-modelos"
+                onClick={() => setMostrarTodosModelos((aberto) => !aberto)}
+                className="inline-flex min-h-11 items-center justify-center gap-2 rounded-full border border-neon-pink px-6 py-3 font-semibold transition hover:bg-neon-pink/10 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-neon-pink"
+              >
+                {mostrarTodosModelos ? "Mostrar menos" : `Ver mais ${modelos.length - 3} demonstrações`}
+                <ChevronDown aria-hidden="true" className={`h-4 w-4 ${mostrarTodosModelos ? "rotate-180" : ""}`} />
+              </button>
+            </div>
+          )}
           <div className="mt-8 text-center">
             <a href={whatsLink("Olá! Vi os modelos no site da NovaesWeb e quero um site assim para o meu negócio.")} target="_blank" rel="noopener noreferrer"
               className="inline-flex items-center gap-2 rounded-full bg-neon px-7 py-3 font-semibold shadow-neon">
