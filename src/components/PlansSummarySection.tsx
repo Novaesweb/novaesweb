@@ -71,7 +71,7 @@ export function PlansSummarySection() {
               {isHighlighted && (
                 <span className="mb-3 inline-flex w-fit items-center gap-1.5 rounded-full bg-neon px-3 py-1 text-[11px] font-bold tracking-wider text-primary-foreground shadow-neon">
                   <Sparkles className="h-3.5 w-3.5" aria-hidden="true" />
-                  MAIS ESCOLHIDO PARA DELIVERY
+                  DESTAQUE PARA DELIVERY
                 </span>
               )}
 
