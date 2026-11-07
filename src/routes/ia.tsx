@@ -58,12 +58,55 @@ function DemoPhone() {
   </div>;
 }
 function RobotMascot() {
-  return <div className="nia-bot-art" aria-hidden="true">
-    <div className="nia-bot-antenna"/>
-    <div className="nia-bot-head"><div className="nia-bot-face"><span className="nia-eye"/><span className="nia-eye"/></div></div>
-    <div className="nia-bot-body"><span>N</span></div>
-    <div className="nia-bot-hand nia-bot-left">✦</div><div className="nia-bot-hand nia-bot-right">✓</div>
-    <div className="nia-bot-foot nia-bot-foot-left"/><div className="nia-bot-foot nia-bot-foot-right"/>
+  const [mood, setMood] = useState<"welcome" | "hello" | "guide">("welcome");
+  const [tipOpen, setTipOpen] = useState(false);
+
+  const interact = () => {
+    setMood(current => current === "welcome" ? "hello" : current === "hello" ? "guide" : "hello");
+    setTipOpen(true);
+  };
+  const message = mood === "guide"
+    ? "Quer conhecer o projeto? Toque em “Solicitar demonstração”. ✨"
+    : "Oi! Eu sou o mascote da Novaes IA. Que bom te ver aqui! 💜";
+
+  return <div className="nia-mascot-wrap">
+    {tipOpen && (
+      <div className="nia-bot-speech" role="status" aria-live="polite">
+        <button type="button" className="nia-bot-speech-close" aria-label="Fechar mensagem do mascote" onClick={() => setTipOpen(false)}><X size={13}/></button>
+        {message}
+        <small>Sou um mascote interativo, não um atendimento por IA.</small>
+      </div>
+    )}
+    <button type="button" className={`nia-bot-art nia-bot-clickable nia-bot-${mood}`}
+      aria-label="Interagir com o mascote Novaes IA"
+      title="Toque para falar com o mascote"
+      onClick={interact}>
+      <span className="nia-bot-spark nia-bot-spark-one" aria-hidden="true">✦</span>
+      <span className="nia-bot-spark nia-bot-spark-two" aria-hidden="true">✧</span>
+      <span className="nia-bot-figure" aria-hidden="true">
+        <span className="nia-bot-antenna"><i/></span>
+        <span className="nia-bot-ear nia-bot-ear-left"/>
+        <span className="nia-bot-ear nia-bot-ear-right"/>
+        <span className="nia-bot-head">
+          <span className="nia-bot-face">
+            <span className="nia-bot-brow nia-bot-brow-left"/>
+            <span className="nia-bot-brow nia-bot-brow-right"/>
+            <span className="nia-eye nia-eye-left"/>
+            <span className="nia-eye nia-eye-right"/>
+            <span className="nia-bot-cheek nia-bot-cheek-left"/>
+            <span className="nia-bot-cheek nia-bot-cheek-right"/>
+            <span className="nia-bot-smile"/>
+          </span>
+        </span>
+        <span className="nia-bot-neck"/>
+        <span className="nia-bot-body"><span className="nia-bot-emblem">N<span className="nia-bot-led"/></span></span>
+        <span className="nia-bot-hand nia-bot-left">✦</span>
+        <span className="nia-bot-hand nia-bot-right">♥</span>
+        <span className="nia-bot-foot nia-bot-foot-left"/>
+        <span className="nia-bot-foot nia-bot-foot-right"/>
+      </span>
+      <span className="nia-bot-hint">TOQUE EM MIM <span aria-hidden="true">✦</span></span>
+    </button>
   </div>;
 }
 function NovaesIaPage() {
