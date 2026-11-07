@@ -169,7 +169,7 @@ function NovaesIaPage() {
           <div className="nia-hero-points"><span><Clock3 size={17}/> Respostas planejadas</span><span><TrendingUp size={17}/> Mais organização</span><span><ShieldCheck size={17}/> Controles por empresa</span></div>
           <p className="nia-disclaimer">Projeto em desenvolvimento. O atendimento automático para clientes reais ainda depende de homologação.</p>
         </div>
-        <div className="nia-hero-visual"><span className="nia-visual-n" aria-hidden="true">N</span><div className="nia-wa-mark" aria-hidden="true"><MessageCircle size={38}/></div><DemoPhone/><RobotMascot/></div>
+        <div className="nia-hero-visual"><div className="nia-wa-mark" aria-hidden="true"><MessageCircle size={38}/></div><DemoPhone/><RobotMascot/></div>
       </section>
       <section className="nia-benefits" aria-label="Benefícios planejados">{features.map(({Icon,title,text})=><article key={title}><Icon size={29}/><div><h2>{title}</h2><p>{text}</p></div></article>)}</section>
       <section className="nia-section nia-steps" id="como-funciona"><div className="nia-section-head"><h2>Como <span>funciona?</span></h2><p>Um processo acompanhado, do primeiro contato à validação das respostas.</p></div><div className="nia-steps-list">{steps.map(({Icon,title,text},i)=><div className="nia-step-wrap" key={title}><article className="nia-step"><Icon size={32}/><div><h3>{i+1}. {title}</h3><p>{text}</p></div></article>{i<steps.length-1&&<ChevronRight className="nia-step-arrow" size={20}/>}</div>)}</div></section>
