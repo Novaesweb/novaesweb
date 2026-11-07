@@ -42,19 +42,32 @@ const plans = [
 ];
 
 function DemoPhone() {
-  const [reply, setReply] = useState(false);
-  return <div className="nia-phone" aria-label="Simulação visual de conversa com a Novaes IA">
-    <div className="nia-phone-top"><span>14:27</span><span className="nia-phone-signal">●●● ▰</span></div>
-    <div className="nia-chat-head"><span className="nia-avatar">N</span><div><strong>Seu Negócio</strong><small>demonstração de atendimento</small></div><span className="nia-menu-dot">⋮</span></div>
-    <div className="nia-chat-body">
-      <span className="nia-demo-tag">EXEMPLO ILUSTRATIVO</span>
-      <p className="nia-bubble nia-sent">Olá! Vocês estão abertos hoje?<small>14:26 ✓✓</small></p>
-      <p className="nia-bubble nia-received">Olá! 👋 Posso te ajudar com nossos horários e serviços.<small>14:26</small></p>
-      <p className="nia-bubble nia-sent">Quero conhecer o cardápio!<small>14:27 ✓✓</small></p>
-      <div className="nia-product"><span className="nia-product-img" aria-hidden="true">🍔</span><div><strong>Informações do negócio</strong><small>Respostas com base em conteúdo aprovado.</small></div></div>
-      {reply && <p className="nia-bubble nia-received">A equipe pode configurar as informações que a IA utiliza para responder. ✨<small>Exemplo</small></p>}
+  return <div className="nia-phone" role="img" aria-label="Ilustração de um smartphone moderno com conversa fictícia de atendimento via WhatsApp; não é um chat funcional">
+    <div className="nia-phone-metal" aria-hidden="true"/>
+    <div className="nia-phone-screen" aria-hidden="true">
+      <div className="nia-phone-island"/>
+      <div className="nia-phone-status"><strong>9:41</strong><div className="nia-status-symbols"><span className="nia-status-bars"><i/><i/><i/><i/></span><span className="nia-status-wifi">◕</span><span className="nia-status-battery"><i/></span></div></div>
+      <div className="nia-chat-head">
+        <span className="nia-chat-back">‹</span>
+        <span className="nia-avatar">N</span>
+        <div className="nia-chat-contact"><strong>Novaes IA <span className="nia-chat-verified">✓</span></strong><small>Atendimento comercial</small></div>
+        <span className="nia-chat-video">▣</span><span className="nia-chat-call">☎</span>
+      </div>
+      <div className="nia-chat-body">
+        <span className="nia-chat-date">HOJE</span>
+        <span className="nia-chat-safe">As mensagens abaixo são uma simulação ilustrativa.</span>
+        <p className="nia-bubble nia-sent">Olá! Vocês estão abertos hoje?<small>9:40 <span className="nia-ticks">✓✓</span></small></p>
+        <p className="nia-bubble nia-received">Olá! 👋 Que bom ter você aqui. Posso ajudar com horários, produtos e informações do negócio.<small>9:40</small></p>
+        <p className="nia-bubble nia-sent">Quero ver o cardápio!<small>9:41 <span className="nia-ticks">✓✓</span></small></p>
+        <div className="nia-chat-product">
+          <div className="nia-chat-product-photo">🍔</div>
+          <div className="nia-chat-product-details"><strong>Cardápio do negócio</strong><span>Informações configuradas pelo responsável.</span><small>9:41</small></div>
+        </div>
+      </div>
+      <div className="nia-chat-compose"><span className="nia-compose-plus">＋</span><div className="nia-compose-box"><span>Mensagem</span><span className="nia-compose-camera">◉</span></div><span className="nia-compose-mic">●</span></div>
+      <div className="nia-phone-home"/>
     </div>
-    <button type="button" className="nia-phone-cta" onClick={() => setReply(v => !v)}>{reply ? "Reiniciar exemplo" : "Ver resposta de exemplo"} <Send size={14}/></button>
+    <span className="nia-phone-power" aria-hidden="true"/><span className="nia-phone-volume" aria-hidden="true"/>
   </div>;
 }
 function RobotMascot() {

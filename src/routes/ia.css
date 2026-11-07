@@ -47,3 +47,55 @@
 @media(max-width:700px){.nia-mascot-wrap{right:2%;bottom:8px;transform:scale(.77)}}
 @media(max-width:390px){.nia-mascot-wrap{right:-13%;bottom:-10px;transform:scale(.62)}}
 @media(prefers-reduced-motion:reduce){.nia-bot-figure,.nia-bot-antenna i,.nia-bot-face .nia-eye,.nia-bot-spark,.nia-bot-hello .nia-bot-right,.nia-bot-guide .nia-bot-right,.nia-bot-speech{animation:none!important}}
+
+
+/* Mockup de smartphone ilustrativo e estático — sem ações de chat. */
+.nia-hero-visual{perspective:1100px}
+.nia-phone{width:272px;height:444px;border:0;border-radius:43px;position:relative;display:block;padding:7px;background:linear-gradient(125deg,#b99ac8 0%,#4f355e 17%,#24122f 38%,#b075d2 69%,#3c254f 100%);box-shadow:inset 1px 1px 2px #ffffffc7,inset -3px -3px 6px #1b0929,0 0 0 2px #4e315c,13px 21px 43px #000b,0 0 42px #e04bff5c;transform:rotate(6deg);isolation:isolate;overflow:visible;pointer-events:none}
+.nia-phone:before{content:"";position:absolute;inset:2px;border-radius:42px;border:1px solid #f0d7ff75;pointer-events:none}
+.nia-phone-metal{position:absolute;inset:4px;border-radius:41px;background:#0b0f16}
+.nia-phone-screen{position:relative;height:100%;width:100%;border-radius:36px;overflow:hidden;background:#0d141a;display:flex;flex-direction:column;font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:#f4f6f5}
+.nia-phone-island{position:absolute;z-index:5;top:10px;left:50%;transform:translateX(-50%);width:78px;height:18px;border-radius:20px;background:#05060a;box-shadow:inset 0 0 0 1px #1e1b29}
+.nia-phone-island:after{content:"";position:absolute;right:11px;top:6px;width:6px;height:6px;border-radius:50%;background:#171c2f;box-shadow:inset 1px 1px 2px #2b3b55}
+.nia-phone-status{height:42px;flex-shrink:0;padding:14px 19px 4px;display:flex;align-items:center;justify-content:space-between;color:#fff;font-size:10px;letter-spacing:.01em;background:#192b28}
+.nia-phone-status strong{font-size:11px}
+.nia-status-symbols{display:flex;align-items:center;gap:5px}
+.nia-status-bars{height:10px;display:flex;gap:2px;align-items:flex-end}
+.nia-status-bars i{display:block;width:3px;background:#fff;border-radius:2px}
+.nia-status-bars i:nth-child(1){height:3px}.nia-status-bars i:nth-child(2){height:5px}.nia-status-bars i:nth-child(3){height:7px}.nia-status-bars i:nth-child(4){height:9px}
+.nia-status-wifi{font-size:13px;line-height:1;transform:rotate(30deg)}
+.nia-status-battery{width:17px;height:9px;border:1px solid #fff;border-radius:3px;padding:1px;position:relative}
+.nia-status-battery:after{content:"";position:absolute;right:-3px;top:2px;width:2px;height:4px;border-radius:2px;background:#fff}
+.nia-status-battery i{display:block;width:90%;height:100%;border-radius:1px;background:#fff}
+.nia-phone .nia-chat-head{height:55px;min-height:55px;padding:6px 10px 7px 9px;background:#192b28;display:flex;align-items:center;gap:7px;border-bottom:1px solid #ffffff12}
+.nia-chat-back{font-size:29px;line-height:1;font-weight:300;color:#dbe4de;margin-right:0;margin-top:-4px}
+.nia-phone .nia-avatar{width:33px;height:33px;flex-shrink:0;border:1px solid #ffffff35;background:radial-gradient(circle at 25% 20%,#ffaaf1,#a22ee2 65%,#43236c);box-shadow:0 0 8px #bd45cf55;font-size:17px}
+.nia-chat-contact{min-width:0;flex:1}
+.nia-chat-contact strong{display:flex;align-items:center;gap:4px;white-space:nowrap;font-size:11.5px;line-height:1.3}
+.nia-chat-verified{font-size:9px;width:12px;height:12px;border-radius:50%;background:#27ae8a;display:grid;place-items:center;color:white}
+.nia-chat-contact small{display:block;color:#a9bbb3;font-size:8.4px;margin-top:2px}
+.nia-chat-video,.nia-chat-call{color:#d4e8df;font-size:19px;line-height:1;margin-left:3px}
+.nia-phone .nia-chat-body{position:relative;min-height:0;flex:1;padding:11px 9px 7px;gap:9px;overflow:hidden;background-color:#101e20;background-image:radial-gradient(#b3aa9a18 1px,transparent 1px),radial-gradient(#465e5130 1px,transparent 1px);background-position:0 0,13px 14px;background-size:26px 26px}
+.nia-chat-date{align-self:center;background:#223638e8;padding:5px 9px;border-radius:7px;font-size:8px;letter-spacing:.03em;color:#c7d3cd;box-shadow:0 1px 4px #0003}
+.nia-chat-safe{font-size:8px;line-height:1.4;text-align:center;align-self:center;color:#e5d9bc;background:#594b2c73;padding:5px 8px;border-radius:6px;max-width:96%}
+.nia-phone .nia-bubble{border-radius:9px;padding:8px 8px 4px;max-width:87%;font-size:10.5px;line-height:1.42;box-shadow:0 1px 3px #0004;position:relative}
+.nia-phone .nia-bubble small{font-size:7.5px;margin-top:4px;color:#a7b8b1}
+.nia-phone .nia-sent{background:#075e50;border-top-right-radius:2px}
+.nia-phone .nia-received{background:#25393b;border-top-left-radius:2px}
+.nia-ticks{color:#6bcaff;font-weight:800}
+.nia-chat-product{align-self:flex-start;display:flex;align-items:center;gap:7px;max-width:93%;padding:6px;background:#25393b;border-radius:9px;box-shadow:0 1px 3px #0004}
+.nia-chat-product-photo{width:56px;height:55px;display:grid;place-items:center;flex-shrink:0;background:radial-gradient(circle at 50% 45%,#e4ba8e,#604326 70%,#302c24);border-radius:7px;font-size:31px}
+.nia-chat-product-details{display:flex;flex-direction:column;gap:3px;font-size:9px}
+.nia-chat-product-details strong{font-size:9px}.nia-chat-product-details span{font-size:8px;color:#d5ddd7;line-height:1.35}.nia-chat-product-details small{align-self:flex-end;color:#a5b8ad;font-size:7px}
+.nia-chat-compose{height:45px;display:flex;align-items:center;gap:7px;padding:5px 9px;background:#101e20}
+.nia-compose-plus{font-size:21px;color:#a3b4ad;font-weight:300}
+.nia-compose-box{display:flex;align-items:center;justify-content:space-between;flex:1;background:#26393b;border-radius:22px;color:#a9b8b1;padding:8px 11px;font-size:10px}
+.nia-compose-camera{font-size:18px;color:#a9b8b1}
+.nia-compose-mic{width:25px;height:25px;border-radius:50%;background:#1da88a;color:#fff;display:grid;place-items:center;font-size:10px}
+.nia-phone-home{height:15px;background:#101e20;position:relative;flex-shrink:0}
+.nia-phone-home:after{content:"";width:83px;height:4px;background:#f1f1f1;border-radius:9px;position:absolute;bottom:5px;left:50%;transform:translateX(-50%)}
+.nia-phone-power{position:absolute;right:-5px;top:103px;width:4px;height:56px;border-radius:0 3px 3px 0;background:linear-gradient(#a36bc1,#332046);box-shadow:1px 0 2px #b884d9}
+.nia-phone-volume{position:absolute;left:-5px;top:104px;width:4px;height:74px;border-radius:3px 0 0 3px;background:linear-gradient(#a36bc1,#332046)}
+@media(max-width:1020px){.nia-phone{transform:scale(.87) rotate(6deg)}}
+@media(max-width:700px){.nia-phone{transform:scale(.82) rotate(5deg)}}
+@media(max-width:390px){.nia-phone{transform:scale(.72) rotate(5deg)}}
