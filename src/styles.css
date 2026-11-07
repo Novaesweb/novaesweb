@@ -359,3 +359,9 @@
     animation: none !important;
   }
 }
+
+/* Hero da página inicial: final rotativo, sem deslocamento vertical ou animação para quem prefere menos movimento. */
+.home-hero-rotating{display:inline;vertical-align:baseline}
+.home-hero-rotating-word{display:inline-block;animation:home-hero-word-enter .52s ease-out both}
+@keyframes home-hero-word-enter{from{opacity:.3;filter:blur(3px);transform:translateY(6px)}to{opacity:1;filter:blur(0);transform:translateY(0)}}
+@media(prefers-reduced-motion:reduce){.home-hero-rotating-word{animation:none}}
