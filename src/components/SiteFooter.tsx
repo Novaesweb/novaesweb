@@ -9,7 +9,6 @@ export function SiteFooter() {
         <Link to="/" className="font-display text-lg font-bold">Novaes<span className="text-neon-pink">Web</span></Link>
         <nav aria-label="Navegação do rodapé" className="flex flex-wrap gap-x-5 text-sm text-muted-foreground">
           <Link to="/servicos" className="inline-flex min-h-11 items-center hover:text-neon-pink">Serviços</Link>
-          <Link to="/ia" className="inline-flex min-h-11 items-center hover:text-neon-pink">Novaes IA</Link>
           <Link to="/planos" className="inline-flex min-h-11 items-center hover:text-neon-pink">Planos</Link>
           <Link to="/simulador-de-economia" className="inline-flex min-h-11 items-center hover:text-neon-pink">Simulador</Link>
           <Link to="/comparativo" className="inline-flex min-h-11 items-center hover:text-neon-pink">Comparativo</Link>

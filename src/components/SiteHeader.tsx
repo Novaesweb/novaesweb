@@ -8,12 +8,11 @@ export const WHATS = whatsLink();
 
 const nav: {
   label: string;
-  to: "/" | "/planos" | "/simulador-de-economia" | "/comparativo" | "/quem-somos" | "/servicos" | "/ia" | "/contato";
+  to: "/" | "/planos" | "/simulador-de-economia" | "/comparativo" | "/quem-somos" | "/servicos" | "/contato";
   hash?: string;
 }[] = [
   { label: "Início", to: "/" },
   { label: "Serviços", to: "/servicos" },
-  { label: "Novaes IA", to: "/ia" },
   { label: "Planos", to: "/planos" },
   { label: "Simulador", to: "/simulador-de-economia" },
   { label: "Comparativo", to: "/comparativo" },
