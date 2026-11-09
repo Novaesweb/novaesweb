@@ -1,7 +1,8 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
+import { HeroTechText } from "@/components/HeroTechText";
 import { ServiceHighlights, BusinessHighlight, AboutHighlight, DecisionHighlights } from "@/components/HomeHighlights";
 import { ArrowRight, MessageCircle, ChevronDown } from "lucide-react";
 import portrait from "@/assets/portrait-wide.webp";
@@ -83,13 +84,6 @@ export const Route = createFileRoute("/")({
 
 function Index() {
   const [mostrarTodosModelos, setMostrarTodosModelos] = useState(false);
-  const [fraseIndex, setFraseIndex] = useState(0);
-  const finais = ["nosso sucesso.", "nosso propósito.", "nosso compromisso."];
-  useEffect(() => {
-    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
-    const id = window.setInterval(() => setFraseIndex(i => (i + 1) % finais.length), 4600);
-    return () => window.clearInterval(id);
-  }, []);
   return (
     <div className="min-h-screen overflow-x-hidden">
       <SiteHeader active="Início" />
@@ -118,11 +112,7 @@ function Index() {
             <span className="inline-block rounded-full border border-neon-pink px-4 py-1 text-xs font-semibold tracking-[0.2em]">
               SITES E SISTEMAS SOB MEDIDA
             </span>
-            <h1 className="mt-5 text-4xl font-extrabold leading-[1.05] sm:text-5xl md:text-6xl">
-              O seu crescimento é parte do{" "}
-              <span className="home-hero-rotating" aria-hidden="true"><span key={fraseIndex} className="home-hero-rotating-word text-neon">{finais[fraseIndex]}</span></span>
-              <span className="sr-only">nosso sucesso.</span>
-            </h1>
+            <HeroTechText />
             <p className="mt-5 text-lg text-muted-foreground">
               Criamos sites, lojas virtuais e sistemas personalizados para fortalecer sua marca,
               facilitar sua operação e acompanhar a evolução do seu negócio.
