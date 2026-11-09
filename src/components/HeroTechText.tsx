@@ -39,8 +39,7 @@ export function HeroTechText() {
                 text={text}
                 fontWeight={800}
                 fontSize={64}
-                intro="assemble"
-                introDuration={2}
+                intro="none"
                 reveal="letter"
                 specks={15}
                 accentColor="#f472b6"
