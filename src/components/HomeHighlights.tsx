@@ -66,11 +66,12 @@ export function BusinessHighlight() {
             <div>
               <p className="text-xs text-muted-foreground">Mensalidade</p>
               <p className="mt-1 text-3xl font-extrabold text-neon">R$ {brl(plan.monthly)}<span className="text-sm font-medium text-foreground">/mês</span></p>
+              <p className="mt-1 text-xs text-neon-emerald">Ou <strong>R$ {brl(plan.annualTotal ?? 1900)}/ano</strong> (2 meses grátis)</p>
             </div>
             <div>
-              <p className="text-xs text-muted-foreground">Criação, cobrada à parte</p>
-              <p className="mt-1 text-2xl font-bold">R$ {brl(plan.setup)}</p>
-              <p className="text-xs text-muted-foreground">Pagamento único na implantação</p>
+              <p className="text-xs text-muted-foreground">Criação reduzida</p>
+              <p className="mt-1 text-2xl font-bold text-neon-pink">R$ {brl(plan.setup)}</p>
+              <p className="text-xs text-muted-foreground">Pagamento único facilitado</p>
             </div>
           </div>
           <ul className="mt-5 space-y-2.5 text-sm">

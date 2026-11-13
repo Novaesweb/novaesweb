@@ -10,20 +10,23 @@ export const plans = [
   {
     id: "start" as PlanId, name: "NOVAES START", label: "Novaes Start", tag: "Sua empresa no digital.",
     setup: 630, monthly: 0, optionalSupportMonthly: 80, deadline: "2 a 4 dias úteis",
+    annualTotal: null, annualMonthly: null, annualSavings: null,
     desc: "Landing page personalizada para apresentar sua empresa e receber contatos pelo WhatsApp.",
     items: ["Landing page personalizada", "Logo, banner e identidade visual", "Produtos/serviços com fotos e preços fixos", "Horário, endereço e localização", "Links para redes sociais", "Botão de WhatsApp com mensagem pronta", "Adaptado para celular, tablet e computador"],
     excludes: "Somente criação. Sem suporte, manutenção, hospedagem recorrente ou alterações mensais inclusas. Sem painel administrativo, carrinho, checkout ou registro de pedidos.",
   },
   {
     id: "business" as PlanId, name: "NOVAES BUSINESS", label: "Novaes Business", tag: "Seu delivery com autonomia.", popular: true,
-    setup: 578, monthly: 190, optionalSupportMonthly: null, deadline: "5 a 8 dias úteis",
+    setup: 290, monthly: 190, optionalSupportMonthly: null, deadline: "5 a 8 dias úteis",
+    annualTotal: 1900, annualMonthly: 158.33, annualSavings: 380,
     desc: "Cardápio digital com carrinho, checkout e painel simplificado para gerenciar pedidos e produtos.",
     items: ["Tudo que for aplicável do Start", "Cardápio digital dinâmico", "Carrinho e checkout", "CEP automático e dados salvos do cliente", "Pix, dinheiro e cartão na entrega", "Acompanhamento do pedido pelo site", "Painel simplificado: pedidos, produtos, preços e categorias", "Abrir/fechar loja, horário e taxa de entrega"],
     excludes: "Não inclui financeiro avançado, funcionários, marketing, cupons e WhatsApp automático (disponíveis como adicionais).",
   },
   {
     id: "premium" as PlanId, name: "NOVAES PREMIUM", label: "Novaes Premium", tag: "Mais recursos para gerenciar sua loja.",
-    setup: 980, monthly: 270, optionalSupportMonthly: null, deadline: "10 a 15 dias úteis",
+    setup: 490, monthly: 270, optionalSupportMonthly: null, deadline: "10 a 15 dias úteis",
+    annualTotal: 2700, annualMonthly: 225, annualSavings: 540,
     desc: "Gestão avançada da loja, com os recursos listados neste plano. Adicionais e soluções sob medida são contratados separadamente.",
     items: ["Tudo do Business", "Combos e personalização de produtos", "Cupons e promoções", "Avaliações da comida e da entrega", "Painel avançado com dashboard e relatórios", "Financeiro e fechamento de caixa", "Equipe, permissões e marketing", "Impressão de comandas e pedidos manuais"],
     excludes: "Não inclui todos os adicionais. WhatsApp automático, tarifas da Meta, domínio próprio, módulos opcionais e integrações personalizadas são contratados à parte, conforme disponibilidade e orçamento.",
@@ -31,10 +34,15 @@ export const plans = [
 ];
 
 export const half = (v: number) => v / 2;
-export const planWhatsMsg = (p: (typeof plans)[number], withSupport = false) =>
-  p.monthly === 0
-    ? `Olá, NovaesWeb! Tenho interesse no ${p.label}, com criação de R$ ${brl(p.setup)}, pagamento único e sem mensalidade obrigatória.${withSupport && p.optionalSupportMonthly ? ` Quero contratar também o suporte opcional de R$ ${brl(p.optionalSupportMonthly)} por mês.` : " Somente a criação, sem suporte contratado."} Gostaria de conversar sobre a contratação.`
-    : `Olá, NovaesWeb! Tenho interesse no ${p.label}, com criação de R$ ${brl(p.setup)} e mensalidade de R$ ${brl(p.monthly)}. Gostaria de conversar sobre a contratação.`;
+export const planWhatsMsg = (p: (typeof plans)[number], withSupport = false, isAnnual = false) => {
+  if (p.monthly === 0) {
+    return `Olá, NovaesWeb! Tenho interesse no ${p.label}, com criação de R$ ${brl(p.setup)}, pagamento único e sem mensalidade obrigatória.${withSupport && p.optionalSupportMonthly ? ` Quero contratar também o suporte opcional de R$ ${brl(p.optionalSupportMonthly)} por mês.` : " Somente a criação, sem suporte contratado."} Gostaria de conversar sobre a contratação.`;
+  }
+  if (isAnnual && p.annualTotal) {
+    return `Olá, NovaesWeb! Tenho interesse no ${p.label} (Plano Anual com 2 meses grátis), com criação reduzida de R$ ${brl(p.setup)} e anuidade de R$ ${brl(p.annualTotal)} (R$ ${brl(p.annualMonthly ?? 0)}/mês). Total: R$ ${brl(p.setup + p.annualTotal)}. Gostaria de conversar sobre a contratação.`;
+  }
+  return `Olá, NovaesWeb! Tenho interesse no ${p.label}, com criação reduzida de R$ ${brl(p.setup)} e mensalidade de R$ ${brl(p.monthly)}. Gostaria de conversar sobre a contratação.`;
+};
 
 // value per plan: true = incluído, false = não, string = observação
 export const comparison: [string, boolean | string, boolean | string, boolean | string][] = [

@@ -4,27 +4,27 @@ import { allFaqs, faqsShown } from "@/data/faqs";
 
 describe("planos", () => {
   it("valores oficiais", () => {
-     expect(plans.map((p) => [p.setup, p.monthly])).toEqual([[630, 0], [578, 190], [980, 270]]);
+     expect(plans.map((p) => [p.setup, p.monthly])).toEqual([[630, 0], [290, 190], [490, 270]]);
   });
   it("entrada de 50%", () => {
-     expect(plans.map((p) => half(p.setup))).toEqual([315, 289, 490]);
+     expect(plans.map((p) => half(p.setup))).toEqual([315, 145, 245]);
   });
   it("whatsapp", () => {
     expect(whatsLink("x")).toBe("https://wa.me/5551991189293?text=x");
     const premium = plans.find((p) => p.id === "premium");
     if (!premium) throw new Error("Premium ausente");
-    expect(planWhatsMsg(premium)).toContain("Novaes Premium, com criação de R$ 980,00 e mensalidade de R$ 270,00");
+    expect(planWhatsMsg(premium)).toContain("Novaes Premium, com criação reduzida de R$ 490,00 e mensalidade de R$ 270,00");
   });
-  it("Business custa 578 de criação e 190 por mês", () => {
+  it("Business custa 290 de criação e 190 por mês", () => {
     const business = plans.find((p) => p.id === "business");
-    expect(business?.setup).toBe(578);
+    expect(business?.setup).toBe(290);
     expect(business?.monthly).toBe(190);
     if (!business) throw new Error("Business ausente");
-    expect(planWhatsMsg(business)).toContain("criação de R$ 578,00 e mensalidade de R$ 190,00");
+    expect(planWhatsMsg(business)).toContain("criação reduzida de R$ 290,00 e mensalidade de R$ 190,00");
   });
-  it("Premium custa 980 de criação e 270 por mês", () => {
+  it("Premium custa 490 de criação e 270 por mês", () => {
     const premium = plans.find((p) => p.id === "premium");
-    expect(premium?.setup).toBe(980);
+    expect(premium?.setup).toBe(490);
     expect(premium?.monthly).toBe(270);
   });
   it("Premium mantém WhatsApp automático como adicional, não inclui tudo", () => {

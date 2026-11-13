@@ -154,10 +154,15 @@ export type CommercialPlan = (typeof commercialPlans)[number];
 export const launchSaving = (plan: CommercialPlan) =>
   plan.previousSetup === null ? 0 : plan.previousSetup - plan.setup;
 
-export const commercialWhatsMsg = (plan: CommercialPlan, withSupport = false) =>
-  plan.id === "start"
-    ? `Olá, NovaesWeb! Tenho interesse no ${plan.label}, com criação de R$ ${brl(plan.setup)}, pagamento único e sem mensalidade obrigatória. ${withSupport && plan.optionalSupportMonthly ? `Quero contratar também o suporte opcional de R$ ${brl(plan.optionalSupportMonthly)} por mês.` : "Somente a criação, sem suporte contratado."} Entendo que o pagamento da criação é de R$ ${brl(plan.setupPayment.upfront)} na contratação e R$ ${brl(plan.setupPayment.remainder)} antes da publicação. Gostaria de conversar sobre a contratação.`
-    : `Olá, NovaesWeb! Tenho interesse no ${plan.label}, com criação de R$ ${brl(plan.setup)} e mensalidade de R$ ${brl(plan.monthly)} (${plan.orderQuota.includedAcceptedOrders} pedidos aceitos/mês incluídos; excedente de R$ ${brl(plan.orderQuota.overageOrderPrice ?? 0)} por pedido aceito). Entendo que estão incluídas até ${plan.contentRequestsPerMonth} solicitações mensais de alteração de conteúdo, não cumulativas e conforme o contrato; módulos adicionais são contratados separadamente. Gostaria de conversar sobre a contratação.`;
+export const commercialWhatsMsg = (plan: CommercialPlan, withSupport = false, isAnnual = false) => {
+  if (plan.id === "start") {
+    return `Olá, NovaesWeb! Tenho interesse no ${plan.label}, com criação de R$ ${brl(plan.setup)}, pagamento único e sem mensalidade obrigatória. ${withSupport && plan.optionalSupportMonthly ? `Quero contratar também o suporte opcional de R$ ${brl(plan.optionalSupportMonthly)} por mês.` : "Somente a criação, sem suporte contratado."} Entendo que o pagamento da criação é de R$ ${brl(plan.setupPayment.upfront)} na contratação e R$ ${brl(plan.setupPayment.remainder)} antes da publicação. Gostaria de conversar sobre a contratação.`;
+  }
+  if (isAnnual && plan.annualTotal) {
+    return `Olá, NovaesWeb! Tenho interesse no ${plan.label} (Plano Anual com 2 meses grátis), com criação reduzida de R$ ${brl(plan.setup)} e anuidade de R$ ${brl(plan.annualTotal)} (equivalente a R$ ${brl(plan.annualMonthly ?? 0)}/mês, economia de R$ ${brl(plan.annualSavings ?? 0)} no ano). Entendo que estão incluídos ${plan.orderQuota.includedAcceptedOrders} pedidos aceitos/mês e até ${plan.contentRequestsPerMonth} solicitações mensais de alteração de conteúdo. Gostaria de conversar sobre a contratação.`;
+  }
+  return `Olá, NovaesWeb! Tenho interesse no ${plan.label}, com criação reduzida de R$ ${brl(plan.setup)} e mensalidade de R$ ${brl(plan.monthly)} (${plan.orderQuota.includedAcceptedOrders} pedidos aceitos/mês incluídos; excedente de R$ ${brl(plan.orderQuota.overageOrderPrice ?? 0)} por pedido aceito). Entendo que estão incluídas até ${plan.contentRequestsPerMonth} solicitações mensais de alteração de conteúdo, não cumulativas e conforme o contrato; módulos adicionais são contratados separadamente. Gostaria de conversar sobre a contratação.`;
+};
 
 export const overageSectionCopy = {
   title: "Seu negócio não precisa parar de vender",

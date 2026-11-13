@@ -18,8 +18,8 @@ describe("estrutura comercial da página de Planos", () => {
   it("preserva os preços aprovados", () => {
     expect(commercialPlans.map((p) => [p.setup, p.monthly])).toEqual([
       [630, 0],
-      [578, 190],
-      [980, 270],
+      [290, 190],
+      [490, 270],
     ]);
   });
 

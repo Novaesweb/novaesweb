@@ -66,7 +66,7 @@ const plansJsonLd = {
       "@type": "Offer",
       name: "Novaes Business",
       description:
-        "Site de delivery com 340 pedidos aceitos/mês incluídos. R$ 578 criação + R$ 190/mês. Pedido excedente: R$ 0,20.",
+        "Site de delivery com 340 pedidos aceitos/mês incluídos. R$ 290 criação + R$ 190/mês ou R$ 1.900/ano (2 meses grátis). Pedido excedente: R$ 0,20.",
       price: "190.00",
       priceCurrency: "BRL",
     },
@@ -74,7 +74,7 @@ const plansJsonLd = {
       "@type": "Offer",
       name: "Novaes Premium",
       description:
-        "Site de delivery com 750 pedidos aceitos/mês incluídos. R$ 980 criação + R$ 270/mês. Pedido excedente: R$ 0,15.",
+        "Site de delivery com 750 pedidos aceitos/mês incluídos. R$ 490 criação + R$ 270/mês ou R$ 2.700/ano (2 meses grátis). Pedido excedente: R$ 0,15.",
       price: "270.00",
       priceCurrency: "BRL",
     },
@@ -767,8 +767,13 @@ function PlanCard({ p }: { p: Plan }) {
               <span className="text-xs text-muted-foreground">/mês</span>
             </div>
             <p className="mt-1 text-xs font-medium text-muted-foreground">
-              Criação única de R$ {brl(p.setup)} cobrada à parte na implantação
+              Criação reduzida de R$ {brl(p.setup)} cobrada à parte na implantação
             </p>
+            {p.annualTotal && (
+              <p className="mt-1 text-xs font-semibold text-neon-emerald">
+                Opção Anual: R$ {brl(p.annualTotal)}/ano (2 meses grátis — R$ {brl(p.annualMonthly ?? 0)}/mês)
+              </p>
+            )}
           </>
         )}
       </div>
@@ -897,6 +902,12 @@ function PlanCard({ p }: { p: Plan }) {
               <div className="flex flex-wrap justify-between gap-2 rounded-lg border border-neon-pink p-3">
                 <span>Mensalidade ({q.includedAcceptedOrders} pedidos aceitos incl.)</span>
                 <span className="font-bold">R$ {brl(p.monthly)}</span>
+              </div>
+            )}
+            {!isOneTime && p.annualTotal && (
+              <div className="flex flex-wrap justify-between gap-2 rounded-lg border border-neon-emerald/60 bg-neon-emerald/5 p-3 text-xs">
+                <span className="font-semibold text-neon-emerald">Opção Anual (10 meses pagos, 2 grátis)</span>
+                <span className="font-bold text-neon-emerald">R$ {brl(p.annualTotal)}/ano (economia de R$ {brl(p.annualSavings ?? 0)})</span>
               </div>
             )}
             <p className="text-xs text-muted-foreground">

@@ -108,9 +108,14 @@ export function PlansSummarySection() {
                       <span className="text-xs text-muted-foreground">/mês</span>
                     </div>
                     <p className="mt-1 text-xs text-muted-foreground">
-                      Criação única:{" "}
+                      Criação reduzida:{" "}
                       <strong className="text-foreground">R$ {brl(plan.setup)}</strong>
                     </p>
+                    {plan.annualTotal && (
+                      <p className="mt-1 text-[11px] font-semibold text-neon-emerald">
+                        Opção Anual: R$ {brl(plan.annualTotal)}/ano (2 meses grátis)
+                      </p>
+                    )}
                   </>
                 )}
               </div>
