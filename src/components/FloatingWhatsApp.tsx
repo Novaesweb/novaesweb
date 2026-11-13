@@ -24,7 +24,7 @@ export function FloatingWhatsApp() {
         visivel ? "translate-y-0 opacity-100" : "pointer-events-none translate-y-6 opacity-0"
       }`}
     >
-      <span aria-hidden className="absolute inset-0 animate-ping rounded-full bg-neon-pink/50" style={{ animationDuration: "2.2s" }} />
+      <span aria-hidden className="pointer-events-none absolute -inset-0.5 rounded-full bg-neon-pink/25 blur-sm transition-opacity duration-300 group-hover:bg-neon-pink/40" />
       <MessageCircle className="relative h-6 w-6" />
       <span className="relative hidden text-sm sm:inline">Fale conosco</span>
     </a>

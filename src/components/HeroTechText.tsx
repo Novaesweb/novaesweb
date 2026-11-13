@@ -8,6 +8,7 @@ export function HeroTechText() {
   useEffect(() => {
     const preference = window.matchMedia("(prefers-reduced-motion: reduce)");
     const contrast = window.matchMedia("(forced-colors: active)");
+    const mobile = window.matchMedia("(max-width: 767px)");
     const update = () => {
       let supported = false;
       try {
@@ -15,14 +16,16 @@ export function HeroTechText() {
       } catch {
         /* Use HTML fallback. */
       }
-      setAnimate(!preference.matches && !contrast.matches && supported);
+      setAnimate(!preference.matches && !contrast.matches && !mobile.matches && supported);
     };
     update();
     preference.addEventListener("change", update);
     contrast.addEventListener("change", update);
+    mobile.addEventListener("change", update);
     return () => {
       preference.removeEventListener("change", update);
       contrast.removeEventListener("change", update);
+      mobile.removeEventListener("change", update);
     };
   }, []);
 
@@ -39,14 +42,15 @@ export function HeroTechText() {
                 text={text}
                 fontWeight={800}
                 fontSize={64}
-                intro="none"
-                reveal="letter"
-                specks={15}
+                intro="metrics"
+                introDuration={0.9}
+                reveal="none"
+                specks={0}
                 accentColor="#f472b6"
-                clickKick
-                draggable
-                selection
-                sweep
+                clickKick={false}
+                draggable={false}
+                selection={false}
+                sweep={false}
                 guides={false}
                 labels={false}
               />

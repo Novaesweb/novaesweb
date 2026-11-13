@@ -735,7 +735,9 @@ const TechText = ({
         targetX = view.left + (view.right - view.left) * (0.5 - 0.5 * Math.cos(clock * 0.45));
         targetY = view.top + (view.bottom - view.top) * (0.45 + 0.1 * Math.sin(clock * 0.8));
       }
-      const active = !introducing && (pointer.inside || sweeping || dragging >= 0);
+      const interactive =
+        s.selection || s.draggable || s.clickKick || (s.reveal && s.reveal !== "none") || s.guides;
+      const active = !introducing && interactive && (pointer.inside || sweeping || dragging >= 0);
       if (active && !placed) {
         lens.x = targetX;
         lens.y = targetY;

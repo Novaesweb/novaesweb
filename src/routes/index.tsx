@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { HeroTechText } from "@/components/HeroTechText";
@@ -71,7 +71,10 @@ export const Route = createFileRoute("/")({
       { property: "og:url", content: "https://novaesweb.com.br/" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
-    links: [{ rel: "canonical", href: "https://novaesweb.com.br/" }],
+    links: [
+      { rel: "canonical", href: "https://novaesweb.com.br/" },
+      { rel: "preload", as: "image", href: portrait, fetchPriority: "high" },
+    ],
     scripts: [
       {
         type: "application/ld+json",
@@ -84,6 +87,31 @@ export const Route = createFileRoute("/")({
 
 function Index() {
   const [mostrarTodosModelos, setMostrarTodosModelos] = useState(false);
+  const [carregarModelos, setCarregarModelos] = useState(
+    () => typeof window !== "undefined" && typeof IntersectionObserver === "undefined",
+  );
+  const modelosRef = useRef<HTMLDivElement | null>(null);
+
+  useEffect(() => {
+    if (carregarModelos) return;
+    if (typeof IntersectionObserver === "undefined") {
+      setCarregarModelos(true);
+      return;
+    }
+    const target = modelosRef.current;
+    if (!target) return;
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries.some((entry) => entry.isIntersecting)) {
+          setCarregarModelos(true);
+          observer.disconnect();
+        }
+      },
+      { rootMargin: "250px 0px" },
+    );
+    observer.observe(target);
+    return () => observer.disconnect();
+  }, [carregarModelos]);
   return (
     <div className="min-h-screen overflow-x-hidden">
       <SiteHeader active="Início" />
@@ -95,12 +123,17 @@ function Index() {
             src={portrait}
             alt=""
             aria-hidden="true"
+            loading="eager"
+            decoding="async"
             className="absolute inset-0 h-full w-full scale-105 object-cover object-[center_20%] opacity-30 blur-2xl"
           />
           <img
             src={portrait}
             alt="Imagem de apresentação da marca NovaesWeb"
             className="absolute inset-0 hidden h-full w-full object-cover object-[center_top] md:block md:object-[right_center] lg:object-[78%_center]"
+            loading="eager"
+            fetchPriority="high"
+            decoding="async"
           />
           <div className="absolute inset-y-0 left-0 w-full md:w-3/5 bg-gradient-to-r from-[#080512]/92 via-[#080512]/70 to-transparent" />
           <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-[#080512] via-[#080512]/60 to-transparent" />
@@ -121,6 +154,9 @@ function Index() {
               src={portrait}
               alt="Imagem de apresentação da marca NovaesWeb"
               className="mt-6 w-full rounded-2xl border border-neon-violet/30 object-cover shadow-neon md:hidden"
+              loading="eager"
+              fetchPriority="high"
+              decoding="async"
             />
             <div className="mt-8 flex flex-wrap gap-4">
               <a
@@ -146,16 +182,16 @@ function Index() {
       <ServiceHighlights />
       <section className="mx-auto max-w-[1800px] px-4 pb-10 sm:px-8 xl:px-14">
         {/* Modelos de Demonstração */}
-        <div id="modelos" className="scroll-mt-24">
+        <div id="modelos" ref={modelosRef} className="scroll-mt-24">
           <div className="text-sm font-semibold tracking-[0.25em] text-neon-pink">VEJA FUNCIONANDO</div>
           <div className="mt-2 flex flex-wrap items-end justify-between gap-4">
             <h2 className="text-3xl font-bold sm:text-4xl">Veja nossos projetos</h2>
             <p className="max-w-xl text-muted-foreground">Explore os modelos e teste a experiência de quem visita o seu site.</p>
           </div>
           <div id="lista-modelos" className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {modelos.map((m, index) => (
+            {(mostrarTodosModelos ? modelos : modelos.slice(0, 3)).map((m) => (
               <a key={m.url} href={m.url} target="_blank" rel="noopener noreferrer"
-                className={`group ${index < 3 || mostrarTodosModelos ? "flex" : "hidden"} flex-col overflow-hidden rounded-xl border border-neon-violet/40 bg-card transition hover:-translate-y-1 hover:border-neon-pink hover:shadow-neon`}>
+                className="group flex flex-col overflow-hidden rounded-xl border border-neon-violet/40 bg-card transition hover:-translate-y-1 hover:border-neon-pink hover:shadow-neon">
                 <div className="flex items-center gap-1.5 border-b border-border px-2.5 py-1.5">
                   <span className="h-2 w-2 rounded-full bg-neon-pink/70" />
                   <span className="h-2 w-2 rounded-full bg-neon-violet/70" />
@@ -163,7 +199,18 @@ function Index() {
                   <span className="ml-1.5 truncate text-[11px] text-muted-foreground">{m.url.replace("https://", "")}</span>
                 </div>
                 <div className="overflow-hidden">
-                  <img src={m.img} alt={`Site ${m.nome}`} loading="lazy" className="aspect-[16/10] w-full object-cover object-top transition duration-500 group-hover:scale-105" />
+                  {carregarModelos ? (
+                    <img
+                      src={m.img}
+                      alt={`Site ${m.nome}`}
+                      loading="lazy"
+                      decoding="async"
+                      fetchPriority="low"
+                      className="aspect-[16/10] w-full object-cover object-top transition duration-500 group-hover:scale-105"
+                    />
+                  ) : (
+                    <div className="aspect-[16/10] w-full bg-muted/20" aria-hidden="true" />
+                  )}
                 </div>
                 <div className="flex flex-1 flex-col p-4">
                   <span className="w-fit rounded-full border border-neon-violet/50 px-2.5 py-0.5 text-[11px] text-neon-pink">{m.nicho}</span>

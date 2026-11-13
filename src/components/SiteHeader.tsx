@@ -29,6 +29,9 @@ export function SiteHeader({ active }: { active: string }) {
           <img
             src={logo}
             alt="NovaesWeb"
+            loading="eager"
+            fetchPriority="high"
+            decoding="async"
             className="h-10 w-10 shrink-0 rounded-full object-cover shadow-neon sm:h-12 sm:w-12"
           />
           <div className="min-w-0 leading-tight">

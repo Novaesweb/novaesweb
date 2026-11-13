@@ -12,15 +12,33 @@ afterEach(() => {
 
 describe("Hero TechText motion preference", () => {
   it("switches between animation and readable HTML when the preference changes, and removes its listener", () => {
-    let change = () => {};
-    const preference = {
+    const listeners = new Map<string, () => void>();
+    const reducedMotion = {
       matches: true,
       addEventListener: vi.fn((_event, listener) => {
-        change = listener;
+        listeners.set("(prefers-reduced-motion: reduce)", listener);
       }),
       removeEventListener: vi.fn(),
     };
-    vi.spyOn(window, "matchMedia").mockReturnValue(preference as unknown as MediaQueryList);
+    const forcedColors = {
+      matches: false,
+      addEventListener: vi.fn((_event, listener) => {
+        listeners.set("(forced-colors: active)", listener);
+      }),
+      removeEventListener: vi.fn(),
+    };
+    const mobileViewport = {
+      matches: false,
+      addEventListener: vi.fn((_event, listener) => {
+        listeners.set("(max-width: 767px)", listener);
+      }),
+      removeEventListener: vi.fn(),
+    };
+    vi.spyOn(window, "matchMedia").mockImplementation((query) => {
+      if (query === "(prefers-reduced-motion: reduce)") return reducedMotion as unknown as MediaQueryList;
+      if (query === "(max-width: 767px)") return mobileViewport as unknown as MediaQueryList;
+      return forcedColors as unknown as MediaQueryList;
+    });
     vi.spyOn(HTMLCanvasElement.prototype, "getContext").mockReturnValue(
       {} as CanvasRenderingContext2D,
     );
@@ -30,17 +48,54 @@ describe("Hero TechText motion preference", () => {
     );
     expect(screen.queryAllByTestId("animated-line")).toHaveLength(0);
     act(() => {
-      preference.matches = false;
-      change();
+      reducedMotion.matches = false;
+      listeners.get("(prefers-reduced-motion: reduce)")?.();
     });
     expect(screen.getAllByTestId("animated-line")).toHaveLength(2);
     act(() => {
-      preference.matches = true;
-      change();
+      reducedMotion.matches = true;
+      listeners.get("(prefers-reduced-motion: reduce)")?.();
     });
     expect(screen.queryAllByTestId("animated-line")).toHaveLength(0);
     unmount();
-    expect(preference.removeEventListener).toHaveBeenCalledWith("change", change);
+    expect(reducedMotion.removeEventListener).toHaveBeenCalledWith(
+      "change",
+      listeners.get("(prefers-reduced-motion: reduce)"),
+    );
+    expect(forcedColors.removeEventListener).toHaveBeenCalledWith(
+      "change",
+      listeners.get("(forced-colors: active)"),
+    );
+    expect(mobileViewport.removeEventListener).toHaveBeenCalledWith(
+      "change",
+      listeners.get("(max-width: 767px)"),
+    );
+  });
+  it("uses normal static text on mobile and short animation on desktop", () => {
+    const mobileQuery = {
+      matches: true,
+      addEventListener: vi.fn(),
+      removeEventListener: vi.fn(),
+    };
+    vi.spyOn(window, "matchMedia").mockImplementation((query) =>
+      (query === "(max-width: 767px)"
+        ? mobileQuery
+        : { matches: false, addEventListener: vi.fn(), removeEventListener: vi.fn() }) as unknown as MediaQueryList,
+    );
+    vi.spyOn(HTMLCanvasElement.prototype, "getContext").mockReturnValue(
+      {} as CanvasRenderingContext2D,
+    );
+
+    render(<HeroTechText />);
+    expect(screen.queryAllByTestId("animated-line")).toHaveLength(0);
+    expect(screen.getByText("O seu crescimento é parte do nosso sucesso.")).toHaveClass(
+      "hero-tech-static",
+    );
+
+    cleanup();
+    mobileQuery.matches = false;
+    render(<HeroTechText />);
+    expect(screen.getAllByTestId("animated-line")).toHaveLength(2);
   });
   it("keeps the phrase visible without Canvas support", () => {
     vi.spyOn(HTMLCanvasElement.prototype, "getContext").mockReturnValue(null);

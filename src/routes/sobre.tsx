@@ -56,6 +56,9 @@ function Sobre() {
           <img
             src={portrait}
             alt="Imagem de apresentação da marca NovaesWeb"
+            loading="eager"
+            fetchPriority="high"
+            decoding="async"
             className="absolute inset-0 h-full w-full object-cover object-[center_top] md:object-[right_center] lg:object-[78%_center]"
           />
           <div className="absolute inset-y-0 left-0 w-full md:w-3/5 bg-gradient-to-r from-[#080512]/92 via-[#080512]/70 to-transparent" />
