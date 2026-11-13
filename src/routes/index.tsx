@@ -117,7 +117,7 @@ function Index() {
       <SiteHeader active="Início" />
 
       {/* Hero original com imagem cobrindo toda a tela de início */}
-      <section id="inicio" className="relative">
+      <section id="inicio" className="relative md:flex md:min-h-[580px] md:flex-col md:justify-center">
         <div className="absolute inset-0 w-full overflow-hidden pointer-events-none">
           <img
             src={portrait}
