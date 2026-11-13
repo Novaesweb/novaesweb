@@ -117,7 +117,7 @@ function Index() {
       <SiteHeader active="Início" />
 
       {/* Hero original com imagem cobrindo toda a tela de início */}
-      <section id="inicio" className="relative md:flex md:min-h-[580px] md:flex-col md:justify-center">
+      <section id="inicio" className="relative lg:flex lg:min-h-[560px] lg:flex-col lg:justify-center">
         <div className="absolute inset-0 w-full overflow-hidden pointer-events-none">
           <img
             src={portrait}
@@ -127,21 +127,13 @@ function Index() {
             decoding="async"
             className="absolute inset-0 h-full w-full scale-105 object-cover object-[center_20%] opacity-30 blur-2xl"
           />
-          <img
-            src={portrait}
-            alt="Imagem de apresentação da marca NovaesWeb"
-            className="hero-portrait absolute inset-0 hidden h-full w-full md:block"
-            loading="eager"
-            fetchPriority="high"
-            decoding="async"
-          />
-          <div className="absolute inset-y-0 left-0 w-full md:w-3/5 bg-gradient-to-r from-[#080512]/92 via-[#080512]/70 to-transparent" />
+          <div className="absolute inset-y-0 left-0 w-full lg:w-3/5 bg-gradient-to-r from-[#080512]/92 via-[#080512]/70 to-transparent" />
           <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-[#080512] via-[#080512]/60 to-transparent" />
           {/* Linha luminosa no final da imagem em harmonia com a paleta neon */}
           <div className="absolute inset-x-0 bottom-0 h-[2px] bg-gradient-to-r from-transparent via-neon-pink to-transparent opacity-85 shadow-[0_0_16px_rgba(236,72,153,0.7)]" />
         </div>
-        <div className="relative mx-auto max-w-[1800px] px-4 sm:px-8 xl:px-14 py-10 md:py-16">
-          <div className="max-w-xl 2xl:max-w-2xl">
+        <div className="relative mx-auto w-full max-w-[1800px] px-4 py-10 sm:px-8 lg:grid lg:grid-cols-[minmax(0,460px)_minmax(0,1fr)] lg:items-center lg:gap-8 lg:py-12 xl:grid-cols-[minmax(0,580px)_minmax(0,1fr)] xl:gap-12 xl:px-14 2xl:grid-cols-[minmax(0,640px)_minmax(0,1fr)]">
+          <div data-testid="hero-text-column" className="mx-auto w-full max-w-2xl lg:mx-0 lg:max-w-none">
             <span className="inline-block rounded-full border border-neon-pink px-4 py-1 text-xs font-semibold tracking-[0.2em]">
               SITES E SISTEMAS SOB MEDIDA
             </span>
@@ -153,29 +145,39 @@ function Index() {
             <img
               src={portrait}
               alt="Imagem de apresentação da marca NovaesWeb"
-              className="mt-6 w-full rounded-2xl border border-neon-violet/30 object-cover shadow-neon md:hidden"
+              className="mt-6 w-full rounded-2xl border border-neon-violet/30 object-cover shadow-neon lg:hidden"
               loading="eager"
               fetchPriority="high"
               decoding="async"
             />
-            <div className="mt-8 flex flex-wrap gap-4">
+            <div className="mt-8 flex flex-wrap gap-3 sm:gap-4">
               <a
                 href={WHATS}
-                className="flex items-center gap-3 rounded-full bg-neon px-7 py-4 font-semibold shadow-neon"
+                className="flex w-full items-center justify-center gap-3 rounded-full bg-neon px-7 py-4 font-semibold shadow-neon sm:w-auto"
               >
                 <MessageCircle className="h-5 w-5" /> Solicitar orçamento <ArrowRight className="h-5 w-5" />
               </a>
               <a
                 href="#modelos"
-                className="flex items-center gap-3 rounded-full border-2 border-neon-pink px-8 py-4 font-semibold"
+                className="flex w-full items-center justify-center gap-3 rounded-full border-2 border-neon-pink px-8 py-4 font-semibold sm:w-auto"
               >
                 Ver projetos funcionando <ArrowRight className="h-5 w-5" />
               </a>
             </div>
           </div>
-          <p className="absolute right-8 top-10 hidden rotate-[-12deg] font-display text-2xl italic md:block">
-            Mais que sites, criamos identidade!
-          </p>
+          <div data-testid="hero-media-column" className="hidden lg:flex lg:flex-col lg:items-end">
+            <p className="mb-8 mr-4 rotate-[-6deg] font-display text-xl italic xl:text-2xl">
+              Mais que sites, criamos identidade!
+            </p>
+            <img
+              src={portrait}
+              alt="Imagem de apresentação da marca NovaesWeb"
+              className="h-auto w-full max-w-[920px] max-h-[540px] object-contain [mask-image:linear-gradient(to_right,transparent_0%,black_10%,black_96%,transparent_100%)]"
+              loading="eager"
+              fetchPriority="high"
+              decoding="async"
+            />
+          </div>
         </div>
       </section>
 
