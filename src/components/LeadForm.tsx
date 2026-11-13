@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button";
 
 export const interesses = [
   "Novaes Start",
-  "Novaes Business",
+  "Novaes Pro",
   "Novaes Premium",
   "Novaes Empresarial / Personalizado",
   "Integração WhatsApp API",

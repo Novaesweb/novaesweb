@@ -133,7 +133,7 @@ export function EconomyTeaserSection() {
                         Site próprio NovaesWeb (100% vendas diretas)
                       </span>
                       <p className="mt-0.5 text-xs text-muted-foreground">
-                        Novaes Business R$ {brl(input.siteMonthlyCost)}/mês + pagamento{" "}
+                        Novaes Pro R$ {brl(input.siteMonthlyCost)}/mês + pagamento{" "}
                         {input.sitePaymentFeePct}% + divulgação R${" "}
                         {brl(input.siteMarketingInvestment)}
                       </p>

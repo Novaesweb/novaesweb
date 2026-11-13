@@ -54,7 +54,7 @@ const diferenciais = [
 
 const planos = [
   { nome: "Novaes Start", desc: "Para colocar sua empresa no digital com uma página profissional." },
-  { nome: "Novaes Business", desc: "Para quem precisa de mais autonomia e recursos de gestão." },
+  { nome: "Novaes Pro", desc: "Para quem precisa de mais autonomia e recursos de gestão." },
   { nome: "Novaes Premium", desc: "Mais recursos para gerenciar a loja e acompanhar resultados." },
   { nome: "Personalizado", desc: "Para projetos sob medida, com escopo definido junto com você." },
 ];

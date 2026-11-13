@@ -92,7 +92,7 @@ const pageDetails = {
       "750 pedidos aceitos por mês incluídos (excedente: R$ 0,15 por pedido aceito)",
       "Até 500 produtos cadastrados",
       "Até 5 administradores no painel",
-      "Todas as funcionalidades do Business",
+      "Todas as funcionalidades do Pro",
       "Painel administrativo ampliado",
       "Organização de categorias de produtos",
       "Gestão de fotos e destaques",
@@ -159,15 +159,15 @@ export const commercialWhatsMsg = (plan: CommercialPlan, withSupport = false, is
     return `Olá, NovaesWeb! Tenho interesse no ${plan.label}, com criação de R$ ${brl(plan.setup)}, pagamento único e sem mensalidade obrigatória. ${withSupport && plan.optionalSupportMonthly ? `Quero contratar também o suporte opcional de R$ ${brl(plan.optionalSupportMonthly)} por mês.` : "Somente a criação, sem suporte contratado."} Entendo que o pagamento da criação é de R$ ${brl(plan.setupPayment.upfront)} na contratação e R$ ${brl(plan.setupPayment.remainder)} antes da publicação. Gostaria de conversar sobre a contratação.`;
   }
   if (isAnnual && plan.annualTotal) {
-    return `Olá, NovaesWeb! Tenho interesse no ${plan.label} (Plano Anual com 2 meses grátis), com criação reduzida de R$ ${brl(plan.setup)} e anuidade de R$ ${brl(plan.annualTotal)} (equivalente a R$ ${brl(plan.annualMonthly ?? 0)}/mês, economia de R$ ${brl(plan.annualSavings ?? 0)} no ano). Entendo que estão incluídos ${plan.orderQuota.includedAcceptedOrders} pedidos aceitos/mês e até ${plan.contentRequestsPerMonth} solicitações mensais de alteração de conteúdo. Gostaria de conversar sobre a contratação.`;
+    return `Olá, NovaesWeb! Tenho interesse no ${plan.label} (Plano Anual com 2 meses grátis), com criação reduzida de R$ ${brl(plan.setup)} e anuidade de R$ ${brl(plan.annualTotal)} (equivalente a R$ ${brl(plan.annualMonthly ?? 0)}/mês, economia de R$ ${brl(plan.annualSavings ?? 0)} no ano). Total para contratar (1º ano): R$ ${brl(plan.setup + plan.annualTotal)}. Entendo que estão incluídos ${plan.orderQuota.includedAcceptedOrders} pedidos aceitos/mês e até ${plan.contentRequestsPerMonth} solicitações mensais de alteração de conteúdo. Gostaria de conversar sobre a contratação.`;
   }
-  return `Olá, NovaesWeb! Tenho interesse no ${plan.label}, com criação reduzida de R$ ${brl(plan.setup)} e mensalidade de R$ ${brl(plan.monthly)} (${plan.orderQuota.includedAcceptedOrders} pedidos aceitos/mês incluídos; excedente de R$ ${brl(plan.orderQuota.overageOrderPrice ?? 0)} por pedido aceito). Entendo que estão incluídas até ${plan.contentRequestsPerMonth} solicitações mensais de alteração de conteúdo, não cumulativas e conforme o contrato; módulos adicionais são contratados separadamente. Gostaria de conversar sobre a contratação.`;
+  return `Olá, NovaesWeb! Tenho interesse no ${plan.label}, com criação reduzida de R$ ${brl(plan.setup)} e mensalidade de R$ ${brl(plan.monthly)} (total inicial criação + 1ª mensalidade: R$ ${brl(plan.setup + plan.monthly)}; ${plan.orderQuota.includedAcceptedOrders} pedidos aceitos/mês incluídos; excedente de R$ ${brl(plan.orderQuota.overageOrderPrice ?? 0)} por pedido aceito). Entendo que estão incluídas até ${plan.contentRequestsPerMonth} solicitações mensais de alteração de conteúdo, não cumulativas e conforme o contrato; módulos adicionais são contratados separadamente. Gostaria de conversar sobre a contratação.`;
 };
 
 export const overageSectionCopy = {
   title: "Seu negócio não precisa parar de vender",
   paragraphs: [
-    "Nos planos Business e Premium, a quantidade mensal de pedidos representa a franquia incluída na assinatura, não um bloqueio de vendas.",
+    "Nos planos Pro e Premium, a quantidade mensal de pedidos representa a franquia incluída na assinatura, não um bloqueio de vendas.",
     "Ao ultrapassar essa quantidade, sua loja continua recebendo pedidos normalmente. Você paga apenas pelos pedidos aceitos que excederem a franquia, conforme a tarifa do seu plano.",
   ],
   benefits: [
@@ -202,8 +202,8 @@ export type OverageBillingExample = {
 export const overageBillingExamples: OverageBillingExample[] = [
   {
     planId: "business",
-    planLabel: "Novaes Business",
-    title: "Business com 500 pedidos aceitos",
+    planLabel: "Novaes Pro",
+    title: "Pro com 500 pedidos aceitos",
     totalAcceptedOrders: 500,
     includedOrders: 340,
     overageOrders: 160,
@@ -241,7 +241,7 @@ export const orderCountingRules = [
 export const plansPageFaqs: [string, string][] = [
   [
     "O que acontece se minha loja ultrapassar a franquia mensal de pedidos?",
-    "Sua loja continua recebendo pedidos normalmente, sem bloqueio automático. No Business estão incluídos 340 pedidos aceitos/mês (excedente de R$ 0,20 por pedido aceito) e no Premium estão incluídos 750 pedidos aceitos/mês (excedente de R$ 0,15 por pedido aceito).",
+    "Sua loja continua recebendo pedidos normalmente, sem bloqueio automático. No Pro estão incluídos 340 pedidos aceitos/mês (excedente de R$ 0,20 por pedido aceito) e no Premium estão incluídos 750 pedidos aceitos/mês (excedente de R$ 0,15 por pedido aceito).",
   ],
   [
     "Quais pedidos entram na contagem da franquia?",
@@ -249,7 +249,7 @@ export const plansPageFaqs: [string, string][] = [
   ],
   [
     "Quando e como os pedidos excedentes são cobrados?",
-    "Os pedidos aceitos que ultrapassarem a franquia mensal do seu plano são apurados e cobrados no mês seguinte, conforme o valor unitário de excedente do plano contratado (R$ 0,20 no Business e R$ 0,15 no Premium).",
+    "Os pedidos aceitos que ultrapassarem a franquia mensal do seu plano são apurados e cobrados no mês seguinte, conforme o valor unitário de excedente do plano contratado (R$ 0,20 no Pro e R$ 0,15 no Premium).",
   ],
   [
     "Como ficam a mensalidade e a franquia no primeiro mês de uso?",

@@ -558,7 +558,7 @@ function SimuladorDeEconomiaPage() {
                       <p className="mt-2 rounded-xl border border-amber-400/50 bg-amber-500/10 p-3 text-xs leading-relaxed text-amber-200">
                         <strong>Atenção:</strong> O plano <strong>Novaes Start</strong> é um site
                         institucional e não inclui sistema de pedidos online. Para receber pedidos
-                        no site próprio, selecione <strong>Novaes Business</strong> (340 pedidos
+                        no site próprio, selecione <strong>Novaes Pro</strong> (340 pedidos
                         incluídos) ou <strong>Novaes Premium</strong> (750 pedidos incluídos).
                       </p>
                     )}
@@ -1120,14 +1120,14 @@ function SimuladorDeEconomiaPage() {
                   <h3 className="font-bold text-foreground">Premissas e custos operacionais</h3>
                   <ul className="mt-2 space-y-1.5">
                     <li>
-                      • <strong>Franquia de pedidos aceitos e excedentes:</strong> No Business são
+                      • <strong>Franquia de pedidos aceitos e excedentes:</strong> No Pro são
                       incluídos 340 pedidos aceitos/mês (excedente R$ 0,20/pedido) e no Premium 750
                       pedidos aceitos/mês (excedente R$ 0,15/pedido), sem bloqueio de vendas ao
                       ultrapassar a franquia.
                     </li>
                     <li>
                       • <strong>Taxa de criação única do site:</strong> A implantação inicial do
-                      site NovaesWeb é cobrada uma única vez (ex.: R$ 578,00 no Business, R$ 980,00
+                      site NovaesWeb é cobrada uma única vez (ex.: R$ 578,00 no Pro, R$ 980,00
                       no Premium ou R$ 630,00 no Start) e não faz parte da mensalidade recorrente.
                     </li>
                     <li>

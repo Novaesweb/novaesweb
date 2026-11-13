@@ -19,7 +19,7 @@ export const legalDocs: LegalDoc[] = [
         "h": "2. Proposta, contratação e pagamento",
         "list": [
           "A proposta deve apresentar o plano, o escopo, os materiais necessários, o prazo e os valores. A contratação é formalizada de acordo com a proposta ou o contrato aceitos.",
-          "A criação é uma cobrança única: 50% para iniciar o projeto e 50% na entrega. O Start não tem mensalidade obrigatória nem pagamento mensal da criação. No Business e no Premium, a mensalidade é separada e começa na ativação do site no ar.",
+          "A criação é uma cobrança única: 50% para iniciar o projeto e 50% na entrega. O Start não tem mensalidade obrigatória nem pagamento mensal da criação. No Pro e no Premium, a mensalidade é separada e começa na ativação do site no ar.",
           "Serviços extras e custos de terceiros devem ser informados e combinados antes da execução. Não se presume autorização para despesas adicionais."
         ]
       },
@@ -27,7 +27,7 @@ export const legalDocs: LegalDoc[] = [
         "h": "3. Planos e prazos estimados",
         "list": [
           "Novaes Start — somente criação por R$ 630,00, sem mensalidade obrigatória; prazo estimado de 2 a 4 dias úteis. Sem suporte, manutenção, hospedagem recorrente ou alterações mensais inclusas. Suporte opcional contratado separadamente por R$ 80,00 por mês.",
-          "Novaes Business — criação R$ 578,00 + mensalidade R$ 190,00; prazo estimado de 5 a 8 dias úteis.",
+          "Novaes Pro — criação R$ 578,00 + mensalidade R$ 190,00; prazo estimado de 5 a 8 dias úteis.",
           "Novaes Premium — criação R$ 980,00 + mensalidade R$ 270,00; prazo estimado de 10 a 15 dias úteis. Inclui os recursos listados no plano, não todos os adicionais ou serviços da NovaesWeb.",
           "Novaes Personalizado — proposta sob medida para combinar recursos, módulos opcionais, automações e integrações oferecidos pela NovaesWeb, conforme compatibilidade, disponibilidade, escopo e orçamento aprovados.",
           "Os prazos começam após o recebimento dos materiais e das informações necessários. Mudanças de escopo e eventuais impedimentos devem ser comunicados e ajustados com o cliente.",
@@ -37,7 +37,7 @@ export const legalDocs: LegalDoc[] = [
       {
         "h": "4. Conteúdo e responsabilidades",
         "list": [
-          "O Start não possui painel administrativo nem alterações mensais inclusas. Mudanças após a entrega são orçadas separadamente. Business e Premium têm edição pelo painel, conforme os recursos do plano.",
+          "O Start não possui painel administrativo nem alterações mensais inclusas. Mudanças após a entrega são orçadas separadamente. Pro e Premium têm edição pelo painel, conforme os recursos do plano.",
           "O cliente deve fornecer informações corretas e manter preços, produtos, contatos, horários e dados de entrega atualizados. Deve possuir direitos ou autorização para textos, marcas, fotografias e outros materiais que fornecer.",
           "Cada parte responde pelas atividades e obrigações sob sua responsabilidade. O cliente não assume falhas atribuíveis à NovaesWeb, e estes termos não afastam responsabilidade legal por vícios, defeitos ou descumprimento do serviço.",
           "Sites de demonstração ilustram possibilidades de apresentação. Não garantem resultados comerciais, volume de pedidos, posições em buscas ou faturamento."
@@ -54,7 +54,7 @@ export const legalDocs: LegalDoc[] = [
         "h": "6. Adicionais, suporte e terceiros",
         "list": [
           "Adicionais compatíveis com o plano são contratados à parte, mediante confirmação de disponibilidade e orçamento. Tarifas de serviços externos, como as da Meta para mensagens automáticas, não estão incluídas, salvo indicação expressa na proposta.",
-          "O suporte é incluso no Business e no Premium e opcional no Start por R$ 80,00 por mês, sem incluir automaticamente manutenção ou alterações. Atendimento de segunda a sexta-feira, das 9h às 18h, horário de Brasília. Atendimento em fins de semana e feriados é extraordinário, mediante disponibilidade: R$ 50 por até 30 minutos, com contratação prévia.",
+          "O suporte é incluso no Pro e no Premium e opcional no Start por R$ 80,00 por mês, sem incluir automaticamente manutenção ou alterações. Atendimento de segunda a sexta-feira, das 9h às 18h, horário de Brasília. Atendimento em fins de semana e feriados é extraordinário, mediante disponibilidade: R$ 50 por até 30 minutos, com contratação prévia.",
           "Falhas críticas de responsabilidade da NovaesWeb não são cobradas. Demandas fora do escopo são orçadas antes da execução.",
           "Dependências de hospedagem, domínios e integrações externas devem ser descritas na proposta. Não se garante disponibilidade ininterrupta nem se afasta o dever de corrigir falhas e prestar o serviço contratado."
         ]
@@ -195,7 +195,7 @@ export const legalDocs: LegalDoc[] = [
       {
         "h": "5. Mensalidade, saída e materiais",
         "p": [
-          "Business e Premium têm mensalidade a partir da ativação do site. O Start não tem mensalidade obrigatória; o suporte mensal é opcional e contratado separadamente. Ao cancelar um serviço recorrente, a data de encerramento, eventual apuração de cobranças, acesso a materiais, domínio, dados e continuidade da hospedagem devem ser informados conforme o contrato e os direitos aplicáveis.",
+          "Pro e Premium têm mensalidade a partir da ativação do site. O Start não tem mensalidade obrigatória; o suporte mensal é opcional e contratado separadamente. Ao cancelar um serviço recorrente, a data de encerramento, eventual apuração de cobranças, acesso a materiais, domínio, dados e continuidade da hospedagem devem ser informados conforme o contrato e os direitos aplicáveis.",
           "Não há fidelidade, multa, transferência automática de domínio ou entrega irrestrita de código estabelecidas por este texto. Esses pontos precisam de definição expressa na proposta; dados pessoais devem ser tratados e disponibilizados quando exigido pela legislação."
         ]
       },

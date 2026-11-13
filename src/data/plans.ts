@@ -16,7 +16,7 @@ export const plans = [
     excludes: "Somente criação. Sem suporte, manutenção, hospedagem recorrente ou alterações mensais inclusas. Sem painel administrativo, carrinho, checkout ou registro de pedidos.",
   },
   {
-    id: "business" as PlanId, name: "NOVAES BUSINESS", label: "Novaes Business", tag: "Seu delivery com autonomia.", popular: true,
+    id: "business" as PlanId, name: "NOVAES PRO", label: "Novaes Pro", tag: "Seu delivery com autonomia.", popular: true,
     setup: 290, monthly: 190, optionalSupportMonthly: null, deadline: "5 a 8 dias úteis",
     annualTotal: 1900, annualMonthly: 158.33, annualSavings: 380,
     desc: "Cardápio digital com carrinho, checkout e painel simplificado para gerenciar pedidos e produtos.",
@@ -28,10 +28,27 @@ export const plans = [
     setup: 490, monthly: 270, optionalSupportMonthly: null, deadline: "10 a 15 dias úteis",
     annualTotal: 2700, annualMonthly: 225, annualSavings: 540,
     desc: "Gestão avançada da loja, com os recursos listados neste plano. Adicionais e soluções sob medida são contratados separadamente.",
-    items: ["Tudo do Business", "Combos e personalização de produtos", "Cupons e promoções", "Avaliações da comida e da entrega", "Painel avançado com dashboard e relatórios", "Financeiro e fechamento de caixa", "Equipe, permissões e marketing", "Impressão de comandas e pedidos manuais"],
+    items: ["Tudo do Pro", "Combos e personalização de produtos", "Cupons e promoções", "Avaliações da comida e da entrega", "Painel avançado com dashboard e relatórios", "Financeiro e fechamento de caixa", "Equipe, permissões e marketing", "Impressão de comandas e pedidos manuais"],
     excludes: "Não inclui todos os adicionais. WhatsApp automático, tarifas da Meta, domínio próprio, módulos opcionais e integrações personalizadas são contratados à parte, conforme disponibilidade e orçamento.",
   },
 ];
+
+export const getAnnualAnchoring = (plan: { setup: number; monthly: number; annualTotal: number | null }) => {
+  if (!plan.annualTotal || plan.monthly <= 0) return null;
+  const regularAnnualTotal = plan.monthly * 12;
+  const savings = regularAnnualTotal - plan.annualTotal;
+  const equivalentMonthly = Number((plan.annualTotal / 12).toFixed(2));
+  const discountPercent = regularAnnualTotal > 0 ? Number(((savings / regularAnnualTotal) * 100).toFixed(1)) : 0;
+  return {
+    annualTotal: plan.annualTotal,
+    regularAnnualTotal,
+    savings,
+    equivalentMonthly,
+    discountPercent,
+    initialTotalAnnual: plan.setup + plan.annualTotal,
+    initialTotalMonthly: plan.setup + plan.monthly,
+  };
+};
 
 export const half = (v: number) => v / 2;
 export const planWhatsMsg = (p: (typeof plans)[number], withSupport = false, isAnnual = false) => {
@@ -93,11 +110,11 @@ export type Addon = {
 export const addons: Addon[] = [
   { id: "whatsapp-notify", name: "Novaes WhatsApp Notify", price: "R$ 25/mês", category: "integrations", description: "Envie notificações automáticas pelo WhatsApp sobre eventos importantes do negócio, como atualizações de pedidos e outras ações configuradas. Depende de integração compatível e das regras do WhatsApp." },
   { id: "whatsapp-activation", name: "Ativação WhatsApp Oficial", price: "R$ 100 (único)", category: "integrations", description: "Serviço de configuração inicial da WhatsApp Cloud API para habilitar integrações oficiais, conforme os requisitos da Meta. Eventuais custos de mensagens não estão incluídos." },
-  { id: "promo", name: "Novaes Promo", price: "R$ 15/mês", category: "management", description: "Ferramentas adicionais para criar e administrar cupons de desconto e campanhas promocionais no site. Adicional para o plano Business." },
-  { id: "finance", name: "Novaes Finance", price: "R$ 30/mês", category: "management", description: "Recursos avançados de controle financeiro, permitindo acompanhar movimentações, despesas e resultados conforme as funcionalidades disponíveis no painel. Adicional para o plano Business." },
-  { id: "team", name: "Novaes Equipe", price: "R$ 20/mês", category: "management", description: "Gerenciamento de colaboradores, organização de acessos e acompanhamento de informações da equipe, conforme o sistema contratado. Adicional para o plano Business." },
-  { id: "insights", name: "Novaes Insights", price: "R$ 20/mês", category: "management", description: "Relatórios detalhados para acompanhar vendas, pedidos e indicadores do negócio, ajudando na análise dos resultados. Adicional para o plano Business." },
-  { id: "marketing", name: "Novaes Marketing", price: "R$ 35/mês", category: "management", description: "Recursos adicionais para organizar campanhas e ações de divulgação relacionadas ao site e aos produtos da empresa. Adicional para o plano Business." },
+  { id: "promo", name: "Novaes Promo", price: "R$ 15/mês", category: "management", description: "Ferramentas adicionais para criar e administrar cupons de desconto e campanhas promocionais no site. Adicional para o plano Pro." },
+  { id: "finance", name: "Novaes Finance", price: "R$ 30/mês", category: "management", description: "Recursos avançados de controle financeiro, permitindo acompanhar movimentações, despesas e resultados conforme as funcionalidades disponíveis no painel. Adicional para o plano Pro." },
+  { id: "team", name: "Novaes Equipe", price: "R$ 20/mês", category: "management", description: "Gerenciamento de colaboradores, organização de acessos e acompanhamento de informações da equipe, conforme o sistema contratado. Adicional para o plano Pro." },
+  { id: "insights", name: "Novaes Insights", price: "R$ 20/mês", category: "management", description: "Relatórios detalhados para acompanhar vendas, pedidos e indicadores do negócio, ajudando na análise dos resultados. Adicional para o plano Pro." },
+  { id: "marketing", name: "Novaes Marketing", price: "R$ 35/mês", category: "management", description: "Recursos adicionais para organizar campanhas e ações de divulgação relacionadas ao site e aos produtos da empresa. Adicional para o plano Pro." },
   { id: "domain", name: "Configuração de Domínio", price: "R$ 50 + registro", category: "services", description: "Configuração técnica para conectar um domínio personalizado ao site. O registro ou a renovação do domínio são cobrados separadamente." },
   { id: "training", name: "Treinamento Personalizado", price: "R$ 70/hora", category: "services", description: "Treinamento adicional para aprender a utilizar o painel administrativo e os recursos contratados." },
   { id: "adjustment", name: "Ajuste Avulso", price: "R$ 15", category: "services", description: "Pequena alteração solicitada fora da franquia de ajustes incluída no plano, mediante avaliação do escopo." },
@@ -123,21 +140,21 @@ export const addonWhatsMsg = (addon: Addon) =>
 
 const CONTRATO = "As condições são apresentadas na proposta ou no contrato.";
 export const faqs: [string, string][] = [
-  ["Preciso pagar a criação e a mensalidade?", "No Start, você paga somente a criação de R$ 630,00, sem mensalidade obrigatória e sem pagamento mensal da criação. Suporte é opcional, por R$ 80,00 por mês. Business e Premium têm criação única e mensalidade recorrente, que não é parcela da criação."],
+  ["Preciso pagar a criação e a mensalidade?", "No Start, você paga somente a criação de R$ 630,00, sem mensalidade obrigatória e sem pagamento mensal da criação. Suporte é opcional, por R$ 80,00 por mês. Pro e Premium têm criação única e mensalidade recorrente, que não é parcela da criação."],
   ["Como funciona a entrada de 50%?", "Você paga 50% do valor da criação para iniciarmos o projeto."],
   ["Quando pago o restante?", "Os outros 50% da criação são pagos na entrega."],
-  ["Quando começa a mensalidade?", "No Business e no Premium, a mensalidade começa na ativação do site. O Start não tem mensalidade obrigatória; o suporte opcional é contratado separadamente."],
-  ["Quanto tempo demora a criação?", "Start: 2 a 4 dias úteis. Business: 5 a 8. Premium: 10 a 15. Os prazos são estimados e começam após o recebimento dos materiais e informações."],
-  ["Posso editar meu site?", "O Start não tem painel nem alterações mensais inclusas; mudanças posteriores são orçadas separadamente. No Business e no Premium, você edita produtos, preços e configurações pelo painel."],
+  ["Quando começa a mensalidade?", "No Pro e no Premium, a mensalidade começa na ativação do site. O Start não tem mensalidade obrigatória; o suporte opcional é contratado separadamente."],
+  ["Quanto tempo demora a criação?", "Start: 2 a 4 dias úteis. Pro: 5 a 8. Premium: 10 a 15. Os prazos são estimados e começam após o recebimento dos materiais e informações."],
+  ["Posso editar meu site?", "O Start não tem painel nem alterações mensais inclusas; mudanças posteriores são orçadas separadamente. No Pro e no Premium, você edita produtos, preços e configurações pelo painel."],
   ["O Start possui painel?", "Não. O Start não possui painel administrativo nem login do proprietário."],
-  ["O Business possui painel?", "Sim, um painel simplificado para pedidos, produtos, categorias e configurações básicas da loja."],
+  ["O Pro possui painel?", "Sim, um painel simplificado para pedidos, produtos, categorias e configurações básicas da loja."],
   ["O Premium possui todas as ferramentas?", "Não. O Premium inclui os recursos listados no plano, com painel avançado. Adicionais, módulos opcionais e integrações são contratados à parte. Para combinar todas as possibilidades que oferecemos, solicite uma proposta Personalizada, conforme compatibilidade, disponibilidade e orçamento."],
   ["O WhatsApp automático está incluído?", "Não. É um adicional de R$ 25/mês, mais R$ 100 de configuração inicial. Tarifas da Meta não estão incluídas. O cliente acompanha o pedido pelo site mesmo sem esse adicional."],
   ["Posso contratar adicionais?", "Sim, sempre que forem compatíveis com o seu plano."],
   ["Posso mudar de plano?", CONTRATO],
   ["Posso usar meu domínio?", "Sim. A configuração custa R$ 50, mais o custo do registro do domínio."],
-  ["Quem cuida da hospedagem?", "No Business e no Premium, a hospedagem está incluída na mensalidade. O Start inclui somente a criação, sem hospedagem recorrente inclusa; as condições de publicação são definidas na proposta."],
-  ["Como funciona o suporte?", "O Start não inclui suporte: você pode contratá-lo opcionalmente por R$ 80,00 por mês. Business e Premium incluem suporte. O atendimento ocorre de segunda a sexta-feira, das 9h às 18h (horário de Brasília), sem atendimento humano 24 horas."],
+  ["Quem cuida da hospedagem?", "No Pro e no Premium, a hospedagem está incluída na mensalidade. O Start inclui somente a criação, sem hospedagem recorrente inclusa; as condições de publicação são definidas na proposta."],
+  ["Como funciona o suporte?", "O Start não inclui suporte: você pode contratá-lo opcionalmente por R$ 80,00 por mês. Pro e Premium incluem suporte. O atendimento ocorre de segunda a sexta-feira, das 9h às 18h (horário de Brasília), sem atendimento humano 24 horas."],
   ["Posso pedir atendimento fora do horário?", "Sim, mediante disponibilidade: R$ 50 por atendimento de até 30 minutos. Falhas críticas de responsabilidade da NovaesWeb não são cobradas."],
   ["Quanto custam alterações?", "O Start não inclui alterações mensais. Alterações são orçadas conforme o escopo: ajuste simples avulso, R$ 15; troca de banner, R$ 25. O suporte opcional não inclui automaticamente alterações ou manutenção."],
   ["Como funciona o cancelamento?", CONTRATO],

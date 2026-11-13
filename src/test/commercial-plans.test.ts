@@ -50,7 +50,7 @@ describe("estrutura comercial da página de Planos", () => {
     expect(commercialWhatsMsg(start, true)).toContain("R$ 80,00 por mês");
   });
 
-  it("Business e Premium têm até 4 solicitações mensais, Start não tem", () => {
+  it("Pro e Premium têm até 4 solicitações mensais, Start não tem", () => {
     expect(commercialPlans.map((p) => p.contentRequestsPerMonth)).toEqual([0, 4, 4]);
     expect(contentChangeRules.requestsPerMonth).toBe(4);
   });
@@ -99,7 +99,7 @@ describe("estrutura comercial da página de Planos", () => {
     ]);
   });
 
-  it("Business e Premium incluem hospedagem, manutenção e suporte; Start não", () => {
+  it("Pro e Premium incluem hospedagem, manutenção e suporte; Start não", () => {
     expect(
       commercialComparison.find((r) => r[0] === "Hospedagem recorrente incluída")?.slice(1),
     ).toEqual([false, true, true]);
@@ -154,12 +154,12 @@ describe("estrutura comercial da página de Planos", () => {
     expect(enterprisePlan.priceLabel).toBe("Valores sob consulta");
   });
 
-  it("calcula exatamente os exemplos de cobrança de mês completo para Business (500 pedidos) e Premium (1.500 pedidos)", () => {
+  it("calcula exatamente os exemplos de cobrança de mês completo para Pro (500 pedidos) e Premium (1.500 pedidos)", () => {
     expect(overageBillingExamples).toEqual([
       {
         planId: "business",
-        planLabel: "Novaes Business",
-        title: "Business com 500 pedidos aceitos",
+        planLabel: "Novaes Pro",
+        title: "Pro com 500 pedidos aceitos",
         totalAcceptedOrders: 500,
         includedOrders: 340,
         overageOrders: 160,
@@ -201,5 +201,25 @@ describe("estrutura comercial da página de Planos", () => {
     expect(allTexts).not.toContain("ilimitados grátis");
     expect(allTexts).not.toContain("teto máximo");
     expect(allTexts).not.toContain("teto financeiro");
+  });
+
+  it("informa claramente o total para contratar no WhatsApp para Pro e Premium (Anual e Mensal)", () => {
+    const pro = commercialPlans.find((p) => p.id === "business");
+    const premium = commercialPlans.find((p) => p.id === "premium");
+    if (!pro || !premium) throw new Error("Pro ou Premium ausente");
+
+    expect(commercialWhatsMsg(pro, false, true)).toContain("R$ 158,33/mês");
+    expect(commercialWhatsMsg(pro, false, true)).toContain("anuidade de R$ 1.900,00");
+    expect(commercialWhatsMsg(pro, false, true)).toContain("Total para contratar (1º ano): R$ 2.190,00");
+
+    expect(commercialWhatsMsg(pro, false, false)).toContain("mensalidade de R$ 190,00");
+    expect(commercialWhatsMsg(pro, false, false)).toContain("total inicial criação + 1ª mensalidade: R$ 480,00");
+
+    expect(commercialWhatsMsg(premium, false, true)).toContain("R$ 225,00/mês");
+    expect(commercialWhatsMsg(premium, false, true)).toContain("anuidade de R$ 2.700,00");
+    expect(commercialWhatsMsg(premium, false, true)).toContain("Total para contratar (1º ano): R$ 3.190,00");
+
+    expect(commercialWhatsMsg(premium, false, false)).toContain("mensalidade de R$ 270,00");
+    expect(commercialWhatsMsg(premium, false, false)).toContain("total inicial criação + 1ª mensalidade: R$ 760,00");
   });
 });

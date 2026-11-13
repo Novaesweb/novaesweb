@@ -68,7 +68,7 @@ const premiumCommercial = commercialPlans.find((p) => p.id === "premium");
 export const sitePlanOptions: SitePlanOption[] = [
   {
     id: "business",
-    label: `${businessPlan?.label ?? "Novaes Business"} (R$ ${brl(businessPlan?.monthly ?? 190)}/mês · ${businessCommercial?.includedOrders ?? 340} pedidos incluídos)`,
+    label: `${businessPlan?.label ?? "Novaes Pro"} (R$ ${brl(businessPlan?.monthly ?? 190)}/mês · ${businessCommercial?.includedOrders ?? 340} pedidos incluídos)`,
     monthly: businessPlan?.monthly ?? 190,
     setup: businessPlan?.setup ?? 578,
     includedOrders: businessCommercial?.includedOrders ?? 340,

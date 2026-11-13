@@ -91,7 +91,7 @@ export const comparisonDimensions: ComparisonDimension[] = [
     },
     novaesweb: {
       label: "Sem bloqueio com excedente acessível",
-      description: "Franquia generosa (340 pedidos no Business e 750 no Premium) e excedente a partir de apenas R$ 0,15 por pedido adicional.",
+      description: "Franquia generosa (340 pedidos no Pro e 750 no Premium) e excedente a partir de apenas R$ 0,15 por pedido adicional.",
       status: "bom",
     },
   },
@@ -165,7 +165,7 @@ export const comparisonFaqs = [
   },
   {
     q: "O que acontece se meu delivery vender mais do que a franquia do plano?",
-    a: "Sua loja continua recebendo pedidos normalmente sem qualquer interrupção. Cada pedido aceito adicional custa apenas R$ 0,20 (no Business) ou R$ 0,15 (no Premium), apurado com transparência no mês seguinte.",
+    a: "Sua loja continua recebendo pedidos normalmente sem qualquer interrupção. Cada pedido aceito adicional custa apenas R$ 0,20 (no Pro) ou R$ 0,15 (no Premium), apurado com transparência no mês seguinte.",
   },
   {
     q: "Posso usar meu próprio domínio no site da NovaesWeb?",

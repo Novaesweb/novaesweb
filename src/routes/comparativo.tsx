@@ -327,7 +327,7 @@ export function ComparativoPage() {
               <h3 className="mt-4 text-base font-bold">Sem bloqueio ao atingir a franquia</h3>
               <p className="mt-1.5 text-xs leading-relaxed text-muted-foreground">
                 Se seu delivery bombar no fim de semana, as vendas não param. Cada pedido aceito
-                excedente custa apenas R$ 0,20 (Business) ou R$ 0,15 (Premium).
+                excedente custa apenas R$ 0,20 (Pro) ou R$ 0,15 (Premium).
               </p>
             </div>
 

@@ -1,5 +1,15 @@
 import { describe, it, expect } from "vitest";
-import { plans, half, whatsLink, planWhatsMsg, videoPacks, packWhatsMsg, faqs, comparison } from "@/data/plans";
+import {
+  plans,
+  half,
+  whatsLink,
+  planWhatsMsg,
+  getAnnualAnchoring,
+  videoPacks,
+  packWhatsMsg,
+  faqs,
+  comparison,
+} from "@/data/plans";
 import { allFaqs, faqsShown } from "@/data/faqs";
 
 describe("planos", () => {
@@ -15,12 +25,45 @@ describe("planos", () => {
     if (!premium) throw new Error("Premium ausente");
     expect(planWhatsMsg(premium)).toContain("Novaes Premium, com criação reduzida de R$ 490,00 e mensalidade de R$ 270,00");
   });
-  it("Business custa 290 de criação e 190 por mês", () => {
-    const business = plans.find((p) => p.id === "business");
-    expect(business?.setup).toBe(290);
-    expect(business?.monthly).toBe(190);
-    if (!business) throw new Error("Business ausente");
-    expect(planWhatsMsg(business)).toContain("criação reduzida de R$ 290,00 e mensalidade de R$ 190,00");
+  it("Pro custa 290 de criação e 190 por mês", () => {
+    const pro = plans.find((p) => p.id === "business");
+    expect(pro?.name).toBe("NOVAES PRO");
+    expect(pro?.label).toBe("Novaes Pro");
+    expect(pro?.setup).toBe(290);
+    expect(pro?.monthly).toBe(190);
+    if (!pro) throw new Error("Pro ausente");
+    expect(planWhatsMsg(pro)).toContain("Novaes Pro, com criação reduzida de R$ 290,00 e mensalidade de R$ 190,00");
+  });
+
+  it("calcula ancoragem anual real para Pro e Premium", () => {
+    const start = plans.find((p) => p.id === "start");
+    const pro = plans.find((p) => p.id === "business");
+    const premium = plans.find((p) => p.id === "premium");
+    if (!start || !pro || !premium) throw new Error("Planos ausentes");
+
+    expect(getAnnualAnchoring(start)).toBeNull();
+
+    const proAnchoring = getAnnualAnchoring(pro);
+    expect(proAnchoring).toEqual({
+      annualTotal: 1900,
+      regularAnnualTotal: 2280,
+      savings: 380,
+      equivalentMonthly: 158.33,
+      discountPercent: 16.7,
+      initialTotalAnnual: 2190,
+      initialTotalMonthly: 480,
+    });
+
+    const premiumAnchoring = getAnnualAnchoring(premium);
+    expect(premiumAnchoring).toEqual({
+      annualTotal: 2700,
+      regularAnnualTotal: 3240,
+      savings: 540,
+      equivalentMonthly: 225,
+      discountPercent: 16.7,
+      initialTotalAnnual: 3190,
+      initialTotalMonthly: 760,
+    });
   });
   it("Premium custa 490 de criação e 270 por mês", () => {
     const premium = plans.find((p) => p.id === "premium");

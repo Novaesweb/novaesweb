@@ -31,7 +31,7 @@ import portrait from "@/assets/portrait-wide.webp";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { AddonHighlights } from "@/components/AddonHighlights";
-import { brl, whatsLink } from "@/data/plans";
+import { brl, getAnnualAnchoring, whatsLink } from "@/data/plans";
 import {
   commercialPlans as plans,
   commercialComparison as comparison,
@@ -64,7 +64,7 @@ const plansJsonLd = {
     },
     {
       "@type": "Offer",
-      name: "Novaes Business",
+      name: "Novaes Pro",
       description:
         "Site de delivery com 340 pedidos aceitos/mês incluídos. R$ 290 criação + R$ 190/mês ou R$ 1.900/ano (2 meses grátis). Pedido excedente: R$ 0,20.",
       price: "190.00",
@@ -90,11 +90,11 @@ const plansJsonLd = {
 export const Route = createFileRoute("/planos")({
   head: () => ({
     meta: [
-      { title: "Planos e Preços — NovaesWeb | Start, Business, Premium e Empresarial" },
+      { title: "Planos e Preços — NovaesWeb | Start, Pro, Premium e Empresarial" },
       {
         name: "description",
         content:
-          "Novaes Start: R$ 630 criação única sem mensalidade. Business: R$ 190/mês (340 pedidos aceitos incluídos, excedente R$ 0,20). Premium: R$ 270/mês (750 pedidos aceitos incluídos, excedente R$ 0,15). Sem bloqueio de vendas.",
+          "Novaes Start: R$ 630 criação única sem mensalidade. Pro: R$ 190/mês (340 pedidos aceitos incluídos, excedente R$ 0,20). Premium: R$ 270/mês (750 pedidos aceitos incluídos, excedente R$ 0,15). Sem bloqueio de vendas.",
       },
       {
         name: "keywords",
@@ -105,7 +105,7 @@ export const Route = createFileRoute("/planos")({
       {
         property: "og:description",
         content:
-          "Conheça os planos Start, Business, Premium e Empresarial da NovaesWeb, com franquia de pedidos aceitos e continuidade sem bloqueio de vendas.",
+          "Conheça os planos Start, Pro, Premium e Empresarial da NovaesWeb, com franquia de pedidos aceitos e continuidade sem bloqueio de vendas.",
       },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "https://novaesweb.com.br/planos" },
@@ -165,7 +165,7 @@ function Planos() {
               Planos que se adaptam ao seu <span className="text-neon">negócio</span>
             </h1>
             <p className="mt-4 text-lg text-muted-foreground">
-              Escolha entre o site institucional do Start, os planos Business e Premium com franquia
+              Escolha entre o site institucional do Start, os planos Pro e Premium com franquia
               mensal de pedidos aceitos sem bloqueio de vendas, ou a solução sob medida do
               Empresarial.
             </p>
@@ -209,7 +209,7 @@ function Planos() {
           </p>
         </div>
 
-        {/* Cards dos Planos: Start, Business e Premium */}
+        {/* Cards dos Planos: Start, Pro e Premium */}
         <div className="grid gap-6 md:grid-cols-3 md:items-stretch">
           {plans.map((p) => (
             <PlanCard key={p.id} p={p} />
@@ -274,7 +274,7 @@ function Planos() {
 
           <div className="flex flex-col justify-between rounded-2xl border border-border bg-card p-6 lg:col-span-5">
             <div>
-              <h3 className="text-lg font-bold">Business e Premium incluem</h3>
+              <h3 className="text-lg font-bold">Pro e Premium incluem</h3>
               <p className="mt-1 text-xs text-muted-foreground">
                 Estrutura recorrente completa para manter sua loja em operação:
               </p>
@@ -480,7 +480,7 @@ function Planos() {
             [BarChart3, "Presença digital", "Apresente seu negócio"],
             [Settings, "Atualizações", "Conforme contratação"],
             [Headphones, "Suporte de verdade", "Incluso ou opcional no Start"],
-            [ShieldCheck, "Manutenção técnica", "Business e Premium"],
+            [ShieldCheck, "Manutenção técnica", "Pro e Premium"],
           ].map(([I, a, b]: any) => (
             <div key={a} className="flex items-center gap-4">
               <I className="h-9 w-9 shrink-0 text-neon-pink" />
@@ -502,7 +502,7 @@ function Planos() {
             <div>
               <h2 className="text-2xl font-bold">Comparativo completo dos planos</h2>
               <p className="text-sm text-muted-foreground">
-                Start institucional · Business (340 pedidos aceitos/mês) · Premium (750 pedidos
+                Start institucional · Pro (340 pedidos aceitos/mês) · Premium (750 pedidos
                 aceitos/mês)
               </p>
             </div>
@@ -576,7 +576,7 @@ function Planos() {
           </h2>
           <ul className="mt-4 space-y-3 text-sm leading-6 text-muted-foreground">
             <li>
-              Business e Premium incluem até{" "}
+              Pro e Premium incluem até{" "}
               <strong className="text-foreground">
                 {contentChangeRules.requestsPerMonth} solicitações de alteração de conteúdo por mês
               </strong>{" "}
@@ -612,7 +612,7 @@ function Planos() {
             <ul className="mt-3 space-y-2 text-sm text-muted-foreground">
               <li>• 50% de entrada para iniciar a criação.</li>
               <li>
-                • Start: 50% restantes antes da publicação. Business e Premium: 50% restantes na
+                • Start: 50% restantes antes da publicação. Pro e Premium: 50% restantes na
                 entrega.
               </li>
               <li>
@@ -620,7 +620,7 @@ function Planos() {
                 criação.
               </li>
               <li>
-                • Business e Premium: criação única; mensalidade recorrente a partir da ativação do
+                • Pro e Premium: criação única; mensalidade recorrente a partir da ativação do
                 site (no primeiro mês, proporcional aos dias ativos).
               </li>
               <li>• Pedidos aceitos excedentes são apurados e cobrados no mês seguinte.</li>
@@ -636,7 +636,7 @@ function Planos() {
                 • Start: sem suporte incluso. Contratação opcional por R$ 80,00 por mês, separada da
                 criação.
               </li>
-              <li>• Business e Premium: suporte incluso na mensalidade.</li>
+              <li>• Pro e Premium: suporte incluso na mensalidade.</li>
               <li>• Segunda a sexta-feira, das 9h às 18h (horário de Brasília).</li>
               <li>
                 • Fins de semana e feriados: atendimento extraordinário mediante disponibilidade, R$
@@ -714,20 +714,29 @@ function Planos() {
 
 type Plan = (typeof plans)[number];
 
-function PlanCard({ p }: { p: Plan }) {
+export function PlanCard({ p }: { p: Plan }) {
   const [tab, setTab] = useState<"inclui" | "pagamento">("inclui");
   const [all, setAll] = useState(false);
   const [withSupport, setWithSupport] = useState(false);
+  const [billing, setBilling] = useState<"anual" | "mensal">("anual");
   const isOneTime = p.monthly === 0;
   const isHighlighted = p.id === "business";
   const I = icons[p.id];
   const items = all ? p.items : p.items.slice(0, 5);
   const q = p.orderQuota;
+  const anchoring = getAnnualAnchoring(p);
+  const isAnnual = !isOneTime && Boolean(anchoring) && billing === "anual";
+  const discountLabel = anchoring
+    ? anchoring.discountPercent.toLocaleString("pt-BR", {
+        minimumFractionDigits: 1,
+        maximumFractionDigits: 1,
+      })
+    : null;
 
   return (
     <article
       id={`plano-${p.id}`}
-      className={`group relative scroll-mt-24 flex flex-col rounded-2xl bg-card/90 p-7 backdrop-blur transition duration-300 hover:-translate-y-1 hover:shadow-neon ${
+      className={`group relative scroll-mt-24 flex flex-col rounded-2xl bg-card/90 p-5 sm:p-7 backdrop-blur transition duration-300 hover:-translate-y-1 hover:shadow-neon ${
         isHighlighted
           ? "border-2 border-neon-pink shadow-neon md:-mt-3"
           : "border border-border hover:border-neon-pink"
@@ -748,7 +757,38 @@ function PlanCard({ p }: { p: Plan }) {
         </div>
       </div>
 
-      <p className="mt-3 text-xs leading-5 text-muted-foreground">{p.idealFor}</p>
+      {!isOneTime && anchoring && (
+        <div
+          role="group"
+          aria-label={`Ciclo de pagamento do plano ${p.label}`}
+          className="mt-4 grid grid-cols-2 gap-1 rounded-full border border-border bg-background/60 p-1 text-xs"
+        >
+          <button
+            type="button"
+            aria-pressed={billing === "mensal"}
+            onClick={() => setBilling("mensal")}
+            className={`min-h-10 rounded-full px-3 py-1.5 font-semibold transition ${
+              billing === "mensal"
+                ? "bg-neon text-primary-foreground shadow-neon"
+                : "text-muted-foreground hover:text-foreground"
+            }`}
+          >
+            Mensal
+          </button>
+          <button
+            type="button"
+            aria-pressed={billing === "anual"}
+            onClick={() => setBilling("anual")}
+            className={`min-h-10 rounded-full px-2.5 py-1.5 font-semibold transition ${
+              billing === "anual"
+                ? "bg-neon text-primary-foreground shadow-neon"
+                : "text-muted-foreground hover:text-foreground"
+            }`}
+          >
+            Anual {discountLabel ? `(-${discountLabel}%)` : ""}
+          </button>
+        </div>
+      )}
 
       <div className="mt-4 border-b border-border/60 pb-4">
         {isOneTime ? (
@@ -762,19 +802,63 @@ function PlanCard({ p }: { p: Plan }) {
               Sem mensalidade obrigatória · Suporte opcional: R$ {brl(p.optionalSupportMonthly ?? 80)}/mês
             </p>
           </>
+        ) : isAnnual && anchoring ? (
+          <>
+            <div className="flex flex-wrap items-center gap-2">
+              <span className="text-xs text-muted-foreground line-through">
+                De R$ {brl(p.monthly)}/mês
+              </span>
+              <span className="rounded-full border border-neon-emerald/50 bg-neon-emerald/15 px-2.5 py-0.5 text-[11px] font-bold text-neon-emerald">
+                Economize {discountLabel}% (R$ {brl(anchoring.savings)}/ano)
+              </span>
+            </div>
+            <div className="mt-1.5 flex items-baseline gap-1.5">
+              <span className="text-base font-bold text-neon-pink">R$</span>
+              <span
+                data-testid={`price-main-${p.id}`}
+                className="font-display text-4xl font-extrabold text-neon"
+              >
+                {brl(anchoring.equivalentMonthly)}
+              </span>
+              <span className="text-xs font-medium text-foreground">/mês</span>
+            </div>
+            <p
+              data-testid={`annual-total-${p.id}`}
+              className="mt-1 text-xs leading-relaxed text-muted-foreground"
+            >
+              Total de{" "}
+              <strong className="font-semibold text-foreground">
+                R$ {brl(anchoring.annualTotal)}
+              </strong>{" "}
+              cobrado anualmente (12 meses)
+            </p>
+            <p className="mt-1 text-xs font-medium text-muted-foreground">
+              Criação única reduzida de R$ {brl(p.setup)} cobrada à parte na implantação
+            </p>
+          </>
         ) : (
           <>
             <div className="flex items-baseline gap-1.5">
               <span className="text-base font-bold">R$</span>
-              <span className="font-display text-4xl font-extrabold">{brl(p.monthly)}</span>
+              <span
+                data-testid={`price-main-${p.id}`}
+                className="font-display text-4xl font-extrabold"
+              >
+                {brl(p.monthly)}
+              </span>
               <span className="text-xs text-muted-foreground">/mês</span>
             </div>
+            {anchoring && (
+              <p className="mt-1 text-xs text-muted-foreground">
+                Cobrança mensal recorrente (R$ {brl(anchoring.regularAnnualTotal)} em 12 meses)
+              </p>
+            )}
             <p className="mt-1 text-xs font-medium text-muted-foreground">
               Criação reduzida de R$ {brl(p.setup)} cobrada à parte na implantação
             </p>
-            {p.annualTotal && (
+            {anchoring && (
               <p className="mt-1 text-xs font-semibold text-neon-emerald">
-                Opção Anual: R$ {brl(p.annualTotal)}/ano (2 meses grátis — R$ {brl(p.annualMonthly ?? 0)}/mês)
+                No plano anual sai por R$ {brl(anchoring.equivalentMonthly)}/mês (2 meses grátis)
               </p>
             )}
           </>
@@ -784,12 +868,12 @@ function PlanCard({ p }: { p: Plan }) {
       {/* Destaque visual das regras de pedidos aceitos e continuidade */}
       <div className="mt-4 rounded-xl border border-border/70 bg-background/60 p-3.5 text-xs">
         <div className="font-semibold text-foreground">
-          {q.includedAcceptedOrders > 0
+          {(q.includedAcceptedOrders ?? 0) > 0
             ? `${q.includedAcceptedOrders} pedidos aceitos incluídos por mês.`
             : "Site institucional (sem pedidos online)."}
         </div>
 
-        {q.includedAcceptedOrders > 0 ? (
+        {(q.includedAcceptedOrders ?? 0) > 0 ? (
           <>
             <p className="mt-1 text-muted-foreground">
               {p.id === "business"
@@ -890,39 +974,73 @@ function PlanCard({ p }: { p: Plan }) {
         ) : (
           <div className="space-y-3 text-sm animate-in fade-in">
             <div className="flex flex-wrap justify-between gap-2 rounded-lg border border-border/60 p-3">
-              <span>Na contratação (50%)</span>
+              <span>Na contratação (50% criação)</span>
               <span className="shrink-0 font-bold">R$ {brl(p.setupPayment.upfront)}</span>
             </div>
             <div className="flex flex-wrap justify-between gap-2 rounded-lg border border-border/60 p-3">
               <span>
                 {p.setupPayment.remainderDue === "before-publication"
-                  ? "Antes da publicação (50%)"
-                  : "Na entrega (50%)"}
+                  ? "Antes da publicação (50% criação)"
+                  : "Na entrega (50% criação)"}
               </span>
               <span className="shrink-0 font-bold">R$ {brl(p.setupPayment.remainder)}</span>
             </div>
-            {!isOneTime && (
+            {!isOneTime && isAnnual && anchoring ? (
+              <div className="flex flex-wrap justify-between gap-2 rounded-lg border border-neon-emerald/60 bg-neon-emerald/5 p-3">
+                <span className="font-semibold text-neon-emerald">
+                  Anuidade (equivalente a R$ {brl(anchoring.equivalentMonthly)}/mês)
+                </span>
+                <span className="font-bold text-neon-emerald">R$ {brl(anchoring.annualTotal)}/ano</span>
+              </div>
+            ) : !isOneTime ? (
               <div className="flex flex-wrap justify-between gap-2 rounded-lg border border-neon-pink p-3">
                 <span>Mensalidade ({q.includedAcceptedOrders} pedidos aceitos incl.)</span>
-                <span className="font-bold">R$ {brl(p.monthly)}</span>
+                <span className="font-bold">R$ {brl(p.monthly)}/mês</span>
               </div>
-            )}
-            {!isOneTime && p.annualTotal && (
-              <div className="flex flex-wrap justify-between gap-2 rounded-lg border border-neon-emerald/60 bg-neon-emerald/5 p-3 text-xs">
-                <span className="font-semibold text-neon-emerald">Opção Anual (10 meses pagos, 2 grátis)</span>
-                <span className="font-bold text-neon-emerald">R$ {brl(p.annualTotal)}/ano (economia de R$ {brl(p.annualSavings ?? 0)})</span>
+            ) : null}
+            {!isOneTime && anchoring && (
+              <div className="flex flex-wrap justify-between gap-2 rounded-lg border border-border/60 p-3 text-xs">
+                <span className="font-semibold text-foreground">
+                  {isAnnual ? "Total cobrado no 1º ano (criação + anual)" : "Total inicial (criação + 1º mês)"}
+                </span>
+                <span className="font-bold text-neon-pink">
+                  R$ {brl(isAnnual ? anchoring.initialTotalAnnual : anchoring.initialTotalMonthly)}
+                </span>
               </div>
             )}
             <p className="text-xs text-muted-foreground">
               {isOneTime
                 ? "Criação com cobrança única: R$ 315,00 na contratação e R$ 315,00 antes da publicação. Sem pagamento mensal da criação. Suporte opcional contratado separadamente."
-                : `Criação é pagamento único. A mensalidade começa na ativação do site (proporcional no 1º mês). Pedidos aceitos excedentes custam R$ ${brl(q.overageOrderPrice ?? 0)} cada e são cobrados no mês seguinte.`}
+                : `Criação é pagamento único. A assinatura começa na ativação do site${isAnnual ? " com renovação anual de R$ " + brl(anchoring?.annualTotal ?? 0) + " após 12 meses" : " (proporcional no 1º mês)"}. Pedidos aceitos excedentes custam R$ ${brl(q.overageOrderPrice ?? 0)} cada e são cobrados no mês seguinte.`}
             </p>
           </div>
         )}
       </div>
 
-      <div className="mt-6 grid gap-2.5">
+      {!isOneTime && anchoring && (
+        <div
+          data-testid={`total-checkout-${p.id}`}
+          className="mt-5 rounded-xl border border-neon-violet/40 bg-background/70 p-3 text-xs"
+        >
+          <div className="flex flex-wrap items-baseline justify-between gap-1 font-semibold text-foreground">
+            <span>
+              {isAnnual
+                ? "Total a pagar para contratar (1º ano):"
+                : "Total inicial (criação + 1ª mensalidade):"}
+            </span>
+            <span className="text-sm font-extrabold text-neon-pink">
+              R$ {brl(isAnnual ? anchoring.initialTotalAnnual : anchoring.initialTotalMonthly)}
+            </span>
+          </div>
+          <p className="mt-1 leading-relaxed text-muted-foreground">
+            {isAnnual
+              ? `Inclui R$ ${brl(p.setup)} de criação única + R$ ${brl(anchoring.annualTotal)} cobrado anualmente. Renovação após 12 meses: R$ ${brl(anchoring.annualTotal)}/ano.`
+              : `Inclui R$ ${brl(p.setup)} de criação única (50% entrada + 50% entrega) + R$ ${brl(p.monthly)}/mês na ativação.`}
+          </p>
+        </div>
+      )}
+
+      <div className="mt-4 grid gap-2.5">
         <Button
           asChild
           variant="outline"
@@ -930,8 +1048,10 @@ function PlanCard({ p }: { p: Plan }) {
             isOneTime ? "border-neon-pink bg-neon shadow-neon" : "border-neon-violet bg-neon shadow-neon"
           }`}
         >
-          <a href={whatsLink(planWhatsMsg(p, withSupport))} target="_blank" rel="noopener noreferrer">
-            Solicitar orçamento — {p.label} <ArrowRight className="h-5 w-5 shrink-0" />
+          <a href={whatsLink(planWhatsMsg(p, withSupport, isAnnual))} target="_blank" rel="noopener noreferrer">
+            Solicitar orçamento — {p.label}
+            {!isOneTime && anchoring ? ` (${isAnnual ? "Anual" : "Mensal"})` : ""}
+            <ArrowRight className="h-5 w-5 shrink-0" />
           </a>
         </Button>
       </div>
