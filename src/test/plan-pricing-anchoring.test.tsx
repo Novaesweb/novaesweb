@@ -62,17 +62,14 @@ describe("Ancoragem de preço anual e renomeação Business -> Pro", () => {
 
     // Estado Anual: equivalente mensal em destaque e total anual pequeno e legível abaixo
     expect(screen.getByTestId("price-main-business")).toHaveTextContent("158,33");
+    expect(screen.getByTestId("price-main-business")).toHaveClass("text-white");
+    expect(screen.getByTestId("price-main-business")).not.toHaveClass("text-neon");
     expect(screen.getByTestId("annual-total-business")).toHaveTextContent(
       "Total de R$ 1.900,00 cobrado anualmente (12 meses)",
     );
     expect(screen.getByText("Economize 16,7% (R$ 380,00/ano)")).toBeInTheDocument();
-
-    const checkoutAnual = screen.getByTestId("total-checkout-business");
-    expect(checkoutAnual).toHaveTextContent("Total a pagar para contratar (1º ano):");
-    expect(checkoutAnual).toHaveTextContent("R$ 2.190,00");
-    expect(checkoutAnual).toHaveTextContent(
-      "Inclui R$ 290,00 de criação única + R$ 1.900,00 cobrado anualmente",
-    );
+    expect(screen.queryByTestId("total-checkout-business")).not.toBeInTheDocument();
+    expect(screen.queryByText(/Total a pagar para contratar/)).not.toBeInTheDocument();
 
     const ctaAnual = screen.getByRole("link", { name: /Solicitar orçamento — Novaes Pro \(Anual\)/ });
     expect(decodeURIComponent(ctaAnual.getAttribute("href") ?? "")).toContain(
@@ -87,12 +84,9 @@ describe("Ancoragem de preço anual e renomeação Business -> Pro", () => {
 
     expect(screen.getByTestId("price-main-business")).toHaveTextContent("190,00");
     expect(screen.queryByTestId("annual-total-business")).not.toBeInTheDocument();
+    expect(screen.queryByTestId("total-checkout-business")).not.toBeInTheDocument();
     expect(screen.getByText(/Cobrança mensal recorrente \(R\$ 2\.280,00 em 12 meses\)/)).toBeInTheDocument();
     expect(screen.getByText(/No plano anual sai por R\$ 158,33\/mês/)).toBeInTheDocument();
-
-    const checkoutMensal = screen.getByTestId("total-checkout-business");
-    expect(checkoutMensal).toHaveTextContent("Total inicial (criação + 1ª mensalidade):");
-    expect(checkoutMensal).toHaveTextContent("R$ 480,00");
 
     const ctaMensal = screen.getByRole("link", {
       name: /Solicitar orçamento — Novaes Pro \(Mensal\)/,
@@ -126,22 +120,19 @@ describe("Ancoragem de preço anual e renomeação Business -> Pro", () => {
     expect(screen.getByRole("heading", { name: "NOVAES PREMIUM" })).toBeInTheDocument();
 
     expect(screen.getByTestId("price-main-premium")).toHaveTextContent("225,00");
+    expect(screen.getByTestId("price-main-premium")).toHaveClass("text-white");
     expect(screen.getByTestId("annual-total-premium")).toHaveTextContent(
       "Total de R$ 2.700,00 cobrado anualmente (12 meses)",
     );
     expect(screen.getByText("Economize 16,7% (R$ 540,00/ano)")).toBeInTheDocument();
-
-    const checkoutAnual = screen.getByTestId("total-checkout-premium");
-    expect(checkoutAnual).toHaveTextContent("R$ 3.190,00");
-    expect(checkoutAnual).toHaveTextContent(
-      "Inclui R$ 490,00 de criação única + R$ 2.700,00 cobrado anualmente",
-    );
+    expect(screen.queryByTestId("total-checkout-premium")).not.toBeInTheDocument();
+    expect(screen.queryByText(/Total a pagar para contratar/)).not.toBeInTheDocument();
 
     const btnMensal = screen.getByRole("button", { name: "Mensal" });
     fireEvent.click(btnMensal);
     expect(container.querySelector("#plano-premium")).toBe(card);
     expect(screen.getByTestId("price-main-premium")).toHaveTextContent("270,00");
-    expect(screen.getByTestId("total-checkout-premium")).toHaveTextContent("R$ 760,00");
+    expect(screen.queryByTestId("total-checkout-premium")).not.toBeInTheDocument();
 
     const ctaMensal = screen.getByRole("link", {
       name: /Solicitar orçamento — Novaes Premium \(Mensal\)/,

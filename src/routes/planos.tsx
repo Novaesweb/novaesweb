@@ -149,7 +149,7 @@ function Planos() {
             loading="eager"
             fetchPriority="high"
             decoding="async"
-            className="absolute inset-0 h-full w-full object-cover object-[center_top] md:object-[right_center] lg:object-[78%_center]"
+            className="hero-portrait absolute inset-0 h-full w-full"
           />
           <div className="absolute inset-y-0 left-0 w-full md:w-3/5 bg-gradient-to-r from-[#080512]/92 via-[#080512]/70 to-transparent" />
           <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-[#080512] via-[#080512]/60 to-transparent" />
@@ -794,8 +794,8 @@ export function PlanCard({ p }: { p: Plan }) {
         {isOneTime ? (
           <>
             <div className="flex items-baseline gap-1.5">
-              <span className="text-base font-bold">R$</span>
-              <span className="font-display text-4xl font-extrabold">{brl(p.setup)}</span>
+              <span className="text-base font-bold text-white">R$</span>
+              <span className="font-display text-4xl font-extrabold text-white">{brl(p.setup)}</span>
               <span className="text-xs text-muted-foreground">criação única</span>
             </div>
             <p className="mt-1 text-xs font-semibold text-neon-emerald">
@@ -813,10 +813,10 @@ export function PlanCard({ p }: { p: Plan }) {
               </span>
             </div>
             <div className="mt-1.5 flex items-baseline gap-1.5">
-              <span className="text-base font-bold text-neon-pink">R$</span>
+              <span className="text-base font-bold text-white">R$</span>
               <span
                 data-testid={`price-main-${p.id}`}
-                className="font-display text-4xl font-extrabold text-neon"
+                className="font-display text-4xl font-extrabold text-white"
               >
                 {brl(anchoring.equivalentMonthly)}
               </span>
@@ -827,7 +827,7 @@ export function PlanCard({ p }: { p: Plan }) {
               className="mt-1 text-xs leading-relaxed text-muted-foreground"
             >
               Total de{" "}
-              <strong className="font-semibold text-foreground">
+              <strong className="font-semibold text-white">
                 R$ {brl(anchoring.annualTotal)}
               </strong>{" "}
               cobrado anualmente (12 meses)
@@ -839,10 +839,10 @@ export function PlanCard({ p }: { p: Plan }) {
         ) : (
           <>
             <div className="flex items-baseline gap-1.5">
-              <span className="text-base font-bold">R$</span>
+              <span className="text-base font-bold text-white">R$</span>
               <span
                 data-testid={`price-main-${p.id}`}
-                className="font-display text-4xl font-extrabold"
+                className="font-display text-4xl font-extrabold text-white"
               >
                 {brl(p.monthly)}
               </span>
@@ -1017,30 +1017,7 @@ export function PlanCard({ p }: { p: Plan }) {
         )}
       </div>
 
-      {!isOneTime && anchoring && (
-        <div
-          data-testid={`total-checkout-${p.id}`}
-          className="mt-5 rounded-xl border border-neon-violet/40 bg-background/70 p-3 text-xs"
-        >
-          <div className="flex flex-wrap items-baseline justify-between gap-1 font-semibold text-foreground">
-            <span>
-              {isAnnual
-                ? "Total a pagar para contratar (1º ano):"
-                : "Total inicial (criação + 1ª mensalidade):"}
-            </span>
-            <span className="text-sm font-extrabold text-neon-pink">
-              R$ {brl(isAnnual ? anchoring.initialTotalAnnual : anchoring.initialTotalMonthly)}
-            </span>
-          </div>
-          <p className="mt-1 leading-relaxed text-muted-foreground">
-            {isAnnual
-              ? `Inclui R$ ${brl(p.setup)} de criação única + R$ ${brl(anchoring.annualTotal)} cobrado anualmente. Renovação após 12 meses: R$ ${brl(anchoring.annualTotal)}/ano.`
-              : `Inclui R$ ${brl(p.setup)} de criação única (50% entrada + 50% entrega) + R$ ${brl(p.monthly)}/mês na ativação.`}
-          </p>
-        </div>
-      )}
-
-      <div className="mt-4 grid gap-2.5">
+      <div className="mt-5 grid gap-2.5">
         <Button
           asChild
           variant="outline"

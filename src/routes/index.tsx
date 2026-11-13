@@ -130,7 +130,7 @@ function Index() {
           <img
             src={portrait}
             alt="Imagem de apresentação da marca NovaesWeb"
-            className="absolute inset-0 hidden h-full w-full object-cover object-[center_top] md:block md:object-[right_center] lg:object-[78%_center]"
+            className="hero-portrait absolute inset-0 hidden h-full w-full md:block"
             loading="eager"
             fetchPriority="high"
             decoding="async"
